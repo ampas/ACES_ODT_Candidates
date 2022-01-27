@@ -1,3 +1,4 @@
 *.nk~
 *.nk.autosave
 .DS_Store
+*.nk~
