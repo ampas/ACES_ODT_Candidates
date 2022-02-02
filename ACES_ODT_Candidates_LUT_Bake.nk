@@ -2,7 +2,7 @@
 version 13.0 v3
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="25" w="2560" h="1470" screen="0">
+    <window x="0" y="25" w="2560" h="1470" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -13,7 +13,6 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                 <split size="851"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
-                    <page id="Viewer.2"/>
                 </dock>
                 <split size="599"/>
                 <dock id="" activePageId="DAG.1" focus="true">
@@ -114,13 +113,13 @@ Dot {
  xpos 15
  ypos 24
 }
-set N1edadc00 [stack 0]
+set N1d8c5000 [stack 0]
 Dot {
  name Dot3
  xpos 343
  ypos 261
 }
-set N1edad800 [stack 0]
+set N1d8c4c00 [stack 0]
 Group {
  name OpenDRT1
  label Rec2100
@@ -158,7 +157,7 @@ Group {
   xpos 180
   ypos -586
  }
-set N5524b400 [stack 0]
+set N1d8c4800 [stack 0]
  Group {
   name EOTF
   xpos 510
@@ -173,7 +172,7 @@ set N5524b400 [stack 0]
    xpos 400
    ypos -130
   }
-set N5524b000 [stack 0]
+set N1d8c4400 [stack 0]
   Expression {
    expr0 r<=0.5?r*r/3:(exp((r-_c)/_a)+_b)/12
    expr1 g<=0.5?g*g/3:(exp((g-_c)/_a)+_b)/12
@@ -207,7 +206,7 @@ set N5524b000 [stack 0]
    addUserKnob {7 Lamb t "ambient luminance level in nits" R 0 200}
    Lamb 5
   }
-push $N5524b000
+push $N1d8c4400
   Expression {
    temp_name0 rp
    temp_expr0 pow(r,1/m_2)
@@ -233,7 +232,7 @@ push $N5524b000
    addUserKnob {7 c_3}
    c_3 {{2392/128}}
   }
-push $N5524b000
+push $N1d8c4400
   Expression {
    expr0 sign(r)*pow(fabs(r),p)
    expr1 sign(g)*pow(fabs(g),p)
@@ -311,7 +310,7 @@ push $N5524b000
   addUserKnob {7 n R 0 4}
   n {{parent.Scale.wn}}
  }
-set N55248c00 [stack 0]
+set N1d86dc00 [stack 0]
  Expression {
   expr0 r*w.0
   expr1 g*w.1
@@ -468,7 +467,7 @@ set N55248c00 [stack 0]
    ypos -58
   }
  end_group
-push $N55248c00
+push $N1d86dc00
  Expression {
   temp_name0 n
   temp_expr0 sqrt(pow(w.0*r,2)+pow(w.1*g,2)+pow(w.2*b,2))/sum
@@ -808,7 +807,7 @@ push $N55248c00
   xpos 510
   ypos 38
  }
-push $N5524b400
+push $N1d8c4800
  Group {
   name InGamut_to_XYZ
   tile_color 0x429940ff
@@ -830,7 +829,7 @@ push $N5524b400
    xpos 324
    ypos -546
   }
-set N54ed1000 [stack 0]
+set N32312000 [stack 0]
   ColorMatrix {
    matrix {
        {{"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"}}
@@ -846,14 +845,14 @@ set N54ed1000 [stack 0]
    xpos 290
    ypos -250
   }
-push $N54ed1000
+push $N32312000
   Dot {
    name Dot391
    label " *RGB to XYZ D65 CAT: XYZ Scaling"
    xpos 434
    ypos -546
   }
-set N54ed0400 [stack 0]
+set N32311400 [stack 0]
   ColorMatrix {
    matrix {
        {0.7006223202 0.1487748027 0.101058729}
@@ -865,7 +864,7 @@ set N54ed0400 [stack 0]
    xpos 1390
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.705396831 0.1640413404 0.08101775497}
@@ -877,7 +876,7 @@ push $N54ed0400
    xpos 1280
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.5990839005 0.2489254922 0.1024464965}
@@ -889,7 +888,7 @@ push $N54ed0400
    xpos 1170
    ypos -465
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.735275209 0.06860940903 0.1465712786}
@@ -901,7 +900,7 @@ push $N54ed0400
    xpos 1060
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.6380076408 0.2147038132 0.09774445742}
@@ -913,7 +912,7 @@ push $N54ed0400
    xpos 950
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.4123909175 0.3575843573 0.1804807931}
@@ -925,7 +924,7 @@ push $N54ed0400
    xpos 840
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.6369581223 0.1446169168 0.1688809693}
@@ -937,7 +936,7 @@ push $N54ed0400
    xpos 730
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.4865711331 0.2656677067 0.1982173175}
@@ -949,7 +948,7 @@ push $N54ed0400
    xpos 620
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.6609312296 0.1336961389 0.1558285803}
@@ -961,7 +960,7 @@ push $N54ed0400
    xpos 510
    ypos -466
   }
-push $N54ed0400
+push $N32311400
   ColorMatrix {
    matrix {
        {0.9503623843 0 9.346324805e-05}
@@ -1008,7 +1007,7 @@ push $N54ed0400
   xpos 214
   ypos -414
  }
-set N5ce4cc00 [stack 0]
+set N322b9c00 [stack 0]
  Group {
   name LMS_to_Yrg
   xpos 290
@@ -1057,7 +1056,7 @@ set N5ce4cc00 [stack 0]
    ypos -226
   }
  end_group
-push $N5ce4cc00
+push $N322b9c00
  MergeExpression {
   inputs 2
   temp_name0 _c
@@ -1128,8 +1127,8 @@ push $N5ce4cc00
   addUserKnob {7 sum t "Normalize so achromatic in=out" R 0 2}
   sum {{sqrt(w.0*w.0+w.1*w.1+w.2*w.2)}}
  }
-set N5cdd2c00 [stack 0]
-push $N5ce4cc00
+set N32643c00 [stack 0]
+push $N322b9c00
  MergeExpression {
   inputs 2
   temp_name0 s
@@ -1300,7 +1299,7 @@ push $N5ce4cc00
    ypos -58
   }
  end_group
-push $N5cdd2c00
+push $N32643c00
  Expression {
   expr0 r*w.0/wn
   expr1 g*w.1/wn
@@ -1620,7 +1619,7 @@ push $N5cdd2c00
    xpos 324
    ypos -516
   }
-set N5ce77400 [stack 0]
+set N3254c800 [stack 0]
   ColorMatrix {
    matrix {
        {{"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"}}
@@ -1636,14 +1635,14 @@ set N5ce77400 [stack 0]
    xpos 290
    ypos -310
   }
-push $N5ce77400
+push $N3254c800
   Dot {
    name Dot1
    label " XYZ D65 to *RGB CAT: XYZ Scaling"
    xpos 434
    ypos -516
   }
-set N5ce76800 [stack 0]
+set N324eb800 [stack 0]
   ColorMatrix {
    matrix {
        {1 0 0}
@@ -1655,7 +1654,7 @@ set N5ce76800 [stack 0]
    xpos 950
    ypos -465
   }
-push $N5ce76800
+push $N324eb800
   ColorMatrix {
    matrix {
        {3.240968943 -1.537382722 -0.4986106157}
@@ -1667,7 +1666,7 @@ push $N5ce76800
    xpos 840
    ypos -465
   }
-push $N5ce76800
+push $N324eb800
   ColorMatrix {
    matrix {
        {2.72539258 -1.01800251 -0.4401629865}
@@ -1679,7 +1678,7 @@ push $N5ce76800
    xpos 730
    ypos -465
   }
-push $N5ce76800
+push $N324eb800
   ColorMatrix {
    matrix {
        {2.40274024 -0.8974836469 -0.3880532086}
@@ -1691,7 +1690,7 @@ push $N5ce76800
    xpos 620
    ypos -465
   }
-push $N5ce76800
+push $N324eb800
   ColorMatrix {
    matrix {
        {2.493495464 -0.9313831329 -0.4027105868}
@@ -1703,7 +1702,7 @@ push $N5ce76800
    xpos 510
    ypos -465
   }
-push $N5ce76800
+push $N324eb800
   ColorMatrix {
    matrix {
        {1.716650844 -0.3556707203 -0.2533662021}
@@ -1756,7 +1755,7 @@ push $N5ce76800
    xpos 400
    ypos -130
   }
-set N5ce74800 [stack 0]
+set N324e9800 [stack 0]
   Expression {
    temp_name0 Yd
    temp_expr0 0.2627*r+0.6780*g+0.0593*b
@@ -1789,7 +1788,7 @@ set N5ce74800 [stack 0]
    addUserKnob {7 _c}
    _c {{0.5-_a*log(4*_a)}}
   }
-push $N5ce74800
+push $N324e9800
   Expression {
    temp_name0 rp
    temp_expr0 pow(r,m_1)
@@ -1815,7 +1814,7 @@ push $N5ce74800
    addUserKnob {7 c_3}
    c_3 {{2392/128}}
   }
-push $N5ce74800
+push $N324e9800
   Expression {
    expr0 sign(r)*pow(fabs(r),1/p)
    expr1 sign(g)*pow(fabs(g),1/p)
@@ -1897,7 +1896,7 @@ Group {
   ypos 353
  }
 end_group
-push $N1edadc00
+push $N1d8c5000
 Reformat {
  type scale
  scale 0.1428571429
@@ -1907,7 +1906,7 @@ Reformat {
  xpos 615
  ypos 254
 }
-set N341bb800 [stack 0]
+set N32472c00 [stack 0]
 Group {
  name DRT_ZCAM_IzMh_v09_Blink2
  label "\[value ssts_luminance.2]nits/\[value gamut]\n\[value colorspace_out]/\[value illuminant_out]/\[value primary_out]\nCAT bug fix"
@@ -2113,7 +2112,7 @@ Group {
   xpos -482
   ypos -1035
  }
-set N8b062800 [stack 0]
+set N32472000 [stack 0]
  Dot {
   name Dot17
   note_font "Bitstream Vera Sans"
@@ -2184,7 +2183,7 @@ set N8b062800 [stack 0]
    xpos 862
    ypos 153
   }
-set N8b061400 [stack 0]
+set N32470c00 [stack 0]
   Shuffle {
    red white
    green white
@@ -2196,7 +2195,7 @@ set N8b061400 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8b061000 [stack 0]
+set N32470800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -2207,7 +2206,7 @@ set N8b061000 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8b061000
+push $N32470800
   Colorspace {
    illuminant_in {{parent.referenceWhite}}
    colorspace_out CIE-XYZ
@@ -2219,7 +2218,7 @@ push $N8b061000
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8b061400
+push $N32470c00
   BlinkScript {
    inputs 3
    recompileCount 77
@@ -2254,14 +2253,14 @@ push $N8b061400
   xpos 484
   ypos -670
  }
-set N8afcf800 [stack 0]
+set N323d7000 [stack 0]
  Dot {
   name Dot20
   note_font "Bitstream Vera Sans"
   xpos 260
   ypos -670
  }
-set N8afcf400 [stack 0]
+set N323d6c00 [stack 0]
  Dot {
   name Dot21
   note_font "Bitstream Vera Sans"
@@ -2343,7 +2342,7 @@ set N8afcf400 [stack 0]
    xpos 862
    ypos 153
   }
-set N8afcdc00 [stack 0]
+set N323d5400 [stack 0]
   Shuffle {
    red white
    green white
@@ -2355,7 +2354,7 @@ set N8afcdc00 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8afcd800 [stack 0]
+set N323d5000 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -2366,7 +2365,7 @@ set N8afcd800 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8afcd800
+push $N323d5000
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -2378,7 +2377,7 @@ push $N8afcd800
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8afcdc00
+push $N323d5400
   BlinkScript {
    inputs 4
    recompileCount 108
@@ -2419,15 +2418,15 @@ push $N8afcdc00
   xpos 87
   ypos -612
  }
-set N8afcc400 [stack 0]
+set N3236b800 [stack 0]
  Dot {
   name Dot22
   note_font "Bitstream Vera Sans"
   xpos 121
   ypos -519
  }
-push $N8afcf400
-push $N8afcc400
+push $N323d6c00
+push $N3236b800
  Merge2 {
   inputs 2
   operation divide
@@ -2463,7 +2462,7 @@ push $N8afcc400
   xpos 226
   ypos -522
  }
-push $N8afcf800
+push $N323d7000
  ShuffleCopy {
   inputs 2
   green green
@@ -2481,28 +2480,28 @@ push $N8afcf800
   xpos 484
   ypos -359
  }
-set Na4e2e800 [stack 0]
+set N3236a000 [stack 0]
  Dot {
   name Dot14
   note_font "Bitstream Vera Sans"
   xpos 294
   ypos -359
  }
-set Na4e2e400 [stack 0]
+set N32369c00 [stack 0]
  Dot {
   name Dot24
   note_font "Bitstream Vera Sans"
   xpos -72
   ypos -359
  }
-set Na4e2e000 [stack 0]
+set N32369800 [stack 0]
  Dot {
   name Dot25
   note_font "Bitstream Vera Sans"
   xpos -163
   ypos -359
  }
-set Na4e2dc00 [stack 0]
+set N32369400 [stack 0]
  Shuffle {
   red white
   green white
@@ -2575,7 +2574,7 @@ set Na4e2dc00 [stack 0]
    xpos 862
    ypos 153
   }
-set Na4e2c800 [stack 0]
+set N32dfbc00 [stack 0]
   Shuffle {
    red white
    green white
@@ -2587,7 +2586,7 @@ set Na4e2c800 [stack 0]
    xpos 1015
    ypos 144
   }
-set Na4e2c400 [stack 0]
+set N32dfb800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -2598,7 +2597,7 @@ set Na4e2c400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Na4e2c400
+push $N32dfb800
   Colorspace {
    illuminant_in {{parent.referenceWhite}}
    colorspace_out CIE-XYZ
@@ -2610,7 +2609,7 @@ push $Na4e2c400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Na4e2c800
+push $N32dfbc00
   BlinkScript {
    inputs 3
    recompileCount 77
@@ -2645,7 +2644,7 @@ push $Na4e2c800
   xpos -389
   ypos -199
  }
-set Na4dd6c00 [stack 0]
+set N32dfa400 [stack 0]
  Dot {
   name Dot61
   note_font "Bitstream Vera Sans"
@@ -2658,14 +2657,14 @@ set Na4dd6c00 [stack 0]
   xpos 42
   ypos -173
  }
-push $Na4dd6c00
+push $N32dfa400
  Dot {
   name Dot47
   note_font "Bitstream Vera Sans"
   xpos -389
   ypos -173
  }
-push $Na4e2dc00
+push $N32369400
  Group {
   name ZCAM_GamutBoundaryBlink5
   note_font "Bitstream Vera Sans"
@@ -2738,7 +2737,7 @@ push $Na4e2dc00
    xpos 862
    ypos 153
   }
-set Na4dd4c00 [stack 0]
+set N32df8400 [stack 0]
   Shuffle {
    red white
    green white
@@ -2750,7 +2749,7 @@ set Na4dd4c00 [stack 0]
    xpos 1015
    ypos 144
   }
-set Na4dd4800 [stack 0]
+set N32da3c00 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -2761,7 +2760,7 @@ set Na4dd4800 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Na4dd4800
+push $N32da3c00
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -2773,7 +2772,7 @@ push $Na4dd4800
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Na4dd4c00
+push $N32df8400
   BlinkScript {
    inputs 4
    recompileCount 106
@@ -2804,7 +2803,7 @@ push $Na4dd4c00
    ypos 377
   }
  end_group
-set Na4e34100 [stack 0]
+set N32e0a400 [stack 0]
  Dot {
   name Dot55
   note_font "Bitstream Vera Sans"
@@ -2826,7 +2825,7 @@ set Na4e34100 [stack 0]
   xpos -291
   ypos -176
  }
-push $Na4e34100
+push $N32e0a400
  Merge2 {
   inputs 2
   operation copy
@@ -2851,7 +2850,7 @@ push $Na4e34100
   xpos -163
   ypos -75
  }
-push $Na4e2e000
+push $N32369800
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance} 1 1 1}
@@ -2978,7 +2977,7 @@ push $Na4e2e000
    xpos 862
    ypos 153
   }
-set Na4d0f000 [stack 0]
+set N3344e800 [stack 0]
   Shuffle {
    red white
    green white
@@ -2990,7 +2989,7 @@ set Na4d0f000 [stack 0]
    xpos 1015
    ypos 144
   }
-set Na4d0ec00 [stack 0]
+set N3344e400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -3001,7 +3000,7 @@ set Na4d0ec00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Na4d0ec00
+push $N3344e400
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -3013,7 +3012,7 @@ push $Na4d0ec00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Na4d0f000
+push $N3344e800
   BlinkScript {
    inputs 4
    recompileCount 106
@@ -3050,7 +3049,7 @@ push $Na4d0f000
   xpos 204
   ypos -231
  }
-set Na4d0d800 [stack 0]
+set N3344d000 [stack 0]
  Dot {
   name Dot59
   note_font "Bitstream Vera Sans"
@@ -3066,7 +3065,7 @@ set Na4d0d800 [stack 0]
   xpos 76
   ypos -176
  }
-push $Na4d0d800
+push $N3344d000
  Merge2 {
   inputs 2
   operation copy
@@ -3091,7 +3090,7 @@ push $Na4d0d800
   xpos 204
   ypos -94
  }
-push $Na4e2e400
+push $N32369c00
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance} 1 1 1}
@@ -3134,7 +3133,7 @@ push $Na4e2e400
   xpos 260
   ypos -67
  }
-push $Na4e2e800
+push $N3236a000
  ShuffleCopy {
   inputs 2
   red red
@@ -3194,7 +3193,7 @@ push $Na4e2e800
    xpos -32
    ypos -184
   }
-set Na4cb6800 [stack 0]
+set N333ea000 [stack 0]
   Dot {
    name Dot11
    xpos 114
@@ -3309,7 +3308,7 @@ set Na4cb6800 [stack 0]
    xpos 114
    ypos 53
   }
-push $Na4cb6800
+push $N333ea000
   MergeExpression {
    inputs 2
    temp_name0 Qzm
@@ -3340,14 +3339,14 @@ push $Na4cb6800
   xpos 484
   ypos 98
  }
-set Na4c3ac00 [stack 0]
+set N3338e400 [stack 0]
  Dot {
   name Dot9
   note_font "Bitstream Vera Sans"
   xpos 643
   ypos 98
  }
-set Na4c3a800 [stack 0]
+set N3338e000 [stack 0]
  Group {
   name st2048_6
   label "Lum to PQ (ZCAM)\ninverse"
@@ -3374,7 +3373,7 @@ set Na4c3a800 [stack 0]
    xpos 863
    ypos 240
   }
-set Na4c3a000 [stack 0]
+set N3338d800 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -3408,7 +3407,7 @@ set Na4c3a000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Na4c3a000
+push $N3338d800
   Dot {
    name Dot26
    xpos 810
@@ -3464,7 +3463,7 @@ push $Na4c3a000
   xpos 609
   ypos 168
  }
-set Na4c38800 [stack 0]
+set N3332fc00 [stack 0]
  BlinkScript {
   recompileCount 35
   ProgramGroup 1
@@ -3540,7 +3539,7 @@ set Na4c38800 [stack 0]
   addUserKnob {3 N_KNOTS_HIGH}
   N_KNOTS_HIGH 4
  }
-set Na4c38400 [stack 0]
+set N3332f800 [stack 0]
  Multiply {
   channels rgb
   value {{parent.reference_luminance}}
@@ -3584,7 +3583,7 @@ set Na4c38400 [stack 0]
    xpos 863
    ypos 240
   }
-set Na4be3000 [stack 0]
+set N3332e800 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -3618,7 +3617,7 @@ set Na4be3000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Na4be3000
+push $N3332e800
   Dot {
    name Dot26
    xpos 810
@@ -3665,7 +3664,7 @@ push $Na4be3000
    ypos 447
   }
  end_group
-push $Na4c3ac00
+push $N3338e400
  ShuffleCopy {
   inputs 2
   red red
@@ -3683,15 +3682,15 @@ push $Na4c3ac00
   xpos 484
   ypos 450
  }
-set Na4be1400 [stack 0]
+set N3332cc00 [stack 0]
  Dot {
   name Dot44
   note_font "Bitstream Vera Sans"
   xpos 605
   ypos 450
  }
-set Na4be1000 [stack 0]
-push $Na4c38800
+set N3332c800 [stack 0]
+push $N3332fc00
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance}}
@@ -3701,14 +3700,14 @@ push $Na4c38800
   xpos 825
   ypos 174
  }
-set Na4be0c00 [stack 0]
+set N3332c400 [stack 0]
  Dot {
   name Dot56
   note_font "Bitstream Vera Sans"
   xpos 1058
   ypos 189
  }
-push $Na4c38400
+push $N3332f800
  Switch {
   inputs 2
   which {{!parent.applySSTS}}
@@ -3732,7 +3731,7 @@ push $Na4c38400
   xpos 1058
   ypos 439
  }
-push $Na4be1000
+push $N3332c800
  Dot {
   name Dot52
   note_font "Bitstream Vera Sans"
@@ -3751,7 +3750,7 @@ push $Na4be1000
   xpos 1231
   ypos 80
  }
-set Na4b8f000 [stack 0]
+set N332ba800 [stack 0]
  Shuffle {
   red black
   green black
@@ -3769,7 +3768,7 @@ set Na4b8f000 [stack 0]
   xpos 1443
   ypos 124
  }
-set Na4b8e800 [stack 0]
+set N332ba000 [stack 0]
  Dot {
   name Dot49
   note_font "Bitstream Vera Sans"
@@ -3819,7 +3818,7 @@ set Na4b8e800 [stack 0]
    xpos 863
    ypos 240
   }
-set Na4b8d400 [stack 0]
+set N332b8c00 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -3853,7 +3852,7 @@ set Na4b8d400 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Na4b8d400
+push $N332b8c00
   Dot {
    name Dot26
    xpos 810
@@ -3900,7 +3899,7 @@ push $Na4b8d400
    ypos 447
   }
  end_group
-push $Na4b8e800
+push $N332ba000
  Dot {
   name Dot50
   note_font "Bitstream Vera Sans"
@@ -3950,7 +3949,7 @@ push $Na4b8e800
    xpos 863
    ypos 240
   }
-set Nb2bd6800 [stack 0]
+set N33276000 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -3984,7 +3983,7 @@ set Nb2bd6800 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Nb2bd6800
+push $N33276000
   Dot {
    name Dot26
    xpos 810
@@ -4045,7 +4044,7 @@ push $Nb2bd6800
   xpos 1342
   ypos 293
  }
-push $Na4b8f000
+push $N332ba800
  Merge2 {
   inputs 2
   operation plus
@@ -4068,7 +4067,7 @@ push $Na4b8f000
   xpos 1197
   ypos 343
  }
-push $Na4be0c00
+push $N3332c400
  BlinkScript {
   recompileCount 35
   ProgramGroup 1
@@ -4176,7 +4175,7 @@ push $Na4be0c00
    xpos 863
    ypos 240
   }
-set Nb2b77000 [stack 0]
+set N32ef2800 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -4210,7 +4209,7 @@ set Nb2b77000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Nb2b77000
+push $N32ef2800
   Dot {
    name Dot26
    xpos 810
@@ -4257,7 +4256,7 @@ push $Nb2b77000
    ypos 447
   }
  end_group
-push $Na4c3a800
+push $N3338e000
  Dot {
   name Dot54
   note_font "Bitstream Vera Sans"
@@ -4357,7 +4356,7 @@ push $Na4c3a800
    xpos -284
    ypos 159
   }
-set Nb2b03c00 [stack 0]
+set N32e87400 [stack 0]
   Expression {
    temp_name0 one_minus_e
    temp_expr0 "1 - pow(10,-15)"
@@ -4393,7 +4392,7 @@ set Nb2b03c00 [stack 0]
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
   }
-push $Nb2b03c00
+push $N32e87400
   Expression {
    expr0 "threshold.r < 1 ? r > threshold.r ? ( -1 / (( r - threshold.r ) / ( 1 - threshold.r ) +1 ) +1 ) * ( 1 - threshold.r ) + threshold.r : r : r"
    expr1 "threshold.g < 1 ? g > threshold.g ? ( -1 / (( g - threshold.g ) / ( 1 - threshold.g ) +1 ) +1 ) * ( 1 - threshold.g ) + threshold.g : g : g"
@@ -4476,7 +4475,7 @@ push $Nb2b03c00
   xpos 571
   ypos 580
  }
-push $Na4be1400
+push $N3332cc00
  Switch {
   inputs 2
   which {{parent.applyHighlightDesat}}
@@ -4531,7 +4530,7 @@ push $Na4be1400
    xpos 862
    ypos 153
   }
-set Nb2b01400 [stack 0]
+set N32e84c00 [stack 0]
   Shuffle {
    red white
    green white
@@ -4543,7 +4542,7 @@ set Nb2b01400 [stack 0]
    xpos 1015
    ypos 144
   }
-set Nb2b01000 [stack 0]
+set N32e84800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -4554,7 +4553,7 @@ set Nb2b01000 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Nb2b01000
+push $N32e84800
   Colorspace {
    illuminant_in {{parent.parent.illuminant_in}}
    colorspace_out CIE-XYZ
@@ -4566,7 +4565,7 @@ push $Nb2b01000
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Nb2b01400
+push $N32e84c00
   BlinkScript {
    inputs 3
    recompileCount 70
@@ -4626,7 +4625,7 @@ push $Nb2b01400
   xpos -461
   ypos 909
  }
-push $N8b062800
+push $N32472000
  Dot {
   name Dot16
   note_font "Bitstream Vera Sans"
@@ -4705,7 +4704,7 @@ push $N8b062800
    xpos 862
    ypos 153
   }
-set Nb2a7d400 [stack 0]
+set N33508c00 [stack 0]
   Shuffle {
    red white
    green white
@@ -4717,7 +4716,7 @@ set Nb2a7d400 [stack 0]
    xpos 1015
    ypos 144
   }
-set Nb2a7d000 [stack 0]
+set N33508800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -4728,7 +4727,7 @@ set Nb2a7d000 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Nb2a7d000
+push $N33508800
   Colorspace {
    illuminant_in {{parent.parent.illuminant_in}}
    colorspace_out CIE-XYZ
@@ -4740,7 +4739,7 @@ push $Nb2a7d000
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Nb2a7d400
+push $N33508c00
   BlinkScript {
    inputs 3
    recompileCount 70
@@ -4776,14 +4775,14 @@ push $Nb2a7d400
   xpos -1114
   ypos -603
  }
-set Nb2a0f800 [stack 0]
+set N334a7000 [stack 0]
  Dot {
   name Dot11
   note_font "Bitstream Vera Sans"
   xpos -1309
   ypos -603
  }
-set Nb2a0f400 [stack 0]
+set N334a6c00 [stack 0]
  Group {
   name st2048_3
   label "PQ (ZCAM) to Lum"
@@ -4810,7 +4809,7 @@ set Nb2a0f400 [stack 0]
    xpos 863
    ypos 240
   }
-set Nb2a0ec00 [stack 0]
+set N334a6400 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -4844,7 +4843,7 @@ set Nb2a0ec00 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Nb2a0ec00
+push $N334a6400
   Dot {
    name Dot26
    xpos 810
@@ -4909,7 +4908,7 @@ push $Nb2a0ec00
   xpos -1343
   ypos -400
  }
-set Nb2a0d000 [stack 0]
+set N334a4800 [stack 0]
  Expression {
   expr0 "r>0.18 ? 1 : 0"
   name Expression5
@@ -4924,14 +4923,14 @@ set Nb2a0d000 [stack 0]
   xpos -1419
   ypos -282
  }
-push $Nb2a0f400
+push $N334a6c00
  Dot {
   name Dot7
   note_font "Bitstream Vera Sans"
   xpos -1608
   ypos -603
  }
-set Nb2a0c400 [stack 0]
+set N3383b800 [stack 0]
  Shuffle {
   red black
   green black
@@ -4949,7 +4948,7 @@ set Nb2a0c400 [stack 0]
   xpos -1779
   ypos -576
  }
-set Nb29cb800 [stack 0]
+set N3383b000 [stack 0]
  Dot {
   name Dot42
   note_font "Bitstream Vera Sans"
@@ -4999,7 +4998,7 @@ set Nb29cb800 [stack 0]
    xpos 863
    ypos 240
   }
-set Nb29ca400 [stack 0]
+set N33839c00 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -5033,7 +5032,7 @@ set Nb29ca400 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Nb29ca400
+push $N33839c00
   Dot {
    name Dot26
    xpos 810
@@ -5080,7 +5079,7 @@ push $Nb29ca400
    ypos 447
   }
  end_group
-push $Nb29cb800
+push $N3383b000
  Dot {
   name Dot41
   note_font "Bitstream Vera Sans"
@@ -5130,7 +5129,7 @@ push $Nb29cb800
    xpos 863
    ypos 240
   }
-set Nb296b800 [stack 0]
+set N337f7000 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -5164,7 +5163,7 @@ set Nb296b800 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Nb296b800
+push $N337f7000
   Dot {
    name Dot26
    xpos 810
@@ -5225,7 +5224,7 @@ push $Nb296b800
   xpos -1752
   ypos -405
  }
-push $Nb2a0c400
+push $N3383b800
  Merge2 {
   inputs 2
   operation plus
@@ -5248,7 +5247,7 @@ push $Nb2a0c400
   xpos -1642
   ypos -369
  }
-push $Nb2a0d000
+push $N334a4800
  BlinkScript {
   recompileCount 35
   ProgramGroup 1
@@ -5356,7 +5355,7 @@ push $Nb2a0d000
    xpos 863
    ypos 240
   }
-set Nb2968400 [stack 0]
+set N33777800 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -5390,7 +5389,7 @@ set Nb2968400 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $Nb2968400
+push $N33777800
   Dot {
    name Dot26
    xpos 810
@@ -5443,7 +5442,7 @@ push $Nb2968400
   xpos -1309
   ypos -226
  }
-set Nb28fe800 [stack 0]
+set N33776000 [stack 0]
  Dot {
   name Dot6
   note_font "Bitstream Vera Sans"
@@ -5540,7 +5539,7 @@ set Nb28fe800 [stack 0]
    xpos -284
    ypos 159
   }
-set Nb28fc800 [stack 0]
+set N33717c00 [stack 0]
   Expression {
    temp_name0 one_minus_e
    temp_expr0 "1 - pow(10,-15)"
@@ -5576,7 +5575,7 @@ set Nb28fc800 [stack 0]
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
   }
-push $Nb28fc800
+push $N33717c00
   Expression {
    expr0 "threshold.r < 1 ? r > threshold.r ? ( -1 / (( r - threshold.r ) / ( 1 - threshold.r ) +1 ) +1 ) * ( 1 - threshold.r ) + threshold.r : r : r"
    expr1 "threshold.g < 1 ? g > threshold.g ? ( -1 / (( g - threshold.g ) / ( 1 - threshold.g ) +1 ) +1 ) * ( 1 - threshold.g ) + threshold.g : g : g"
@@ -5650,15 +5649,15 @@ push $Nb28fc800
   xpos -1642
   ypos -135
  }
-push $Nb28fe800
-push $Nb2a0f800
+push $N33776000
+push $N334a7000
  Dot {
   name Dot13
   note_font "Bitstream Vera Sans"
   xpos -1114
   ypos -226
  }
-set Naafca400 [stack 0]
+set N33715c00 [stack 0]
  Switch {
   inputs 2
   which {{parent.applySSTS}}
@@ -5716,7 +5715,7 @@ set Naafca400 [stack 0]
    xpos -32
    ypos -184
   }
-set Naafc9c00 [stack 0]
+set N33715400 [stack 0]
   Dot {
    name Dot11
    xpos 114
@@ -5831,7 +5830,7 @@ set Naafc9c00 [stack 0]
    xpos 114
    ypos 53
   }
-push $Naafc9c00
+push $N33715400
 add_layer {zcam_1d zcam_1d.J zcam_1d.C zcam_1d.h zcam_1d.Q zcam_1d.M zcam_1d.H}
   MergeExpression {
    inputs 2
@@ -5857,7 +5856,7 @@ add_layer {zcam_1d zcam_1d.J zcam_1d.C zcam_1d.h zcam_1d.Q zcam_1d.M zcam_1d.H}
    ypos 117
   }
  end_group
-push $Naafca400
+push $N33715c00
  ShuffleCopy {
   inputs 2
   red red
@@ -5883,21 +5882,21 @@ push $Naafca400
   xpos -1114
   ypos -23
  }
-set Naaf59800 [stack 0]
+set N33695000 [stack 0]
  Dot {
   name Dot31
   note_font "Bitstream Vera Sans"
   xpos -1004
   ypos -23
  }
-set Naaf59400 [stack 0]
+set N33694c00 [stack 0]
  Dot {
   name Dot28
   note_font "Bitstream Vera Sans"
   xpos -854
   ypos -23
  }
-set Naaf59000 [stack 0]
+set N33694800 [stack 0]
  Shuffle {
   red white
   green white
@@ -5970,7 +5969,7 @@ set Naaf59000 [stack 0]
    xpos 862
    ypos 153
   }
-set Naaef3800 [stack 0]
+set N3363f000 [stack 0]
   Shuffle {
    red white
    green white
@@ -5982,7 +5981,7 @@ set Naaef3800 [stack 0]
    xpos 1015
    ypos 144
   }
-set Naaef3400 [stack 0]
+set N3363ec00 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -5993,7 +5992,7 @@ set Naaef3400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Naaef3400
+push $N3363ec00
   Colorspace {
    illuminant_in {{parent.referenceWhite}}
    colorspace_out CIE-XYZ
@@ -6005,7 +6004,7 @@ push $Naaef3400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Naaef3800
+push $N3363f000
   BlinkScript {
    inputs 3
    recompileCount 77
@@ -6034,7 +6033,7 @@ push $Naaef3800
    ypos 335
   }
  end_group
-push $Naaf59000
+push $N33694800
  Group {
   name ZCAM_GamutBoundaryBlink1
   note_font "Bitstream Vera Sans"
@@ -6108,7 +6107,7 @@ push $Naaf59000
    xpos 862
    ypos 153
   }
-set Naaef1000 [stack 0]
+set N3363c800 [stack 0]
   Shuffle {
    red white
    green white
@@ -6120,7 +6119,7 @@ set Naaef1000 [stack 0]
    xpos 1015
    ypos 144
   }
-set Naaef0c00 [stack 0]
+set N3363c400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -6131,7 +6130,7 @@ set Naaef0c00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Naaef0c00
+push $N3363c400
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -6143,7 +6142,7 @@ push $Naaef0c00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Naaef1000
+push $N3363c800
   BlinkScript {
    inputs 4
    recompileCount 106
@@ -6180,7 +6179,7 @@ push $Naaef1000
   xpos -854
   ypos 135
  }
-set Naae87400 [stack 0]
+set N335cec00 [stack 0]
  ShuffleCopy {
   inputs 2
   red red
@@ -6196,7 +6195,7 @@ set Naae87400 [stack 0]
   xpos -702
   ypos 188
  }
-push $Naae87400
+push $N335cec00
  Merge2 {
   inputs 2
   operation copy
@@ -6215,7 +6214,7 @@ push $Naae87400
   xpos -888
   ypos 215
  }
-push $Naaf59400
+push $N33694c00
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance} 1 1 1}
@@ -6258,7 +6257,7 @@ push $Naaf59400
   xpos -1038
   ypos 257
  }
-push $Naaf59800
+push $N33695000
  ShuffleCopy {
   inputs 2
   red red
@@ -6276,14 +6275,14 @@ push $Naaf59800
   xpos -1114
   ypos 385
  }
-set Naae85000 [stack 0]
+set N335cc800 [stack 0]
  Dot {
   name Dot2
   note_font "Bitstream Vera Sans"
   xpos -994
   ypos 385
  }
-set Naae84c00 [stack 0]
+set N335cc400 [stack 0]
  Dot {
   name Dot23
   note_font "Bitstream Vera Sans"
@@ -6365,7 +6364,7 @@ set Naae84c00 [stack 0]
    xpos 862
    ypos 153
   }
-set Naae2b000 [stack 0]
+set N3356e800 [stack 0]
   Shuffle {
    red white
    green white
@@ -6377,7 +6376,7 @@ set Naae2b000 [stack 0]
    xpos 1015
    ypos 144
   }
-set Naae2ac00 [stack 0]
+set N3356e400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -6388,7 +6387,7 @@ set Naae2ac00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Naae2ac00
+push $N3356e400
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -6400,7 +6399,7 @@ push $Naae2ac00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Naae2b000
+push $N3356e800
   BlinkScript {
    inputs 4
    recompileCount 122
@@ -6441,15 +6440,15 @@ push $Naae2b000
   xpos -884
   ypos 445
  }
-set Naae29800 [stack 0]
+set N3356d000 [stack 0]
  Dot {
   name Dot4
   note_font "Bitstream Vera Sans"
   xpos -850
   ypos 562
  }
-push $Naae84c00
-push $Naae29800
+push $N335cc400
+push $N3356d000
  Merge2 {
   inputs 2
   operation divide
@@ -6485,7 +6484,7 @@ push $Naae29800
   xpos -1028
   ypos 559
  }
-push $Naae85000
+push $N335cc800
  ShuffleCopy {
   inputs 2
   green green
@@ -6539,7 +6538,7 @@ push $Naae85000
    xpos 862
    ypos 153
   }
-set Naadbb800 [stack 0]
+set N338f3000 [stack 0]
   Shuffle {
    red white
    green white
@@ -6551,7 +6550,7 @@ set Naadbb800 [stack 0]
    xpos 1015
    ypos 144
   }
-set Naadbb400 [stack 0]
+set N338f2c00 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -6562,7 +6561,7 @@ set Naadbb400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $Naadbb400
+push $N338f2c00
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -6574,7 +6573,7 @@ push $Naadbb400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $Naadbb800
+push $N338f3000
   BlinkScript {
    inputs 3
    recompileCount 67
@@ -6711,13 +6710,13 @@ Group {
   ypos 353
  }
 end_group
-push $N1edadc00
+push $N1d8c5000
 Dot {
  name Dot2
  xpos 15
  ypos 261
 }
-set N5d806000 [stack 0]
+set N3388a800 [stack 0]
 Group {
  name ACES_OutputTransform_v1_2_1
  tile_color 0xa57aaaff
@@ -7046,13 +7045,13 @@ Group {
    xpos -6
    ypos -510
   }
-set N5e627000 [stack 0]
+set N33888400 [stack 0]
   Dot {
    name Dot4
    xpos -116
    ypos -510
   }
-set N5e626c00 [stack 0]
+set N33befc00 [stack 0]
   Expression {
    temp_name0 chroma
    temp_expr0 sqrt(b*(b-g)+g*(g-r)+r*(r-b))
@@ -7068,7 +7067,7 @@ set N5e626c00 [stack 0]
    ypos -466
   }
 push 0
-push $N5e626c00
+push $N33befc00
   Dot {
    name Dot3
    xpos -226
@@ -7088,7 +7087,7 @@ push $N5e626c00
    xpos -260
    ypos -466
   }
-set N5e626000 [stack 0]
+set N33bef000 [stack 0]
   Expression {
    channel0 {rgba.red rgba.green rgba.blue none}
    expr0 "(r - 0.4) / 0.2"
@@ -7113,7 +7112,7 @@ set N5e626000 [stack 0]
    xpos -370
    ypos -442
   }
-push $N5e626000
+push $N33bef000
   Merge2 {
    inputs 3+1
    operation plus
@@ -7124,7 +7123,7 @@ push $N5e626000
    xpos -260
    ypos -393
   }
-set N5e625400 [stack 0]
+set N33bee400 [stack 0]
   Expression {
    temp_name0 ycOut
    temp_expr0 g
@@ -7140,7 +7139,7 @@ set N5e625400 [stack 0]
    xpos -150
    ypos -346
   }
-push $N5e625400
+push $N33bee400
   Expression {
    temp_name0 ycIn
    temp_expr0 g
@@ -7169,7 +7168,7 @@ push $N5e625400
    xpos -226
    ypos -246
   }
-push $N5e627000
+push $N33888400
   Merge2 {
    inputs 2
    operation multiply
@@ -7213,13 +7212,13 @@ push $N5e627000
    xpos -6
    ypos 42
   }
-set N5e5bf400 [stack 0]
+set N33bec800 [stack 0]
   Dot {
    name Dot2
    xpos -226
    ypos 42
   }
-set N5e5bf000 [stack 0]
+set N33bec400 [stack 0]
   Expression {
    temp_name0 TINY
    temp_expr0 1e-10
@@ -7237,7 +7236,7 @@ set N5e5bf000 [stack 0]
    xpos -260
    ypos 86
   }
-push $N5e5bf000
+push $N33bec400
   Dot {
    name Dot3
    xpos -336
@@ -7318,14 +7317,14 @@ push $N5e5bf000
    xpos -226
    ypos 330
   }
-set N5e5bcc00 [stack 0]
-push $N5e5bf400
+set N33b89c00 [stack 0]
+push $N33bec800
   Dot {
    name Dot8
    xpos -6
    ypos 258
   }
-set N5e5bc800 [stack 0]
+set N33b89800 [stack 0]
   MergeExpression {
    inputs 2
    temp_name0 minChan
@@ -7342,8 +7341,8 @@ set N5e5bc800 [stack 0]
    xpos -150
    ypos 351
   }
-push $N5e5bcc00
-push $N5e5bc800
+push $N33b89c00
+push $N33b89800
   MergeExpression {
    inputs 2
    expr0 "r + Ar * Ab * (RRT_RED_PIVOT - r) * (1. - RRT_RED_SCALE)"
@@ -7419,7 +7418,7 @@ push $N5e5bc800
   xpos -1216
   ypos -558
  }
-set N5e55a400 [stack 0]
+set N33b13400 [stack 0]
  Group {
   name ssts
   xpos -1250
@@ -7495,42 +7494,42 @@ set N5e55a400 [stack 0]
    xpos -996
    ypos -318
   }
-set N5e559c00 [stack 0]
+set N33b12c00 [stack 0]
   Dot {
    name Dot26
    label " "
    xpos -996
    ypos 1506
   }
-push $N5e559c00
+push $N33b12c00
   Dot {
    name Dot4
    label " "
    xpos -886
    ypos -318
   }
-set N5e559400 [stack 0]
+set N33b12400 [stack 0]
   Dot {
    name Dot5
    label " "
    xpos -776
    ypos -318
   }
-set N5e559000 [stack 0]
+set N33b12000 [stack 0]
   Dot {
    name Dot2
    label " "
    xpos -666
    ypos -318
   }
-set N5e558c00 [stack 0]
+set N33b11c00 [stack 0]
   Dot {
    name Dot3
    label " "
    xpos -556
    ypos -318
   }
-set N5e558800 [stack 0]
+set N33b11800 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -7551,14 +7550,14 @@ set N5e558800 [stack 0]
    xpos -556
    ypos 162
   }
-push $N5e558800
+push $N33b11800
   Dot {
    name Dot7
    label " "
    xpos -336
    ypos -318
   }
-set N5e4fb800 [stack 0]
+set N33b10c00 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -7589,7 +7588,7 @@ set N5e4fb800 [stack 0]
    xpos -336
    ypos 786
   }
-push $N5e558c00
+push $N33b11c00
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -7610,28 +7609,28 @@ push $N5e558c00
    xpos -666
    ypos 354
   }
-push $N5e4fb800
+push $N33b10c00
   Dot {
    name Dot9
    label " "
    xpos -6
    ypos -318
   }
-set N5e4fa000 [stack 0]
+set N33ac3000 [stack 0]
   Dot {
    name Dot6
    label " "
    xpos -6
    ypos -198
   }
-set N5e4f9c00 [stack 0]
+set N33ac2c00 [stack 0]
   Dot {
    name Dot8
    label " "
    xpos 214
    ypos -198
   }
-set N5e4f9800 [stack 0]
+set N33ac2800 [stack 0]
   Dot {
    name Dot13
    label " "
@@ -7644,7 +7643,7 @@ set N5e4f9800 [stack 0]
    xpos 434
    ypos -78
   }
-set N5e4f9000 [stack 0]
+set N33ac2000 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -7672,7 +7671,7 @@ set N5e4f9000 [stack 0]
    xpos 290
    ypos 8
   }
-push $N5e4f9000
+push $N33ac2000
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -7702,14 +7701,14 @@ push $N5e4f9000
    ypos 8
   }
 push 0
-push $N5e4f9800
+push $N33ac2800
   Dot {
    name Dot11
    label " "
    xpos 214
    ypos -78
   }
-set N5e4ab800 [stack 0]
+set N33ac0c00 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -7737,7 +7736,7 @@ set N5e4ab800 [stack 0]
    xpos 70
    ypos 8
   }
-push $N5e4ab800
+push $N33ac0c00
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -7766,14 +7765,14 @@ push $N5e4ab800
    xpos 180
    ypos 8
   }
-push $N5e4f9c00
+push $N33ac2c00
   Dot {
    name Dot10
    label " "
    xpos -6
    ypos -78
   }
-set N5e4aa400 [stack 0]
+set N33a77400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -7801,7 +7800,7 @@ set N5e4aa400 [stack 0]
    xpos -150
    ypos 8
   }
-push $N5e4aa400
+push $N33a77400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -7854,7 +7853,7 @@ push $N5e4aa400
    ypos 786
   }
 push 0
-push $N5e559000
+push $N33b12000
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -7875,28 +7874,28 @@ push $N5e559000
    xpos -776
    ypos 474
   }
-push $N5e4fa000
+push $N33ac3000
   Dot {
    name Dot14
    label " "
    xpos 764
    ypos -318
   }
-set N5e43f800 [stack 0]
+set N33a74c00 [stack 0]
   Dot {
    name Dot15
    label " "
    xpos 764
    ypos -198
   }
-set N5e43f400 [stack 0]
+set N33a74800 [stack 0]
   Dot {
    name Dot17
    label " "
    xpos 984
    ypos -198
   }
-set N5e43f000 [stack 0]
+set N33a74400 [stack 0]
   Dot {
    name Dot20
    label " "
@@ -7909,7 +7908,7 @@ set N5e43f000 [stack 0]
    xpos 1204
    ypos -78
   }
-set N5e43e800 [stack 0]
+set N33a0f800 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -7938,7 +7937,7 @@ set N5e43e800 [stack 0]
    xpos 1060
    ypos 8
   }
-push $N5e43e800
+push $N33a0f800
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -7968,14 +7967,14 @@ push $N5e43e800
    ypos 8
   }
 push 0
-push $N5e43f000
+push $N33a74400
   Dot {
    name Dot18
    label " "
    xpos 984
    ypos -78
   }
-set N5e43d400 [stack 0]
+set N33a0e400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -8004,7 +8003,7 @@ set N5e43d400 [stack 0]
    xpos 840
    ypos 8
   }
-push $N5e43d400
+push $N33a0e400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -8033,14 +8032,14 @@ push $N5e43d400
    xpos 950
    ypos 8
   }
-push $N5e43f400
+push $N33a74800
   Dot {
    name Dot16
    label " "
    xpos 764
    ypos -78
   }
-set N5e3dbc00 [stack 0]
+set N33a0d000 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -8069,7 +8068,7 @@ set N5e3dbc00 [stack 0]
    xpos 620
    ypos 8
   }
-push $N5e3dbc00
+push $N33a0d000
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -8121,7 +8120,7 @@ push $N5e3dbc00
    xpos 984
    ypos 786
   }
-push $N5e559400
+push $N33b12400
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -8142,7 +8141,7 @@ push $N5e559400
    xpos -886
    ypos 618
   }
-push $N5e43f800
+push $N33a74c00
   Dot {
    name Dot21
    label " "
@@ -8220,7 +8219,7 @@ push $N5e43f800
   xpos -1216
   ypos -462
  }
-set N5e37f000 [stack 0]
+set N339a0400 [stack 0]
  Dot {
   name Dot22
   label " "
@@ -8251,7 +8250,7 @@ set N5e37f000 [stack 0]
   xpos -1656
   ypos 2658
  }
-push $N5e37f000
+push $N339a0400
  Dot {
   name Dot28
   label " "
@@ -8261,7 +8260,7 @@ push $N5e37f000
   xpos -1216
   ypos -342
  }
-set N5e37e000 [stack 0]
+set N33d3b000 [stack 0]
  Group {
   name segmented_spline_c9_fwd
   xpos -1140
@@ -8297,42 +8296,42 @@ set N5e37e000 [stack 0]
    xpos -996
    ypos -318
   }
-set N5e37d800 [stack 0]
+set N33d3a800 [stack 0]
   Dot {
    name Dot26
    label " "
    xpos -996
    ypos 1506
   }
-push $N5e37d800
+push $N33d3a800
   Dot {
    name Dot4
    label " "
    xpos -886
    ypos -318
   }
-set N5e37d000 [stack 0]
+set N33d3a000 [stack 0]
   Dot {
    name Dot5
    label " "
    xpos -776
    ypos -318
   }
-set N5e37cc00 [stack 0]
+set N33d39c00 [stack 0]
   Dot {
    name Dot2
    label " "
    xpos -666
    ypos -318
   }
-set N5e37c800 [stack 0]
+set N33d39800 [stack 0]
   Dot {
    name Dot3
    label " "
    xpos -556
    ypos -318
   }
-set N5e37c400 [stack 0]
+set N33d39400 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -8353,14 +8352,14 @@ set N5e37c400 [stack 0]
    xpos -556
    ypos 162
   }
-push $N5e37c400
+push $N33d39400
   Dot {
    name Dot7
    label " "
    xpos -336
    ypos -318
   }
-set N5e733400 [stack 0]
+set N33d38800 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -8391,7 +8390,7 @@ set N5e733400 [stack 0]
    xpos -336
    ypos 786
   }
-push $N5e37c800
+push $N33d39800
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -8412,28 +8411,28 @@ push $N5e37c800
    xpos -666
    ypos 354
   }
-push $N5e733400
+push $N33d38800
   Dot {
    name Dot9
    label " "
    xpos -6
    ypos -318
   }
-set N5e731c00 [stack 0]
+set N33d06c00 [stack 0]
   Dot {
    name Dot6
    label " "
    xpos -6
    ypos -198
   }
-set N5e731800 [stack 0]
+set N33d06800 [stack 0]
   Dot {
    name Dot8
    label " "
    xpos 214
    ypos -198
   }
-set N5e731400 [stack 0]
+set N33d06400 [stack 0]
   Dot {
    name Dot13
    label " "
@@ -8446,7 +8445,7 @@ set N5e731400 [stack 0]
    xpos 434
    ypos -78
   }
-set N5e730c00 [stack 0]
+set N33d05c00 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -8475,7 +8474,7 @@ set N5e730c00 [stack 0]
    xpos 290
    ypos 8
   }
-push $N5e730c00
+push $N33d05c00
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -8505,14 +8504,14 @@ push $N5e730c00
    ypos 8
   }
 push 0
-push $N5e731400
+push $N33d06400
   Dot {
    name Dot11
    label " "
    xpos 214
    ypos -78
   }
-set N5e6e3400 [stack 0]
+set N33d04800 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -8541,7 +8540,7 @@ set N5e6e3400 [stack 0]
    xpos 70
    ypos 8
   }
-push $N5e6e3400
+push $N33d04800
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -8570,14 +8569,14 @@ push $N5e6e3400
    xpos 180
    ypos 8
   }
-push $N5e731800
+push $N33d06800
   Dot {
    name Dot10
    label " "
    xpos -6
    ypos -78
   }
-set N5e6e2000 [stack 0]
+set N33caf000 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -8606,7 +8605,7 @@ set N5e6e2000 [stack 0]
    xpos -150
    ypos 8
   }
-push $N5e6e2000
+push $N33caf000
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -8659,7 +8658,7 @@ push $N5e6e2000
    ypos 786
   }
 push 0
-push $N5e37cc00
+push $N33d39c00
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -8680,28 +8679,28 @@ push $N5e37cc00
    xpos -776
    ypos 474
   }
-push $N5e731c00
+push $N33d06c00
   Dot {
    name Dot14
    label " "
    xpos 764
    ypos -318
   }
-set N5e67b400 [stack 0]
+set N33cac800 [stack 0]
   Dot {
    name Dot15
    label " "
    xpos 764
    ypos -198
   }
-set N5e67b000 [stack 0]
+set N33cac400 [stack 0]
   Dot {
    name Dot17
    label " "
    xpos 984
    ypos -198
   }
-set N5e67ac00 [stack 0]
+set N3403fc00 [stack 0]
   Dot {
    name Dot20
    label " "
@@ -8714,7 +8713,7 @@ set N5e67ac00 [stack 0]
    xpos 1204
    ypos -78
   }
-set N5e67a400 [stack 0]
+set N3403f400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -8743,7 +8742,7 @@ set N5e67a400 [stack 0]
    xpos 1060
    ypos 8
   }
-push $N5e67a400
+push $N3403f400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -8773,14 +8772,14 @@ push $N5e67a400
    ypos 8
   }
 push 0
-push $N5e67ac00
+push $N3403fc00
   Dot {
    name Dot18
    label " "
    xpos 984
    ypos -78
   }
-set N5e679000 [stack 0]
+set N3403e000 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -8809,7 +8808,7 @@ set N5e679000 [stack 0]
    xpos 840
    ypos 8
   }
-push $N5e679000
+push $N3403e000
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -8838,14 +8837,14 @@ push $N5e679000
    xpos 950
    ypos 8
   }
-push $N5e67b000
+push $N33cac400
   Dot {
    name Dot16
    label " "
    xpos 764
    ypos -78
   }
-set N5ea1f800 [stack 0]
+set N3403cc00 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -8874,7 +8873,7 @@ set N5ea1f800 [stack 0]
    xpos 620
    ypos 8
   }
-push $N5ea1f800
+push $N3403cc00
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -8926,7 +8925,7 @@ push $N5ea1f800
    xpos 984
    ypos 786
   }
-push $N5e37d000
+push $N33d3a000
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -8947,7 +8946,7 @@ push $N5e37d000
    xpos -886
    ypos 618
   }
-push $N5e67b400
+push $N33cac800
   Dot {
    name Dot21
    label " "
@@ -9011,7 +9010,7 @@ push $N5e67b400
    ypos 1814
   }
  end_group
-push $N5e37e000
+push $N33d3b000
  Switch {
   inputs 2
   which {{parent.use_c9}}
@@ -9042,7 +9041,7 @@ push $N5e37e000
   xpos -1216
   ypos 282
  }
-set N5e9aac00 [stack 0]
+set N33f6bc00 [stack 0]
  Dot {
   name Dot15
   label " "
@@ -9052,7 +9051,7 @@ set N5e9aac00 [stack 0]
   xpos -1106
   ypos 282
  }
-set N5e9aa800 [stack 0]
+set N33f6b800 [stack 0]
  Dot {
   name Dot13
   label " "
@@ -9071,7 +9070,7 @@ set N5e9aa800 [stack 0]
   xpos -886
   ypos 354
  }
-set N5e9aa000 [stack 0]
+set N33f6b000 [stack 0]
  Expression {
   temp_name0 tr
   temp_expr0 "(-r - c_x_0) / (c_x_1 - c_x_0)"
@@ -9129,7 +9128,7 @@ set N5e9aa000 [stack 0]
   xpos -886
   ypos 498
  }
-push $N5e9aa000
+push $N33f6b000
  Expression {
   temp_name0 SCALE
   temp_expr0 0.96362
@@ -9141,7 +9140,7 @@ push $N5e9aa000
   xpos -1030
   ypos 344
  }
-push $N5e9aa800
+push $N33f6b800
  Switch {
   inputs 2
   which {{"parent.display_pri < 3"}}
@@ -9158,7 +9157,7 @@ push $N5e9aa800
   xpos -1106
   ypos 426
  }
-push $N5e9aac00
+push $N33f6bc00
  Switch {
   inputs 2
   which {{parent.d60_sim}}
@@ -9182,7 +9181,7 @@ push $N5e9aac00
   xpos -1216
   ypos 762
  }
-set N5e9a8800 [stack 0]
+set N33f69800 [stack 0]
  ColorMatrix {
   matrix {
       {{"(1.0 - sat) * rgb2Y.x + sat"} {"(1.0 - sat) * rgb2Y.y"} {"(1.0 - sat) * rgb2Y.z"}}
@@ -9199,7 +9198,7 @@ set N5e9a8800 [stack 0]
   addUserKnob {7 sat}
   sat 0.93
  }
-push $N5e9a8800
+push $N33f69800
  Switch {
   inputs 2
   which {{"parent.eotf < 5 && display_pri < 2"}}
@@ -9228,7 +9227,7 @@ push $N5e9a8800
   xpos -1216
   ypos 1146
  }
-set N5e93f800 [stack 0]
+set N33f68c00 [stack 0]
  Colorspace {
   colorspace_in CIE-XYZ
   colorspace_out CIE-Yxy
@@ -9264,7 +9263,7 @@ set N5e93f800 [stack 0]
   xpos -1140
   ypos 1256
  }
-push $N5e93f800
+push $N33f68c00
  Switch {
   inputs 2
   which {{"(parent.eotf <= 4) ? parent.dark_to_dim : 0"}}
@@ -9282,7 +9281,7 @@ push $N5e93f800
   xpos -1216
   ypos 1434
  }
-set N5e93e400 [stack 0]
+set N33ef3400 [stack 0]
  Dot {
   name Dot9
   label " "
@@ -9292,7 +9291,7 @@ set N5e93e400 [stack 0]
   xpos -1106
   ypos 1434
  }
-set N5e93e000 [stack 0]
+set N33ef3000 [stack 0]
  ColorMatrix {
   matrix {
       {0.9872254133 -0.006114810705 0.01592640579}
@@ -9304,8 +9303,8 @@ set N5e93e000 [stack 0]
   xpos -1140
   ypos 1466
  }
-set N5e93dc00 [stack 0]
-push $N5e93e000
+set N33ef2c00 [stack 0]
+push $N33ef3000
  Dot {
   name Dot10
   label " "
@@ -9315,7 +9314,7 @@ push $N5e93e000
   xpos -996
   ypos 1434
  }
-push $N5e93dc00
+push $N33ef2c00
  Switch {
   inputs 2
   which {{parent.d60_sim}}
@@ -9323,7 +9322,7 @@ push $N5e93dc00
   xpos -1140
   ypos 1550
  }
-push $N5e93e400
+push $N33ef3400
  Switch {
   inputs 2
   which {{"parent.display_pri < 3"}}
@@ -9363,8 +9362,8 @@ push $N5e93e400
    xpos -6
    ypos -198
   }
-set N5e93d000 [stack 0]
-push $N5e93d000
+set N33ef2000 [stack 0]
+push $N33ef2000
   ColorMatrix {
    matrix {
        {1.049811006 0 -9.748453158e-05}
@@ -9376,7 +9375,7 @@ push $N5e93d000
    xpos 730
    ypos -136
   }
-push $N5e93d000
+push $N33ef2000
   ColorMatrix {
    matrix {
        {1.641023397 -0.3248033226 -0.2364246994}
@@ -9388,7 +9387,7 @@ push $N5e93d000
    xpos 620
    ypos -136
   }
-push $N5e93d000
+push $N33ef2000
   ColorMatrix {
    matrix {
        {2.402741432 -0.8974840641 -0.3880533576}
@@ -9400,7 +9399,7 @@ push $N5e93d000
    xpos 510
    ypos -136
   }
-push $N5e93d000
+push $N33ef2000
   ColorMatrix {
    matrix {
        {2.725393534 -1.018002748 -0.4401631057}
@@ -9412,7 +9411,7 @@ push $N5e93d000
    xpos 400
    ypos -136
   }
-push $N5e93d000
+push $N33ef2000
   ColorMatrix {
    matrix {
        {2.493496418 -0.9313833117 -0.4027107358}
@@ -9424,7 +9423,7 @@ push $N5e93d000
    xpos 290
    ypos -136
   }
-push $N5e93d000
+push $N33ef2000
   ColorMatrix {
    matrix {
        {1.71665132 -0.3556708097 -0.2533662617}
@@ -9436,7 +9435,7 @@ push $N5e93d000
    xpos 180
    ypos -136
   }
-push $N5e93d000
+push $N33ef2000
   ColorMatrix {
    matrix {
        {3.240970135 -1.537383318 -0.4986107945}
@@ -9471,8 +9470,8 @@ push $N5e93d000
    xpos -6
    ypos 162
   }
-set N5e8ce800 [stack 0]
-push $N5e8ce800
+set N33e8f800 [stack 0]
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.9525524378 0 9.367863095e-05}
@@ -9484,7 +9483,7 @@ push $N5e8ce800
    xpos 730
    ypos 224
   }
-push $N5e8ce800
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.6624541879 0.1340042055 0.1561876982}
@@ -9496,7 +9495,7 @@ push $N5e8ce800
    xpos 620
    ypos 224
   }
-push $N5e8ce800
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.5049495697 0.2646814585 0.1830150485}
@@ -9508,7 +9507,7 @@ push $N5e8ce800
    xpos 510
    ypos 224
   }
-push $N5e8ce800
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.4451698363 0.2771343887 0.1722826511}
@@ -9520,7 +9519,7 @@ push $N5e8ce800
    xpos 400
    ypos 224
   }
-push $N5e8ce800
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.4865709841 0.2656676769 0.1982172877}
@@ -9532,7 +9531,7 @@ push $N5e8ce800
    xpos 290
    ypos 224
   }
-push $N5e8ce800
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.6369580626 0.1446169019 0.1688809693}
@@ -9544,7 +9543,7 @@ push $N5e8ce800
    xpos 180
    ypos 224
   }
-push $N5e8ce800
+push $N33e8f800
   ColorMatrix {
    matrix {
        {0.4123907983 0.3575843275 0.180480808}
@@ -9593,8 +9592,8 @@ push $N5e8ce800
    xpos -6
    ypos -198
   }
-set N5e843c00 [stack 0]
-push $N5e843c00
+set N33e8d000 [stack 0]
+push $N33e8d000
   ColorMatrix {
    matrix {
        {1.049811006 0 -9.748453158e-05}
@@ -9606,7 +9605,7 @@ push $N5e843c00
    xpos 730
    ypos -136
   }
-push $N5e843c00
+push $N33e8d000
   ColorMatrix {
    matrix {
        {1.641023397 -0.3248033226 -0.2364246994}
@@ -9618,7 +9617,7 @@ push $N5e843c00
    xpos 620
    ypos -136
   }
-push $N5e843c00
+push $N33e8d000
   ColorMatrix {
    matrix {
        {2.402741432 -0.8974840641 -0.3880533576}
@@ -9630,7 +9629,7 @@ push $N5e843c00
    xpos 510
    ypos -136
   }
-push $N5e843c00
+push $N33e8d000
   ColorMatrix {
    matrix {
        {2.725393534 -1.018002748 -0.4401631057}
@@ -9642,7 +9641,7 @@ push $N5e843c00
    xpos 400
    ypos -136
   }
-push $N5e843c00
+push $N33e8d000
   ColorMatrix {
    matrix {
        {2.493496418 -0.9313833117 -0.4027107358}
@@ -9654,7 +9653,7 @@ push $N5e843c00
    xpos 290
    ypos -136
   }
-push $N5e843c00
+push $N33e8d000
   ColorMatrix {
    matrix {
        {1.71665132 -0.3556708097 -0.2533662617}
@@ -9666,7 +9665,7 @@ push $N5e843c00
    xpos 180
    ypos -136
   }
-push $N5e843c00
+push $N33e8d000
   ColorMatrix {
    matrix {
        {3.240970135 -1.537383318 -0.4986107945}
@@ -9706,8 +9705,8 @@ push $N5e843c00
   xpos -1216
   ypos 2514
  }
-set N5e841400 [stack 0]
-push $N5e841400
+set N33e12400 [stack 0]
+push $N33e12400
  Dot {
   name Dot3
   label " "
@@ -9717,7 +9716,7 @@ push $N5e841400
   xpos -886
   ypos 2514
  }
-set N5e841000 [stack 0]
+set N33e12000 [stack 0]
  Dot {
   name Dot4
   label " "
@@ -9727,7 +9726,7 @@ set N5e841000 [stack 0]
   xpos -666
   ypos 2514
  }
-set N5e840c00 [stack 0]
+set N33e11c00 [stack 0]
  Dot {
   name Dot6
   label " "
@@ -9737,7 +9736,7 @@ set N5e840c00 [stack 0]
   xpos -446
   ypos 2514
  }
-set N5e840800 [stack 0]
+set N33e11800 [stack 0]
  Dot {
   name Dot18
   label " "
@@ -9747,7 +9746,7 @@ set N5e840800 [stack 0]
   xpos -226
   ypos 2514
  }
-set N5e840400 [stack 0]
+set N33e11400 [stack 0]
  Dot {
   name Dot20
   label " "
@@ -9757,7 +9756,7 @@ set N5e840400 [stack 0]
   xpos -6
   ypos 2514
  }
-set N5e7ffc00 [stack 0]
+set N33e11000 [stack 0]
  Dot {
   name Dot25
   label " "
@@ -9767,7 +9766,7 @@ set N5e7ffc00 [stack 0]
   xpos 214
   ypos 2514
  }
-set N5e7ff800 [stack 0]
+set N33e10c00 [stack 0]
  Dot {
   name Dot24
   label " "
@@ -9786,7 +9785,7 @@ set N5e7ff800 [stack 0]
   xpos 654
   ypos 2610
  }
-set N5e7ff000 [stack 0]
+set N33e10400 [stack 0]
  Expression {
   expr0 "r * (Ymax - Ymin) + Ymin"
   expr1 "g * (Ymax - Ymin) + Ymin"
@@ -9800,7 +9799,7 @@ set N5e7ff000 [stack 0]
   addUserKnob {7 Ymax R 48 10000}
   Ymax {{parent.lum.2}}
  }
-push $N5e7ff000
+push $N33e10400
  Expression {
   expr0 "r * (Ymax - Ymin) + Ymin"
   expr1 "g * (Ymax - Ymin) + Ymin"
@@ -9857,7 +9856,7 @@ push $N5e7ff000
   addUserKnob {7 pq_C +DISABLED R 0 100}
   pq_C 10000
  }
-set N5e7fe000 [stack 0]
+set N33dcb000 [stack 0]
  Dot {
   name Dot5
   label " "
@@ -9942,7 +9941,7 @@ set N5e7fe000 [stack 0]
   xpos 984
   ypos 2970
  }
-push $N5e7fe000
+push $N33dcb000
  Dot {
   name Dot27
   label " PQ"
@@ -9952,7 +9951,7 @@ push $N5e7fe000
   xpos 654
   ypos 2970
  }
-push $N5e7ff800
+push $N33e10c00
  Expression {
   expr0 "pow( (48./52.37) * r, 1./2.6)"
   expr1 "pow( (48./52.37) * g, 1./2.6)"
@@ -9962,7 +9961,7 @@ push $N5e7ff800
   xpos 180
   ypos 2702
  }
-push $N5e7ffc00
+push $N33e11000
  Expression {
   expr0 pow(r,1/gamma)
   expr1 pow(g,1/gamma)
@@ -9975,7 +9974,7 @@ push $N5e7ffc00
   addUserKnob {7 gamma R 0 4}
   gamma 2.6
  }
-push $N5e840400
+push $N33e11400
  Expression {
   expr0 pow(r,1/gamma)
   expr1 pow(g,1/gamma)
@@ -9988,7 +9987,7 @@ push $N5e840400
   addUserKnob {7 gamma R 0 4}
   gamma 2.4
  }
-push $N5e840800
+push $N33e11800
  Expression {
   expr0 pow(r,1/gamma)
   expr1 pow(g,1/gamma)
@@ -10001,7 +10000,7 @@ push $N5e840800
   addUserKnob {7 gamma R 0 4}
   gamma 2.2
  }
-push $N5e840c00
+push $N33e11c00
  Expression {
   temp_name0 c_a
   temp_expr0 "pow( pow( Lw, 1./gamma) - pow( Lb, 1./gamma), gamma)"
@@ -10021,7 +10020,7 @@ push $N5e840c00
   addUserKnob {7 gamma R 1 4}
   gamma 2.4
  }
-push $N5e841000
+push $N33e12000
  Expression {
   temp_name0 yb
   temp_expr0 "pow( offs * gamma / ( ( gamma - 1.0) * ( 1.0 + offs)), gamma)"
@@ -10093,7 +10092,7 @@ push $N5e841000
   xpos -200
   ypos -660
  }
-push $N5e55a400
+push $N33b13400
  Reformat {
   type "to box"
   box_width 4
@@ -10192,42 +10191,42 @@ push $N5e55a400
    xpos -996
    ypos -318
   }
-set N5e794400 [stack 0]
+set N3414d400 [stack 0]
   Dot {
    name Dot26
    label " "
    xpos -996
    ypos 1506
   }
-push $N5e794400
+push $N3414d400
   Dot {
    name Dot4
    label " "
    xpos -886
    ypos -318
   }
-set N5eb27800 [stack 0]
+set N3414cc00 [stack 0]
   Dot {
    name Dot5
    label " "
    xpos -776
    ypos -318
   }
-set N5eb27400 [stack 0]
+set N3414c800 [stack 0]
   Dot {
    name Dot2
    label " "
    xpos -666
    ypos -318
   }
-set N5eb27000 [stack 0]
+set N3414c400 [stack 0]
   Dot {
    name Dot3
    label " "
    xpos -556
    ypos -318
   }
-set N5eb26c00 [stack 0]
+set N340fbc00 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10248,14 +10247,14 @@ set N5eb26c00 [stack 0]
    xpos -556
    ypos 162
   }
-push $N5eb26c00
+push $N340fbc00
   Dot {
    name Dot7
    label " "
    xpos -336
    ypos -318
   }
-set N5eb26000 [stack 0]
+set N340fb000 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10286,7 +10285,7 @@ set N5eb26000 [stack 0]
    xpos -336
    ypos 786
   }
-push $N5eb27000
+push $N3414c400
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10307,28 +10306,28 @@ push $N5eb27000
    xpos -666
    ypos 354
   }
-push $N5eb26000
+push $N340fb000
   Dot {
    name Dot9
    label " "
    xpos -6
    ypos -318
   }
-set N5eb24800 [stack 0]
+set N340f9800 [stack 0]
   Dot {
    name Dot6
    label " "
    xpos -6
    ypos -174
   }
-set N5eb24400 [stack 0]
+set N340f9400 [stack 0]
   Dot {
    name Dot8
    label " "
    xpos 214
    ypos -174
   }
-set N5eadfc00 [stack 0]
+set N340f9000 [stack 0]
   Dot {
    name Dot13
    label " "
@@ -10340,7 +10339,7 @@ set N5eadfc00 [stack 0]
    xpos 434
    ypos -78
   }
-set N5eadf400 [stack 0]
+set N340f8800 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(b, 1e-10 ))"
@@ -10369,7 +10368,7 @@ set N5eadf400 [stack 0]
    xpos 290
    ypos -34
   }
-push $N5eadf400
+push $N340f8800
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -10407,13 +10406,13 @@ push $N5eadf400
    min {{parent.min.x} {parent.min.y} {parent.minSlope}}
   }
 push 0
-push $N5eb24400
+push $N340f9400
   Dot {
    name Dot10
    xpos -6
    ypos -78
   }
-set N5eade000 [stack 0]
+set N340b7000 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10442,7 +10441,7 @@ set N5eade000 [stack 0]
    xpos -150
    ypos -34
   }
-push $N5eade000
+push $N340b7000
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -10479,13 +10478,13 @@ push $N5eade000
    addUserKnob {13 min l Min}
    min {{parent.min.x} {parent.min.y} {parent.minSlope}}
   }
-push $N5eadfc00
+push $N340f9000
   Dot {
    name Dot18
    xpos 214
    ypos -78
   }
-set N5eadcc00 [stack 0]
+set N340b5c00 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(g, 1e-10 ))"
@@ -10514,7 +10513,7 @@ set N5eadcc00 [stack 0]
    xpos 70
    ypos -34
   }
-push $N5eadcc00
+push $N340b5c00
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -10574,7 +10573,7 @@ push $N5eadcc00
    ypos 786
   }
 push 0
-push $N5eb27400
+push $N3414c800
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10595,28 +10594,28 @@ push $N5eb27400
    xpos -776
    ypos 474
   }
-push $N5eb24800
+push $N340f9800
   Dot {
    name Dot14
    label " "
    xpos 764
    ypos -318
   }
-set N5ea7e000 [stack 0]
+set N34433000 [stack 0]
   Dot {
    name Dot15
    label " "
    xpos 764
    ypos -174
   }
-set N5ea7dc00 [stack 0]
+set N34432c00 [stack 0]
   Dot {
    name Dot17
    label " "
    xpos 984
    ypos -174
   }
-set N5ea7d800 [stack 0]
+set N34432800 [stack 0]
   Dot {
    name Dot20
    label " "
@@ -10628,7 +10627,7 @@ set N5ea7d800 [stack 0]
    xpos 1204
    ypos -78
   }
-set N5ea7d000 [stack 0]
+set N34432000 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(b, 1e-10 ))"
@@ -10657,7 +10656,7 @@ set N5ea7d000 [stack 0]
    xpos 1060
    ypos -34
   }
-push $N5ea7d000
+push $N34432000
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -10690,13 +10689,13 @@ push $N5ea7d000
    ypos 14
   }
 push 0
-push $N5ea7dc00
+push $N34432c00
   Dot {
    name Dot11
    xpos 764
    ypos -78
   }
-set N5ee13800 [stack 0]
+set N34430c00 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10725,7 +10724,7 @@ set N5ee13800 [stack 0]
    xpos 620
    ypos -34
   }
-push $N5ee13800
+push $N34430c00
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -10757,13 +10756,13 @@ push $N5ee13800
    xpos 730
    ypos 14
   }
-push $N5ea7d800
+push $N34432800
   Dot {
    name Dot12
    xpos 984
    ypos -78
   }
-set N5ee12400 [stack 0]
+set N343e3400 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(g, 1e-10 ))"
@@ -10792,7 +10791,7 @@ set N5ee12400 [stack 0]
    xpos 840
    ypos -34
   }
-push $N5ee12400
+push $N343e3400
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -10847,7 +10846,7 @@ push $N5ee12400
    xpos 984
    ypos 786
   }
-push $N5eb27800
+push $N3414cc00
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -10868,7 +10867,7 @@ push $N5eb27800
    xpos -886
    ypos 618
   }
-push $N5ea7e000
+push $N34433000
   Dot {
    name Dot21
    label " "
@@ -10985,7 +10984,7 @@ Group {
   ypos 353
  }
 end_group
-push $N1edad800
+push $N1d8c4c00
 Group {
  name OpenDRT
  label Rec709
@@ -11023,7 +11022,7 @@ Group {
   xpos 180
   ypos -586
  }
-set N1edad400 [stack 0]
+set N34379c00 [stack 0]
  Group {
   name EOTF
   xpos 510
@@ -11038,7 +11037,7 @@ set N1edad400 [stack 0]
    xpos 400
    ypos -130
   }
-set N1edad000 [stack 0]
+set N34379800 [stack 0]
   Expression {
    expr0 r<=0.5?r*r/3:(exp((r-_c)/_a)+_b)/12
    expr1 g<=0.5?g*g/3:(exp((g-_c)/_a)+_b)/12
@@ -11072,7 +11071,7 @@ set N1edad000 [stack 0]
    addUserKnob {7 Lamb t "ambient luminance level in nits" R 0 200}
    Lamb 5
   }
-push $N1edad000
+push $N34379800
   Expression {
    temp_name0 rp
    temp_expr0 pow(r,1/m_2)
@@ -11098,7 +11097,7 @@ push $N1edad000
    addUserKnob {7 c_3}
    c_3 {{2392/128}}
   }
-push $N1edad000
+push $N34379800
   Expression {
    expr0 sign(r)*pow(fabs(r),p)
    expr1 sign(g)*pow(fabs(g),p)
@@ -11176,7 +11175,7 @@ push $N1edad000
   addUserKnob {7 n R 0 4}
   n {{parent.Scale.wn}}
  }
-set N1ed3a800 [stack 0]
+set N342ff000 [stack 0]
  Expression {
   expr0 r*w.0
   expr1 g*w.1
@@ -11333,7 +11332,7 @@ set N1ed3a800 [stack 0]
    ypos -58
   }
  end_group
-push $N1ed3a800
+push $N342ff000
  Expression {
   temp_name0 n
   temp_expr0 sqrt(pow(w.0*r,2)+pow(w.1*g,2)+pow(w.2*b,2))/sum
@@ -11673,7 +11672,7 @@ push $N1ed3a800
   xpos 510
   ypos 38
  }
-push $N1edad400
+push $N34379c00
  Group {
   name InGamut_to_XYZ
   tile_color 0x429940ff
@@ -11695,7 +11694,7 @@ push $N1edad400
    xpos 324
    ypos -546
   }
-set N1eedec00 [stack 0]
+set N3419f400 [stack 0]
   ColorMatrix {
    matrix {
        {{"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"}}
@@ -11711,14 +11710,14 @@ set N1eedec00 [stack 0]
    xpos 290
    ypos -250
   }
-push $N1eedec00
+push $N3419f400
   Dot {
    name Dot391
    label " *RGB to XYZ D65 CAT: XYZ Scaling"
    xpos 434
    ypos -546
   }
-set N1eede000 [stack 0]
+set N3419e800 [stack 0]
   ColorMatrix {
    matrix {
        {0.7006223202 0.1487748027 0.101058729}
@@ -11730,7 +11729,7 @@ set N1eede000 [stack 0]
    xpos 1390
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.705396831 0.1640413404 0.08101775497}
@@ -11742,7 +11741,7 @@ push $N1eede000
    xpos 1280
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.5990839005 0.2489254922 0.1024464965}
@@ -11754,7 +11753,7 @@ push $N1eede000
    xpos 1170
    ypos -465
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.735275209 0.06860940903 0.1465712786}
@@ -11766,7 +11765,7 @@ push $N1eede000
    xpos 1060
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.6380076408 0.2147038132 0.09774445742}
@@ -11778,7 +11777,7 @@ push $N1eede000
    xpos 950
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.4123909175 0.3575843573 0.1804807931}
@@ -11790,7 +11789,7 @@ push $N1eede000
    xpos 840
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.6369581223 0.1446169168 0.1688809693}
@@ -11802,7 +11801,7 @@ push $N1eede000
    xpos 730
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.4865711331 0.2656677067 0.1982173175}
@@ -11814,7 +11813,7 @@ push $N1eede000
    xpos 620
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.6609312296 0.1336961389 0.1558285803}
@@ -11826,7 +11825,7 @@ push $N1eede000
    xpos 510
    ypos -466
   }
-push $N1eede000
+push $N3419e800
   ColorMatrix {
    matrix {
        {0.9503623843 0 9.346324805e-05}
@@ -11873,7 +11872,7 @@ push $N1eede000
   xpos 214
   ypos -414
  }
-set N53676800 [stack 0]
+set N34533000 [stack 0]
  Group {
   name LMS_to_Yrg
   xpos 290
@@ -11922,7 +11921,7 @@ set N53676800 [stack 0]
    ypos -226
   }
  end_group
-push $N53676800
+push $N34533000
  MergeExpression {
   inputs 2
   temp_name0 _c
@@ -11993,8 +11992,8 @@ push $N53676800
   addUserKnob {7 sum t "Normalize so achromatic in=out" R 0 2}
   sum {{sqrt(w.0*w.0+w.1*w.1+w.2*w.2)}}
  }
-set N53674c00 [stack 0]
-push $N53676800
+set N34531400 [stack 0]
+push $N34533000
  MergeExpression {
   inputs 2
   temp_name0 s
@@ -12165,7 +12164,7 @@ push $N53676800
    ypos -58
   }
  end_group
-push $N53674c00
+push $N34531400
  Expression {
   expr0 r*w.0/wn
   expr1 g*w.1/wn
@@ -12486,7 +12485,7 @@ push $N53674c00
    xpos 324
    ypos -516
   }
-set N54105400 [stack 0]
+set N347d5c00 [stack 0]
   ColorMatrix {
    matrix {
        {{"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"} {"SwitchGamut.input\[value SwitchGamut.which].matrix"}}
@@ -12502,14 +12501,14 @@ set N54105400 [stack 0]
    xpos 290
    ypos -310
   }
-push $N54105400
+push $N347d5c00
   Dot {
    name Dot1
    label " XYZ D65 to *RGB CAT: XYZ Scaling"
    xpos 434
    ypos -516
   }
-set N54104800 [stack 0]
+set N347d5000 [stack 0]
   ColorMatrix {
    matrix {
        {1 0 0}
@@ -12521,7 +12520,7 @@ set N54104800 [stack 0]
    xpos 950
    ypos -465
   }
-push $N54104800
+push $N347d5000
   ColorMatrix {
    matrix {
        {3.240968943 -1.537382722 -0.4986106157}
@@ -12533,7 +12532,7 @@ push $N54104800
    xpos 840
    ypos -465
   }
-push $N54104800
+push $N347d5000
   ColorMatrix {
    matrix {
        {2.72539258 -1.01800251 -0.4401629865}
@@ -12545,7 +12544,7 @@ push $N54104800
    xpos 730
    ypos -465
   }
-push $N54104800
+push $N347d5000
   ColorMatrix {
    matrix {
        {2.40274024 -0.8974836469 -0.3880532086}
@@ -12557,7 +12556,7 @@ push $N54104800
    xpos 620
    ypos -465
   }
-push $N54104800
+push $N347d5000
   ColorMatrix {
    matrix {
        {2.493495464 -0.9313831329 -0.4027105868}
@@ -12569,7 +12568,7 @@ push $N54104800
    xpos 510
    ypos -465
   }
-push $N54104800
+push $N347d5000
   ColorMatrix {
    matrix {
        {1.716650844 -0.3556707203 -0.2533662021}
@@ -12622,7 +12621,7 @@ push $N54104800
    xpos 400
    ypos -130
   }
-set N540a6400 [stack 0]
+set N34776c00 [stack 0]
   Expression {
    temp_name0 Yd
    temp_expr0 0.2627*r+0.6780*g+0.0593*b
@@ -12655,7 +12654,7 @@ set N540a6400 [stack 0]
    addUserKnob {7 _c}
    _c {{0.5-_a*log(4*_a)}}
   }
-push $N540a6400
+push $N34776c00
   Expression {
    temp_name0 rp
    temp_expr0 pow(r,m_1)
@@ -12681,7 +12680,7 @@ push $N540a6400
    addUserKnob {7 c_3}
    c_3 {{2392/128}}
   }
-push $N540a6400
+push $N34776c00
   Expression {
    expr0 sign(r)*pow(fabs(r),1/p)
    expr1 sign(g)*pow(fabs(g),1/p)
@@ -12763,7 +12762,7 @@ Group {
   ypos 353
  }
 end_group
-push $N5d806000
+push $N3388a800
 Group {
  name ACES_OutputTransform_v1_2_
  tile_color 0xa57aaaff
@@ -13090,13 +13089,13 @@ Group {
    xpos -6
    ypos -510
   }
-set N5db3f800 [stack 0]
+set N346aa000 [stack 0]
   Dot {
    name Dot4
    xpos -116
    ypos -510
   }
-set N5db3f400 [stack 0]
+set N346a9c00 [stack 0]
   Expression {
    temp_name0 chroma
    temp_expr0 sqrt(b*(b-g)+g*(g-r)+r*(r-b))
@@ -13112,7 +13111,7 @@ set N5db3f400 [stack 0]
    ypos -466
   }
 push 0
-push $N5db3f400
+push $N346a9c00
   Dot {
    name Dot3
    xpos -226
@@ -13132,7 +13131,7 @@ push $N5db3f400
    xpos -260
    ypos -466
   }
-set N5db3e800 [stack 0]
+set N346a9000 [stack 0]
   Expression {
    channel0 {rgba.red rgba.green rgba.blue none}
    expr0 "(r - 0.4) / 0.2"
@@ -13157,7 +13156,7 @@ set N5db3e800 [stack 0]
    xpos -370
    ypos -442
   }
-push $N5db3e800
+push $N346a9000
   Merge2 {
    inputs 3+1
    operation plus
@@ -13168,7 +13167,7 @@ push $N5db3e800
    xpos -260
    ypos -393
   }
-set N5db3dc00 [stack 0]
+set N346a8400 [stack 0]
   Expression {
    temp_name0 ycOut
    temp_expr0 g
@@ -13184,7 +13183,7 @@ set N5db3dc00 [stack 0]
    xpos -150
    ypos -346
   }
-push $N5db3dc00
+push $N346a8400
   Expression {
    temp_name0 ycIn
    temp_expr0 g
@@ -13213,7 +13212,7 @@ push $N5db3dc00
    xpos -226
    ypos -246
   }
-push $N5db3f800
+push $N346aa000
   Merge2 {
    inputs 2
    operation multiply
@@ -13257,13 +13256,13 @@ push $N5db3f800
    xpos -6
    ypos 42
   }
-set N5dadfc00 [stack 0]
+set N3464e400 [stack 0]
   Dot {
    name Dot2
    xpos -226
    ypos 42
   }
-set N5dadf800 [stack 0]
+set N3464e000 [stack 0]
   Expression {
    temp_name0 TINY
    temp_expr0 1e-10
@@ -13281,7 +13280,7 @@ set N5dadf800 [stack 0]
    xpos -260
    ypos 86
   }
-push $N5dadf800
+push $N3464e000
   Dot {
    name Dot3
    xpos -336
@@ -13362,14 +13361,14 @@ push $N5dadf800
    xpos -226
    ypos 330
   }
-set N5dadd400 [stack 0]
-push $N5dadfc00
+set N345db800 [stack 0]
+push $N3464e400
   Dot {
    name Dot8
    xpos -6
    ypos 258
   }
-set N5dadd000 [stack 0]
+set N345db400 [stack 0]
   MergeExpression {
    inputs 2
    temp_name0 minChan
@@ -13386,8 +13385,8 @@ set N5dadd000 [stack 0]
    xpos -150
    ypos 351
   }
-push $N5dadd400
-push $N5dadd000
+push $N345db800
+push $N345db400
   MergeExpression {
    inputs 2
    expr0 "r + Ar * Ab * (RRT_RED_PIVOT - r) * (1. - RRT_RED_SCALE)"
@@ -13463,7 +13462,7 @@ push $N5dadd000
   xpos -1216
   ypos -558
  }
-set N5da7ac00 [stack 0]
+set N345d9400 [stack 0]
  Group {
   name ssts
   xpos -1250
@@ -13539,42 +13538,42 @@ set N5da7ac00 [stack 0]
    xpos -996
    ypos -318
   }
-set N5da7a400 [stack 0]
+set N345d8c00 [stack 0]
   Dot {
    name Dot26
    label " "
    xpos -996
    ypos 1506
   }
-push $N5da7a400
+push $N345d8c00
   Dot {
    name Dot4
    label " "
    xpos -886
    ypos -318
   }
-set N5da79c00 [stack 0]
+set N345d8400 [stack 0]
   Dot {
    name Dot5
    label " "
    xpos -776
    ypos -318
   }
-set N5da79800 [stack 0]
+set N3457bc00 [stack 0]
   Dot {
    name Dot2
    label " "
    xpos -666
    ypos -318
   }
-set N5da79400 [stack 0]
+set N3457b800 [stack 0]
   Dot {
    name Dot3
    label " "
    xpos -556
    ypos -318
   }
-set N5da79000 [stack 0]
+set N3457b400 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -13595,14 +13594,14 @@ set N5da79000 [stack 0]
    xpos -556
    ypos 162
   }
-push $N5da79000
+push $N3457b400
   Dot {
    name Dot7
    label " "
    xpos -336
    ypos -318
   }
-set N5da78400 [stack 0]
+set N3457a800 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -13633,7 +13632,7 @@ set N5da78400 [stack 0]
    xpos -336
    ypos 786
   }
-push $N5da79400
+push $N3457b800
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -13654,28 +13653,28 @@ push $N5da79400
    xpos -666
    ypos 354
   }
-push $N5da78400
+push $N3457a800
   Dot {
    name Dot9
    label " "
    xpos -6
    ypos -318
   }
-set N5de26800 [stack 0]
+set N34579000 [stack 0]
   Dot {
    name Dot6
    label " "
    xpos -6
    ypos -198
   }
-set N5de26400 [stack 0]
+set N34578c00 [stack 0]
   Dot {
    name Dot8
    label " "
    xpos 214
    ypos -198
   }
-set N5de26000 [stack 0]
+set N34578800 [stack 0]
   Dot {
    name Dot13
    label " "
@@ -13688,7 +13687,7 @@ set N5de26000 [stack 0]
    xpos 434
    ypos -78
   }
-set N5de25800 [stack 0]
+set N34937c00 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -13716,7 +13715,7 @@ set N5de25800 [stack 0]
    xpos 290
    ypos 8
   }
-push $N5de25800
+push $N34937c00
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -13746,14 +13745,14 @@ push $N5de25800
    ypos 8
   }
 push 0
-push $N5de26000
+push $N34578800
   Dot {
    name Dot11
    label " "
    xpos 214
    ypos -78
   }
-set N5de24400 [stack 0]
+set N34936800 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -13781,7 +13780,7 @@ set N5de24400 [stack 0]
    xpos 70
    ypos 8
   }
-push $N5de24400
+push $N34936800
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -13810,14 +13809,14 @@ push $N5de24400
    xpos 180
    ypos 8
   }
-push $N5de26400
+push $N34578c00
   Dot {
    name Dot10
    label " "
    xpos -6
    ypos -78
   }
-set N5ddcac00 [stack 0]
+set N34935400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -13845,7 +13844,7 @@ set N5ddcac00 [stack 0]
    xpos -150
    ypos 8
   }
-push $N5ddcac00
+push $N34935400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -13898,7 +13897,7 @@ push $N5ddcac00
    ypos 786
   }
 push 0
-push $N5da79800
+push $N3457bc00
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -13919,28 +13918,28 @@ push $N5da79800
    xpos -776
    ypos 474
   }
-push $N5de26800
+push $N34579000
   Dot {
    name Dot14
    label " "
    xpos 764
    ypos -318
   }
-set N5ddc8400 [stack 0]
+set N348c2800 [stack 0]
   Dot {
    name Dot15
    label " "
    xpos 764
    ypos -198
   }
-set N5dd63c00 [stack 0]
+set N348c2400 [stack 0]
   Dot {
    name Dot17
    label " "
    xpos 984
    ypos -198
   }
-set N5dd63800 [stack 0]
+set N348c2000 [stack 0]
   Dot {
    name Dot20
    label " "
@@ -13953,7 +13952,7 @@ set N5dd63800 [stack 0]
    xpos 1204
    ypos -78
   }
-set N5dd63000 [stack 0]
+set N348c1800 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -13982,7 +13981,7 @@ set N5dd63000 [stack 0]
    xpos 1060
    ypos 8
   }
-push $N5dd63000
+push $N348c1800
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -14012,14 +14011,14 @@ push $N5dd63000
    ypos 8
   }
 push 0
-push $N5dd63800
+push $N348c2000
   Dot {
    name Dot18
    label " "
    xpos 984
    ypos -78
   }
-set N5dd61c00 [stack 0]
+set N348c0400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -14048,7 +14047,7 @@ set N5dd61c00 [stack 0]
    xpos 840
    ypos 8
   }
-push $N5dd61c00
+push $N348c0400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -14077,14 +14076,14 @@ push $N5dd61c00
    xpos 950
    ypos 8
   }
-push $N5dd63c00
+push $N348c2400
   Dot {
    name Dot16
    label " "
    xpos 764
    ypos -78
   }
-set N5dd60800 [stack 0]
+set N34872c00 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -14113,7 +14112,7 @@ set N5dd60800 [stack 0]
    xpos 620
    ypos 8
   }
-push $N5dd60800
+push $N34872c00
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -14165,7 +14164,7 @@ push $N5dd60800
    xpos 984
    ypos 786
   }
-push $N5da79c00
+push $N345d8400
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -14186,7 +14185,7 @@ push $N5da79c00
    xpos -886
    ypos 618
   }
-push $N5ddc8400
+push $N348c2800
   Dot {
    name Dot21
    label " "
@@ -14264,7 +14263,7 @@ push $N5ddc8400
   xpos -1216
   ypos -462
  }
-set N5dc9f800 [stack 0]
+set N34c06000 [stack 0]
  Dot {
   name Dot22
   label " "
@@ -14295,7 +14294,7 @@ set N5dc9f800 [stack 0]
   xpos -1656
   ypos 2658
  }
-push $N5dc9f800
+push $N34c06000
  Dot {
   name Dot28
   label " "
@@ -14305,7 +14304,7 @@ push $N5dc9f800
   xpos -1216
   ypos -342
  }
-set N5dc9e800 [stack 0]
+set N34c05000 [stack 0]
  Group {
   name segmented_spline_c9_fwd
   xpos -1140
@@ -14341,42 +14340,42 @@ set N5dc9e800 [stack 0]
    xpos -996
    ypos -318
   }
-set N5dc9e000 [stack 0]
+set N34c04800 [stack 0]
   Dot {
    name Dot26
    label " "
    xpos -996
    ypos 1506
   }
-push $N5dc9e000
+push $N34c04800
   Dot {
    name Dot4
    label " "
    xpos -886
    ypos -318
   }
-set N5dc9d800 [stack 0]
+set N34bb7c00 [stack 0]
   Dot {
    name Dot5
    label " "
    xpos -776
    ypos -318
   }
-set N5dc9d400 [stack 0]
+set N34bb7800 [stack 0]
   Dot {
    name Dot2
    label " "
    xpos -666
    ypos -318
   }
-set N5dc9d000 [stack 0]
+set N34bb7400 [stack 0]
   Dot {
    name Dot3
    label " "
    xpos -556
    ypos -318
   }
-set N5dc9cc00 [stack 0]
+set N34bb7000 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -14397,14 +14396,14 @@ set N5dc9cc00 [stack 0]
    xpos -556
    ypos 162
   }
-push $N5dc9cc00
+push $N34bb7000
   Dot {
    name Dot7
    label " "
    xpos -336
    ypos -318
   }
-set N5dc5bc00 [stack 0]
+set N34bb6400 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -14435,7 +14434,7 @@ set N5dc5bc00 [stack 0]
    xpos -336
    ypos 786
   }
-push $N5dc9d000
+push $N34bb7400
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -14456,28 +14455,28 @@ push $N5dc9d000
    xpos -666
    ypos 354
   }
-push $N5dc5bc00
+push $N34bb6400
   Dot {
    name Dot9
    label " "
    xpos -6
    ypos -318
   }
-set N5dc5a400 [stack 0]
+set N34bb4c00 [stack 0]
   Dot {
    name Dot6
    label " "
    xpos -6
    ypos -198
   }
-set N5dc5a000 [stack 0]
+set N34bb4800 [stack 0]
   Dot {
    name Dot8
    label " "
    xpos 214
    ypos -198
   }
-set N5dc59c00 [stack 0]
+set N34bb4400 [stack 0]
   Dot {
    name Dot13
    label " "
@@ -14490,7 +14489,7 @@ set N5dc59c00 [stack 0]
    xpos 434
    ypos -78
   }
-set N5dc59400 [stack 0]
+set N34b77800 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -14519,7 +14518,7 @@ set N5dc59400 [stack 0]
    xpos 290
    ypos 8
   }
-push $N5dc59400
+push $N34b77800
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -14549,14 +14548,14 @@ push $N5dc59400
    ypos 8
   }
 push 0
-push $N5dc59c00
+push $N34bb4400
   Dot {
    name Dot11
    label " "
    xpos 214
    ypos -78
   }
-set N5dc07c00 [stack 0]
+set N34b76400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -14585,7 +14584,7 @@ set N5dc07c00 [stack 0]
    xpos 70
    ypos 8
   }
-push $N5dc07c00
+push $N34b76400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -14614,14 +14613,14 @@ push $N5dc07c00
    xpos 180
    ypos 8
   }
-push $N5dc5a000
+push $N34bb4800
   Dot {
    name Dot10
    label " "
    xpos -6
    ypos -78
   }
-set N5dc06800 [stack 0]
+set N34b75000 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -14650,7 +14649,7 @@ set N5dc06800 [stack 0]
    xpos -150
    ypos 8
   }
-push $N5dc06800
+push $N34b75000
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -14703,7 +14702,7 @@ push $N5dc06800
    ypos 786
   }
 push 0
-push $N5dc9d400
+push $N34bb7800
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -14724,28 +14723,28 @@ push $N5dc9d400
    xpos -776
    ypos 474
   }
-push $N5dc5a400
+push $N34bb4c00
   Dot {
    name Dot14
    label " "
    xpos 764
    ypos -318
   }
-set N5db9bc00 [stack 0]
+set N34afe400 [stack 0]
   Dot {
    name Dot15
    label " "
    xpos 764
    ypos -198
   }
-set N5db9b800 [stack 0]
+set N34afe000 [stack 0]
   Dot {
    name Dot17
    label " "
    xpos 984
    ypos -198
   }
-set N5db9b400 [stack 0]
+set N34afdc00 [stack 0]
   Dot {
    name Dot20
    label " "
@@ -14758,7 +14757,7 @@ set N5db9b400 [stack 0]
    xpos 1204
    ypos -78
   }
-set N5db9ac00 [stack 0]
+set N34afd400 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -14787,7 +14786,7 @@ set N5db9ac00 [stack 0]
    xpos 1060
    ypos 8
   }
-push $N5db9ac00
+push $N34afd400
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(b, 5.96046448e-08 )))"
@@ -14817,14 +14816,14 @@ push $N5db9ac00
    ypos 8
   }
 push 0
-push $N5db9b400
+push $N34afdc00
   Dot {
    name Dot18
    label " "
    xpos 984
    ypos -78
   }
-set N5db99800 [stack 0]
+set N34aa3c00 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -14853,7 +14852,7 @@ set N5db99800 [stack 0]
    xpos 840
    ypos 8
   }
-push $N5db99800
+push $N34aa3c00
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(g, 5.96046448e-08 )))"
@@ -14882,14 +14881,14 @@ push $N5db99800
    xpos 950
    ypos 8
   }
-push $N5db9b800
+push $N34afe000
   Dot {
    name Dot16
    label " "
    xpos 764
    ypos -78
   }
-set N5db98400 [stack 0]
+set N34aa2800 [stack 0]
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -14918,7 +14917,7 @@ set N5db98400 [stack 0]
    xpos 620
    ypos 8
   }
-push $N5db98400
+push $N34aa2800
   Expression {
    temp_name0 logx
    temp_expr0 "(log10( max(r, 5.96046448e-08 )))"
@@ -14970,7 +14969,7 @@ push $N5db98400
    xpos 984
    ypos 786
   }
-push $N5dc9d800
+push $N34bb7c00
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 5.96046448e-08 ))"
@@ -14991,7 +14990,7 @@ push $N5dc9d800
    xpos -886
    ypos 618
   }
-push $N5db9bc00
+push $N34afe400
   Dot {
    name Dot21
    label " "
@@ -15055,7 +15054,7 @@ push $N5db9bc00
    ypos 1814
   }
  end_group
-push $N5dc9e800
+push $N34c05000
  Switch {
   inputs 2
   which {{parent.use_c9}}
@@ -15086,7 +15085,7 @@ push $N5dc9e800
   xpos -1216
   ypos 282
  }
-set N5decb400 [stack 0]
+set N34a3dc00 [stack 0]
  Dot {
   name Dot15
   label " "
@@ -15096,7 +15095,7 @@ set N5decb400 [stack 0]
   xpos -1106
   ypos 282
  }
-set N5decb000 [stack 0]
+set N34a3d800 [stack 0]
  Dot {
   name Dot13
   label " "
@@ -15115,7 +15114,7 @@ set N5decb000 [stack 0]
   xpos -886
   ypos 354
  }
-set N5deca800 [stack 0]
+set N34a3d000 [stack 0]
  Expression {
   temp_name0 tr
   temp_expr0 "(-r - c_x_0) / (c_x_1 - c_x_0)"
@@ -15173,7 +15172,7 @@ set N5deca800 [stack 0]
   xpos -886
   ypos 498
  }
-push $N5deca800
+push $N34a3d000
  Expression {
   temp_name0 SCALE
   temp_expr0 0.96362
@@ -15185,7 +15184,7 @@ push $N5deca800
   xpos -1030
   ypos 344
  }
-push $N5decb000
+push $N34a3d800
  Switch {
   inputs 2
   which {{"parent.display_pri < 3"}}
@@ -15202,7 +15201,7 @@ push $N5decb000
   xpos -1106
   ypos 426
  }
-push $N5decb400
+push $N34a3dc00
  Switch {
   inputs 2
   which {{parent.d60_sim}}
@@ -15226,7 +15225,7 @@ push $N5decb400
   xpos -1216
   ypos 762
  }
-set N5dec9000 [stack 0]
+set N349db400 [stack 0]
  ColorMatrix {
   matrix {
       {{"(1.0 - sat) * rgb2Y.x + sat"} {"(1.0 - sat) * rgb2Y.y"} {"(1.0 - sat) * rgb2Y.z"}}
@@ -15243,7 +15242,7 @@ set N5dec9000 [stack 0]
   addUserKnob {7 sat}
   sat 0.93
  }
-push $N5dec9000
+push $N349db400
  Switch {
   inputs 2
   which {{"parent.eotf < 5 && display_pri < 2"}}
@@ -15272,7 +15271,7 @@ push $N5dec9000
   xpos -1216
   ypos 1146
  }
-set N5dec8400 [stack 0]
+set N349da800 [stack 0]
  Colorspace {
   colorspace_in CIE-XYZ
   colorspace_out CIE-Yxy
@@ -15308,7 +15307,7 @@ set N5dec8400 [stack 0]
   xpos -1140
   ypos 1256
  }
-push $N5dec8400
+push $N349da800
  Switch {
   inputs 2
   which {{"(parent.eotf <= 4) ? parent.dark_to_dim : 0"}}
@@ -15326,7 +15325,7 @@ push $N5dec8400
   xpos -1216
   ypos 1434
  }
-set N5de5ac00 [stack 0]
+set N349d9400 [stack 0]
  Dot {
   name Dot9
   label " "
@@ -15336,7 +15335,7 @@ set N5de5ac00 [stack 0]
   xpos -1106
   ypos 1434
  }
-set N5de5a800 [stack 0]
+set N349d9000 [stack 0]
  ColorMatrix {
   matrix {
       {0.9872254133 -0.006114810705 0.01592640579}
@@ -15348,8 +15347,8 @@ set N5de5a800 [stack 0]
   xpos -1140
   ypos 1466
  }
-set N5de5a400 [stack 0]
-push $N5de5a800
+set N349d8c00 [stack 0]
+push $N349d9000
  Dot {
   name Dot10
   label " "
@@ -15359,7 +15358,7 @@ push $N5de5a800
   xpos -996
   ypos 1434
  }
-push $N5de5a400
+push $N349d8c00
  Switch {
   inputs 2
   which {{parent.d60_sim}}
@@ -15367,7 +15366,7 @@ push $N5de5a400
   xpos -1140
   ypos 1550
  }
-push $N5de5ac00
+push $N349d9400
  Switch {
   inputs 2
   which {{"parent.display_pri < 3"}}
@@ -15407,8 +15406,8 @@ push $N5de5ac00
    xpos -6
    ypos -198
   }
-set N5de59800 [stack 0]
-push $N5de59800
+set N34d4bc00 [stack 0]
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {1.049811006 0 -9.748453158e-05}
@@ -15420,7 +15419,7 @@ push $N5de59800
    xpos 730
    ypos -136
   }
-push $N5de59800
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {1.641023397 -0.3248033226 -0.2364246994}
@@ -15432,7 +15431,7 @@ push $N5de59800
    xpos 620
    ypos -136
   }
-push $N5de59800
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {2.402741432 -0.8974840641 -0.3880533576}
@@ -15444,7 +15443,7 @@ push $N5de59800
    xpos 510
    ypos -136
   }
-push $N5de59800
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {2.725393534 -1.018002748 -0.4401631057}
@@ -15456,7 +15455,7 @@ push $N5de59800
    xpos 400
    ypos -136
   }
-push $N5de59800
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {2.493496418 -0.9313833117 -0.4027107358}
@@ -15468,7 +15467,7 @@ push $N5de59800
    xpos 290
    ypos -136
   }
-push $N5de59800
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {1.71665132 -0.3556708097 -0.2533662617}
@@ -15480,7 +15479,7 @@ push $N5de59800
    xpos 180
    ypos -136
   }
-push $N5de59800
+push $N34d4bc00
   ColorMatrix {
    matrix {
        {3.240970135 -1.537383318 -0.4986107945}
@@ -15515,8 +15514,8 @@ push $N5de59800
    xpos -6
    ypos 162
   }
-set N5e1e3000 [stack 0]
-push $N5e1e3000
+set N34d49800 [stack 0]
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.9525524378 0 9.367863095e-05}
@@ -15528,7 +15527,7 @@ push $N5e1e3000
    xpos 730
    ypos 224
   }
-push $N5e1e3000
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.6624541879 0.1340042055 0.1561876982}
@@ -15540,7 +15539,7 @@ push $N5e1e3000
    xpos 620
    ypos 224
   }
-push $N5e1e3000
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.5049495697 0.2646814585 0.1830150485}
@@ -15552,7 +15551,7 @@ push $N5e1e3000
    xpos 510
    ypos 224
   }
-push $N5e1e3000
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.4451698363 0.2771343887 0.1722826511}
@@ -15564,7 +15563,7 @@ push $N5e1e3000
    xpos 400
    ypos 224
   }
-push $N5e1e3000
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.4865709841 0.2656676769 0.1982172877}
@@ -15576,7 +15575,7 @@ push $N5e1e3000
    xpos 290
    ypos 224
   }
-push $N5e1e3000
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.6369580626 0.1446169019 0.1688809693}
@@ -15588,7 +15587,7 @@ push $N5e1e3000
    xpos 180
    ypos 224
   }
-push $N5e1e3000
+push $N34d49800
   ColorMatrix {
    matrix {
        {0.4123907983 0.3575843275 0.180480808}
@@ -15637,8 +15636,8 @@ push $N5e1e3000
    xpos -6
    ypos -198
   }
-set N5e1e0800 [stack 0]
-push $N5e1e0800
+set N34ce6c00 [stack 0]
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {1.049811006 0 -9.748453158e-05}
@@ -15650,7 +15649,7 @@ push $N5e1e0800
    xpos 730
    ypos -136
   }
-push $N5e1e0800
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {1.641023397 -0.3248033226 -0.2364246994}
@@ -15662,7 +15661,7 @@ push $N5e1e0800
    xpos 620
    ypos -136
   }
-push $N5e1e0800
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {2.402741432 -0.8974840641 -0.3880533576}
@@ -15674,7 +15673,7 @@ push $N5e1e0800
    xpos 510
    ypos -136
   }
-push $N5e1e0800
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {2.725393534 -1.018002748 -0.4401631057}
@@ -15686,7 +15685,7 @@ push $N5e1e0800
    xpos 400
    ypos -136
   }
-push $N5e1e0800
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {2.493496418 -0.9313833117 -0.4027107358}
@@ -15698,7 +15697,7 @@ push $N5e1e0800
    xpos 290
    ypos -136
   }
-push $N5e1e0800
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {1.71665132 -0.3556708097 -0.2533662617}
@@ -15710,7 +15709,7 @@ push $N5e1e0800
    xpos 180
    ypos -136
   }
-push $N5e1e0800
+push $N34ce6c00
   ColorMatrix {
    matrix {
        {3.240970135 -1.537383318 -0.4986107945}
@@ -15750,8 +15749,8 @@ push $N5e1e0800
   xpos -1216
   ypos 2514
  }
-set N5e175c00 [stack 0]
-push $N5e175c00
+set N34ce4400 [stack 0]
+push $N34ce4400
  Dot {
   name Dot3
   label " "
@@ -15761,7 +15760,7 @@ push $N5e175c00
   xpos -886
   ypos 2514
  }
-set N5e175800 [stack 0]
+set N34c73c00 [stack 0]
  Dot {
   name Dot4
   label " "
@@ -15771,7 +15770,7 @@ set N5e175800 [stack 0]
   xpos -666
   ypos 2514
  }
-set N5e175400 [stack 0]
+set N34c73800 [stack 0]
  Dot {
   name Dot6
   label " "
@@ -15781,7 +15780,7 @@ set N5e175400 [stack 0]
   xpos -446
   ypos 2514
  }
-set N5e175000 [stack 0]
+set N34c73400 [stack 0]
  Dot {
   name Dot18
   label " "
@@ -15791,7 +15790,7 @@ set N5e175000 [stack 0]
   xpos -226
   ypos 2514
  }
-set N5e174c00 [stack 0]
+set N34c73000 [stack 0]
  Dot {
   name Dot20
   label " "
@@ -15801,7 +15800,7 @@ set N5e174c00 [stack 0]
   xpos -6
   ypos 2514
  }
-set N5e174800 [stack 0]
+set N34c72c00 [stack 0]
  Dot {
   name Dot25
   label " "
@@ -15811,7 +15810,7 @@ set N5e174800 [stack 0]
   xpos 214
   ypos 2514
  }
-set N5e174400 [stack 0]
+set N34c72800 [stack 0]
  Dot {
   name Dot24
   label " "
@@ -15830,7 +15829,7 @@ set N5e174400 [stack 0]
   xpos 654
   ypos 2610
  }
-set N5e11b800 [stack 0]
+set N34c72000 [stack 0]
  Expression {
   expr0 "r * (Ymax - Ymin) + Ymin"
   expr1 "g * (Ymax - Ymin) + Ymin"
@@ -15844,7 +15843,7 @@ set N5e11b800 [stack 0]
   addUserKnob {7 Ymax R 48 10000}
   Ymax {{parent.lum.2}}
  }
-push $N5e11b800
+push $N34c72000
  Expression {
   expr0 "r * (Ymax - Ymin) + Ymin"
   expr1 "g * (Ymax - Ymin) + Ymin"
@@ -15901,7 +15900,7 @@ push $N5e11b800
   addUserKnob {7 pq_C +DISABLED R 0 100}
   pq_C 10000
  }
-set N5e11a800 [stack 0]
+set N34c71000 [stack 0]
  Dot {
   name Dot5
   label " "
@@ -15986,7 +15985,7 @@ set N5e11a800 [stack 0]
   xpos 984
   ypos 2970
  }
-push $N5e11a800
+push $N34c71000
  Dot {
   name Dot27
   label " PQ"
@@ -15996,7 +15995,7 @@ push $N5e11a800
   xpos 654
   ypos 2970
  }
-push $N5e174400
+push $N34c72800
  Expression {
   expr0 "pow( (48./52.37) * r, 1./2.6)"
   expr1 "pow( (48./52.37) * g, 1./2.6)"
@@ -16006,7 +16005,7 @@ push $N5e174400
   xpos 180
   ypos 2702
  }
-push $N5e174800
+push $N34c72c00
  Expression {
   expr0 pow(r,1/gamma)
   expr1 pow(g,1/gamma)
@@ -16019,7 +16018,7 @@ push $N5e174800
   addUserKnob {7 gamma R 0 4}
   gamma 2.6
  }
-push $N5e174c00
+push $N34c73000
  Expression {
   expr0 pow(r,1/gamma)
   expr1 pow(g,1/gamma)
@@ -16032,7 +16031,7 @@ push $N5e174c00
   addUserKnob {7 gamma R 0 4}
   gamma 2.4
  }
-push $N5e175000
+push $N34c73400
  Expression {
   expr0 pow(r,1/gamma)
   expr1 pow(g,1/gamma)
@@ -16045,7 +16044,7 @@ push $N5e175000
   addUserKnob {7 gamma R 0 4}
   gamma 2.2
  }
-push $N5e175400
+push $N34c73800
  Expression {
   temp_name0 c_a
   temp_expr0 "pow( pow( Lw, 1./gamma) - pow( Lb, 1./gamma), gamma)"
@@ -16065,7 +16064,7 @@ push $N5e175400
   addUserKnob {7 gamma R 1 4}
   gamma 2.4
  }
-push $N5e175800
+push $N34c73c00
  Expression {
   temp_name0 yb
   temp_expr0 "pow( offs * gamma / ( ( gamma - 1.0) * ( 1.0 + offs)), gamma)"
@@ -16137,7 +16136,7 @@ push $N5e175800
   xpos -200
   ypos -660
  }
-push $N5da7ac00
+push $N345d9400
  Reformat {
   type "to box"
   box_width 4
@@ -16236,42 +16235,42 @@ push $N5da7ac00
    xpos -996
    ypos -318
   }
-set N5e0a0c00 [stack 0]
+set N34fb7000 [stack 0]
   Dot {
    name Dot26
    label " "
    xpos -996
    ypos 1506
   }
-push $N5e0a0c00
+push $N34fb7000
   Dot {
    name Dot4
    label " "
    xpos -886
    ypos -318
   }
-set N5e0a0400 [stack 0]
+set N34fb6800 [stack 0]
   Dot {
    name Dot5
    label " "
    xpos -776
    ypos -318
   }
-set N5e04fc00 [stack 0]
+set N34fb6400 [stack 0]
   Dot {
    name Dot2
    label " "
    xpos -666
    ypos -318
   }
-set N5e04f800 [stack 0]
+set N34fb6000 [stack 0]
   Dot {
    name Dot3
    label " "
    xpos -556
    ypos -318
   }
-set N5e04f400 [stack 0]
+set N34fb5c00 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16292,14 +16291,14 @@ set N5e04f400 [stack 0]
    xpos -556
    ypos 162
   }
-push $N5e04f400
+push $N34fb5c00
   Dot {
    name Dot7
    label " "
    xpos -336
    ypos -318
   }
-set N5e04e800 [stack 0]
+set N34fb5000 [stack 0]
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16330,7 +16329,7 @@ set N5e04e800 [stack 0]
    xpos -336
    ypos 786
   }
-push $N5e04f800
+push $N34fb6000
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16351,28 +16350,28 @@ push $N5e04f800
    xpos -666
    ypos 354
   }
-push $N5e04e800
+push $N34fb5000
   Dot {
    name Dot9
    label " "
    xpos -6
    ypos -318
   }
-set N5e04d000 [stack 0]
+set N34f5f400 [stack 0]
   Dot {
    name Dot6
    label " "
    xpos -6
    ypos -174
   }
-set N5e04cc00 [stack 0]
+set N34f5f000 [stack 0]
   Dot {
    name Dot8
    label " "
    xpos 214
    ypos -174
   }
-set N5e04c800 [stack 0]
+set N34f5ec00 [stack 0]
   Dot {
    name Dot13
    label " "
@@ -16384,7 +16383,7 @@ set N5e04c800 [stack 0]
    xpos 434
    ypos -78
   }
-set N5dffbc00 [stack 0]
+set N34f5e400 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(b, 1e-10 ))"
@@ -16413,7 +16412,7 @@ set N5dffbc00 [stack 0]
    xpos 290
    ypos -34
   }
-push $N5dffbc00
+push $N34f5e400
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -16451,13 +16450,13 @@ push $N5dffbc00
    min {{parent.min.x} {parent.min.y} {parent.minSlope}}
   }
 push 0
-push $N5e04cc00
+push $N34f5f000
   Dot {
    name Dot10
    xpos -6
    ypos -78
   }
-set N5dffa800 [stack 0]
+set N34f5d000 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16486,7 +16485,7 @@ set N5dffa800 [stack 0]
    xpos -150
    ypos -34
   }
-push $N5dffa800
+push $N34f5d000
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -16523,13 +16522,13 @@ push $N5dffa800
    addUserKnob {13 min l Min}
    min {{parent.min.x} {parent.min.y} {parent.minSlope}}
   }
-push $N5e04c800
+push $N34f5ec00
   Dot {
    name Dot18
    xpos 214
    ypos -78
   }
-set N5dff9400 [stack 0]
+set N34f07800 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(g, 1e-10 ))"
@@ -16558,7 +16557,7 @@ set N5dff9400 [stack 0]
    xpos 70
    ypos -34
   }
-push $N5dff9400
+push $N34f07800
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -16618,7 +16617,7 @@ push $N5dff9400
    ypos 786
   }
 push 0
-push $N5e04fc00
+push $N34fb6400
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16639,28 +16638,28 @@ push $N5e04fc00
    xpos -776
    ypos 474
   }
-push $N5e04d000
+push $N34f5f400
   Dot {
    name Dot14
    label " "
    xpos 764
    ypos -318
   }
-set N5df9e800 [stack 0]
+set N34f05000 [stack 0]
   Dot {
    name Dot15
    label " "
    xpos 764
    ypos -174
   }
-set N5df9e400 [stack 0]
+set N34f04c00 [stack 0]
   Dot {
    name Dot17
    label " "
    xpos 984
    ypos -174
   }
-set N5df9e000 [stack 0]
+set N34f04800 [stack 0]
   Dot {
    name Dot20
    label " "
@@ -16672,7 +16671,7 @@ set N5df9e000 [stack 0]
    xpos 1204
    ypos -78
   }
-set N5df9d800 [stack 0]
+set N34eafc00 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(b, 1e-10 ))"
@@ -16701,7 +16700,7 @@ set N5df9d800 [stack 0]
    xpos 1060
    ypos -34
   }
-push $N5df9d800
+push $N34eafc00
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -16734,13 +16733,13 @@ push $N5df9d800
    ypos 14
   }
 push 0
-push $N5df9e400
+push $N34f04c00
   Dot {
    name Dot11
    xpos 764
    ypos -78
   }
-set N5df9c400 [stack 0]
+set N34eae800 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16769,7 +16768,7 @@ set N5df9c400 [stack 0]
    xpos 620
    ypos -34
   }
-push $N5df9c400
+push $N34eae800
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -16801,13 +16800,13 @@ push $N5df9c400
    xpos 730
    ypos 14
   }
-push $N5df9e000
+push $N34f04800
   Dot {
    name Dot12
    xpos 984
    ypos -78
   }
-set N5e33ec00 [stack 0]
+set N34ead400 [stack 0]
   Expression {
    temp_name0 logy
    temp_expr0 "log10( max(g, 1e-10 ))"
@@ -16836,7 +16835,7 @@ set N5e33ec00 [stack 0]
    xpos 840
    ypos -34
   }
-push $N5e33ec00
+push $N34ead400
   MergeExpression {
    inputs 2
    temp_name0 logy
@@ -16891,7 +16890,7 @@ push $N5e33ec00
    xpos 984
    ypos 786
   }
-push $N5e0a0400
+push $N34fb6800
   Expression {
    temp_name0 logr
    temp_expr0 "log10( max(r, 1e-10 ))"
@@ -16912,7 +16911,7 @@ push $N5e0a0400
    xpos -886
    ypos 618
   }
-push $N5df9e800
+push $N34f05000
   Dot {
    name Dot21
    label " "
@@ -17029,7 +17028,7 @@ Group {
   ypos 353
  }
 end_group
-push $N341bb800
+push $N32472c00
 Group {
  name DRT_ZCAM_IzMh_v09_Blink1
  label "\[value ssts_luminance.2]nits/\[value gamut]\n\[value colorspace_out]/\[value illuminant_out]/\[value primary_out]\nCAT bug fix\n"
@@ -17235,7 +17234,7 @@ Group {
   xpos -482
   ypos -1035
  }
-set N5b2c0800 [stack 0]
+set N34dcf400 [stack 0]
  Dot {
   name Dot17
   note_font "Bitstream Vera Sans"
@@ -17306,7 +17305,7 @@ set N5b2c0800 [stack 0]
    xpos 862
    ypos 153
   }
-set N8adf3000 [stack 0]
+set N34dce000 [stack 0]
   Shuffle {
    red white
    green white
@@ -17318,7 +17317,7 @@ set N8adf3000 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8adf2c00 [stack 0]
+set N34dcdc00 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -17329,7 +17328,7 @@ set N8adf2c00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8adf2c00
+push $N34dcdc00
   Colorspace {
    illuminant_in {{parent.referenceWhite}}
    colorspace_out CIE-XYZ
@@ -17341,7 +17340,7 @@ push $N8adf2c00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8adf3000
+push $N34dce000
   BlinkScript {
    inputs 3
    recompileCount 77
@@ -17376,14 +17375,14 @@ push $N8adf3000
   xpos 484
   ypos -670
  }
-set N8adf1800 [stack 0]
+set N34dcc800 [stack 0]
  Dot {
   name Dot20
   note_font "Bitstream Vera Sans"
   xpos 260
   ypos -670
  }
-set N8adf1400 [stack 0]
+set N34dcc400 [stack 0]
  Dot {
   name Dot21
   note_font "Bitstream Vera Sans"
@@ -17465,7 +17464,7 @@ set N8adf1400 [stack 0]
    xpos 862
    ypos 153
   }
-set N8ad8b800 [stack 0]
+set N35132800 [stack 0]
   Shuffle {
    red white
    green white
@@ -17477,7 +17476,7 @@ set N8ad8b800 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8ad8b400 [stack 0]
+set N35132400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -17488,7 +17487,7 @@ set N8ad8b400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8ad8b400
+push $N35132400
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -17500,7 +17499,7 @@ push $N8ad8b400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8ad8b800
+push $N35132800
   BlinkScript {
    inputs 4
    recompileCount 108
@@ -17541,15 +17540,15 @@ push $N8ad8b800
   xpos 87
   ypos -612
  }
-set N8ad8a000 [stack 0]
+set N35131000 [stack 0]
  Dot {
   name Dot22
   note_font "Bitstream Vera Sans"
   xpos 121
   ypos -519
  }
-push $N8adf1400
-push $N8ad8a000
+push $N34dcc400
+push $N35131000
  Merge2 {
   inputs 2
   operation divide
@@ -17585,7 +17584,7 @@ push $N8ad8a000
   xpos 226
   ypos -522
  }
-push $N8adf1800
+push $N34dcc800
  ShuffleCopy {
   inputs 2
   green green
@@ -17603,28 +17602,28 @@ push $N8adf1800
   xpos 484
   ypos -359
  }
-set N8ad88800 [stack 0]
+set N350c3400 [stack 0]
  Dot {
   name Dot14
   note_font "Bitstream Vera Sans"
   xpos 294
   ypos -359
  }
-set N8ad88400 [stack 0]
+set N350c3000 [stack 0]
  Dot {
   name Dot24
   note_font "Bitstream Vera Sans"
   xpos -72
   ypos -359
  }
-set N8ad2fc00 [stack 0]
+set N350c2c00 [stack 0]
  Dot {
   name Dot25
   note_font "Bitstream Vera Sans"
   xpos -163
   ypos -359
  }
-set N8ad2f800 [stack 0]
+set N350c2800 [stack 0]
  Shuffle {
   red white
   green white
@@ -17697,7 +17696,7 @@ set N8ad2f800 [stack 0]
    xpos 862
    ypos 153
   }
-set N8ad2e400 [stack 0]
+set N350c1400 [stack 0]
   Shuffle {
    red white
    green white
@@ -17709,7 +17708,7 @@ set N8ad2e400 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8ad2e000 [stack 0]
+set N350c1000 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -17720,7 +17719,7 @@ set N8ad2e000 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8ad2e000
+push $N350c1000
   Colorspace {
    illuminant_in {{parent.referenceWhite}}
    colorspace_out CIE-XYZ
@@ -17732,7 +17731,7 @@ push $N8ad2e000
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8ad2e400
+push $N350c1400
   BlinkScript {
    inputs 3
    recompileCount 77
@@ -17767,7 +17766,7 @@ push $N8ad2e400
   xpos -389
   ypos -199
  }
-set N8ad2cc00 [stack 0]
+set N3545f800 [stack 0]
  Dot {
   name Dot61
   note_font "Bitstream Vera Sans"
@@ -17780,14 +17779,14 @@ set N8ad2cc00 [stack 0]
   xpos 42
   ypos -173
  }
-push $N8ad2cc00
+push $N3545f800
  Dot {
   name Dot47
   note_font "Bitstream Vera Sans"
   xpos -389
   ypos -173
  }
-push $N8ad2f800
+push $N350c2800
  Group {
   name ZCAM_GamutBoundaryBlink5
   note_font "Bitstream Vera Sans"
@@ -17860,7 +17859,7 @@ push $N8ad2f800
    xpos 862
    ypos 153
   }
-set N8acd2800 [stack 0]
+set N3545d800 [stack 0]
   Shuffle {
    red white
    green white
@@ -17872,7 +17871,7 @@ set N8acd2800 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8acd2400 [stack 0]
+set N3545d400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -17883,7 +17882,7 @@ set N8acd2400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8acd2400
+push $N3545d400
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -17895,7 +17894,7 @@ push $N8acd2400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8acd2800
+push $N3545d800
   BlinkScript {
    inputs 4
    recompileCount 106
@@ -17926,7 +17925,7 @@ push $N8acd2800
    ypos 377
   }
  end_group
-set N8ad38f00 [stack 0]
+set N350cd600 [stack 0]
  Dot {
   name Dot55
   note_font "Bitstream Vera Sans"
@@ -17948,7 +17947,7 @@ set N8ad38f00 [stack 0]
   xpos -291
   ypos -176
  }
-push $N8ad38f00
+push $N350cd600
  Merge2 {
   inputs 2
   operation copy
@@ -17973,7 +17972,7 @@ push $N8ad38f00
   xpos -163
   ypos -75
  }
-push $N8ad2fc00
+push $N350c2c00
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance} 1 1 1}
@@ -18100,7 +18099,7 @@ push $N8ad2fc00
    xpos 862
    ypos 153
   }
-set N8ac69000 [stack 0]
+set N3539bc00 [stack 0]
   Shuffle {
    red white
    green white
@@ -18112,7 +18111,7 @@ set N8ac69000 [stack 0]
    xpos 1015
    ypos 144
   }
-set N8ac68c00 [stack 0]
+set N3539b800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -18123,7 +18122,7 @@ set N8ac68c00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N8ac68c00
+push $N3539b800
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -18135,7 +18134,7 @@ push $N8ac68c00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N8ac69000
+push $N3539bc00
   BlinkScript {
    inputs 4
    recompileCount 106
@@ -18172,7 +18171,7 @@ push $N8ac69000
   xpos 204
   ypos -231
  }
-set N8ac03400 [stack 0]
+set N3539a400 [stack 0]
  Dot {
   name Dot59
   note_font "Bitstream Vera Sans"
@@ -18188,7 +18187,7 @@ set N8ac03400 [stack 0]
   xpos 76
   ypos -176
  }
-push $N8ac03400
+push $N3539a400
  Merge2 {
   inputs 2
   operation copy
@@ -18213,7 +18212,7 @@ push $N8ac03400
   xpos 204
   ypos -94
  }
-push $N8ad88400
+push $N350c3000
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance} 1 1 1}
@@ -18256,7 +18255,7 @@ push $N8ad88400
   xpos 260
   ypos -67
  }
-push $N8ad88800
+push $N350c3400
  ShuffleCopy {
   inputs 2
   red red
@@ -18316,7 +18315,7 @@ push $N8ad88800
    xpos -32
    ypos -184
   }
-set N8ac00800 [stack 0]
+set N3533f400 [stack 0]
   Dot {
    name Dot11
    xpos 114
@@ -18431,7 +18430,7 @@ set N8ac00800 [stack 0]
    xpos 114
    ypos 53
   }
-push $N8ac00800
+push $N3533f400
   MergeExpression {
    inputs 2
    temp_name0 Qzm
@@ -18462,14 +18461,14 @@ push $N8ac00800
   xpos 484
   ypos 98
  }
-set N8abacc00 [stack 0]
+set N352d3800 [stack 0]
  Dot {
   name Dot9
   note_font "Bitstream Vera Sans"
   xpos 643
   ypos 98
  }
-set N8abac800 [stack 0]
+set N352d3400 [stack 0]
  Group {
   name st2048_6
   label "Lum to PQ (ZCAM)\ninverse"
@@ -18496,7 +18495,7 @@ set N8abac800 [stack 0]
    xpos 863
    ypos 240
   }
-set N67c2bc00 [stack 0]
+set N352d2c00 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -18530,7 +18529,7 @@ set N67c2bc00 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N67c2bc00
+push $N352d2c00
   Dot {
    name Dot26
    xpos 810
@@ -18586,7 +18585,7 @@ push $N67c2bc00
   xpos 609
   ypos 168
  }
-set N67c2a400 [stack 0]
+set N352d1400 [stack 0]
  BlinkScript {
   recompileCount 35
   ProgramGroup 1
@@ -18662,7 +18661,7 @@ set N67c2a400 [stack 0]
   addUserKnob {3 N_KNOTS_HIGH}
   N_KNOTS_HIGH 4
  }
-set N67c2a000 [stack 0]
+set N352d1000 [stack 0]
  Multiply {
   channels rgb
   value {{parent.reference_luminance}}
@@ -18706,7 +18705,7 @@ set N67c2a000 [stack 0]
    xpos 863
    ypos 240
   }
-set N67c29000 [stack 0]
+set N35277c00 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -18740,7 +18739,7 @@ set N67c29000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N67c29000
+push $N35277c00
   Dot {
    name Dot26
    xpos 810
@@ -18787,7 +18786,7 @@ push $N67c29000
    ypos 447
   }
  end_group
-push $N8abacc00
+push $N352d3800
  ShuffleCopy {
   inputs 2
   red red
@@ -18805,15 +18804,15 @@ push $N8abacc00
   xpos 484
   ypos 450
  }
-set N67bc3000 [stack 0]
+set N35276000 [stack 0]
  Dot {
   name Dot44
   note_font "Bitstream Vera Sans"
   xpos 605
   ypos 450
  }
-set N67bc2c00 [stack 0]
-push $N67c2a400
+set N35275c00 [stack 0]
+push $N352d1400
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance}}
@@ -18823,14 +18822,14 @@ push $N67c2a400
   xpos 825
   ypos 174
  }
-set N67bc2800 [stack 0]
+set N35275800 [stack 0]
  Dot {
   name Dot56
   note_font "Bitstream Vera Sans"
   xpos 1058
   ypos 189
  }
-push $N67c2a000
+push $N352d1000
  Switch {
   inputs 2
   which {{!parent.applySSTS}}
@@ -18854,7 +18853,7 @@ push $N67c2a000
   xpos 1058
   ypos 439
  }
-push $N67bc2c00
+push $N35275c00
  Dot {
   name Dot52
   note_font "Bitstream Vera Sans"
@@ -18873,7 +18872,7 @@ push $N67bc2c00
   xpos 1231
   ypos 80
  }
-set N67bc1000 [stack 0]
+set N35213c00 [stack 0]
  Shuffle {
   red black
   green black
@@ -18891,7 +18890,7 @@ set N67bc1000 [stack 0]
   xpos 1443
   ypos 124
  }
-set N67bc0800 [stack 0]
+set N35213400 [stack 0]
  Dot {
   name Dot49
   note_font "Bitstream Vera Sans"
@@ -18941,7 +18940,7 @@ set N67bc0800 [stack 0]
    xpos 863
    ypos 240
   }
-set N67b6f000 [stack 0]
+set N35212000 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -18975,7 +18974,7 @@ set N67b6f000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N67b6f000
+push $N35212000
   Dot {
    name Dot26
    xpos 810
@@ -19022,7 +19021,7 @@ push $N67b6f000
    ypos 447
   }
  end_group
-push $N67bc0800
+push $N35213400
  Dot {
   name Dot50
   note_font "Bitstream Vera Sans"
@@ -19072,7 +19071,7 @@ push $N67bc0800
    xpos 863
    ypos 240
   }
-set N67b6c800 [stack 0]
+set N351bb400 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -19106,7 +19105,7 @@ set N67b6c800 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N67b6c800
+push $N351bb400
   Dot {
    name Dot26
    xpos 810
@@ -19167,7 +19166,7 @@ push $N67b6c800
   xpos 1342
   ypos 293
  }
-push $N67bc1000
+push $N35213c00
  Merge2 {
   inputs 2
   operation plus
@@ -19190,7 +19189,7 @@ push $N67bc1000
   xpos 1197
   ypos 343
  }
-push $N67bc2800
+push $N35275800
  BlinkScript {
   recompileCount 35
   ProgramGroup 1
@@ -19298,7 +19297,7 @@ push $N67bc2800
    xpos 863
    ypos 240
   }
-set N67b15000 [stack 0]
+set N3554fc00 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -19332,7 +19331,7 @@ set N67b15000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N67b15000
+push $N3554fc00
   Dot {
    name Dot26
    xpos 810
@@ -19379,7 +19378,7 @@ push $N67b15000
    ypos 447
   }
  end_group
-push $N8abac800
+push $N352d3400
  Dot {
   name Dot54
   note_font "Bitstream Vera Sans"
@@ -19479,7 +19478,7 @@ push $N8abac800
    xpos -284
    ypos 159
   }
-set N67ab1c00 [stack 0]
+set N3554cc00 [stack 0]
   Expression {
    temp_name0 one_minus_e
    temp_expr0 "1 - pow(10,-15)"
@@ -19515,7 +19514,7 @@ set N67ab1c00 [stack 0]
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
   }
-push $N67ab1c00
+push $N3554cc00
   Expression {
    expr0 "threshold.r < 1 ? r > threshold.r ? ( -1 / (( r - threshold.r ) / ( 1 - threshold.r ) +1 ) +1 ) * ( 1 - threshold.r ) + threshold.r : r : r"
    expr1 "threshold.g < 1 ? g > threshold.g ? ( -1 / (( g - threshold.g ) / ( 1 - threshold.g ) +1 ) +1 ) * ( 1 - threshold.g ) + threshold.g : g : g"
@@ -19598,7 +19597,7 @@ push $N67ab1c00
   xpos 571
   ypos 580
  }
-push $N67bc3000
+push $N35276000
  Switch {
   inputs 2
   which {{parent.applyHighlightDesat}}
@@ -19653,7 +19652,7 @@ push $N67bc3000
    xpos 862
    ypos 153
   }
-set N67a33000 [stack 0]
+set N354d6000 [stack 0]
   Shuffle {
    red white
    green white
@@ -19665,7 +19664,7 @@ set N67a33000 [stack 0]
    xpos 1015
    ypos 144
   }
-set N67a32c00 [stack 0]
+set N354d5c00 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -19676,7 +19675,7 @@ set N67a32c00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N67a32c00
+push $N354d5c00
   Colorspace {
    illuminant_in {{parent.parent.illuminant_in}}
    colorspace_out CIE-XYZ
@@ -19688,7 +19687,7 @@ push $N67a32c00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N67a33000
+push $N354d6000
   BlinkScript {
    inputs 3
    recompileCount 70
@@ -19749,7 +19748,7 @@ push $N67a33000
   xpos -461
   ypos 909
  }
-push $N5b2c0800
+push $N34dcf400
  Dot {
   name Dot16
   note_font "Bitstream Vera Sans"
@@ -19828,7 +19827,7 @@ push $N5b2c0800
    xpos 862
    ypos 153
   }
-set N679c3000 [stack 0]
+set N35852000 [stack 0]
   Shuffle {
    red white
    green white
@@ -19840,7 +19839,7 @@ set N679c3000 [stack 0]
    xpos 1015
    ypos 144
   }
-set N679c2c00 [stack 0]
+set N35851c00 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -19851,7 +19850,7 @@ set N679c2c00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N679c2c00
+push $N35851c00
   Colorspace {
    illuminant_in {{parent.parent.illuminant_in}}
    colorspace_out CIE-XYZ
@@ -19863,7 +19862,7 @@ push $N679c2c00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N679c3000
+push $N35852000
   BlinkScript {
    inputs 3
    recompileCount 70
@@ -19899,14 +19898,14 @@ push $N679c3000
   xpos -1114
   ypos -603
  }
-set N679c1800 [stack 0]
+set N35850800 [stack 0]
  Dot {
   name Dot11
   note_font "Bitstream Vera Sans"
   xpos -1309
   ypos -603
  }
-set N679c1400 [stack 0]
+set N35850400 [stack 0]
  Group {
   name st2048_3
   label "PQ (ZCAM) to Lum"
@@ -19933,7 +19932,7 @@ set N679c1400 [stack 0]
    xpos 863
    ypos 240
   }
-set N679c0c00 [stack 0]
+set N357f3800 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -19967,7 +19966,7 @@ set N679c0c00 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N679c0c00
+push $N357f3800
   Dot {
    name Dot26
    xpos 810
@@ -20032,7 +20031,7 @@ push $N679c0c00
   xpos -1343
   ypos -400
  }
-set N6795ac00 [stack 0]
+set N357f1c00 [stack 0]
  Expression {
   expr0 "r>0.18 ? 1 : 0"
   name Expression5
@@ -20047,14 +20046,14 @@ set N6795ac00 [stack 0]
   xpos -1419
   ypos -282
  }
-push $N679c1400
+push $N35850400
  Dot {
   name Dot7
   note_font "Bitstream Vera Sans"
   xpos -1608
   ypos -603
  }
-set N6795a000 [stack 0]
+set N357f1000 [stack 0]
  Shuffle {
   red black
   green black
@@ -20072,7 +20071,7 @@ set N6795a000 [stack 0]
   xpos -1779
   ypos -576
  }
-set N67959800 [stack 0]
+set N357f0800 [stack 0]
  Dot {
   name Dot42
   note_font "Bitstream Vera Sans"
@@ -20122,7 +20121,7 @@ set N67959800 [stack 0]
    xpos 863
    ypos 240
   }
-set N67958400 [stack 0]
+set N357a7000 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -20156,7 +20155,7 @@ set N67958400 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N67958400
+push $N357a7000
   Dot {
    name Dot26
    xpos 810
@@ -20203,7 +20202,7 @@ push $N67958400
    ypos 447
   }
  end_group
-push $N67959800
+push $N357f0800
  Dot {
   name Dot41
   note_font "Bitstream Vera Sans"
@@ -20253,7 +20252,7 @@ push $N67959800
    xpos 863
    ypos 240
   }
-set N66b1d800 [stack 0]
+set N357a4800 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -20287,7 +20286,7 @@ set N66b1d800 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N66b1d800
+push $N357a4800
   Dot {
    name Dot26
    xpos 810
@@ -20348,7 +20347,7 @@ push $N66b1d800
   xpos -1752
   ypos -405
  }
-push $N6795a000
+push $N357f1000
  Merge2 {
   inputs 2
   operation plus
@@ -20371,7 +20370,7 @@ push $N6795a000
   xpos -1642
   ypos -369
  }
-push $N6795ac00
+push $N357f1c00
  BlinkScript {
   recompileCount 35
   ProgramGroup 1
@@ -20479,7 +20478,7 @@ push $N6795ac00
    xpos 863
    ypos 240
   }
-set N66ab6000 [stack 0]
+set N35739000 [stack 0]
   Dot {
    name Dot27
    xpos 916
@@ -20513,7 +20512,7 @@ set N66ab6000 [stack 0]
    addUserKnob {7 L_p R 0 10000}
    L_p {{parent.peakLuminance}}
   }
-push $N66ab6000
+push $N35739000
   Dot {
    name Dot26
    xpos 810
@@ -20566,7 +20565,7 @@ push $N66ab6000
   xpos -1309
   ypos -226
  }
-set N66ab4800 [stack 0]
+set N356d7400 [stack 0]
  Dot {
   name Dot6
   note_font "Bitstream Vera Sans"
@@ -20663,7 +20662,7 @@ set N66ab4800 [stack 0]
    xpos -284
    ypos 159
   }
-set N66a56400 [stack 0]
+set N356d5400 [stack 0]
   Expression {
    temp_name0 one_minus_e
    temp_expr0 "1 - pow(10,-15)"
@@ -20699,7 +20698,7 @@ set N66a56400 [stack 0]
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
    addUserKnob {6 threshold_panelDropped_1_1_1_1_1_1_1_1_1_1_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
   }
-push $N66a56400
+push $N356d5400
   Expression {
    expr0 "threshold.r < 1 ? r > threshold.r ? ( -1 / (( r - threshold.r ) / ( 1 - threshold.r ) +1 ) +1 ) * ( 1 - threshold.r ) + threshold.r : r : r"
    expr1 "threshold.g < 1 ? g > threshold.g ? ( -1 / (( g - threshold.g ) / ( 1 - threshold.g ) +1 ) +1 ) * ( 1 - threshold.g ) + threshold.g : g : g"
@@ -20773,15 +20772,15 @@ push $N66a56400
   xpos -1642
   ypos -135
  }
-push $N66ab4800
-push $N679c1800
+push $N356d7400
+push $N35850800
  Dot {
   name Dot13
   note_font "Bitstream Vera Sans"
   xpos -1114
   ypos -226
  }
-set N66a54400 [stack 0]
+set N3564b000 [stack 0]
  Switch {
   inputs 2
   which {{parent.applySSTS}}
@@ -20839,7 +20838,7 @@ set N66a54400 [stack 0]
    xpos -32
    ypos -184
   }
-set N669c3800 [stack 0]
+set N3564a800 [stack 0]
   Dot {
    name Dot11
    xpos 114
@@ -20954,7 +20953,7 @@ set N669c3800 [stack 0]
    xpos 114
    ypos 53
   }
-push $N669c3800
+push $N3564a800
   MergeExpression {
    inputs 2
    temp_name0 Qz
@@ -20979,7 +20978,7 @@ push $N669c3800
    ypos 117
   }
  end_group
-push $N66a54400
+push $N3564b000
  ShuffleCopy {
   inputs 2
   red red
@@ -21005,21 +21004,21 @@ push $N66a54400
   xpos -1114
   ypos -23
  }
-set N66977400 [stack 0]
+set N355e6400 [stack 0]
  Dot {
   name Dot31
   note_font "Bitstream Vera Sans"
   xpos -1004
   ypos -23
  }
-set N66977000 [stack 0]
+set N355e6000 [stack 0]
  Dot {
   name Dot28
   note_font "Bitstream Vera Sans"
   xpos -854
   ypos -23
  }
-set N66976c00 [stack 0]
+set N355e5c00 [stack 0]
  Shuffle {
   red white
   green white
@@ -21092,7 +21091,7 @@ set N66976c00 [stack 0]
    xpos 862
    ypos 153
   }
-set N66975800 [stack 0]
+set N355e4800 [stack 0]
   Shuffle {
    red white
    green white
@@ -21104,7 +21103,7 @@ set N66975800 [stack 0]
    xpos 1015
    ypos 144
   }
-set N66975400 [stack 0]
+set N355e4400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -21115,7 +21114,7 @@ set N66975400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N66975400
+push $N355e4400
   Colorspace {
    illuminant_in {{parent.referenceWhite}}
    colorspace_out CIE-XYZ
@@ -21127,7 +21126,7 @@ push $N66975400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N66975800
+push $N355e4800
   BlinkScript {
    inputs 3
    recompileCount 77
@@ -21156,7 +21155,7 @@ push $N66975800
    ypos 335
   }
  end_group
-push $N66976c00
+push $N355e5c00
  Group {
   name ZCAM_GamutBoundaryBlink1
   note_font "Bitstream Vera Sans"
@@ -21229,7 +21228,7 @@ push $N66976c00
    xpos 862
    ypos 153
   }
-set N66902c00 [stack 0]
+set N35589c00 [stack 0]
   Shuffle {
    red white
    green white
@@ -21241,7 +21240,7 @@ set N66902c00 [stack 0]
    xpos 1015
    ypos 144
   }
-set N66902800 [stack 0]
+set N35589800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -21252,7 +21251,7 @@ set N66902800 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N66902800
+push $N35589800
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -21264,7 +21263,7 @@ push $N66902800
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N66902c00
+push $N35589c00
   BlinkScript {
    inputs 4
    recompileCount 106
@@ -21301,7 +21300,7 @@ push $N66902c00
   xpos -854
   ypos 135
  }
-set N66901400 [stack 0]
+set N35588400 [stack 0]
  ShuffleCopy {
   inputs 2
   red red
@@ -21317,7 +21316,7 @@ set N66901400 [stack 0]
   xpos -702
   ypos 188
  }
-push $N66901400
+push $N35588400
  Merge2 {
   inputs 2
   operation copy
@@ -21336,7 +21335,7 @@ push $N66901400
   xpos -888
   ypos 215
  }
-push $N66977000
+push $N355e6000
  Multiply {
   channels rgb
   value {{1/parent.reference_luminance} 1 1 1}
@@ -21379,7 +21378,7 @@ push $N66977000
   xpos -1038
   ypos 257
  }
-push $N66977400
+push $N355e6400
  ShuffleCopy {
   inputs 2
   red red
@@ -21397,14 +21396,14 @@ push $N66977400
   xpos -1114
   ypos 385
  }
-set N668aec00 [stack 0]
+set N3591dc00 [stack 0]
  Dot {
   name Dot2
   note_font "Bitstream Vera Sans"
   xpos -994
   ypos 385
  }
-set N668ae800 [stack 0]
+set N3591d800 [stack 0]
  Dot {
   name Dot23
   note_font "Bitstream Vera Sans"
@@ -21486,7 +21485,7 @@ set N668ae800 [stack 0]
    xpos 862
    ypos 153
   }
-set N668ad000 [stack 0]
+set N358b3c00 [stack 0]
   Shuffle {
    red white
    green white
@@ -21498,7 +21497,7 @@ set N668ad000 [stack 0]
    xpos 1015
    ypos 144
   }
-set N668acc00 [stack 0]
+set N358b3800 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -21509,7 +21508,7 @@ set N668acc00 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N668acc00
+push $N358b3800
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -21521,7 +21520,7 @@ push $N668acc00
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N668ad000
+push $N358b3c00
   BlinkScript {
    inputs 4
    recompileCount 122
@@ -21562,15 +21561,15 @@ push $N668ad000
   xpos -884
   ypos 445
  }
-set N96be3400 [stack 0]
+set N358b2400 [stack 0]
  Dot {
   name Dot4
   note_font "Bitstream Vera Sans"
   xpos -850
   ypos 562
  }
-push $N668ae800
-push $N96be3400
+push $N3591d800
+push $N358b2400
  Merge2 {
   inputs 2
   operation divide
@@ -21606,7 +21605,7 @@ push $N96be3400
   xpos -1028
   ypos 559
  }
-push $N668aec00
+push $N3591dc00
  ShuffleCopy {
   inputs 2
   green green
@@ -21660,7 +21659,7 @@ push $N668aec00
    xpos 862
    ypos 153
   }
-set N96be1800 [stack 0]
+set N358b0800 [stack 0]
   Shuffle {
    red white
    green white
@@ -21672,7 +21671,7 @@ set N96be1800 [stack 0]
    xpos 1015
    ypos 144
   }
-set N96be1400 [stack 0]
+set N358b0400 [stack 0]
   Colorspace {
    colorspace_out CIE-XYZ
    name D65White
@@ -21683,7 +21682,7 @@ set N96be1400 [stack 0]
    addUserKnob {13 value}
    value {{colormatrix.0+colormatrix.1+colormatrix.2} {colormatrix.3+colormatrix.4+colormatrix.5} {colormatrix.6+colormatrix.7+colormatrix.8}}
   }
-push $N96be1400
+push $N358b0400
   Colorspace {
    illuminant_in {{parent.parent.white}}
    colorspace_out CIE-XYZ
@@ -21695,7 +21694,7 @@ push $N96be1400
    addUserKnob {13 value}
    value {{"\[python nuke.thisNode().knob('colormatrix').getValue(0)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(1)\\ +\\ nuke.thisNode().knob('colormatrix').getValue(2)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(3) + nuke.thisNode().knob('colormatrix').getValue(4) + nuke.thisNode().knob('colormatrix').getValue(5)]"} {"\[python nuke.thisNode().knob('colormatrix').getValue(6) + nuke.thisNode().knob('colormatrix').getValue(7) + nuke.thisNode().knob('colormatrix').getValue(8)]"}}
   }
-push $N96be1800
+push $N358b0800
   BlinkScript {
    inputs 3
    recompileCount 67
@@ -21787,6 +21786,7 @@ Reformat {
  xpos 615
  ypos 391
 }
+set N35c45400 [stack 0]
 Group {
  name Write_ResolveACES_ODT_LUT4
  label "\[python nuke.thisNode().knob('file').evaluate().split('/').pop(-1)]"
@@ -21831,20 +21831,6 @@ Group {
   ypos 353
  }
 end_group
-NoOp {
- inputs 0
- name master
- tile_color 0x102307ff
- label "rev\[value revision]"
- note_font_size 50
- note_font_color 0x347216ff
- xpos 1014
- ypos 137
- addUserKnob {20 User}
- addUserKnob {1 revision}
- revision 003
- addUserKnob {22 bakeAllODTs T "ODTWrites = \[]\nfor node in nuke.allNodes():\n    if 'Write_ResolveACES_ODT_LUT' in node.name():\n        ODTWrites.append(node)\n\nfor ODTWriteNode in ODTWrites:\n    ODTWriteNode.knob('writeCubes').execute()" +STARTLINE}
-}
 Constant {
  inputs 0
  channels rgb
@@ -21861,4 +21847,26 @@ Ramp {
  name Ramp1
  xpos 145
  ypos -26
+}
+push $N35c45400
+Viewer {
+ frame_range 1-100
+ gl_buffer_depth half-float
+ name Viewer1
+ xpos 615
+ ypos 423
+}
+NoOp {
+ inputs 0
+ name master
+ tile_color 0x102307ff
+ label "rev\[value revision]"
+ note_font_size 50
+ note_font_color 0x347216ff
+ xpos 1014
+ ypos 137
+ addUserKnob {20 User}
+ addUserKnob {1 revision}
+ revision 003
+ addUserKnob {22 bakeAllODTs T "ODTWrites = \[]\nfor node in nuke.allNodes():\n    if 'Write_ResolveACES_ODT_LUT' in node.name():\n        ODTWrites.append(node)\n\nfor ODTWriteNode in ODTWrites:\n    ODTWriteNode.knob('writeCubes').execute()" +STARTLINE}
 }
