@@ -7,7 +7,7 @@ This repo contains a Nukescipt used to bake the LUTs, A dctl template to wrap th
 # Filmlight Baselight
 
 ## 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_0_Candidates_rev003` to `/vol/.support/etc/colourspaces`
+- Copy all the files contained in `ACES2_0_Candidates_rev004` to `/vol/.support/etc/colourspaces`
 - Restart Baselight
 - You should see three new custom DRTs in `Scene Settings -> Format & Colour -> Display Rendering Transform`
 
@@ -17,7 +17,7 @@ This repo contains a Nukescipt used to bake the LUTs, A dctl template to wrap th
 ## 1. Adding a Custom ACES IDT or ODT File:
 - Navigate to the `ACES Transforms` folder in Resolve's application support folder.
     - MacOS: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/ACES Transforms`
-    - Windows: `AppData\Blackmagic Design\DaVinci Resolve\Support\ACES Transforms`
+    - Windows: `C:\Users\<User>\AppData\Roaming\Blackmagic Design\DaVinci Resolve\Support\ACES Transforms\IDT`
     - Linux: `~/.local/share/DaVinciResolve/ACES Transforms`
 - Place your custom ACES DCTL files for Input Device Transforms (IDTs) in the IDT subfolder.
 - Place your custom ACES DCTL files for Output Device Transforms (ODTs) in the ODT subfolder.
