@@ -7,7 +7,7 @@ This repo contains a Nukescipt used to bake the LUTs, A dctl template to wrap th
 # Filmlight Baselight
 
 ## 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_0_Candidates_rev004` to `/vol/.support/etc/colourspaces`
+- Copy all the files contained in `ACES2_0_Candidates_rev005` to `/vol/.support/etc/colourspaces`
 - Restart Baselight
 - You should see three new custom DRTs in `Scene Settings -> Format & Colour -> Display Rendering Transform`
 
