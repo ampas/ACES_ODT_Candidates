@@ -8,7 +8,7 @@ There is a HDR YouTube clip comparing these 3 versions [here](https://www.youtub
 # Filmlight Baselight
 
 ## 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_0_Candidates_rev006` to `/vol/.support/etc/colourspaces`
+- Copy all the files contained in `ACES2_0_Candidates_rev007` to `/vol/.support/etc/colourspaces`
 - Restart Baselight
 - You should see three new custom DRTs in `Scene Settings -> Format & Colour -> Display Rendering Transform`
 

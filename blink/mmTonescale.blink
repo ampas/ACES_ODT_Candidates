@@ -1,0 +1,145 @@
+
+kernel mmTonescaleKernel : ImageComputationKernel<ePixelWise>
+{
+  Image<eRead, eAccessPoint, eEdgeClamped> src; // the input image
+  Image<eWrite> dst; // the output image
+
+  param:
+   
+
+    // Tonescale select
+    bool inverse;
+    // OpenDRT tonescale parameters
+    float Lp;
+    float su;
+    float c0;
+    float cs;
+    float c1;
+    float p;
+    float w1;
+    float s1;
+    float ex;
+    float eb;
+    float e0;
+    float s0;
+    float fl;
+    float dch;
+    float sat;
+
+  local:
+
+    // constants
+  void define()
+  {
+
+  }
+
+
+  // get the y value of f(x) where the fuction is defined as a line between two points
+  // the two points as passed as an array [a.x, a.y, b.x, b.y]
+  float lerp1D( float4 table, float x)
+  {
+    float m = (table.w-table.y) / (table.z-table.x);
+    float c = table.y - (m*table.x);
+    float y = x*m+c;
+    return y;
+  }
+
+
+  // "safe" power function to avoid NANs or INFs when taking a fractional power of a negative base
+  // this one initially retured -pow(abs(b), e) for negative b
+  // but this ended up producing undesirable results in some cases
+  // so now it just returns 0.0 instead
+  float spow( float base, float exponent )
+  {
+    if(base < 0.0f && exponent != floor(exponent) )
+    {
+      return 0.0f;
+    }
+    else
+    {
+     return pow(base, exponent); 
+    }
+  }
+
+
+  // clamp the components of a 3D vector between a min & max value
+  float3 clamp3(float3 v, float min, float max)
+  {
+    v.x = clamp(v.x, min, max);
+    v.y = clamp(v.y, min, max);
+    v.z = clamp(v.z, min, max);
+    return v;
+  }
+
+
+
+  float forwardMmTonescale(float x)
+  {
+      float tc = 0.0f;
+      if (x<0.18)
+      {
+          tc = cs*spow(x,c0);
+      }
+      else
+      {
+          tc = c0*(x-0.18)+0.18;
+      }
+      
+      float ts = s1*spow((tc/(s0+tc)),p);
+      float tf = ts*ts/(ts+fl);
+      float ccf = spow(s0/(x+s0),dch)*sat;
+
+      return tf;
+  }
+
+  float inverseMmTonescale(float x)
+  {
+
+      float tf = (x+sqrt(x*(4*fl+x)))/2;
+      float ts = s0/(spow((s1/tf),(1/p))-1);
+      float tc = 0.0f;
+      if (ts<0.18)
+      {
+          tc = spow((ts/cs),(1/c0));
+      }
+      else
+      {
+          tc = (ts-0.18)/c0+0.18;
+      }
+      float ccf = spow(s0/(tc+s0),dch)*sat;
+
+      return tc;
+  }
+
+
+  void init()
+  {
+    
+  }
+
+
+  void process()
+  {
+    SampleType(src) source = src();
+    float3 srcRGB(source.x, source.y, source.z);
+    float3 mappedVals;
+    if(!inverse)
+    {
+        mappedVals.x = forwardMmTonescale(source.x);
+        mappedVals.y = forwardMmTonescale(source.y);
+        mappedVals.z = forwardMmTonescale(source.z);
+    }
+    else
+    {
+        mappedVals.x = inverseMmTonescale(source.x);
+        mappedVals.y = inverseMmTonescale(source.y);
+        mappedVals.z = inverseMmTonescale(source.z);
+    }
+
+
+    float3 dstRGB;
+
+    dst() = float4(mappedVals.x, mappedVals.y, mappedVals.z, source.w); 
+  }
+};
