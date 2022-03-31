@@ -9,22 +9,21 @@ This repo contains:
 There is a HDR YouTube clip comparing these 3 versions [here](https://www.youtube.com/watch?v=s8f1MylJLN0). It should only be viewed on a HDR display, as SDR playback will be passing through YouTube's tonemapper, which dramatically effects the look.
 
 
-# Overview
-
-## Candidate A
-This represents a minimal departure from the existing ACES 1.2 transforms.
-Some minor colour tweaks collectively known as the RRT Sweeteners have been removed.
-The c9 (SDR) and SSTS (HDR) tonescales have both been replaced with the Michaelis-Menten Spring Dual-Contrast (MMSDC) curve, still applied as a per channel RGB lookup in the AP1 rendering space. Mapping down to the final display gamut is a simple matrix, as used in the existing ACES Display Transforms.
-
-## Candidate B
-Is a mathematically minimal approach that tries to preserve hue, whilst leaving as many options open for the user as possible.
-It applies the same MMSDC tonecurve in a way that preserves chart linear hue lines, allowing for improved SDR to HDR colour rendering. But leaves the final mapping down to the target display gamut to the user, allowing greater choice in the approach taken here.
-
-## Candidate C
-Is a more complex approach that pushes the scene-referred data into a perceptually driven colour appearance model, and does the tonemapping and explicit target display gamut compression in that space. Representation of light intensity is prioritised over saturation. And perceptual hue consistency is prioritised over absolute saturation. 
-
 
 # Installation
+
+## OCIO for Nuke and other Applications
+
+There is a cutdown OCIO config based on the current ACES 1.2 config.
+It includes all Input and Utility spaces, but a greatly reduced set of Output spaces.
+
+There are two config variations:
+* A standard `config.ocio` for general use in Nuke on Linux and Windows, and other generic OCIO applications.
+
+* And a second `condig_DisplayP3.ocio` intended for use with Nuke 13 on a Mac with EDR support.
+This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR Color Profile` checkbox, and setting the `gl buffer depth` to `half-float` in the Viewer settings pane.
+
+
 
 ## Filmlight Baselight
 
