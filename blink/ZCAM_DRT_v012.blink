@@ -1781,6 +1781,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
       JMh = compressGamutInverse(JMh);
       float3 inputIzazbz = inverseTonescale(JMh);
       dstRGB = Izazbz_to_input_RGB(inputIzazbz);
+      diagnostic =  dstRGB;
     }
     else
     {
