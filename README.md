@@ -32,6 +32,8 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
 - Restart Baselight
 - You should see three new custom DRTs in `Scene Settings -> Format & Colour -> Display Rendering Transform`
 
+<span style="color:red">Note : Candidate C currently will not display correctly in baselight because of a shaper gamut change.
+
 
 ## Davinci Resolve
 

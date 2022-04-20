@@ -101,6 +101,7 @@ frameNumbers = [x.split('.')[-2] for x in imageNames]
 frameNumbers.sort()
 ## remove duplicates
 frameNumbers = list(dict.fromkeys(frameNumbers))
+frameNumbers = [x for x in frameNumbers if x != '']
 
 for frame in frameNumbers:
     print(frame)
