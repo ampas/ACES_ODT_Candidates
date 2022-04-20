@@ -92,15 +92,28 @@ footTemplate = '''    </div>
 
 rev = '008'
 
+## get list of image names from image directory
+import os
+imageNames = os.listdir('docs/images')
+## isolate frame numbers from name
+frameNumbers = [x.split('.')[-2] for x in imageNames]
+## sort frame numbers
+frameNumbers.sort()
+## remove duplicates
+frameNumbers = list(dict.fromkeys(frameNumbers))
+
+for frame in frameNumbers:
+    print(frame)
+
 ### Write out HDR vs SDR
 newDivs = []
 description = 'ACES 2.0 OT Candidates revRRR - SDR vs HDR'.replace('RRR', rev)
-for i in range(1,177):
+for frame in frameNumbers:
     # print(str(i).zfill(4))
-    newDivs.append(divTemplate1.replace('XXXX', str(i).zfill(4)).replace('RRR', rev))
+    newDivs.append(divTemplate1.replace('XXXX', frame).replace('RRR', rev))
 
-for div in newDivs:
-    print(div)
+# for div in newDivs:
+#     print(div)
 
 #write to html file on disk
 with open('docs/sdrVsHdr.html', 'w') as f:
@@ -111,9 +124,9 @@ with open('docs/sdrVsHdr.html', 'w') as f:
 ### Write out A vs C
 newDivs = []
 description = 'ACES 2.0 OT Candidates revRRR - A vs C'.replace('RRR', rev)
-for i in range(1,177):
+for frame in frameNumbers:
     # print(str(i).zfill(4))
-    newDivs.append(divTemplate2.replace('XXXX', str(i).zfill(4)).replace('RRR', rev))
+    newDivs.append(divTemplate2.replace('XXXX', frame).replace('RRR', rev))
 
 for div in newDivs:
     print(div)
