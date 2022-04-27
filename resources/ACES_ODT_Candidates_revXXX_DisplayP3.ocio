@@ -24,24 +24,29 @@ displays:
   ACES:
     - !<View> {name: ACES 1.2 - Rec2100, colorspace: Output - Rec.2020 ST2084 (1000 nits)}
     - !<View> {name: ACES 2.0 Candidate A revXXX - Rec.2100, colorspace: Candidate A revXXX - Rec.2100}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - Rec.2100, colorspace: Candidate B revXXX - Rec.2100}
     - !<View> {name: ACES 2.0 Candidate C revXXX - Rec.2100, colorspace: Candidate C revXXX - Rec.2100}
     - !<View> {name: ACES 1.2 - Rec2100 (Rec709 sim), colorspace: Output - Rec.2100 (Rec709 sim)}
     - !<View> {name: ACES 2.0 Candidate A revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate A revXXX - Rec.2100 (Rec709 sim)}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate B revXXX - Rec.2100 (Rec709 sim)}
     - !<View> {name: ACES 2.0 Candidate C revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate C revXXX - Rec.2100 (Rec709 sim)}
     - !<View> {name: ACES 1.2 - Rec.709, colorspace: Output - Rec.709}
     - !<View> {name: ACES 2.0 Candidate A revXXX - Rec.709, colorspace: Candidate A revXXX - Rec.709}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - Rec.709, colorspace: Candidate B revXXX - Rec.709}
     - !<View> {name: ACES 2.0 Candidate C revXXX - Rec.709, colorspace: Candidate C revXXX - Rec.709}
     - !<View> {name: ACES 1.2 - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 (Rec709 Limited)}
     - !<View> {name: ACES 2.0 Candidate A revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate A revXXX (Rec709 Limited)}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate B revXXX (Rec709 Limited)}
     - !<View> {name: ACES 2.0 Candidate C revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate C revXXX (Rec709 Limited)}
     - !<View> {name: ACES 1.2 - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 (P3D65 1000nit Limited)}
     - !<View> {name: ACES 2.0 Candidate A revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate A revXXX (P3D65 1000nit Limited)}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate B revXXX (P3D65 1000nit Limited)}
     - !<View> {name: ACES 2.0 Candidate C revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate C revXXX (P3D65 1000nit Limited)}
     - !<View> {name: Raw, colorspace: Utility - Raw}
     - !<View> {name: Log, colorspace: Input - ADX - ADX10}
 
 active_displays: [ACES]
-active_views: [ ACES 1.2 - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate A revXXX - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate C revXXX - DisplayP3 (Rec.709 Limited),ACES 1.2 - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate A revXXX - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate C revXXX - DisplayP3 (P3D65 1000nit Limited), Raw, Log]
+active_views: [ ACES 1.2 - Rec.709 , ACES 2.0 Candidate A revXXX - Rec.709 , ACES 2.0 Candidate B revXXX - Rec.709 , ACES 2.0 Candidate C revXXX - Rec.709, ACES 1.2 - Rec2100 , ACES 2.0 Candidate A revXXX - Rec.2100 , ACES 2.0 Candidate B revXXX - Rec.2100 , ACES 2.0 Candidate C revXXX - Rec.2100 , ACES 1.2 - Rec2100 (Rec709 sim)  , ACES 2.0 Candidate A revXXX - Rec.2100 (Rec709 sim) , ACES 2.0 Candidate B revXXX - Rec.2100 (Rec709 sim) , ACES 2.0 Candidate C revXXX - Rec.2100 (Rec709 sim) , Raw, Log]
 
 colorspaces:
   - !<ColorSpace>
@@ -1394,6 +1399,21 @@ colorspaces:
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateA revXXX Rec709.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
+    name: Candidate B revXXX - Rec.709
+    family: Output
+    equalitygroup: ""
+    bitdepth: 32f
+    description: |
+      ACES 2.0 Testing Candiadate B revXXX - Rec.709 Output Transform
+    isdata: false
+    allocation: uniform
+    allocationvars: [0, 1]
+    from_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateB revXXX Rec709.cube, interpolation: tetrahedral}
+
+  - !<ColorSpace>
     name: Candidate C revXXX - Rec.709
     family: Output
     equalitygroup: ""
@@ -1423,6 +1443,21 @@ colorspaces:
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateA revXXX Rec2100.cube, interpolation: tetrahedral}
+
+  - !<ColorSpace>
+    name: Candidate B revXXX - Rec.2100
+    family: Output
+    equalitygroup: ""
+    bitdepth: 32f
+    description: |
+      ACES 2.0 Testing Candiadate B revXXX - Rec.2100 Output Transform
+    isdata: false
+    allocation: uniform
+    allocationvars: [0, 1]
+    from_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateB revXXX Rec2100.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
     name: Candidate C revXXX - Rec.2100
@@ -1476,6 +1511,21 @@ colorspaces:
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateA revXXX Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
+
+  - !<ColorSpace>
+    name: Candidate B revXXX - Rec.2100 (Rec709 sim)
+    family: Output
+    equalitygroup: ""
+    bitdepth: 32f
+    description: |
+      ACES 2.0 Testing Candiadate B revXXX - Rec.2100 (Rec709 sim) Output Transform
+    isdata: false
+    allocation: uniform
+    allocationvars: [0, 1]
+    from_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateB revXXX Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
   
   - !<ColorSpace>
     name: Candidate C revXXX - Rec.2100 (Rec709 sim)
@@ -1550,6 +1600,23 @@ colorspaces:
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
+    name: Output - DisplayP3 Candidate B revXXX (Rec709 Limited)
+    family: Output
+    equalitygroup: ""
+    bitdepth: 32f
+    description: |
+      ACES 2.0 Output - DisplayP3 Candidate B revXXX (Rec709 Limited)
+    isdata: false
+    allocation: uniform
+    allocationvars: [0, 1]
+    from_reference: !<GroupTransform>
+      children:
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate B revXXX - Rec.709}
+        - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
+        - !<MatrixTransform> {matrix: [0.82246882, 0.17753105, 0, 0, 0.03319578, 0.96680403, 0.00000001, 0, 0.01708578, 0.07240722, 0.9105069, 0, 0, 0, 0, 1]}
+        - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
+
+  - !<ColorSpace>
     name: Output - DisplayP3 Candidate C revXXX (Rec709 Limited)
     family: Output
     equalitygroup: ""
@@ -1597,6 +1664,24 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate A revXXX - Rec.2100}
+        - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
+        - !<CDLTransform> {slope: [.01, .01, .01]}
+        - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
+        - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
+
+  - !<ColorSpace>
+    name: Output - DisplayP3 Candidate B revXXX (P3D65 1000nit Limited)
+    family: Output
+    equalitygroup: ""
+    bitdepth: 32f
+    description: |
+      ACES 2.0 Output - DisplayP3 Candidate B revXXX (P3D65 1000nit Limited)
+    isdata: false
+    allocation: uniform
+    allocationvars: [0, 1]
+    from_reference: !<GroupTransform>
+      children:
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate B revXXX - Rec.2100}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
