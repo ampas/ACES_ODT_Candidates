@@ -1493,7 +1493,7 @@ colorspaces:
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.627419, 0.329275, 0.0433056, 0, 0.0691005, 0.919539, 0.0113606, 0, 0.0163944, 0.088025, 0.895581, 0, 0, 0, 0, 1]}
         - !<MatrixTransform> {matrix: [100, 0, 0, 0, 0, 100, 0, 0, 0, 0, 100, 0, 0, 0, 0, 1], direction: forward}
-        - !<FileTransform> {src: PQ_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: inverse}
 
 
 

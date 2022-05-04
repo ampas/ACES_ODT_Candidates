@@ -32,7 +32,9 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
 ## Filmlight Baselight
 
 ### 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_0_Candidates_rev008` to `/vol/.support/etc/colourspaces`
+- Copy all the files contained in `ACES2_0_Candidates_rev009` to the colourspace folder
+    - Linux: `/usr/fl/etc/colourspaces `
+    - Mac: `/Library/Application Support/ FilmLight/etc/colourspaces`
 - Restart Baselight
 - You should see three new custom DRTs in `Scene Settings -> Format & Colour -> Display Rendering Transform`
 
