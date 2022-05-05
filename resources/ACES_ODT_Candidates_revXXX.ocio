@@ -23,30 +23,30 @@ roles:
 displays:
   ACES:
     - !<View> {name: ACES 1.2 - Rec2100, colorspace: Output - Rec.2020 ST2084 (1000 nits)}
-    - !<View> {name: ACES 2.0 Candidate A rev009 - Rec.2100, colorspace: Candidate A rev009 - Rec.2100}
-    - !<View> {name: ACES 2.0 Candidate B rev009 - Rec.2100, colorspace: Candidate B rev009 - Rec.2100}
-    - !<View> {name: ACES 2.0 Candidate C rev009 - Rec.2100, colorspace: Candidate C rev009 - Rec.2100}
+    - !<View> {name: ACES 2.0 Candidate A revXXX - Rec.2100, colorspace: Candidate A revXXX - Rec.2100}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - Rec.2100, colorspace: Candidate B revXXX - Rec.2100}
+    - !<View> {name: ACES 2.0 Candidate C revXXX - Rec.2100, colorspace: Candidate C revXXX - Rec.2100}
     - !<View> {name: ACES 1.2 - Rec2100 (Rec709 sim), colorspace: Output - Rec.2100 (Rec709 sim)}
-    - !<View> {name: ACES 2.0 Candidate A rev009 - Rec.2100 (Rec709 sim), colorspace: Candidate A rev009 - Rec.2100 (Rec709 sim)}
-    - !<View> {name: ACES 2.0 Candidate B rev009 - Rec.2100 (Rec709 sim), colorspace: Candidate B rev009 - Rec.2100 (Rec709 sim)}
-    - !<View> {name: ACES 2.0 Candidate C rev009 - Rec.2100 (Rec709 sim), colorspace: Candidate C rev009 - Rec.2100 (Rec709 sim)}
+    - !<View> {name: ACES 2.0 Candidate A revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate A revXXX - Rec.2100 (Rec709 sim)}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate B revXXX - Rec.2100 (Rec709 sim)}
+    - !<View> {name: ACES 2.0 Candidate C revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate C revXXX - Rec.2100 (Rec709 sim)}
     - !<View> {name: ACES 1.2 - Rec.709, colorspace: Output - Rec.709}
-    - !<View> {name: ACES 2.0 Candidate A rev009 - Rec.709, colorspace: Candidate A rev009 - Rec.709}
-    - !<View> {name: ACES 2.0 Candidate B rev009 - Rec.709, colorspace: Candidate B rev009 - Rec.709}
-    - !<View> {name: ACES 2.0 Candidate C rev009 - Rec.709, colorspace: Candidate C rev009 - Rec.709}
+    - !<View> {name: ACES 2.0 Candidate A revXXX - Rec.709, colorspace: Candidate A revXXX - Rec.709}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - Rec.709, colorspace: Candidate B revXXX - Rec.709}
+    - !<View> {name: ACES 2.0 Candidate C revXXX - Rec.709, colorspace: Candidate C revXXX - Rec.709}
     - !<View> {name: ACES 1.2 - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 (Rec709 Limited)}
-    - !<View> {name: ACES 2.0 Candidate A rev009 - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate A rev009 (Rec709 Limited)}
-    - !<View> {name: ACES 2.0 Candidate B rev009 - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate B rev009 (Rec709 Limited)}
-    - !<View> {name: ACES 2.0 Candidate C rev009 - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate C rev009 (Rec709 Limited)}
+    - !<View> {name: ACES 2.0 Candidate A revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate A revXXX (Rec709 Limited)}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate B revXXX (Rec709 Limited)}
+    - !<View> {name: ACES 2.0 Candidate C revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate C revXXX (Rec709 Limited)}
     - !<View> {name: ACES 1.2 - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 (P3D65 1000nit Limited)}
-    - !<View> {name: ACES 2.0 Candidate A rev009 - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate A rev009 (P3D65 1000nit Limited)}
-    - !<View> {name: ACES 2.0 Candidate B rev009 - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate B rev009 (P3D65 1000nit Limited)}
-    - !<View> {name: ACES 2.0 Candidate C rev009 - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate C rev009 (P3D65 1000nit Limited)}
+    - !<View> {name: ACES 2.0 Candidate A revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate A revXXX (P3D65 1000nit Limited)}
+    - !<View> {name: ACES 2.0 Candidate B revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate B revXXX (P3D65 1000nit Limited)}
+    - !<View> {name: ACES 2.0 Candidate C revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate C revXXX (P3D65 1000nit Limited)}
     - !<View> {name: Raw, colorspace: Utility - Raw}
     - !<View> {name: Log, colorspace: Input - ADX - ADX10}
 
 active_displays: [ACES]
-active_views: [ ACES 1.2 - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate A rev009 - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate B rev009 - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate C rev009 - DisplayP3 (Rec.709 Limited),ACES 1.2 - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate A rev009 - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate B rev009 - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate C rev009 - DisplayP3 (P3D65 1000nit Limited), Raw, Log]
+active_views: [ ACES 1.2 - Rec.709 , ACES 2.0 Candidate A revXXX - Rec.709 , ACES 2.0 Candidate B revXXX - Rec.709 , ACES 2.0 Candidate C revXXX - Rec.709, ACES 1.2 - Rec2100 , ACES 2.0 Candidate A revXXX - Rec.2100 , ACES 2.0 Candidate B revXXX - Rec.2100 , ACES 2.0 Candidate C revXXX - Rec.2100 , ACES 1.2 - Rec2100 (Rec709 sim)  , ACES 2.0 Candidate A revXXX - Rec.2100 (Rec709 sim) , ACES 2.0 Candidate B revXXX - Rec.2100 (Rec709 sim) , ACES 2.0 Candidate C revXXX - Rec.2100 (Rec709 sim) , Raw, Log]
 
 colorspaces:
   - !<ColorSpace>
@@ -1384,42 +1384,42 @@ colorspaces:
         - !<FileTransform> {src: Log2_48_nits_Shaper.RRT.Rec.709.spi3d, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate A rev009 - Rec.709
+    name: Candidate A revXXX - Rec.709
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate A rev009 - Rec.709 Output Transform
+      ACES 2.0 Testing Candiadate A revXXX - Rec.709 Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateA rev009 Rec709.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateA revXXX Rec709.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate B rev009 - Rec.709
+    name: Candidate B revXXX - Rec.709
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate B rev009 - Rec.709 Output Transform
+      ACES 2.0 Testing Candiadate B revXXX - Rec.709 Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateB rev009 Rec709.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateB revXXX Rec709.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate C rev009 - Rec.709
+    name: Candidate C revXXX - Rec.709
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate C rev009 - Rec.709 Output Transform
+      ACES 2.0 Testing Candiadate C revXXX - Rec.709 Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
@@ -1427,45 +1427,45 @@ colorspaces:
       children:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateC rev009 Rec709.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateC revXXX Rec709.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate A rev009 - Rec.2100
+    name: Candidate A revXXX - Rec.2100
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate A rev009 - Rec.2100 Output Transform
+      ACES 2.0 Testing Candiadate A revXXX - Rec.2100 Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateA rev009 Rec2100.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateA revXXX Rec2100.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate B rev009 - Rec.2100
+    name: Candidate B revXXX - Rec.2100
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate B rev009 - Rec.2100 Output Transform
+      ACES 2.0 Testing Candiadate B revXXX - Rec.2100 Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateB rev009 Rec2100.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateB revXXX Rec2100.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate C rev009 - Rec.2100
+    name: Candidate C revXXX - Rec.2100
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate C rev009 - Rec.2100 Output Transform
+      ACES 2.0 Testing Candiadate C revXXX - Rec.2100 Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
@@ -1473,7 +1473,7 @@ colorspaces:
       children:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateC rev009 Rec2100.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateC revXXX Rec2100.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
     name: Output - Rec.2100 (Rec709 sim)
@@ -1498,42 +1498,42 @@ colorspaces:
 
 
   - !<ColorSpace>
-    name: Candidate A rev009 - Rec.2100 (Rec709 sim)
+    name: Candidate A revXXX - Rec.2100 (Rec709 sim)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate A rev009 - Rec.2100 (Rec709 sim) Output Transform
+      ACES 2.0 Testing Candiadate A revXXX - Rec.2100 (Rec709 sim) Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateA rev009 Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateA revXXX Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
-    name: Candidate B rev009 - Rec.2100 (Rec709 sim)
+    name: Candidate B revXXX - Rec.2100 (Rec709 sim)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate B rev009 - Rec.2100 (Rec709 sim) Output Transform
+      ACES 2.0 Testing Candiadate B revXXX - Rec.2100 (Rec709 sim) Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateB rev009 Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateB revXXX Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
   
   - !<ColorSpace>
-    name: Candidate C rev009 - Rec.2100 (Rec709 sim)
+    name: Candidate C revXXX - Rec.2100 (Rec709 sim)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate C rev009 - Rec.2100 (Rec709 sim) Output Transform
+      ACES 2.0 Testing Candiadate C revXXX - Rec.2100 (Rec709 sim) Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
@@ -1541,7 +1541,7 @@ colorspaces:
       children:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_rev009/ACES2 CandidateC rev009 Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 CandidateC revXXX Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
 
 
   - !<ColorSpace>
@@ -1583,52 +1583,52 @@ colorspaces:
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate A rev009 (Rec709 Limited)
+    name: Output - DisplayP3 Candidate A revXXX (Rec709 Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate A rev009 (Rec709 Limited)
+      ACES 2.0 Output - DisplayP3 Candidate A revXXX (Rec709 Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate A rev009 - Rec.709}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate A revXXX - Rec.709}
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.82246882, 0.17753105, 0, 0, 0.03319578, 0.96680403, 0.00000001, 0, 0.01708578, 0.07240722, 0.9105069, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate B rev009 (Rec709 Limited)
+    name: Output - DisplayP3 Candidate B revXXX (Rec709 Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate B rev009 (Rec709 Limited)
+      ACES 2.0 Output - DisplayP3 Candidate B revXXX (Rec709 Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate B rev009 - Rec.709}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate B revXXX - Rec.709}
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.82246882, 0.17753105, 0, 0, 0.03319578, 0.96680403, 0.00000001, 0, 0.01708578, 0.07240722, 0.9105069, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate C rev009 (Rec709 Limited)
+    name: Output - DisplayP3 Candidate C revXXX (Rec709 Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate C rev009 (Rec709 Limited)
+      ACES 2.0 Output - DisplayP3 Candidate C revXXX (Rec709 Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate C rev009 - Rec.709}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate C revXXX - Rec.709}
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.82246882, 0.17753105, 0, 0, 0.03319578, 0.96680403, 0.00000001, 0, 0.01708578, 0.07240722, 0.9105069, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
@@ -1652,54 +1652,54 @@ colorspaces:
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate A rev009 (P3D65 1000nit Limited)
+    name: Output - DisplayP3 Candidate A revXXX (P3D65 1000nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate A rev009 (P3D65 1000nit Limited)
+      ACES 2.0 Output - DisplayP3 Candidate A revXXX (P3D65 1000nit Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate A rev009 - Rec.2100}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate A revXXX - Rec.2100}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate B rev009 (P3D65 1000nit Limited)
+    name: Output - DisplayP3 Candidate B revXXX (P3D65 1000nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate B rev009 (P3D65 1000nit Limited)
+      ACES 2.0 Output - DisplayP3 Candidate B revXXX (P3D65 1000nit Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate B rev009 - Rec.2100}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate B revXXX - Rec.2100}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate C rev009 (P3D65 1000nit Limited)
+    name: Output - DisplayP3 Candidate C revXXX (P3D65 1000nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate C rev009 (P3D65 1000nit Limited)
+      ACES 2.0 Output - DisplayP3 Candidate C revXXX (P3D65 1000nit Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate C rev009 - Rec.2100}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate C revXXX - Rec.2100}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}

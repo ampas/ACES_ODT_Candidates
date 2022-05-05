@@ -46,7 +46,7 @@ displays:
     - !<View> {name: Log, colorspace: Input - ADX - ADX10}
 
 active_displays: [ACES]
-active_views: [ ACES 1.2 - Rec.709 , ACES 2.0 Candidate A revXXX - Rec.709 , ACES 2.0 Candidate B revXXX - Rec.709 , ACES 2.0 Candidate C revXXX - Rec.709, ACES 1.2 - Rec2100 , ACES 2.0 Candidate A revXXX - Rec.2100 , ACES 2.0 Candidate B revXXX - Rec.2100 , ACES 2.0 Candidate C revXXX - Rec.2100 , ACES 1.2 - Rec2100 (Rec709 sim)  , ACES 2.0 Candidate A revXXX - Rec.2100 (Rec709 sim) , ACES 2.0 Candidate B revXXX - Rec.2100 (Rec709 sim) , ACES 2.0 Candidate C revXXX - Rec.2100 (Rec709 sim) , Raw, Log]
+active_views: [ ACES 1.2 - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate A revXXX - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate B revXXX - DisplayP3 (Rec.709 Limited),ACES 2.0 Candidate C revXXX - DisplayP3 (Rec.709 Limited),ACES 1.2 - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate A revXXX - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate B revXXX - DisplayP3 (P3D65 1000nit Limited),ACES 2.0 Candidate C revXXX - DisplayP3 (P3D65 1000nit Limited), Raw, Log]
 
 colorspaces:
   - !<ColorSpace>
