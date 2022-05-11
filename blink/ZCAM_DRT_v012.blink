@@ -282,7 +282,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
     // the 1D LUT used for quickly findig the approximate limiting gamut cusp JMh coordinates
     // the samples are spaced by HSV hue increments of the limiting RGB gamut
     // so to find the correct entry for a given ZCAM hue (h) value 
-    // one must search the table entries for the mathcing entry.z component
+    // one must search the table entries for the matching entry.z component
     int gamutCuspTableSize;
 
     // the 'gamutCuspTableUnsorted' table is populated
@@ -290,7 +290,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
     // since it is unlikely that HSV.H=0 and JMh.h=0 line up
     // the entries are then wrap-around shifted
     // so that the 'gamutCuspTable' starts with the lowest JMh.h value
-    // both tables need to be declared here since tempoary array variables
+    // both tables need to be declared here since temporary array variables
     // in the init() fuction seem to crash Nuke on some systems
     float3 gamutCuspTableUnsorted[360];
     float3 gamutCuspTable[360];
@@ -334,7 +334,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
 
 
   // "safe" power function to avoid NANs or INFs when taking a fractional power of a negative base
-  // this one initially retured -pow(abs(b), e) for negative b
+  // this one initially returned -pow(abs(b), e) for negative b
   // but this ended up producing undesirable results in some cases
   // so now it just returns 0.0 instead
   float spow( float base, float exponent )
@@ -395,7 +395,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
     return vCompressed;
   }
 
-  // Two-Stage chromatic adaptation transforms as proposed by  Zhai, Q., & Luo, M. R. (2018)
+  // Two-Stage chromatic adaptation transforms as proposed by Zhai, Q., & Luo, M. R. (2018)
   // https://opg.optica.org/oe/fulltext.cfm?uri=oe-26-6-7724
   // https://github.com/colour-science/colour/blob/e5fa0790adcc3e5df5fa42ddf2bb75214c8cf59c/colour/adaptation/zhai2018.py
   float3 CAT_Zhai2018( float3 XYZ_b, float3 XYZ_wb, float3 XYZ_wd, float D_b, float D_d, float3x3 M)
@@ -417,7 +417,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
   }
 
   // apply chromatic adaptation transform to 'XYZ' from 'XYZ_ws' to 'XYZ_wd' white points
-  // 'type' selects the cone fundamentals matrix (exept for Zhai2018 which uses a 2-stage tranforms based on CATO2 fundamentals)
+  // 'type' selects the cone fundamentals matrix (except for Zhai2018 which uses a 2-stage tranforms based on CATO2 fundamentals)
   // 'adaptDegree' sets the degree of adaptation for the Zhai2018 model
   float3 apply_CAT( float3 XYZ, float3 XYZ_ws, float3 XYZ_wd, int type, float adaptDegree )
   {
@@ -887,7 +887,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
   }
 
 
-  // find the JM coordinates of the smoothed boundary of the limiting gamaut in ZCAM at the hue slice 'h' 
+  // find the JM coordinates of the smoothed boundary of the limiting gamut in ZCAM at the hue slice 'h' 
   // by searching along the line defined by 'JMSource' and 'JMFocus'
   // the function will search outwards from where the line intersects the achromatic axis with a staring incement of 'startStepSize'
   // once the boundary has been crossed it will search in the opposite direction with half the step size
@@ -944,7 +944,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
   }
 
 
-  // apply the forward ACES SingleStageToneScale (SSTS) transfom to the linear 'x' input value and return a luminance value
+  // apply the forward ACES SingleStageToneScale (SSTS) transform to the linear 'x' input value and return a luminance value
   float forwardSSTS(float x, float3 minPt, float3 midPt, float3 maxPt)
   {
     // Check for negatives or zero before taking the log. If negative or zero,
@@ -1210,7 +1210,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
 
     float luminanceTS = 50.0f;
 
-    // swtich for testing out the MM tonescale from Jed
+    // switch for testing out the MM tonescale from Jed
     if( mmTonescaleMode )
     {
         luminanceTS = forwardMmTonescale(linear) * mmScaleFactor;
@@ -1746,7 +1746,7 @@ kernel DRT_ZCAM_v12_Kernel : ImageComputationKernel<ePixelWise>
     limitJmax = limit_RGB_to_JMh(float3(1.0f)).x;
 
 
-    // limitMmax (asumed to coincide with one of the RGBCMY corners of the limitRGB cube)
+    // limitMmax (assumed to coincide with one of the RGBCMY corners of the limitRGB cube)
     float3 gamutCornersTable[6];
     gamutCornersTable[0] = limit_RGB_to_JMh(float3(1.0f, 0.0f, 0.0f));
     gamutCornersTable[1] = limit_RGB_to_JMh(float3(1.0f, 1.0f, 0.0f));
