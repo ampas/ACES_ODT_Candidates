@@ -1,5 +1,5 @@
 DEFINE_ACES_PARAM(IS_PARAMETRIC_ACES_TRANSFORM: 0)
-DEFINE_LUT(DRTLUT, ACES2 CandidateB rev009 Rec2100 (Rec709 sim).cube)
+DEFINE_LUT(DRTLUT, ACES2 CandidateB rev009 Rec2100 Rec709 sim.cube)
 
 
 __DEVICE__ float lin_to_ACEScct(float in) {
