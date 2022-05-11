@@ -23,7 +23,7 @@ It includes all Input and Utility spaces, but a greatly reduced set of Output sp
 There are two config variations:
 * A standard `config.ocio` for general use in Nuke on Linux and Windows, and other generic OCIO applications.
 
-* And a second `condig_DisplayP3.ocio` intended for use with Nuke 13 on a Mac with EDR support.
+* And a second `config_DisplayP3.ocio` intended for use with Nuke 13 on a Mac with EDR support.
 This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR Color Profile` checkbox, and setting the `gl buffer depth` to `half-float` in the Viewer settings pane.
 
 
