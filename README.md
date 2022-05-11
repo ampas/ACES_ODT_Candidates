@@ -6,10 +6,10 @@ This repo contains:
 * A dctl template to wrap them in a way Resolve will treat as a valid ACES ODT.
 * A FilmLight Display Rendering Transforms intended for use in Baselight.
 
+
 Comparison frames can be viewed here. (Only tested and known to work on a Pro Display XDR in Chrome under MacOS 12.3)
 
 [Testing examples](https://alexfry.github.io/ACES_ODT_Candidates_Examples/)
-
 
 
 # Installation
@@ -30,9 +30,9 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
 ## Filmlight Baselight
 
 ### 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_0_Candidates_rev009` to the colourspace folder
-    - Linux: `/usr/fl/etc/colourspaces `
-    - Mac: `/Library/Application Support/ FilmLight/etc/colourspaces`
+- Copy all the files contained in `ACES2_0_Candidates_rev009` to the colourspace folder 
+    - Linux & Mac: `/vol/.support/etc/colourspaces`
+
 - Restart Baselight
 - You should see three new custom DRTs in `Scene Settings -> Format & Colour -> Display Rendering Transform`
 
@@ -49,3 +49,22 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
 - Place your custom ACES DCTL files for Input Device Transforms (IDTs) in the IDT subfolder.
 - Place your custom ACES DCTL files for Output Device Transforms (ODTs) in the ODT subfolder.
 - Start Resolve.
+
+There are two pathways for testing the candidate transform in Resolve.
+
+### A: Standard ACES project
+
+Using a standard ACES mode project the OT candidates can be found under the `ACES Output Transforms` submenu.
+
+The only caveat here is that Resolve currently doesn not support output space tagging for custom DCTL transforms, so whilst they will work as expected with external monitors, they will no be picked up correctly if you use "Use Mac display color profiles for viewers" option, which in turn means EDR/HDR display will not work correctly.
+![ResolveACES](docs/images/ResolveACESMode001.png)
+
+### B: Stock DaVinci YRGB project with manual ACES node
+
+You can also set you project to use the stock `DaVinci YRGB` colour science mode.
+![ResolveACES](docs/images/ResolveNodeMode002.png)
+
+And then drop an ACES Transform node at the timeline level.
+![ResolveACES](docs/images/ResolveNodeMode001.png)
+
+The advantage of this method is that EDR display on the Mac will work properly, as will the ouput scopes.
