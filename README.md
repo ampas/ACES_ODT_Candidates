@@ -8,9 +8,7 @@ This repo contains:
 
 Comparison frames can be viewed here. (Only tested and known to work on a Pro Display XDR in Chrome under MacOS 12.3)
 
-[SDR vs HDR](https://alexfry.github.io/ACES_ODT_Candidates/sdrVsHdr.html)
-
-[A vs C](https://alexfry.github.io/ACES_ODT_Candidates/AvsC.html)
+[Testing examples](https://alexfry.github.io/ACES_ODT_Candidates_Examples/)
 
 
 
