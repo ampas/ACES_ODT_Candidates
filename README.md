@@ -6,9 +6,10 @@ This repo contains:
 * A dctl template to wrap them in a way Resolve will treat as a valid ACES ODT.
 * A FilmLight Display Rendering Transforms intended for use in Baselight.
 
-Comparison frames can be viewed here. (Only works under some specific setups.)
 
-[ACES_ODT_Candidates_Examples](https://alexfry.github.io/ACES_ODT_Candidates_Examples/)
+Comparison frames can be viewed here. (Only tested and known to work on a Pro Display XDR in Chrome under MacOS 12.3)
+
+[Testing examples](https://alexfry.github.io/ACES_ODT_Candidates_Examples/)
 
 
 # Installation
