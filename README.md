@@ -5,6 +5,7 @@ This repo contains:
 * a Nukescipt used to bake the LUTs.
 * A dctl template to wrap them in a way Resolve will treat as a valid ACES ODT.
 * A FilmLight Display Rendering Transforms intended for use in Baselight.
+* OCIO configs, both for standard Linux/Windows environments, and Macs using EDR displays.
 
 
 Comparison frames can be viewed here. (Only tested and known to work on a Pro Display XDR in Chrome under MacOS 12.3)
