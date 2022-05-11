@@ -114,7 +114,7 @@ def bakeCandidateLUTfromNode(node):
 
     nukeScriptDir = nuke.script_directory()
     print(nukeScriptDir)
-    templatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())
+    dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())
     fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())
     flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')
     print(flSpacePath)
@@ -124,6 +124,7 @@ def bakeCandidateLUTfromNode(node):
 
 
     cubePath = os.path.join(nukeScriptDir,node.knob('cubePath').evaluate())
+    cubePathClean = cubePath.replace('(','').replace(')','')
     ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())
     cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())
     # replace LUT writer path with evaluated path
@@ -150,21 +151,27 @@ def bakeCandidateLUTfromNode(node):
 
     dctlPath = cubePath.replace('.cube','.dctl')
     cubeName = cubePath.split('/').pop(-1)
+    cubeNameClean = cubeName.replace('(','').replace(')','')
+
+
 
 
 
 
     if bakeLuts == True:
         node.knob('generate').execute()
+        # if cubeName does not match cubeNameClean copy cubeName to cubeNameClean
+        if cubePath != cubePathClean:
+            shutil.copy(cubePath,cubePathClean)
 
 
 
 
 
     ## write the dctl file
-    with open(templatePath) as f:
+    with open(dctltemplatePath) as f:
         lines = f.readlines()
-    newLines = [x.replace('replace.cube',cubeName) for x in lines]
+    newLines = [x.replace('replace.cube',cubeNameClean) for x in lines]
     with open(dctlPath, 'w') as f:
         f.write(''.join(newLines))
 
@@ -176,11 +183,13 @@ def bakeCandidateLUTfromNode(node):
     # convert cube to cub
     cubeToCub(cubePath,cubPath)
 
-
-
-
     # copy cubePath to ocioCubePath
     shutil.copy(cubePath,ocioCubePath)
+
+    # remove original cube if it isnt the same as the clean version
+    if cubePathClean != cubePath:
+        # delete cubeName
+        os.remove(cubePath)
 
 
 
