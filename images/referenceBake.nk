@@ -1,0 +1,372 @@
+#! /Applications/Nuke13.0v3/Nuke13.0v3.app/Contents/MacOS/libnuke-13.0.3.dylib -nx
+version 13.0 v3
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="25" w="3008" h="1562" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2345" stretch="1"/>
+            <splitter orientation="2">
+                <split size="905"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="637"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="uk.co.thefoundry.scripteditor.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/afry/GitHub/ACES_ODT_Candidates/images/referenceBake.nk
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement OCIO
+ OCIO_config custom
+ customOCIOConfigPath /Users/afry/GitHub/ACES_ODT_Candidates/OCIO/ACES_ODT_Candidates_rev009_config.ocio
+ defaultViewerLUT "OCIO LUTs"
+ workingSpaceLUT scene_linear
+ monitorLut "ACES/ACES 1.2 - DisplayP3 (Rec.709 Limited)"
+ monitorOutLUT "ACES 1.2 - DisplayP3 (Rec.709 Limited) (ACES)"
+ int8Lut matte_paint
+ int16Lut texture_paint
+ logLut compositing_log
+ floatLut scene_linear
+}
+Read {
+ inputs 0
+ file_type exr
+ file /Users/afry/GitHub/ACES_ODT_Candidates/images/SonyF35.StillLife.exr
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ origset true
+ colorspace "ACES - ACES2065-1"
+ name Read1
+ xpos -59
+ ypos -158
+}
+Dot {
+ name Dot1
+ xpos -25
+ ypos -56
+}
+set N3ddb2c00 [stack 0]
+Text {
+ message "Candidate B rev009 - Rec.2100"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text5
+ label "\[nuke]"
+ xpos 435
+ ypos 151
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate B rev009 - Rec.2100"
+ name OCIOColorSpace5
+ label "\[value out_colorspace]"
+ xpos 442
+ ypos 179
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write5
+ xpos 442
+ ypos 211
+}
+Viewer {
+ frame_range 1-100
+ gl_buffer_depth half-float
+ viewerProcess "Raw (ACES)"
+ name Viewer1
+ xpos -248
+ ypos 266
+}
+push $N3ddb2c00
+Text {
+ message "Candidate B rev009 - Rec.709"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text2
+ label "\[nuke]"
+ xpos 54
+ ypos 152
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate B rev009 - Rec.709"
+ name OCIOColorSpace2
+ label "\[value out_colorspace]"
+ xpos 54
+ ypos 184
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write2
+ xpos 54
+ ypos 216
+}
+push $N3ddb2c00
+Text {
+ message "Candidate C rev009 - Rec.709"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text3
+ label "\[nuke]"
+ xpos 170
+ ypos 150
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate C rev009 - Rec.709"
+ name OCIOColorSpace3
+ label "\[value out_colorspace]"
+ xpos 170
+ ypos 182
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write3
+ xpos 170
+ ypos 214
+}
+push $N3ddb2c00
+Text {
+ message "Candidate A rev009 - Rec.2100"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text4
+ label "\[nuke]"
+ xpos 326
+ ypos 150
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate A rev009 - Rec.2100"
+ name OCIOColorSpace4
+ label "\[value out_colorspace]"
+ xpos 326
+ ypos 182
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write4
+ xpos 326
+ ypos 214
+}
+push $N3ddb2c00
+Text {
+ message "Candidate C rev009 - Rec.2100"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text6
+ label "\[nuke]"
+ xpos 559
+ ypos 151
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate C rev009 - Rec.2100"
+ name OCIOColorSpace6
+ label "\[value out_colorspace]"
+ xpos 565
+ ypos 183
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write6
+ xpos 565
+ ypos 215
+}
+push $N3ddb2c00
+Text {
+ message "Candidate A rev009 - Rec.2100 (Rec709 sim)"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text7
+ label "\[nuke]"
+ xpos 702
+ ypos 149
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate A rev009 - Rec.2100 (Rec709 sim)"
+ name OCIOColorSpace7
+ label "\[value out_colorspace]"
+ xpos 710
+ ypos 177
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write7
+ xpos 710
+ ypos 209
+}
+push $N3ddb2c00
+Text {
+ message "Candidate B rev009 - Rec.2100 (Rec709 sim)"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text8
+ label "\[nuke]"
+ xpos 833
+ ypos 147
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate B rev009 - Rec.2100 (Rec709 sim)"
+ name OCIOColorSpace8
+ label "\[value out_colorspace]"
+ xpos 833
+ ypos 179
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write8
+ xpos 833
+ ypos 211
+}
+push $N3ddb2c00
+Text {
+ message "Candidate C rev009 - Rec.2100 (Rec709 sim)"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text9
+ label "\[nuke]"
+ xpos 963
+ ypos 145
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate C rev009 - Rec.2100 (Rec709 sim)"
+ name OCIOColorSpace9
+ label "\[value out_colorspace]"
+ xpos 963
+ ypos 177
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write9
+ xpos 963
+ ypos 209
+}
+push $N3ddb2c00
+Text {
+ message "Candidate A rev009 - Rec.709"
+ font "/Library/Fonts/Arial Unicode.ttf"
+ size 25
+ xjustify center
+ yjustify bottom
+ box {16 12 1904 1068}
+ center {960 540}
+ color 2
+ name Text1
+ label "\[nuke]"
+ xpos -59
+ ypos 154
+}
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "Candidate A rev009 - Rec.709"
+ name OCIOColorSpace1
+ label "\[value out_colorspace]"
+ xpos -59
+ ypos 186
+}
+Write {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/images/\[python nuke.thisNode().metadata('input/filename').split('/').pop(-1).replace('.exr','')]_\[value input.out_colorspace].tif"
+ raw true
+ file_type tiff
+ checkHashOnRead false
+ version 3
+ name Write1
+ xpos -59
+ ypos 226
+}
