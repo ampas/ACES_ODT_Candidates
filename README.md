@@ -42,11 +42,11 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
 
 ### 1. Adding a Custom ACES IDT or ODT File:
 - Navigate to the `ACES Transforms` folder in Resolve's application support folder.
-    - MacOS: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/ACES Transforms`
-    - Windows: `C:\Users\<User>\AppData\Roaming\Blackmagic Design\DaVinci Resolve\Support\ACES Transforms\IDT`
-    - Linux: `~/.local/share/DaVinciResolve/ACES Transforms`
-- Place your custom ACES DCTL files for Input Device Transforms (IDTs) in the IDT subfolder.
-- Place your custom ACES DCTL files for Output Device Transforms (ODTs) in the ODT subfolder.
+    - MacOS: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/ACES Transforms/ODT`
+    - Windows: `C:\Users\<User>\AppData\Roaming\Blackmagic Design\DaVinci Resolve\Support\ACES Transforms\ODT`
+    - Linux: `~/.local/share/DaVinciResolve/ACES Transforms/ODT`
+
+- Copy the `ACES2_0_Candidates_rev009` folder into the ODT folder.
 - Start Resolve.
 
 There are two pathways for testing the candidate transform in Resolve.
