@@ -1,6 +1,4 @@
 DEFINE_ACES_PARAM(IS_PARAMETRIC_ACES_TRANSFORM: 0)
-DEFINE_LUT(DRTLUT, replace.cube)
-
 
 __DEVICE__ float lin_to_ACEScct(float in) {
   if (in <= 0.0078125f) {
@@ -24,3 +22,8 @@ __DEVICE__ float3 transform(int p_Width, int p_Height, int p_X, int p_Y, float p
 
     return res;
 }
+
+
+DEFINE_CUBE_LUT(DRTLUT)
+{
+REPLACE_WITH_CUBE_DATA}

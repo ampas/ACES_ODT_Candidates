@@ -18,17 +18,9 @@ def cubeToCub(cubePath,cubPath):
     inputCubePath = cubePath
     ouputCubPath = cubPath
 
-
-
-
-
     # read the cube
     with open(inputCubePath) as f:
         lines = f.readlines()
-
-
-
-
 
     # header
     tlHeader = '''# Truelight Cube v2.1
@@ -37,26 +29,13 @@ def cubeToCub(cubePath,cubPath):
     # width     65 65 65\n
     # Cube'''
 
-
-
-
-
     # footer
     tlFooter = '''\n# end\n'''
-
-
-
-
-
 
     LUTlines = lines[2:]
     LUTlines = [x.replace('\n','').split(' ') for x in LUTlines]
     LUTlines = [[float(i) for i in x] for x in LUTlines]
     LUTlines = [[str(i) for i in x] for x in LUTlines]
-
-
-
-
 
     ## remove decimal from 0.0 and 1.0
     for i, x in enumerate(LUTlines):
@@ -66,34 +45,18 @@ def cubeToCub(cubePath,cubPath):
             if '1.0' == a:
                 LUTlines[i][j] = '1'
 
-
-
-
-
     # reconstruct the cube string
     stringLUTlines = []
     for line in LUTlines:
         stringLUTlines.append(' '.join(line))
     newLUTStringBlock = '\n'.join(stringLUTlines)
 
-
-
-
-
     # join it all up
     outputContents = tlHeader + '\n' + newLUTStringBlock + '\n' + tlFooter
-
-
-
-
 
     # check directory for outputCubPath exists, if not, create it
     if not os.path.exists(os.path.dirname(ouputCubPath)):
         os.makedirs(os.path.dirname(ouputCubPath))
-
-
-
-
 
     # write the file
     with open(ouputCubPath, 'w') as f:
@@ -165,6 +128,9 @@ def bakeCandidateLUTfromNode(node):
             shutil.copy(cubePath,cubePathClean)
 
 
+    # read contents of cube file
+    with open(cubePathClean) as f:
+        cubelines = f.readlines()
 
 
 
@@ -172,6 +138,9 @@ def bakeCandidateLUTfromNode(node):
     with open(dctltemplatePath) as f:
         lines = f.readlines()
     newLines = [x.replace('replace.cube',cubeNameClean) for x in lines]
+    # replace the string REPLACE_WITH_CUBE_DATA with the contents of cubelines
+    newLines = [x.replace('REPLACE_WITH_CUBE_DATA',''.join(cubelines)) for x in newLines]
+
     with open(dctlPath, 'w') as f:
         f.write(''.join(newLines))
 
@@ -186,10 +155,14 @@ def bakeCandidateLUTfromNode(node):
     # copy cubePath to ocioCubePath
     shutil.copy(cubePath,ocioCubePath)
 
-    # remove original cube if it isnt the same as the clean version
-    if cubePathClean != cubePath:
-        # delete cubeName
+    # # remove original cube if it isnt the same as the clean version
+    # if cubePathClean != cubePath:
+    #     # delete cubeName
+        # os.remove(cubePath)
+    if os.path.exists(cubePath):
         os.remove(cubePath)
+    if os.path.exists(cubePathClean):
+        os.remove(cubePathClean)
 
 
 
