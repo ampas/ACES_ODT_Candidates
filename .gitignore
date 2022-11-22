@@ -2,3 +2,4 @@
 *.nk.autosave
 .DS_Store
 *.nk~
+OCIOLoadTest.nk

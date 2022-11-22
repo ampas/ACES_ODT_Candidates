@@ -1,16 +1,11 @@
 # ACES ODT Candidates
- Prebaked LUTs of the ACES 2.0 ODT candidates from the [ACES Output Transforms Architecture Virtual Working Group](https://paper.dropbox.com/doc/Output-Transforms-Architecture-Virtual-Working-Group-HKNpj824NA0Z8tn7jiPS0)
+ Prebaked LUTs of the ACES 2.0 CAMDRT Prototype from the [ACES Output Transforms Architecture Virtual Working Group](https://paper.dropbox.com/doc/Output-Transforms-Architecture-Virtual-Working-Group-HKNpj824NA0Z8tn7jiPS0)
 
 This repo contains:
 * a Nukescipt used to bake the LUTs.
 * A dctl template to wrap them in a way Resolve will treat as a valid ACES ODT.
 * A FilmLight Display Rendering Transforms intended for use in Baselight.
 * OCIO configs, both for standard Linux/Windows environments, and Macs using EDR displays.
-
-
-Comparison frames can be viewed here. (Only tested and known to work on a Pro Display XDR in Chrome under MacOS 12.3)
-
-[Testing examples](https://alexfry.github.io/ACES_ODT_Candidates_Examples/)
 
 
 # Installation
@@ -21,17 +16,19 @@ There is a cutdown OCIO config based on the current ACES 1.2 config.
 It includes all Input and Utility spaces, but a greatly reduced set of Output spaces.
 
 There are two config variations:
-* A standard `config.ocio` for general use in Nuke on Linux and Windows, and other generic OCIO applications.
+* A `_Limited.ocio` for general use in Nuke on Linux and Windows, and other generic OCIO applications.
 
-* And a second `config_DisplayP3.ocio` intended for use with Nuke 13 on a Mac with EDR support.
+* A `_DisplayP3.ocio` intended for use with Nuke 13 on a Mac with EDR support.
 This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR Color Profile` checkbox, and setting the `gl buffer depth` to `half-float` in the Viewer settings pane.
+
+* And an `_All.ocio` config will both sets of transforms. (Useful, but can mean the View menu is a bit overloaded)
 
 
 
 ## Filmlight Baselight
 
 ### 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_0_Candidates_rev009` to the colourspace folder 
+- Copy all the files contained in `ACES2_Candidates_rev024` to the colourspace folder 
     - Linux & Mac: `/vol/.support/etc/colourspaces`
 
 - Restart Baselight
@@ -46,7 +43,7 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
     - Windows: `C:\Users\<User>\AppData\Roaming\Blackmagic Design\DaVinci Resolve\Support\ACES Transforms\ODT`
     - Linux: `~/.local/share/DaVinciResolve/ACES Transforms/ODT`
 
-- Copy the `ACES2_0_Candidates_rev009` folder into the ODT folder.
+- Copy the `ACES2 Candidates rev024` folder into the ODT folder.
 - Start Resolve.
 
 There are two pathways for testing the candidate transform in Resolve.

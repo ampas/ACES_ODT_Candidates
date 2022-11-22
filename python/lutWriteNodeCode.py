@@ -22,12 +22,16 @@ def cubeToCub(cubePath,cubPath):
     with open(inputCubePath) as f:
         lines = f.readlines()
 
+    cubeSize = lines[1].split(' ')[1].replace('\n','')
+
     # header
     tlHeader = '''# Truelight Cube v2.1
     # iDims     3
     # oDims     3
-    # width     65 65 65\n
+    # width     CUBESIZE CUBESIZE CUBESIZE\n
     # Cube'''
+
+    tlHeader = tlHeader.replace('CUBESIZE',cubeSize)
 
     # footer
     tlFooter = '''\n# end\n'''
