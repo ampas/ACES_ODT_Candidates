@@ -204,15 +204,62 @@ def createOCIOconfigs(revision):
     newOcioTemplateDir = os.path.join(nukeScriptDir,'OCIO/')
     ocioConfigTemplates = [x for x in os.listdir(ocioTemplateDir) if x.endswith('.ocio')]
     ocioConfigTemplatePaths = [os.path.join(ocioTemplateDir,x) for x in ocioConfigTemplates]
+
+
+    activeViewDicts = []
+    activeViewDicts.append({'name':'All','values':[
+        'ACES 1.2 - Rec.709',
+        'ACES 1.2 - Rec2100',
+        'ACES 1.2 - Rec2100 (Rec709 sim)',
+        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',
+        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.709',
+        'ACES 2.0 Candidate CAMDRT revXXX - P3D65',
+        'ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',
+        ]})
+
+    activeViewDicts.append({'name':'DisplayP3','values':[
+        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',
+        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',
+        ]})
+
+    activeViewDicts.append({'name':'Limited','values':[
+        'ACES 1.2 - Rec.709',
+        'ACES 1.2 - Rec2100',
+        'ACES 1.2 - Rec2100 (Rec709 sim)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.709',
+        'ACES 2.0 Candidate CAMDRT revXXX - P3D65',
+        'ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)',
+        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)',
+        ]})
+
+
     for config in ocioConfigTemplatePaths:
-        configName = config.split('/').pop(-1)
-        newConfigName = configName.replace('revXXX','rev'+revision)
-        newConfigPath = os.path.join(newOcioTemplateDir,newConfigName)
-        with open(config) as f:
-            lines = f.readlines()
-        newLines = [x.replace('revXXX','rev'+revision) for x in lines]
-        with open(newConfigPath, 'w') as f:
-            f.write(''.join(newLines))
+        for activeViewDict in activeViewDicts:
+
+            configName = config.split('/').pop(-1)
+            newConfigName = configName.replace('revXXX','rev'+revision).replace('TEMPLATE',activeViewDict['name'])
+            newConfigPath = os.path.join(newOcioTemplateDir,newConfigName)
+            with open(config) as f:
+                lines = f.readlines()
+            activeViewsStrings = [ x.replace('revXXX','rev'+revision) for x in  activeViewDict['values']]
+            activeViews = ','.join(activeViewsStrings)
+            newLines = [x.replace('revXXX','rev'+revision).replace('ACTIVEVIEWSPLACEHOLDER',activeViews) for x in lines]
+            with open(newConfigPath, 'w') as f:
+                f.write(''.join(newLines))
 
 
 
