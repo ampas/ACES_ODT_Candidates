@@ -1394,6 +1394,9 @@ colorspaces:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec709.cube, interpolation: tetrahedral}
+    to_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec709_inverse.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
     name: Candidate CAMDRT rev026 - P3D65
@@ -1426,6 +1429,9 @@ colorspaces:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 P3D65 (Rec709 sim).cube, interpolation: tetrahedral}
+    to_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 P3D65 (Rec709 sim)_inverse.cube, interpolation: tetrahedral}
 
 
   - !<ColorSpace>
@@ -1443,6 +1449,10 @@ colorspaces:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec2100 (P3D65 540nit Limited).cube, interpolation: tetrahedral}
+    to_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec2100 (P3D65 540nit Limited)_inverse.cube, interpolation: tetrahedral}
+
 
   - !<ColorSpace>
     name: Candidate CAMDRT rev026 - Rec.2100 (P3D65 1000nit Limited)
@@ -1459,6 +1469,10 @@ colorspaces:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec2100 (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
+    to_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec2100 (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
+
 
   - !<ColorSpace>
     name: Output - Rec.2100 (Rec709 sim)
@@ -1495,7 +1509,9 @@ colorspaces:
         - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec2100 (Rec709 sim).cube, interpolation: tetrahedral}
-
+    to_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACES2_Candidates_rev026/ACES2 Candidate CAMDRT rev026 Rec2100 (Rec709 sim)_inverse.cube, interpolation: tetrahedral}
 
   - !<ColorSpace>
     name: Output - Rec.2020 ST2084 (1000 nits)
