@@ -1,13 +1,4 @@
-DisplayName="ACEScct: ACEScct / AP0";
-BlackPoint=75;
-WhitePoint=568;
-
-Help = 
-"Primaries: AP0\n"
-"Tone curve: ACEScct\n"
-"Colour space for ACES 2.0 testing.\n"
-"This colour space is similar to ACEScc above black, but adds a toe for more traditional\n"
-"log-like colour grading behavior.\n";
+DisplayName="ACEScct: ACEScct / APS4";
 
 to_lin = upto("@@");
 vec4 convertToLinear(vec4 val)
@@ -44,13 +35,15 @@ vec4 convertFromLinear(vec4 val, int clip)
 }
 @@
 
+// Matrix calculated from CIE x,y values...
+// RGB:            0.713,0.293 0.165,0.83 0.128,0.044
+// White = D60:    0.32168,0.33767
+
 mat = [array
-       0.9999017,  0.0000000,  0.0000983,
-       0.3439664,  0.7281661, -0.0721325,
-       0.0000000,  0.0000000,  1.0000000];
+ 1.05304263, -0.01507882, -0.03796356,
+ 0.34315706,  0.72725382, -0.07040586,
+-0.35978658, -0.03322839,  1.39300994];
 
 type = "scene";
-range = "full";
+range="full";
 Invisible = 1;
-DefaultHiddenUses = [set "Cursor","GradeResult","Input","Render",];
-ColourMetadata = [struct Primaries= "ACES-AP0" , TransferFunction="ACES-cct"];

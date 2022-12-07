@@ -8,7 +8,7 @@ import os
 import shutil
 
 
-node = nuke.thisNode()
+masterNode = nuke.thisNode()
 
 
 bakeLuts = nuke.thisNode().knob('bakeLUTs').value()
@@ -70,7 +70,7 @@ def cubeToCub(cubePath,cubPath):
 
 
 
-def bakeCandidateLUTfromNode(node):
+def bakeCandidateLUTfromNode(node,inverse=False):
     candidate = node.knob('candidate').value()
     revision = node.knob('revision').value()
     target = node.knob('target').value()
@@ -83,7 +83,7 @@ def bakeCandidateLUTfromNode(node):
     print(nukeScriptDir)
     dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())
     fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())
-    flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')
+    # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')
     print(flSpacePath)
 
 
@@ -94,6 +94,13 @@ def bakeCandidateLUTfromNode(node):
     cubePathClean = cubePath.replace('(','').replace(')','')
     ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())
     cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())
+
+    if inverse:
+        cubePath = cubePath.replace('.cube','_inverse.cube')
+        cubePathClean = cubePathClean.replace('.cube','_inverse.cube')
+        ocioCubePath = ocioCubePath.replace('.cube','_inverse.cube')
+        cubPath = cubPath.replace('.cub','_inverse.cub')
+
     # replace LUT writer path with evaluated path
     node.knob('file').setValue(cubePath)
 
@@ -189,9 +196,10 @@ def bakeCandidateLUTfromNode(node):
 
     # check ACEScct_AP0.flspace exists, if not, copy it
     for flspace in ['/ACEScct_AP0.flspace','/ACEScct_APS4.flspace']:
-        ACEScct_AP0_flspace_path = os.path.dirname(cubPath) + flspace
-        if not os.path.exists(ACEScct_AP0_flspace_path):
-            shutil.copy(flSpacePath,ACEScct_AP0_flspace_path)
+        flSpaceSourcePath = os.path.join(nukeScriptDir,'resources' + flspace)
+        flSpaceDestPath = os.path.dirname(cubPath) + flspace
+        if not os.path.exists(flSpaceDestPath):
+            shutil.copy(flSpaceSourcePath,flSpaceDestPath)
 
 
 
@@ -273,7 +281,10 @@ for node in nuke.allNodes():
 
 
 for ODTWriteNode in ODTWrites:
+    masterNode.knob('inverseMode').setValue(False)
     bakeCandidateLUTfromNode(ODTWriteNode)
+    masterNode.knob('inverseMode').setValue(True)
+    bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)
 
 
 
