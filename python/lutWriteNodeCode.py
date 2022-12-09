@@ -82,9 +82,12 @@ def bakeCandidateLUTfromNode(node,inverse=False):
     nukeScriptDir = nuke.script_directory()
     print(nukeScriptDir)
     dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())
+    if inverse:
+        dctltemplatePath = dctltemplatePath.replace('.dctl','_inverse.dctl')
+
     fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())
     # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')
-    print(flSpacePath)
+    # print(flSpacePath)
 
 
 
@@ -119,11 +122,14 @@ def bakeCandidateLUTfromNode(node,inverse=False):
     if not os.path.exists(os.path.dirname(ocioCubePath)):
         os.makedirs(os.path.dirname(ocioCubePath))
 
-
-
-
-
     dctlPath = cubePath.replace('.cube','.dctl')
+    if inverse:
+        dctlPath = dctlPath.replace('/ODT/','/IDT/')
+
+    # check dctlPath exists, if not, create it
+    if not os.path.exists(os.path.dirname(dctlPath)):
+        os.makedirs(os.path.dirname(dctlPath))
+
     cubeName = cubePath.split('/').pop(-1)
     cubeNameClean = cubeName.replace('(','').replace(')','')
 
@@ -181,14 +187,16 @@ def bakeCandidateLUTfromNode(node,inverse=False):
 
     ## write the fltransform
     if target == 'Rec709':
-        fltransformPath = cubPath.replace('.cub','.fltransform')
-        with open(fltransformTemplatePath) as f:
-            lines = f.readlines()
-        newLines = [x.replace('replaceTransformName','ACES 2.0 Candidate'+ candidate + ' rev'+revision) for x in lines]
-        newLines = [x.replace('replaceForward_Rec709.cub',os.path.basename(cubPath)) for x in newLines]
-        newLines = [x.replace('replaceForward_Rec2100.cub',os.path.basename(cubPath).replace('Rec709','Rec2100')) for x in newLines]
-        with open(fltransformPath, 'w') as f:
-            f.write(''.join(newLines))
+        if  inverse == False:
+            fltransformPath = cubPath.replace('.cub','.fltransform')
+            cubeToken = os.path.basename(cubPath.replace('_Rec709','').replace('.cub',''))
+            with open(fltransformTemplatePath) as f:
+                lines = f.readlines()
+            newLines = [x.replace('replaceTransformName','ACES 2.0 Candidate'+ candidate + ' rev'+revision) for x in lines]
+            newLines = [x.replace('replaceForward',cubeToken) for x in newLines]
+            # newLines = [x.replace('replaceForward_Rec2100',os.path.basename(cubPath).replace('Rec709','Rec2100').replace('.cub','')) for x in newLines]
+            with open(fltransformPath, 'w') as f:
+                f.write(''.join(newLines))
 
 
 

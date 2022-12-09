@@ -2,24 +2,23 @@
 version 13.2 v5
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="25" w="3008" h="1562" maximized="1" screen="0">
+    <window x="0" y="25" w="2048" h="1152" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="2345" stretch="1"/>
+            <split size="1385" stretch="1"/>
             <splitter orientation="2">
-                <split size="905"/>
+                <split size="665"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="637"/>
+                <split size="467"/>
                 <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
-                    <page id="DAG.2"/>
                 </dock>
             </splitter>
             <split size="615"/>
@@ -120,13 +119,13 @@ Dot {
  xpos 16
  ypos -51
 }
-set Ncf48aac0 [stack 0]
+set Ne4f56760 [stack 0]
 Dot {
  name Dot5
  xpos 84
  ypos -4
 }
-push $Ncf48aac0
+push $Ne4f56760
 Expression {
  temp_name0 cut_lin
  temp_expr0 0.0078125
@@ -171,13 +170,13 @@ Reformat {
  xpos -19
  ypos 192
 }
-set Ncd956f30 [stack 0]
+set Na1809e50 [stack 0]
 Dot {
  name Dot3
  xpos 157
  ypos 272
 }
-push $Ncd956f30
+push $Na1809e50
 ColorMatrix {
  matrix {
      {1.009929895 -0.01972960308 -0.03755422309}
@@ -210,7 +209,7 @@ Dot {
  xpos 15
  ypos 411
 }
-set Ncf4a2dc0 [stack 0]
+set Na18270f0 [stack 0]
 Group {
  name DRT_CAM_Blink6
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[value camMode] \[if \{\[value DRT_CAM_Kernel_HK_mode_in]==true\} \{return HK\\ mode\\ in\}]"
@@ -334,14 +333,14 @@ Group {
   xpos -908
   ypos -292
  }
-set Nd481c00 [stack 0]
+set N9526f800 [stack 0]
  Colorspace {
   colorspace_out CIE-XYZ
   name Colorspace2
   xpos -1067
   ypos -213
  }
-push $Nd481c00
+push $N9526f800
  BlinkScript {
   kernelSourceFile output-transforms-dev/display-transforms/nuke/CAM_DRT_v026.blink
   recompileCount 681
@@ -448,7 +447,7 @@ push $Nd481c00
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Ncda87530 [stack 0]
+set N973d6410 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{parent.parent.DRT_CAM_Blink6.ssts_luminance.z/100}}
@@ -457,20 +456,20 @@ set Ncda87530 [stack 0]
   ypos -112
   disable {{1-parent.clamp_output}}
  }
-set Ncdbb58c0 [stack 0]
+set Na1916d00 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Ncda87530
+push $N973d6410
  Multiply {
   value 0.01
   name Multiply1
   xpos -757
   ypos -139
  }
-push $Nd481c00
+push $N9526f800
  Colorspace {
   primary_in ACES
   colorspace_out sRGB
@@ -683,8 +682,8 @@ push $Nd481c00
     xpos -260
     ypos 110
    }
-set Ncf6bc170 [stack 0]
-push $Ncf6bc170
+set Na19553a0 [stack 0]
+push $Na19553a0
    ContactSheet {
     inputs 2
     width {{width*columns}}
@@ -756,7 +755,7 @@ push $Ncf6bc170
     xpos -40
     ypos -341
    }
-set Ncd9b0df0 [stack 0]
+set Na1a33fc0 [stack 0]
    Dot {
     name Dot2
     label " "
@@ -789,7 +788,7 @@ set Ncd9b0df0 [stack 0]
     addUserKnob {12 white}
     white {{"parent.distribution ? 4*parent.wxy.x / ( -2 * parent.wxy.x + 12 * parent.wxy.y + 3) : parent.wxy"} {"parent.distribution ? 9*parent.wxy.y / ( -2*parent.wxy.x + 12*parent.wxy.y + 3) : parent.wxy"}}
    }
-set Ncd9c3eb0 [stack 0]
+set Na1a47200 [stack 0]
    Posterize {
     channels rgb
     Colors {{rint(parent.density/3*2)}}
@@ -797,8 +796,8 @@ set Ncd9c3eb0 [stack 0]
     xpos -590
     ypos -191
    }
-set Ncda9e1e0 [stack 0]
-push $Ncd9c3eb0
+set N9747b0f0 [stack 0]
+push $Na1a47200
    Dot {
     name Dot15
     xpos -446
@@ -812,8 +811,8 @@ push $Ncd9c3eb0
     xpos -480
     ypos -154
    }
-push $Ncda9e1e0
-push $Ncd9c3eb0
+push $N9747b0f0
+push $Na1a47200
    Dot {
     name Dot16
     xpos -666
@@ -926,8 +925,8 @@ push $Ncd9c3eb0
     xpos -556
     ypos 378
    }
-push $Ncf6bc170
-push $Ncd9b0df0
+push $Na19553a0
+push $Na1a33fc0
    Expression {
     expr0 r
     expr1 "4*g / ( -2*g + 12*b + 3)"
@@ -1051,7 +1050,7 @@ push $Ncd9b0df0
     postage_stamp false
    }
   end_group
-set Nea7fc00 [stack 0]
+set Nf758d400 [stack 0]
   Group {
    name RGBToXYZ_GamutGrid
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -1125,7 +1124,7 @@ set Nea7fc00 [stack 0]
    xpos -920
    ypos 134
   }
-set Ncf6c3d20 [stack 0]
+set Na1a950f0 [stack 0]
   Group {
    name RGBToXYZ_GamutC
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -1184,7 +1183,7 @@ set Ncf6c3d20 [stack 0]
    xpos -1140
    ypos 254
   }
-push $Ncf6c3d20
+push $Na1a950f0
   Group {
    name RGBToXYZ_GamutB
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -1243,7 +1242,7 @@ push $Ncf6c3d20
    xpos -1030
    ypos 254
   }
-push $Ncf6c3d20
+push $Na1a950f0
   Group {
    name RGBToXYZ_GamutA
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -1302,7 +1301,7 @@ push $Ncf6c3d20
    xpos -920
    ypos 254
   }
-push $Nea7fc00
+push $Nf758d400
   Reformat {
    type scale
    scale 0.8
@@ -2469,7 +2468,7 @@ push $Nea7fc00
    xpos -666
    ypos -1302
   }
-set Nbcf4c450 [stack 0]
+set Na1d33230 [stack 0]
   Dot {
    name Dot27
    xpos -1546
@@ -2534,7 +2533,7 @@ set Nbcf4c450 [stack 0]
    xpos -1546
    ypos -414
   }
-push $Nbcf4c450
+push $Na1d33230
   Reformat {
    type "to box"
    box_width 2048
@@ -2560,19 +2559,19 @@ push $Nbcf4c450
    xpos -666
    ypos -1158
   }
-set Nbd3c51b0 [stack 0]
+set Na1d76fd0 [stack 0]
   Dot {
    name Dot26
    xpos -886
    ypos -1158
   }
-set Nbd3c7710 [stack 0]
+set Na1d79530 [stack 0]
   Dot {
    name Dot23
    xpos -1106
    ypos -1158
   }
-set Nbd3c9db0 [stack 0]
+set Na1d7bbd0 [stack 0]
   Dot {
    name Dot12
    xpos -1326
@@ -2659,7 +2658,7 @@ set Nbd3c9db0 [stack 0]
    xpos -1326
    ypos -486
   }
-push $Nbd3c9db0
+push $Na1d7bbd0
   Reformat {
    type "to box"
    box_width {{parent.Reformat1.box_width}}
@@ -2680,7 +2679,7 @@ push $Nbd3c9db0
    xpos -1140
    ypos -898
   }
-set Nbd27aba0 [stack 0]
+set Na1dbb860 [stack 0]
   Dot {
    name Dot8
    xpos -996
@@ -2701,7 +2700,7 @@ set Nbd27aba0 [stack 0]
    xpos -996
    ypos -750
   }
-push $Nbd27aba0
+push $Na1dbb860
   Multiply {
    channels rgb
    value 269
@@ -2748,13 +2747,13 @@ push $Nbd27aba0
    xpos -1106
    ypos -654
   }
-push $Nbd3c7710
+push $Na1d79530
   Dot {
    name Dot4
    xpos -886
    ypos -1086
   }
-set Nbd2adec0 [stack 0]
+set Na1deeb80 [stack 0]
   Rectangle {
    replace true
    area {0 0 6 {height}}
@@ -2767,7 +2766,7 @@ set Nbd2adec0 [stack 0]
    xpos -810
    ypos -1041
   }
-push $Nbd2adec0
+push $Na1deeb80
   Radial {
    inputs 1+1
    replace true
@@ -2787,7 +2786,7 @@ push $Nbd2adec0
    xpos -886
    ypos -894
   }
-push $Nbd3c51b0
+push $Na1d76fd0
   Gamma {
    channels rgba
    value 0.5
@@ -2909,7 +2908,7 @@ push $Nbd3c51b0
    xpos -666
    ypos 450
   }
-set Nbd454060 [stack 0]
+set Na1cd36e0 [stack 0]
   Dot {
    name Dot5
    label " "
@@ -2947,7 +2946,7 @@ set Nbd454060 [stack 0]
    xpos -556
    ypos 618
   }
-push $Nbd454060
+push $Na1cd36e0
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -3035,7 +3034,7 @@ push $Nbd454060
    xpos 654
    ypos 162
   }
-set Nbd5079a0 [stack 0]
+set Na1e19720 [stack 0]
   Constant {
    inputs 0
    channels rgb
@@ -3091,7 +3090,7 @@ set Nbd5079a0 [stack 0]
    xpos 324
    ypos 282
   }
-set Nbd52a620 [stack 0]
+set Na1e3d0b0 [stack 0]
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -3122,7 +3121,7 @@ set Nbd52a620 [stack 0]
    ypos 368
    disable {{!parent.diagram}}
   }
-push $Nbd52a620
+push $Na1e3d0b0
   BlinkScript {
    inputs 2
    KernelDescription "2 \"PlotChromaticity_sample\" iterate pixelWise 20e14b615a937bac78c1a771cbdfd10cc7c5fb6c487f65d0bb2d6633e404b958 3 \"col\" Read Random \"Yxy\" Read Random \"dst\" Write Random 3 \"padding\" Float 1 AAAAAA== \"left_margin\" Float 1 AAAAAA== \"tolerance\" Float 1 AAAAAA== 3 \"padding\" 1 1 \"left_margin\" 1 1 \"tolerance\" 1 1 2 \"outsize\" Float 1 1 AAAAAA== \"offset\" Float 1 1 AAAAAA=="
@@ -3143,7 +3142,7 @@ push $Nbd52a620
    xpos 324
    ypos 450
   }
-set Nbd54ad80 [stack 0]
+set Na188be40 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048}}
@@ -3152,7 +3151,7 @@ set Nbd54ad80 [stack 0]
    xpos 290
    ypos 488
   }
-set Nbd54d150 [stack 0]
+set Na19c8ce0 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048*2}}
@@ -3161,7 +3160,7 @@ set Nbd54d150 [stack 0]
    xpos 180
    ypos 488
   }
-push $Nbd54ad80
+push $Na188be40
   Dot {
    name Dot21
    xpos -6
@@ -3176,7 +3175,7 @@ push $Nbd54ad80
    xpos -40
    ypos 489
   }
-set Nbd2b0560 [stack 0]
+set Na188e210 [stack 0]
   Dilate {
    channels rgba
    size {0 {parent.Dilate3.size.w}}
@@ -3185,7 +3184,7 @@ set Nbd2b0560 [stack 0]
    xpos -40
    ypos 584
   }
-push $Nbd2b0560
+push $Na188e210
   Dilate {
    channels rgba
    size {{Output.width*plus_size/100} 0}
@@ -3265,7 +3264,7 @@ push $Nbd2b0560
     ypos 302
    }
   end_group
-push $Nbd54d150
+push $Na19c8ce0
   Merge2 {
    inputs 2
    bbox B
@@ -3282,7 +3281,7 @@ push $Nbd54d150
    xpos 324
    ypos 690
   }
-push $Nbd5079a0
+push $Na1e19720
   Dot {
    name Dot1
    label " "
@@ -3371,7 +3370,7 @@ push $Nbd5079a0
    xpos 764
    ypos 546
   }
-push $Nbd5079a0
+push $Na1e19720
   Dot {
    name Dot16
    label " Col"
@@ -3426,7 +3425,7 @@ push $Nbd5079a0
    ypos 1046
   }
  end_group
-push $Ncdbb58c0
+push $Na1916d00
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -3450,7 +3449,7 @@ Dot {
  xpos 492
  ypos 690
 }
-set Nc89a00b0 [stack 0]
+set Na1f76fe0 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -3490,7 +3489,7 @@ Expression {
  xpos 504
  ypos 795
 }
-push $Nc89a00b0
+push $Na1f76fe0
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -3543,7 +3542,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncf4a2dc0
+push $Na18270f0
 Group {
  name DRT_CAM_Blink5
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[value camMode] \[if \{\[value DRT_CAM_Kernel_HK_mode_in]==true\} \{return HK\\ mode\\ in\}]"
@@ -3667,14 +3666,14 @@ Group {
   xpos -908
   ypos -292
  }
-set Nda99600 [stack 0]
+set N978aa800 [stack 0]
  Colorspace {
   colorspace_out CIE-XYZ
   name Colorspace2
   xpos -1067
   ypos -213
  }
-push $Nda99600
+push $N978aa800
  BlinkScript {
   kernelSourceFile output-transforms-dev/display-transforms/nuke/CAM_DRT_v026.blink
   recompileCount 681
@@ -3781,7 +3780,7 @@ push $Nda99600
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Nbd1434c0 [stack 0]
+set Na1e635d0 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{parent.parent.DRT_CAM_Blink5.ssts_luminance.z/100}}
@@ -3790,20 +3789,20 @@ set Nbd1434c0 [stack 0]
   ypos -112
   disable {{1-parent.clamp_output}}
  }
-set Nbcf79360 [stack 0]
+set Na200caa0 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Nbd1434c0
+push $Na1e635d0
  Multiply {
   value 0.01
   name Multiply1
   xpos -757
   ypos -139
  }
-push $Nda99600
+push $N978aa800
  Colorspace {
   primary_in ACES
   colorspace_out sRGB
@@ -4016,8 +4015,8 @@ push $Nda99600
     xpos -260
     ypos 110
    }
-set Nbd704080 [stack 0]
-push $Nbd704080
+set Na207fe80 [stack 0]
+push $Na207fe80
    ContactSheet {
     inputs 2
     width {{width*columns}}
@@ -4089,7 +4088,7 @@ push $Nbd704080
     xpos -40
     ypos -341
    }
-set Nbd72f200 [stack 0]
+set Na20ad550 [stack 0]
    Dot {
     name Dot2
     label " "
@@ -4122,7 +4121,7 @@ set Nbd72f200 [stack 0]
     addUserKnob {12 white}
     white {{"parent.distribution ? 4*parent.wxy.x / ( -2 * parent.wxy.x + 12 * parent.wxy.y + 3) : parent.wxy"} {"parent.distribution ? 9*parent.wxy.y / ( -2*parent.wxy.x + 12*parent.wxy.y + 3) : parent.wxy"}}
    }
-set Nbd7422c0 [stack 0]
+set Na20c0610 [stack 0]
    Posterize {
     channels rgb
     Colors {{rint(parent.density/3*2)}}
@@ -4130,8 +4129,8 @@ set Nbd7422c0 [stack 0]
     xpos -590
     ypos -191
    }
-set Nbd749ec0 [stack 0]
-push $Nbd7422c0
+set Na20c8210 [stack 0]
+push $Na20c0610
    Dot {
     name Dot15
     xpos -446
@@ -4145,8 +4144,8 @@ push $Nbd7422c0
     xpos -480
     ypos -154
    }
-push $Nbd749ec0
-push $Nbd7422c0
+push $Na20c8210
+push $Na20c0610
    Dot {
     name Dot16
     xpos -666
@@ -4259,8 +4258,8 @@ push $Nbd7422c0
     xpos -556
     ypos 378
    }
-push $Nbd704080
-push $Nbd72f200
+push $Na207fe80
+push $Na20ad550
    Expression {
     expr0 r
     expr1 "4*g / ( -2*g + 12*b + 3)"
@@ -4384,7 +4383,7 @@ push $Nbd72f200
     postage_stamp false
    }
   end_group
-set Neae3a00 [stack 0]
+set Nf76e6200 [stack 0]
   Group {
    name RGBToXYZ_GamutGrid
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -4458,7 +4457,7 @@ set Neae3a00 [stack 0]
    xpos -920
    ypos 134
   }
-set Nbd81e790 [stack 0]
+set Na2254450 [stack 0]
   Group {
    name RGBToXYZ_GamutC
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -4517,7 +4516,7 @@ set Nbd81e790 [stack 0]
    xpos -1140
    ypos 254
   }
-push $Nbd81e790
+push $Na2254450
   Group {
    name RGBToXYZ_GamutB
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -4576,7 +4575,7 @@ push $Nbd81e790
    xpos -1030
    ypos 254
   }
-push $Nbd81e790
+push $Na2254450
   Group {
    name RGBToXYZ_GamutA
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -4635,7 +4634,7 @@ push $Nbd81e790
    xpos -920
    ypos 254
   }
-push $Neae3a00
+push $Nf76e6200
   Reformat {
    type scale
    scale 0.8
@@ -5802,7 +5801,7 @@ push $Neae3a00
    xpos -666
    ypos -1302
   }
-set Nbda87360 [stack 0]
+set Na2164a50 [stack 0]
   Dot {
    name Dot27
    xpos -1546
@@ -5867,7 +5866,7 @@ set Nbda87360 [stack 0]
    xpos -1546
    ypos -414
   }
-push $Nbda87360
+push $Na2164a50
   Reformat {
    type "to box"
    box_width 2048
@@ -5893,19 +5892,19 @@ push $Nbda87360
    xpos -666
    ypos -1158
   }
-set Nbdacb100 [stack 0]
+set Na21778c0 [stack 0]
   Dot {
    name Dot26
    xpos -886
    ypos -1158
   }
-set Nbdacd660 [stack 0]
+set Na244b9b0 [stack 0]
   Dot {
    name Dot23
    xpos -1106
    ypos -1158
   }
-set Nbdacfd00 [stack 0]
+set Na244e050 [stack 0]
   Dot {
    name Dot12
    xpos -1326
@@ -5992,7 +5991,7 @@ set Nbdacfd00 [stack 0]
    xpos -1326
    ypos -486
   }
-push $Nbdacfd00
+push $Na244e050
   Reformat {
    type "to box"
    box_width {{parent.Reformat1.box_width}}
@@ -6013,7 +6012,7 @@ push $Nbdacfd00
    xpos -1140
    ypos -898
   }
-set Nbd1a9d10 [stack 0]
+set Na2499c40 [stack 0]
   Dot {
    name Dot8
    xpos -996
@@ -6034,7 +6033,7 @@ set Nbd1a9d10 [stack 0]
    xpos -996
    ypos -750
   }
-push $Nbd1a9d10
+push $Na2499c40
   Multiply {
    channels rgb
    value 269
@@ -6081,13 +6080,13 @@ push $Nbd1a9d10
    xpos -1106
    ypos -654
   }
-push $Nbdacd660
+push $Na244b9b0
   Dot {
    name Dot4
    xpos -886
    ypos -1086
   }
-set Nbd490120 [stack 0]
+set Na24cd3c0 [stack 0]
   Rectangle {
    replace true
    area {0 0 6 {height}}
@@ -6100,7 +6099,7 @@ set Nbd490120 [stack 0]
    xpos -810
    ypos -1041
   }
-push $Nbd490120
+push $Na24cd3c0
   Radial {
    inputs 1+1
    replace true
@@ -6120,7 +6119,7 @@ push $Nbd490120
    xpos -886
    ypos -894
   }
-push $Nbdacb100
+push $Na21778c0
   Gamma {
    channels rgba
    value 0.5
@@ -6242,7 +6241,7 @@ push $Nbdacb100
    xpos -666
    ypos 450
   }
-set Nbdb56310 [stack 0]
+set Na25494a0 [stack 0]
   Dot {
    name Dot5
    label " "
@@ -6280,7 +6279,7 @@ set Nbdb56310 [stack 0]
    xpos -556
    ypos 618
   }
-push $Nbdb56310
+push $Na25494a0
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -6368,7 +6367,7 @@ push $Nbdb56310
    xpos 654
    ypos 162
   }
-set Nbd664ca0 [stack 0]
+set Na258b360 [stack 0]
   Constant {
    inputs 0
    channels rgb
@@ -6424,7 +6423,7 @@ set Nbd664ca0 [stack 0]
    xpos 324
    ypos 282
   }
-set Nbd688750 [stack 0]
+set Na25aecf0 [stack 0]
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -6455,7 +6454,7 @@ set Nbd688750 [stack 0]
    ypos 368
    disable {{!parent.diagram}}
   }
-push $Nbd688750
+push $Na25aecf0
   BlinkScript {
    inputs 2
    KernelDescription "2 \"PlotChromaticity_sample\" iterate pixelWise 20e14b615a937bac78c1a771cbdfd10cc7c5fb6c487f65d0bb2d6633e404b958 3 \"col\" Read Random \"Yxy\" Read Random \"dst\" Write Random 3 \"padding\" Float 1 AAAAAA== \"left_margin\" Float 1 AAAAAA== \"tolerance\" Float 1 AAAAAA== 3 \"padding\" 1 1 \"left_margin\" 1 1 \"tolerance\" 1 1 2 \"outsize\" Float 1 1 AAAAAA== \"offset\" Float 1 1 AAAAAA=="
@@ -6476,7 +6475,7 @@ push $Nbd688750
    xpos 324
    ypos 450
   }
-set Nbd499ba0 [stack 0]
+set Na25cfff0 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048}}
@@ -6485,7 +6484,7 @@ set Nbd499ba0 [stack 0]
    xpos 290
    ypos 488
   }
-set Nbd49bf70 [stack 0]
+set Na23e7450 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048*2}}
@@ -6494,7 +6493,7 @@ set Nbd49bf70 [stack 0]
    xpos 180
    ypos 488
   }
-push $Nbd499ba0
+push $Na25cfff0
   Dot {
    name Dot21
    xpos -6
@@ -6509,7 +6508,7 @@ push $Nbd499ba0
    xpos -40
    ypos 489
   }
-set Nbd4aa3f0 [stack 0]
+set Na2185870 [stack 0]
   Dilate {
    channels rgba
    size {0 {parent.Dilate3.size.w}}
@@ -6518,7 +6517,7 @@ set Nbd4aa3f0 [stack 0]
    xpos -40
    ypos 584
   }
-push $Nbd4aa3f0
+push $Na2185870
   Dilate {
    channels rgba
    size {{Output.width*plus_size/100} 0}
@@ -6598,7 +6597,7 @@ push $Nbd4aa3f0
     ypos 302
    }
   end_group
-push $Nbd49bf70
+push $Na23e7450
   Merge2 {
    inputs 2
    bbox B
@@ -6615,7 +6614,7 @@ push $Nbd49bf70
    xpos 324
    ypos 690
   }
-push $Nbd664ca0
+push $Na258b360
   Dot {
    name Dot1
    label " "
@@ -6704,7 +6703,7 @@ push $Nbd664ca0
    xpos 764
    ypos 546
   }
-push $Nbd664ca0
+push $Na258b360
   Dot {
    name Dot16
    label " Col"
@@ -6759,7 +6758,7 @@ push $Nbd664ca0
    ypos 1046
   }
  end_group
-push $Nbcf79360
+push $Na200caa0
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -6783,7 +6782,7 @@ Dot {
  xpos 354
  ypos 692
 }
-set Nc8984110 [stack 0]
+set Na21f6960 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -6823,7 +6822,7 @@ Expression {
  xpos 366
  ypos 797
 }
-push $Nc8984110
+push $Na21f6960
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -6876,7 +6875,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncf4a2dc0
+push $Na18270f0
 Group {
  name DRT_CAM_Blink3
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[value camMode] \[if \{\[value DRT_CAM_Kernel_HK_mode_in]==true\} \{return HK\\ mode\\ in\}]"
@@ -7000,14 +6999,14 @@ Group {
   xpos -908
   ypos -292
  }
-set N10373e00 [stack 0]
+set Nf770d400 [stack 0]
  Colorspace {
   colorspace_out CIE-XYZ
   name Colorspace2
   xpos -1067
   ypos -213
  }
-push $N10373e00
+push $Nf770d400
  BlinkScript {
   kernelSourceFile output-transforms-dev/display-transforms/nuke/CAM_DRT_v026.blink
   recompileCount 681
@@ -7114,7 +7113,7 @@ push $N10373e00
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Nbd6e3230 [stack 0]
+set Na263f050 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{parent.parent.DRT_CAM_Blink3.ssts_luminance.z/100}}
@@ -7123,20 +7122,20 @@ set Nbd6e3230 [stack 0]
   ypos -112
   disable {{1-parent.clamp_output}}
  }
-set Nbd780a70 [stack 0]
+set Nc4f5a7f0 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Nbd6e3230
+push $Na263f050
  Multiply {
   value 0.01
   name Multiply1
   xpos -757
   ypos -139
  }
-push $N10373e00
+push $Nf770d400
  Colorspace {
   primary_in ACES
   colorspace_out sRGB
@@ -7349,8 +7348,8 @@ push $N10373e00
     xpos -260
     ypos 110
    }
-set Nbdf151a0 [stack 0]
-push $Nbdf151a0
+set Na266ad20 [stack 0]
+push $Na266ad20
    ContactSheet {
     inputs 2
     width {{width*columns}}
@@ -7422,7 +7421,7 @@ push $Nbdf151a0
     xpos -40
     ypos -341
    }
-set Nbdf42870 [stack 0]
+set Na26983f0 [stack 0]
    Dot {
     name Dot2
     label " "
@@ -7455,7 +7454,7 @@ set Nbdf42870 [stack 0]
     addUserKnob {12 white}
     white {{"parent.distribution ? 4*parent.wxy.x / ( -2 * parent.wxy.x + 12 * parent.wxy.y + 3) : parent.wxy"} {"parent.distribution ? 9*parent.wxy.y / ( -2*parent.wxy.x + 12*parent.wxy.y + 3) : parent.wxy"}}
    }
-set Nbdf55930 [stack 0]
+set Na26ab4b0 [stack 0]
    Posterize {
     channels rgb
     Colors {{rint(parent.density/3*2)}}
@@ -7463,8 +7462,8 @@ set Nbdf55930 [stack 0]
     xpos -590
     ypos -191
    }
-set Nbdf5d530 [stack 0]
-push $Nbdf55930
+set Na26b30b0 [stack 0]
+push $Na26ab4b0
    Dot {
     name Dot15
     xpos -446
@@ -7478,8 +7477,8 @@ push $Nbdf55930
     xpos -480
     ypos -154
    }
-push $Nbdf5d530
-push $Nbdf55930
+push $Na26b30b0
+push $Na26ab4b0
    Dot {
     name Dot16
     xpos -666
@@ -7592,8 +7591,8 @@ push $Nbdf55930
     xpos -556
     ypos 378
    }
-push $Nbdf151a0
-push $Nbdf42870
+push $Na266ad20
+push $Na26983f0
    Expression {
     expr0 r
     expr1 "4*g / ( -2*g + 12*b + 3)"
@@ -7717,7 +7716,7 @@ push $Nbdf42870
     postage_stamp false
    }
   end_group
-set N10575e00 [stack 0]
+set Nf7741000 [stack 0]
   Group {
    name RGBToXYZ_GamutGrid
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -7791,7 +7790,7 @@ set N10575e00 [stack 0]
    xpos -920
    ypos 134
   }
-set Nbe0338d0 [stack 0]
+set Na27893f0 [stack 0]
   Group {
    name RGBToXYZ_GamutC
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -7850,7 +7849,7 @@ set Nbe0338d0 [stack 0]
    xpos -1140
    ypos 254
   }
-push $Nbe0338d0
+push $Na27893f0
   Group {
    name RGBToXYZ_GamutB
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -7909,7 +7908,7 @@ push $Nbe0338d0
    xpos -1030
    ypos 254
   }
-push $Nbe0338d0
+push $Na27893f0
   Group {
    name RGBToXYZ_GamutA
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -7968,7 +7967,7 @@ push $Nbe0338d0
    xpos -920
    ypos 254
   }
-push $N10575e00
+push $Nf7741000
   Reformat {
    type scale
    scale 0.8
@@ -9135,7 +9134,7 @@ push $N10575e00
    xpos -666
    ypos -1302
   }
-set Nbe32fb30 [stack 0]
+set Na31f1a40 [stack 0]
   Dot {
    name Dot27
    xpos -1546
@@ -9200,7 +9199,7 @@ set Nbe32fb30 [stack 0]
    xpos -1546
    ypos -414
   }
-push $Nbe32fb30
+push $Na31f1a40
   Reformat {
    type "to box"
    box_width 2048
@@ -9226,19 +9225,19 @@ push $Nbe32fb30
    xpos -666
    ypos -1158
   }
-set Nbdc50950 [stack 0]
+set Na3239880 [stack 0]
   Dot {
    name Dot26
    xpos -886
    ypos -1158
   }
-set Nbdc52eb0 [stack 0]
+set Na323bde0 [stack 0]
   Dot {
    name Dot23
    xpos -1106
    ypos -1158
   }
-set Nbdc55550 [stack 0]
+set Na323e480 [stack 0]
   Dot {
    name Dot12
    xpos -1326
@@ -9325,7 +9324,7 @@ set Nbdc55550 [stack 0]
    xpos -1326
    ypos -486
   }
-push $Nbdc55550
+push $Na323e480
   Reformat {
    type "to box"
    box_width {{parent.Reformat1.box_width}}
@@ -9346,7 +9345,7 @@ push $Nbdc55550
    xpos -1140
    ypos -898
   }
-set Nbdd448f0 [stack 0]
+set Na328a070 [stack 0]
   Dot {
    name Dot8
    xpos -996
@@ -9367,7 +9366,7 @@ set Nbdd448f0 [stack 0]
    xpos -996
    ypos -750
   }
-push $Nbdd448f0
+push $Na328a070
   Multiply {
    channels rgb
    value 269
@@ -9414,13 +9413,13 @@ push $Nbdd448f0
    xpos -1106
    ypos -654
   }
-push $Nbdc52eb0
+push $Na323bde0
   Dot {
    name Dot4
    xpos -886
    ypos -1086
   }
-set Nbdd75bf0 [stack 0]
+set Na32bd390 [stack 0]
   Rectangle {
    replace true
    area {0 0 6 {height}}
@@ -9433,7 +9432,7 @@ set Nbdd75bf0 [stack 0]
    xpos -810
    ypos -1041
   }
-push $Nbdd75bf0
+push $Na32bd390
   Radial {
    inputs 1+1
    replace true
@@ -9453,7 +9452,7 @@ push $Nbdd75bf0
    xpos -886
    ypos -894
   }
-push $Nbdc50950
+push $Na3239880
   Gamma {
    channels rgba
    value 0.5
@@ -9575,7 +9574,7 @@ push $Nbdc50950
    xpos -666
    ypos 450
   }
-set Nbe354fa0 [stack 0]
+set Na3339450 [stack 0]
   Dot {
    name Dot5
    label " "
@@ -9613,7 +9612,7 @@ set Nbe354fa0 [stack 0]
    xpos -556
    ypos 618
   }
-push $Nbe354fa0
+push $Na3339450
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -9701,7 +9700,7 @@ push $Nbe354fa0
    xpos 654
    ypos 162
   }
-set Nbe396e60 [stack 0]
+set Na337b310 [stack 0]
   Constant {
    inputs 0
    channels rgb
@@ -9757,7 +9756,7 @@ set Nbe396e60 [stack 0]
    xpos 324
    ypos 282
   }
-set Nbdb98f80 [stack 0]
+set Na339eca0 [stack 0]
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -9788,7 +9787,7 @@ set Nbdb98f80 [stack 0]
    ypos 368
    disable {{!parent.diagram}}
   }
-push $Nbdb98f80
+push $Na339eca0
   BlinkScript {
    inputs 2
    KernelDescription "2 \"PlotChromaticity_sample\" iterate pixelWise 20e14b615a937bac78c1a771cbdfd10cc7c5fb6c487f65d0bb2d6633e404b958 3 \"col\" Read Random \"Yxy\" Read Random \"dst\" Write Random 3 \"padding\" Float 1 AAAAAA== \"left_margin\" Float 1 AAAAAA== \"tolerance\" Float 1 AAAAAA== 3 \"padding\" 1 1 \"left_margin\" 1 1 \"tolerance\" 1 1 2 \"outsize\" Float 1 1 AAAAAA== \"offset\" Float 1 1 AAAAAA=="
@@ -9809,7 +9808,7 @@ push $Nbdb98f80
    xpos 324
    ypos 450
   }
-set Nbde0e6d0 [stack 0]
+set Na33bff50 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048}}
@@ -9818,7 +9817,7 @@ set Nbde0e6d0 [stack 0]
    xpos 290
    ypos 488
   }
-set Nbde10aa0 [stack 0]
+set Na33c2320 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048*2}}
@@ -9827,7 +9826,7 @@ set Nbde10aa0 [stack 0]
    xpos 180
    ypos 488
   }
-push $Nbde0e6d0
+push $Na33bff50
   Dot {
    name Dot21
    xpos -6
@@ -9842,7 +9841,7 @@ push $Nbde0e6d0
    xpos -40
    ypos 489
   }
-set Nbde1ef20 [stack 0]
+set Na33d07a0 [stack 0]
   Dilate {
    channels rgba
    size {0 {parent.Dilate3.size.w}}
@@ -9851,7 +9850,7 @@ set Nbde1ef20 [stack 0]
    xpos -40
    ypos 584
   }
-push $Nbde1ef20
+push $Na33d07a0
   Dilate {
    channels rgba
    size {{Output.width*plus_size/100} 0}
@@ -9931,7 +9930,7 @@ push $Nbde1ef20
     ypos 302
    }
   end_group
-push $Nbde10aa0
+push $Na33c2320
   Merge2 {
    inputs 2
    bbox B
@@ -9948,7 +9947,7 @@ push $Nbde10aa0
    xpos 324
    ypos 690
   }
-push $Nbe396e60
+push $Na337b310
   Dot {
    name Dot1
    label " "
@@ -10037,7 +10036,7 @@ push $Nbe396e60
    xpos 764
    ypos 546
   }
-push $Nbe396e60
+push $Na337b310
   Dot {
    name Dot16
    label " Col"
@@ -10092,7 +10091,7 @@ push $Nbe396e60
    ypos 1046
   }
  end_group
-push $Nbd780a70
+push $Nc4f5a7f0
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -10102,7 +10101,7 @@ push $Nbd780a70
   ypos -4
  }
 end_group
-set N10565400 [stack 0]
+set Nf770ee00 [stack 0]
 Reformat {
  type scale
  scale 7
@@ -10117,7 +10116,7 @@ Dot {
  xpos 645
  ypos 685
 }
-set Nc8b82170 [stack 0]
+set Na350fe70 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -10157,7 +10156,7 @@ Expression {
  xpos 657
  ypos 790
 }
-push $Nc8b82170
+push $Na350fe70
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -10210,7 +10209,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncf4a2dc0
+push $Na18270f0
 Group {
  name DRT_CAM_Blink1
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[value camMode] \[if \{\[value DRT_CAM_Kernel_HK_mode_in]==true\} \{return HK\\ mode\\ in\}]"
@@ -10334,14 +10333,14 @@ Group {
   xpos -908
   ypos -292
  }
-set Neb7a000 [stack 0]
+set Nc534cc00 [stack 0]
  Colorspace {
   colorspace_out CIE-XYZ
   name Colorspace2
   xpos -1067
   ypos -213
  }
-push $Neb7a000
+push $Nc534cc00
  BlinkScript {
   kernelSourceFile output-transforms-dev/display-transforms/nuke/CAM_DRT_v026.blink
   recompileCount 681
@@ -10448,7 +10447,7 @@ push $Neb7a000
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Ned9070f0 [stack 0]
+set Na3554390 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{parent.parent.DRT_CAM_Blink1.ssts_luminance.z/100}}
@@ -10457,20 +10456,20 @@ set Ned9070f0 [stack 0]
   ypos -112
   disable {{1-parent.clamp_output}}
  }
-set Nbf372a90 [stack 0]
+set Na1e80680 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Ned9070f0
+push $Na3554390
  Multiply {
   value 0.01
   name Multiply1
   xpos -757
   ypos -139
  }
-push $Neb7a000
+push $Nc534cc00
  Colorspace {
   primary_in ACES
   colorspace_out sRGB
@@ -10683,8 +10682,8 @@ push $Neb7a000
     xpos -260
     ypos 110
    }
-set Nbe265ac0 [stack 0]
-push $Nbe265ac0
+set Na35cb060 [stack 0]
+push $Na35cb060
    ContactSheet {
     inputs 2
     width {{width*columns}}
@@ -10756,7 +10755,7 @@ push $Nbe265ac0
     xpos -40
     ypos -341
    }
-set Nbe293190 [stack 0]
+set Na35f8730 [stack 0]
    Dot {
     name Dot2
     label " "
@@ -10789,7 +10788,7 @@ set Nbe293190 [stack 0]
     addUserKnob {12 white}
     white {{"parent.distribution ? 4*parent.wxy.x / ( -2 * parent.wxy.x + 12 * parent.wxy.y + 3) : parent.wxy"} {"parent.distribution ? 9*parent.wxy.y / ( -2*parent.wxy.x + 12*parent.wxy.y + 3) : parent.wxy"}}
    }
-set Nbe2a6250 [stack 0]
+set Na360f930 [stack 0]
    Posterize {
     channels rgb
     Colors {{rint(parent.density/3*2)}}
@@ -10797,8 +10796,8 @@ set Nbe2a6250 [stack 0]
     xpos -590
     ypos -191
    }
-set Nbe2ade50 [stack 0]
-push $Nbe2a6250
+set Na3617530 [stack 0]
+push $Na360f930
    Dot {
     name Dot15
     xpos -446
@@ -10812,8 +10811,8 @@ push $Nbe2a6250
     xpos -480
     ypos -154
    }
-push $Nbe2ade50
-push $Nbe2a6250
+push $Na3617530
+push $Na360f930
    Dot {
     name Dot16
     xpos -666
@@ -10926,8 +10925,8 @@ push $Nbe2a6250
     xpos -556
     ypos 378
    }
-push $Nbe265ac0
-push $Nbe293190
+push $Na35cb060
+push $Na35f8730
    Expression {
     expr0 r
     expr1 "4*g / ( -2*g + 12*b + 3)"
@@ -11051,7 +11050,7 @@ push $Nbe293190
     postage_stamp false
    }
   end_group
-set N106f6000 [stack 0]
+set Nc53e2400 [stack 0]
   Group {
    name RGBToXYZ_GamutGrid
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -11125,7 +11124,7 @@ set N106f6000 [stack 0]
    xpos -920
    ypos 134
   }
-set Nbf447550 [stack 0]
+set Na1ebaf60 [stack 0]
   Group {
    name RGBToXYZ_GamutC
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -11184,7 +11183,7 @@ set Nbf447550 [stack 0]
    xpos -1140
    ypos 254
   }
-push $Nbf447550
+push $Na1ebaf60
   Group {
    name RGBToXYZ_GamutB
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -11243,7 +11242,7 @@ push $Nbf447550
    xpos -1030
    ypos 254
   }
-push $Nbf447550
+push $Na1ebaf60
   Group {
    name RGBToXYZ_GamutA
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -11302,7 +11301,7 @@ push $Nbf447550
    xpos -920
    ypos 254
   }
-push $N106f6000
+push $Nc53e2400
   Reformat {
    type scale
    scale 0.8
@@ -12469,7 +12468,7 @@ push $N106f6000
    xpos -666
    ypos -1302
   }
-set Nbf54e400 [stack 0]
+set Na391e290 [stack 0]
   Dot {
    name Dot27
    xpos -1546
@@ -12534,7 +12533,7 @@ set Nbf54e400 [stack 0]
    xpos -1546
    ypos -414
   }
-push $Nbf54e400
+push $Na391e290
   Reformat {
    type "to box"
    box_width 2048
@@ -12560,19 +12559,19 @@ push $Nbf54e400
    xpos -666
    ypos -1158
   }
-set Nbf5921a0 [stack 0]
+set Na3962030 [stack 0]
   Dot {
    name Dot26
    xpos -886
    ypos -1158
   }
-set Nbf594700 [stack 0]
+set Na3964590 [stack 0]
   Dot {
    name Dot23
    xpos -1106
    ypos -1158
   }
-set Nbf596da0 [stack 0]
+set Na3966c30 [stack 0]
   Dot {
    name Dot12
    xpos -1326
@@ -12659,7 +12658,7 @@ set Nbf596da0 [stack 0]
    xpos -1326
    ypos -486
   }
-push $Nbf596da0
+push $Na3966c30
   Reformat {
    type "to box"
    box_width {{parent.Reformat1.box_width}}
@@ -12680,7 +12679,7 @@ push $Nbf596da0
    xpos -1140
    ypos -898
   }
-set Nbf5e2990 [stack 0]
+set Na39b2820 [stack 0]
   Dot {
    name Dot8
    xpos -996
@@ -12701,7 +12700,7 @@ set Nbf5e2990 [stack 0]
    xpos -996
    ypos -750
   }
-push $Nbf5e2990
+push $Na39b2820
   Multiply {
    channels rgb
    value 269
@@ -12748,13 +12747,13 @@ push $Nbf5e2990
    xpos -1106
    ypos -654
   }
-push $Nbf594700
+push $Na3964590
   Dot {
    name Dot4
    xpos -886
    ypos -1086
   }
-set Nbf81a210 [stack 0]
+set Na39e5fa0 [stack 0]
   Rectangle {
    replace true
    area {0 0 6 {height}}
@@ -12767,7 +12766,7 @@ set Nbf81a210 [stack 0]
    xpos -810
    ypos -1041
   }
-push $Nbf81a210
+push $Na39e5fa0
   Radial {
    inputs 1+1
    replace true
@@ -12787,7 +12786,7 @@ push $Nbf81a210
    xpos -886
    ypos -894
   }
-push $Nbf5921a0
+push $Na3962030
   Gamma {
    channels rgba
    value 0.5
@@ -12909,7 +12908,7 @@ push $Nbf5921a0
    xpos -666
    ypos 450
   }
-set Nbf855bb0 [stack 0]
+set Na3a62140 [stack 0]
   Dot {
    name Dot5
    label " "
@@ -12947,7 +12946,7 @@ set Nbf855bb0 [stack 0]
    xpos -556
    ypos 618
   }
-push $Nbf855bb0
+push $Na3a62140
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -13035,7 +13034,7 @@ push $Nbf855bb0
    xpos 654
    ypos 162
   }
-set Nbf897a70 [stack 0]
+set Nc6112c10 [stack 0]
   Constant {
    inputs 0
    channels rgb
@@ -13091,7 +13090,7 @@ set Nbf897a70 [stack 0]
    xpos 324
    ypos 282
   }
-set Nbf89f300 [stack 0]
+set Nc6136710 [stack 0]
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -13122,7 +13121,7 @@ set Nbf89f300 [stack 0]
    ypos 368
    disable {{!parent.diagram}}
   }
-push $Nbf89f300
+push $Nc6136710
   BlinkScript {
    inputs 2
    KernelDescription "2 \"PlotChromaticity_sample\" iterate pixelWise 20e14b615a937bac78c1a771cbdfd10cc7c5fb6c487f65d0bb2d6633e404b958 3 \"col\" Read Random \"Yxy\" Read Random \"dst\" Write Random 3 \"padding\" Float 1 AAAAAA== \"left_margin\" Float 1 AAAAAA== \"tolerance\" Float 1 AAAAAA== 3 \"padding\" 1 1 \"left_margin\" 1 1 \"tolerance\" 1 1 2 \"outsize\" Float 1 1 AAAAAA== \"offset\" Float 1 1 AAAAAA=="
@@ -13143,7 +13142,7 @@ push $Nbf89f300
    xpos 324
    ypos 450
   }
-set Nbf0d2d30 [stack 0]
+set Na3b17860 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048}}
@@ -13152,7 +13151,7 @@ set Nbf0d2d30 [stack 0]
    xpos 290
    ypos 488
   }
-set Nbf0d5100 [stack 0]
+set Na3b19c30 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048*2}}
@@ -13161,7 +13160,7 @@ set Nbf0d5100 [stack 0]
    xpos 180
    ypos 488
   }
-push $Nbf0d2d30
+push $Na3b17860
   Dot {
    name Dot21
    xpos -6
@@ -13176,7 +13175,7 @@ push $Nbf0d2d30
    xpos -40
    ypos 489
   }
-set Nbf0e3580 [stack 0]
+set Na3b280b0 [stack 0]
   Dilate {
    channels rgba
    size {0 {parent.Dilate3.size.w}}
@@ -13185,7 +13184,7 @@ set Nbf0e3580 [stack 0]
    xpos -40
    ypos 584
   }
-push $Nbf0e3580
+push $Na3b280b0
   Dilate {
    channels rgba
    size {{Output.width*plus_size/100} 0}
@@ -13265,7 +13264,7 @@ push $Nbf0e3580
     ypos 302
    }
   end_group
-push $Nbf0d5100
+push $Na3b19c30
   Merge2 {
    inputs 2
    bbox B
@@ -13282,7 +13281,7 @@ push $Nbf0d5100
    xpos 324
    ypos 690
   }
-push $Nbf897a70
+push $Nc6112c10
   Dot {
    name Dot1
    label " "
@@ -13371,7 +13370,7 @@ push $Nbf897a70
    xpos 764
    ypos 546
   }
-push $Nbf897a70
+push $Nc6112c10
   Dot {
    name Dot16
    label " Col"
@@ -13426,7 +13425,7 @@ push $Nbf897a70
    ypos 1046
   }
  end_group
-push $Nbf372a90
+push $Na1e80680
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -13450,7 +13449,7 @@ Dot {
  xpos 182
  ypos 688
 }
-set N7f01c040 [stack 0]
+set Na3c2ea50 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -13490,7 +13489,7 @@ Expression {
  xpos 194
  ypos 793
 }
-push $N7f01c040
+push $Na3c2ea50
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -13543,7 +13542,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncf4a2dc0
+push $Na18270f0
 Group {
  name DRT_CAM_Blink2
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[value camMode] \[if \{\[value DRT_CAM_Kernel_HK_mode_in]==true\} \{return HK\\ mode\\ in\}]"
@@ -13667,14 +13666,14 @@ Group {
   xpos -908
   ypos -292
  }
-set Nf5b9000 [stack 0]
+set N95346400 [stack 0]
  Colorspace {
   colorspace_out CIE-XYZ
   name Colorspace2
   xpos -1067
   ypos -213
  }
-push $Nf5b9000
+push $N95346400
  BlinkScript {
   kernelSourceFile output-transforms-dev/display-transforms/nuke/CAM_DRT_v026.blink
   recompileCount 681
@@ -13781,7 +13780,7 @@ push $Nf5b9000
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Nbf8c9c90 [stack 0]
+set Na3c72f70 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{parent.parent.DRT_CAM_Blink2.ssts_luminance.z/100}}
@@ -13790,20 +13789,20 @@ set Nbf8c9c90 [stack 0]
   ypos -112
   disable {{1-parent.clamp_output}}
  }
-set Nbf1b98a0 [stack 0]
+set Na3bcc890 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Nbf8c9c90
+push $Na3c72f70
  Multiply {
   value 0.01
   name Multiply1
   xpos -757
   ypos -139
  }
-push $Nf5b9000
+push $N95346400
  Colorspace {
   primary_in ACES
   colorspace_out sRGB
@@ -14016,8 +14015,8 @@ push $Nf5b9000
     xpos -260
     ypos 110
    }
-set Nbfa171a0 [stack 0]
-push $Nbfa171a0
+set Na3d43da0 [stack 0]
+push $Na3d43da0
    ContactSheet {
     inputs 2
     width {{width*columns}}
@@ -14089,7 +14088,7 @@ push $Nbfa171a0
     xpos -40
     ypos -341
    }
-set Nbfa44940 [stack 0]
+set Na3d71470 [stack 0]
    Dot {
     name Dot2
     label " "
@@ -14122,7 +14121,7 @@ set Nbfa44940 [stack 0]
     addUserKnob {12 white}
     white {{"parent.distribution ? 4*parent.wxy.x / ( -2 * parent.wxy.x + 12 * parent.wxy.y + 3) : parent.wxy"} {"parent.distribution ? 9*parent.wxy.y / ( -2*parent.wxy.x + 12*parent.wxy.y + 3) : parent.wxy"}}
    }
-set Nbfa57a00 [stack 0]
+set Na3d84530 [stack 0]
    Posterize {
     channels rgb
     Colors {{rint(parent.density/3*2)}}
@@ -14130,8 +14129,8 @@ set Nbfa57a00 [stack 0]
     xpos -590
     ypos -191
    }
-set Nbfa5f600 [stack 0]
-push $Nbfa57a00
+set Na3d8c130 [stack 0]
+push $Na3d84530
    Dot {
     name Dot15
     xpos -446
@@ -14145,8 +14144,8 @@ push $Nbfa57a00
     xpos -480
     ypos -154
    }
-push $Nbfa5f600
-push $Nbfa57a00
+push $Na3d8c130
+push $Na3d84530
    Dot {
     name Dot16
     xpos -666
@@ -14259,8 +14258,8 @@ push $Nbfa57a00
     xpos -556
     ypos 378
    }
-push $Nbfa171a0
-push $Nbfa44940
+push $Na3d43da0
+push $Na3d71470
    Expression {
     expr0 r
     expr1 "4*g / ( -2*g + 12*b + 3)"
@@ -14384,7 +14383,7 @@ push $Nbfa44940
     postage_stamp false
    }
   end_group
-set Nebe2000 [stack 0]
+set N979c5000 [stack 0]
   Group {
    name RGBToXYZ_GamutGrid
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -14458,7 +14457,7 @@ set Nebe2000 [stack 0]
    xpos -920
    ypos 134
   }
-set Nbfc77db0 [stack 0]
+set Na3e62480 [stack 0]
   Group {
    name RGBToXYZ_GamutC
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -14517,7 +14516,7 @@ set Nbfc77db0 [stack 0]
    xpos -1140
    ypos 254
   }
-push $Nbfc77db0
+push $Na3e62480
   Group {
    name RGBToXYZ_GamutB
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -14576,7 +14575,7 @@ push $Nbfc77db0
    xpos -1030
    ypos 254
   }
-push $Nbfc77db0
+push $Na3e62480
   Group {
    name RGBToXYZ_GamutA
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -14635,7 +14634,7 @@ push $Nbfc77db0
    xpos -920
    ypos 254
   }
-push $Nebe2000
+push $N979c5000
   Reformat {
    type scale
    scale 0.8
@@ -15802,7 +15801,7 @@ push $Nebe2000
    xpos -666
    ypos -1302
   }
-set Nbe4fdb20 [stack 0]
+set Na40cb1c0 [stack 0]
   Dot {
    name Dot27
    xpos -1546
@@ -15867,7 +15866,7 @@ set Nbe4fdb20 [stack 0]
    xpos -1546
    ypos -414
   }
-push $Nbe4fdb20
+push $Na40cb1c0
   Reformat {
    type "to box"
    box_width 2048
@@ -15893,19 +15892,19 @@ push $Nbe4fdb20
    xpos -666
    ypos -1158
   }
-set Nbfb408f0 [stack 0]
+set Na4113000 [stack 0]
   Dot {
    name Dot26
    xpos -886
    ypos -1158
   }
-set Nbfb42e50 [stack 0]
+set Na4115560 [stack 0]
   Dot {
    name Dot23
    xpos -1106
    ypos -1158
   }
-set Nbfb454f0 [stack 0]
+set Na4117c00 [stack 0]
   Dot {
    name Dot12
    xpos -1326
@@ -15992,7 +15991,7 @@ set Nbfb454f0 [stack 0]
    xpos -1326
    ypos -486
   }
-push $Nbfb454f0
+push $Na4117c00
   Reformat {
    type "to box"
    box_width {{parent.Reformat1.box_width}}
@@ -16013,7 +16012,7 @@ push $Nbfb454f0
    xpos -1140
    ypos -898
   }
-set Nbff6f7d0 [stack 0]
+set Na41637f0 [stack 0]
   Dot {
    name Dot8
    xpos -996
@@ -16034,7 +16033,7 @@ set Nbff6f7d0 [stack 0]
    xpos -996
    ypos -750
   }
-push $Nbff6f7d0
+push $Na41637f0
   Multiply {
    channels rgb
    value 269
@@ -16081,13 +16080,13 @@ push $Nbff6f7d0
    xpos -1106
    ypos -654
   }
-push $Nbfb42e50
+push $Na4115560
   Dot {
    name Dot4
    xpos -886
    ypos -1086
   }
-set Nbfd3dbe0 [stack 0]
+set Na4196b10 [stack 0]
   Rectangle {
    replace true
    area {0 0 6 {height}}
@@ -16100,7 +16099,7 @@ set Nbfd3dbe0 [stack 0]
    xpos -810
    ypos -1041
   }
-push $Nbfd3dbe0
+push $Na4196b10
   Radial {
    inputs 1+1
    replace true
@@ -16120,7 +16119,7 @@ push $Nbfd3dbe0
    xpos -886
    ypos -894
   }
-push $Nbfb408f0
+push $Na4113000
   Gamma {
    channels rgba
    value 0.5
@@ -16242,7 +16241,7 @@ push $Nbfb408f0
    xpos -666
    ypos 450
   }
-set Nbfaa5de0 [stack 0]
+set Na4212c00 [stack 0]
   Dot {
    name Dot5
    label " "
@@ -16280,7 +16279,7 @@ set Nbfaa5de0 [stack 0]
    xpos -556
    ypos 618
   }
-push $Nbfaa5de0
+push $Na4212c00
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -16368,7 +16367,7 @@ push $Nbfaa5de0
    xpos 654
    ypos 162
   }
-set Nbf1f9fc0 [stack 0]
+set Na4254ac0 [stack 0]
   Constant {
    inputs 0
    channels rgb
@@ -16424,7 +16423,7 @@ set Nbf1f9fc0 [stack 0]
    xpos 324
    ypos 282
   }
-set Nbffafcb0 [stack 0]
+set Na4278450 [stack 0]
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -16455,7 +16454,7 @@ set Nbffafcb0 [stack 0]
    ypos 368
    disable {{!parent.diagram}}
   }
-push $Nbffafcb0
+push $Na4278450
   BlinkScript {
    inputs 2
    KernelDescription "2 \"PlotChromaticity_sample\" iterate pixelWise 20e14b615a937bac78c1a771cbdfd10cc7c5fb6c487f65d0bb2d6633e404b958 3 \"col\" Read Random \"Yxy\" Read Random \"dst\" Write Random 3 \"padding\" Float 1 AAAAAA== \"left_margin\" Float 1 AAAAAA== \"tolerance\" Float 1 AAAAAA== 3 \"padding\" 1 1 \"left_margin\" 1 1 \"tolerance\" 1 1 2 \"outsize\" Float 1 1 AAAAAA== \"offset\" Float 1 1 AAAAAA=="
@@ -16476,7 +16475,7 @@ push $Nbffafcb0
    xpos 324
    ypos 450
   }
-set Nbfb51cf0 [stack 0]
+set Na4299700 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048}}
@@ -16485,7 +16484,7 @@ set Nbfb51cf0 [stack 0]
    xpos 290
    ypos 488
   }
-set Nbfb540c0 [stack 0]
+set Na429bad0 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048*2}}
@@ -16494,7 +16493,7 @@ set Nbfb540c0 [stack 0]
    xpos 180
    ypos 488
   }
-push $Nbfb51cf0
+push $Na4299700
   Dot {
    name Dot21
    xpos -6
@@ -16509,7 +16508,7 @@ push $Nbfb51cf0
    xpos -40
    ypos 489
   }
-set Nbfb62540 [stack 0]
+set Na42a9f50 [stack 0]
   Dilate {
    channels rgba
    size {0 {parent.Dilate3.size.w}}
@@ -16518,7 +16517,7 @@ set Nbfb62540 [stack 0]
    xpos -40
    ypos 584
   }
-push $Nbfb62540
+push $Na42a9f50
   Dilate {
    channels rgba
    size {{Output.width*plus_size/100} 0}
@@ -16598,7 +16597,7 @@ push $Nbfb62540
     ypos 302
    }
   end_group
-push $Nbfb540c0
+push $Na429bad0
   Merge2 {
    inputs 2
    bbox B
@@ -16615,7 +16614,7 @@ push $Nbfb540c0
    xpos 324
    ypos 690
   }
-push $Nbf1f9fc0
+push $Na4254ac0
   Dot {
    name Dot1
    label " "
@@ -16704,7 +16703,7 @@ push $Nbf1f9fc0
    xpos 764
    ypos 546
   }
-push $Nbf1f9fc0
+push $Na4254ac0
   Dot {
    name Dot16
    label " Col"
@@ -16759,7 +16758,7 @@ push $Nbf1f9fc0
    ypos 1046
   }
  end_group
-push $Nbf1b98a0
+push $Na3bcc890
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -16783,7 +16782,7 @@ Dot {
  xpos 836
  ypos 690
 }
-set N7f012640 [stack 0]
+set Na4392d50 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -16823,7 +16822,7 @@ Expression {
  xpos 848
  ypos 795
 }
-push $N7f012640
+push $Na4392d50
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -16876,7 +16875,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncf4a2dc0
+push $Na18270f0
 Group {
  name DRT_CAM_Blink22
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[value camMode] \[if \{\[value DRT_CAM_Kernel_HK_mode_in]==true\} \{return HK\\ mode\\ in\}]"
@@ -17000,14 +16999,14 @@ Group {
   xpos -908
   ypos -292
  }
-set Nfead400 [stack 0]
+set N97bd6a00 [stack 0]
  Colorspace {
   colorspace_out CIE-XYZ
   name Colorspace2
   xpos -1067
   ypos -213
  }
-push $Nfead400
+push $N97bd6a00
  BlinkScript {
   kernelSourceFile output-transforms-dev/display-transforms/nuke/CAM_DRT_v026.blink
   recompileCount 681
@@ -17114,7 +17113,7 @@ push $Nfead400
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Nbde47860 [stack 0]
+set Na43d7820 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{parent.parent.DRT_CAM_Blink22.ssts_luminance.z/100}}
@@ -17123,20 +17122,20 @@ set Nbde47860 [stack 0]
   ypos -112
   disable {{1-parent.clamp_output}}
  }
-set Nbde5fed0 [stack 0]
+set Na43efe60 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Nbde47860
+push $Na43d7820
  Multiply {
   value 0.01
   name Multiply1
   xpos -757
   ypos -139
  }
-push $Nfead400
+push $N97bd6a00
  Colorspace {
   primary_in ACES
   colorspace_out sRGB
@@ -17349,8 +17348,8 @@ push $Nfead400
     xpos -260
     ypos 110
    }
-set Nbded3290 [stack 0]
-push $Nbded3290
+set Na4467390 [stack 0]
+push $Na4467390
    ContactSheet {
     inputs 2
     width {{width*columns}}
@@ -17422,7 +17421,7 @@ push $Nbded3290
     xpos -40
     ypos -341
    }
-set Nbe504980 [stack 0]
+set Na44949c0 [stack 0]
    Dot {
     name Dot2
     label " "
@@ -17455,7 +17454,7 @@ set Nbe504980 [stack 0]
     addUserKnob {12 white}
     white {{"parent.distribution ? 4*parent.wxy.x / ( -2 * parent.wxy.x + 12 * parent.wxy.y + 3) : parent.wxy"} {"parent.distribution ? 9*parent.wxy.y / ( -2*parent.wxy.x + 12*parent.wxy.y + 3) : parent.wxy"}}
    }
-set Nbe517a40 [stack 0]
+set Na44a7a80 [stack 0]
    Posterize {
     channels rgb
     Colors {{rint(parent.density/3*2)}}
@@ -17463,8 +17462,8 @@ set Nbe517a40 [stack 0]
     xpos -590
     ypos -191
    }
-set Nbe51f640 [stack 0]
-push $Nbe517a40
+set Na44af680 [stack 0]
+push $Na44a7a80
    Dot {
     name Dot15
     xpos -446
@@ -17478,8 +17477,8 @@ push $Nbe517a40
     xpos -480
     ypos -154
    }
-push $Nbe51f640
-push $Nbe517a40
+push $Na44af680
+push $Na44a7a80
    Dot {
     name Dot16
     xpos -666
@@ -17592,8 +17591,8 @@ push $Nbe517a40
     xpos -556
     ypos 378
    }
-push $Nbded3290
-push $Nbe504980
+push $Na4467390
+push $Na44949c0
    Expression {
     expr0 r
     expr1 "4*g / ( -2*g + 12*b + 3)"
@@ -17717,7 +17716,7 @@ push $Nbe504980
     postage_stamp false
    }
   end_group
-set Nff54c00 [stack 0]
+set N97c66e00 [stack 0]
   Group {
    name RGBToXYZ_GamutGrid
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -17791,7 +17790,7 @@ set Nff54c00 [stack 0]
    xpos -920
    ypos 134
   }
-set Nbe5eaf70 [stack 0]
+set Na45859c0 [stack 0]
   Group {
    name RGBToXYZ_GamutC
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -17850,7 +17849,7 @@ set Nbe5eaf70 [stack 0]
    xpos -1140
    ypos 254
   }
-push $Nbe5eaf70
+push $Na45859c0
   Group {
    name RGBToXYZ_GamutB
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -17909,7 +17908,7 @@ push $Nbe5eaf70
    xpos -1030
    ypos 254
   }
-push $Nbe5eaf70
+push $Na45859c0
   Group {
    name RGBToXYZ_GamutA
    label "\[if \{\[value invert]\} \{return \"XYZ to \[value gamut]\"\} else \{return \"\[value gamut] to XYZ\"\}]\n\n"
@@ -17968,7 +17967,7 @@ push $Nbe5eaf70
    xpos -920
    ypos 254
   }
-push $Nff54c00
+push $N97c66e00
   Reformat {
    type scale
    scale 0.8
@@ -19135,7 +19134,7 @@ push $Nff54c00
    xpos -666
    ypos -1302
   }
-set Nbf021280 [stack 0]
+set Na47ee5c0 [stack 0]
   Dot {
    name Dot27
    xpos -1546
@@ -19200,7 +19199,7 @@ set Nbf021280 [stack 0]
    xpos -1546
    ypos -414
   }
-push $Nbf021280
+push $Na47ee5c0
   Reformat {
    type "to box"
    box_width 2048
@@ -19226,19 +19225,19 @@ push $Nbf021280
    xpos -666
    ypos -1158
   }
-set Nbf065020 [stack 0]
+set Na4836480 [stack 0]
   Dot {
    name Dot26
    xpos -886
    ypos -1158
   }
-set Nbf067580 [stack 0]
+set Na48389e0 [stack 0]
   Dot {
    name Dot23
    xpos -1106
    ypos -1158
   }
-set Nbf069c20 [stack 0]
+set Na483b080 [stack 0]
   Dot {
    name Dot12
    xpos -1326
@@ -19325,7 +19324,7 @@ set Nbf069c20 [stack 0]
    xpos -1326
    ypos -486
   }
-push $Nbf069c20
+push $Na483b080
   Reformat {
    type "to box"
    box_width {{parent.Reformat1.box_width}}
@@ -19346,7 +19345,7 @@ push $Nbf069c20
    xpos -1140
    ypos -898
   }
-set Nbe6b1720 [stack 0]
+set Na4886c70 [stack 0]
   Dot {
    name Dot8
    xpos -996
@@ -19367,7 +19366,7 @@ set Nbe6b1720 [stack 0]
    xpos -996
    ypos -750
   }
-push $Nbe6b1720
+push $Na4886c70
   Multiply {
    channels rgb
    value 269
@@ -19414,13 +19413,13 @@ push $Nbe6b1720
    xpos -1106
    ypos -654
   }
-push $Nbf067580
+push $Na48389e0
   Dot {
    name Dot4
    xpos -886
    ypos -1086
   }
-set Nbe6e4a40 [stack 0]
+set Na48b9f90 [stack 0]
   Rectangle {
    replace true
    area {0 0 6 {height}}
@@ -19433,7 +19432,7 @@ set Nbe6e4a40 [stack 0]
    xpos -810
    ypos -1041
   }
-push $Nbe6e4a40
+push $Na48b9f90
   Radial {
    inputs 1+1
    replace true
@@ -19453,7 +19452,7 @@ push $Nbe6e4a40
    xpos -886
    ypos -894
   }
-push $Nbf065020
+push $Na4836480
   Gamma {
    channels rgba
    value 0.5
@@ -19575,7 +19574,7 @@ push $Nbf065020
    xpos -666
    ypos 450
   }
-set Nbe3f9ad0 [stack 0]
+set Na49360e0 [stack 0]
   Dot {
    name Dot5
    label " "
@@ -19613,7 +19612,7 @@ set Nbe3f9ad0 [stack 0]
    xpos -556
    ypos 618
   }
-push $Nbe3f9ad0
+push $Na49360e0
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -19701,7 +19700,7 @@ push $Nbe3f9ad0
    xpos 654
    ypos 162
   }
-set Nbf23b840 [stack 0]
+set Na4977fa0 [stack 0]
   Constant {
    inputs 0
    channels rgb
@@ -19757,7 +19756,7 @@ set Nbf23b840 [stack 0]
    xpos 324
    ypos 282
   }
-set Nbf25f1d0 [stack 0]
+set Na499b930 [stack 0]
   ColorMatrix {
    matrix {
        {{parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix} {parent.GamutToXYZ.ColorMatrix.matrix}}
@@ -19788,7 +19787,7 @@ set Nbf25f1d0 [stack 0]
    ypos 368
    disable {{!parent.diagram}}
   }
-push $Nbf25f1d0
+push $Na499b930
   BlinkScript {
    inputs 2
    KernelDescription "2 \"PlotChromaticity_sample\" iterate pixelWise 20e14b615a937bac78c1a771cbdfd10cc7c5fb6c487f65d0bb2d6633e404b958 3 \"col\" Read Random \"Yxy\" Read Random \"dst\" Write Random 3 \"padding\" Float 1 AAAAAA== \"left_margin\" Float 1 AAAAAA== \"tolerance\" Float 1 AAAAAA== 3 \"padding\" 1 1 \"left_margin\" 1 1 \"tolerance\" 1 1 2 \"outsize\" Float 1 1 AAAAAA== \"offset\" Float 1 1 AAAAAA=="
@@ -19809,7 +19808,7 @@ push $Nbf25f1d0
    xpos 324
    ypos 450
   }
-set Nbf280d20 [stack 0]
+set Na49bcbe0 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048}}
@@ -19818,7 +19817,7 @@ set Nbf280d20 [stack 0]
    xpos 290
    ypos 488
   }
-set Nbf2830f0 [stack 0]
+set Na49befb0 [stack 0]
   Dilate {
    channels rgba
    size {{Output.width/2048*2}}
@@ -19827,7 +19826,7 @@ set Nbf2830f0 [stack 0]
    xpos 180
    ypos 488
   }
-push $Nbf280d20
+push $Na49bcbe0
   Dot {
    name Dot21
    xpos -6
@@ -19842,7 +19841,7 @@ push $Nbf280d20
    xpos -40
    ypos 489
   }
-set Nbf291570 [stack 0]
+set Na49cd430 [stack 0]
   Dilate {
    channels rgba
    size {0 {parent.Dilate3.size.w}}
@@ -19851,7 +19850,7 @@ set Nbf291570 [stack 0]
    xpos -40
    ypos 584
   }
-push $Nbf291570
+push $Na49cd430
   Dilate {
    channels rgba
    size {{Output.width*plus_size/100} 0}
@@ -19931,7 +19930,7 @@ push $Nbf291570
     ypos 302
    }
   end_group
-push $Nbf2830f0
+push $Na49befb0
   Merge2 {
    inputs 2
    bbox B
@@ -19948,7 +19947,7 @@ push $Nbf2830f0
    xpos 324
    ypos 690
   }
-push $Nbf23b840
+push $Na4977fa0
   Dot {
    name Dot1
    label " "
@@ -20037,7 +20036,7 @@ push $Nbf23b840
    xpos 764
    ypos 546
   }
-push $Nbf23b840
+push $Na4977fa0
   Dot {
    name Dot16
    label " Col"
@@ -20092,7 +20091,7 @@ push $Nbf23b840
    ypos 1046
   }
  end_group
-push $Nbde5fed0
+push $Na43efe60
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -20111,7 +20110,7 @@ Reformat {
  xpos 17
  ypos 652
 }
-set Nbf32ccd0 [stack 0]
+set Na34aa840 [stack 0]
 Group {
  name SDR_to_HDR3
  xpos -230
@@ -20280,19 +20279,19 @@ Group {
   xpos -6
   ypos 74
  }
-set N78f58190 [stack 0]
+set Na4b0e890 [stack 0]
  Dot {
   name Dot2
   xpos 234
   ypos 74
  }
-set N78f4dd90 [stack 0]
+set Na4b10f30 [stack 0]
  Dot {
   name Dot3
   xpos 474
   ypos 74
  }
-set Ncd83e3f0 [stack 0]
+set Na4b135d0 [stack 0]
  Expression {
   expr0 r<0?0:((log(r)/log(2)+2.5)*50+425)/1023
   expr1 g<0?0:((log(g)/log(2)+2.5)*50+425)/1023
@@ -20303,7 +20302,7 @@ set Ncd83e3f0 [stack 0]
   xpos 440
   ypos 108
  }
-push $Ncd83e3f0
+push $Na4b135d0
  Expression {
   expr0 pow(2,((r*1023)-425)/50-2.5)
   expr1 pow(2,((g*1023)-425)/50-2.5)
@@ -20321,7 +20320,7 @@ push $Ncd83e3f0
   xpos 440
   ypos 190
  }
-push $N78f4dd90
+push $Na4b10f30
  Expression {
   expr0 r<0?(log(pow(2,-16))/log(2)+9.72)/17.52:r<pow(2,-15)?(log(pow(2,-16)+r*0.5)/log(2)+9.72)/17.52:(log(r)/log(2)+9.72)/17.52
   expr1 g<0?(log(pow(2,-16))/log(2)+9.72)/17.52:g<pow(2,-15)?(log(pow(2,-16)+g*0.5)/log(2)+9.72)/17.52:(log(g)/log(2)+9.72)/17.52
@@ -20332,7 +20331,7 @@ push $N78f4dd90
   xpos 200
   ypos 104
  }
-push $N78f4dd90
+push $Na4b10f30
  Expression {
   expr0 r<(9.72-15)/17.52?(pow(2,(r*17.52-9.72))-pow(2,-16))*2:pow(2,(r*17.52-9.72))
   expr1 g<(9.72-15)/17.52?(pow(2,(g*17.52-9.72))-pow(2,-16))*2:pow(2,(g*17.52-9.72))
@@ -20350,7 +20349,7 @@ push $N78f4dd90
   xpos 200
   ypos 190
  }
-push $N78f58190
+push $Na4b0e890
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -20370,7 +20369,7 @@ push $N78f58190
   xpos -40
   ypos 108
  }
-push $N78f58190
+push $Na4b0e890
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -20408,7 +20407,7 @@ push $N78f58190
   xpos -40
   ypos 430
  }
-push $Ncd83e3f0
+push $Na4b135d0
  Expression {
   temp_name0 StepsPerStop
   temp_expr0 50
@@ -20426,15 +20425,15 @@ push $Ncd83e3f0
   ypos 104
  }
 end_group
-push $N10565400
-push $Ncf48aac0
-push $Nbf32ccd0
+push $Nf770ee00
+push $Ne4f56760
+push $Na34aa840
 Dot {
  name Dot7
  xpos 51
  ypos 684
 }
-set Nc8b55350 [stack 0]
+set Na4b5ceb0 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -20474,7 +20473,7 @@ Expression {
  xpos 63
  ypos 789
 }
-set N78fb37f0 [stack 0]
+set Na4b6e9b0 [stack 0]
 Viewer {
  inputs 3
  frame_range 1-100
@@ -20485,8 +20484,8 @@ Viewer {
  xpos 962
  ypos 909
 }
-push $N78fb37f0
-push $Nc8b55350
+push $Na4b6e9b0
+push $Na4b5ceb0
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -20551,7 +20550,7 @@ NoOp {
  addUserKnob {20 User}
  addUserKnob {1 revision}
  revision 026
- addUserKnob {22 bakeAllODTs T "### This code is embedded in the nukescript, not accessed from here\n\n\n\n\n\n\nimport os\nimport shutil\n\n\n\nmasterNode = nuke.thisNode()\n\n\n\nbakeLuts = nuke.thisNode().knob('bakeLUTs').value()\n\n\n\ndef cubeToCub(cubePath,cubPath):\n    inputCubePath = cubePath\n    ouputCubPath = cubPath\n\n\n    # read the cube\n    with open(inputCubePath) as f:\n        lines = f.readlines()\n\n\n    cubeSize = lines\[1].split(' ')\[1].replace('\\n','')\n\n\n    # header\n    tlHeader = '''# Truelight Cube v2.1\n    # iDims     3\n    # oDims     3\n    # width     CUBESIZE CUBESIZE CUBESIZE\\n\n    # Cube'''\n\n\n    tlHeader = tlHeader.replace('CUBESIZE',cubeSize)\n\n\n    # footer\n    tlFooter = '''\\n# end\\n'''\n\n\n    LUTlines = lines\[2:]\n    LUTlines = \[x.replace('\\n','').split(' ') for x in LUTlines]\n    LUTlines = \[\[float(i) for i in x] for x in LUTlines]\n    LUTlines = \[\[str(i) for i in x] for x in LUTlines]\n\n\n    ## remove decimal from 0.0 and 1.0\n    for i, x in enumerate(LUTlines):\n        for j, a in enumerate(x):\n            if '0.0' == a:\n                LUTlines\[i]\[j] = '0'\n            if '1.0' == a:\n                LUTlines\[i]\[j] = '1'\n\n\n    # reconstruct the cube string\n    stringLUTlines = \[]\n    for line in LUTlines:\n        stringLUTlines.append(' '.join(line))\n    newLUTStringBlock = '\\n'.join(stringLUTlines)\n\n\n    # join it all up\n    outputContents = tlHeader + '\\n' + newLUTStringBlock + '\\n' + tlFooter\n\n\n    # check directory for outputCubPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ouputCubPath)):\n        os.makedirs(os.path.dirname(ouputCubPath))\n\n\n    # write the file\n    with open(ouputCubPath, 'w') as f:\n        f.write(outputContents)\n\n\n\n\n\n\ndef bakeCandidateLUTfromNode(node,inverse=False):\n    candidate = node.knob('candidate').value()\n    revision = node.knob('revision').value()\n    target = node.knob('target').value()\n\n\n\n\n\n\n    nukeScriptDir = nuke.script_directory()\n    print(nukeScriptDir)\n    dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())\n    fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())\n    # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')\n    # print(flSpacePath)\n\n\n\n\n\n\n    cubePath = os.path.join(nukeScriptDir,node.knob('cubePath').evaluate())\n    cubePathClean = cubePath.replace('(','').replace(')','')\n    ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())\n    cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())\n\n\n    if inverse:\n        cubePath = cubePath.replace('.cube','_inverse.cube')\n        cubePathClean = cubePathClean.replace('.cube','_inverse.cube')\n        ocioCubePath = ocioCubePath.replace('.cube','_inverse.cube')\n        cubPath = cubPath.replace('.cub','_inverse.cub')\n\n\n    # replace LUT writer path with evaluated path\n    node.knob('file').setValue(cubePath)\n\n\n\n\n\n\n    # check cubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(cubePath)):\n        os.makedirs(os.path.dirname(cubePath))\n\n\n\n\n\n    # check ocioCubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ocioCubePath)):\n        os.makedirs(os.path.dirname(ocioCubePath))\n\n\n\n\n\n\n    dctlPath = cubePath.replace('.cube','.dctl')\n    cubeName = cubePath.split('/').pop(-1)\n    cubeNameClean = cubeName.replace('(','').replace(')','')\n\n\n\n\n\n\n\n    if bakeLuts == True:\n        node.knob('generate').execute()\n        # if cubeName does not match cubeNameClean copy cubeName to cubeNameClean\n        if cubePath != cubePathClean:\n            shutil.copy(cubePath,cubePathClean)\n\n\n\n    # read contents of cube file\n    with open(cubePathClean) as f:\n        cubelines = f.readlines()\n\n\n\n\n    ## write the dctl file\n    with open(dctltemplatePath) as f:\n        lines = f.readlines()\n    newLines = \[x.replace('replace.cube',cubeNameClean) for x in lines]\n    # replace the string REPLACE_WITH_CUBE_DATA with the contents of cubelines\n    newLines = \[x.replace('REPLACE_WITH_CUBE_DATA',''.join(cubelines)) for x in newLines]\n\n\n    with open(dctlPath, 'w') as f:\n        f.write(''.join(newLines))\n\n\n\n\n\n\n    # Baselight\n    # convert cube to cub\n    cubeToCub(cubePath,cubPath)\n\n\n    # copy cubePath to ocioCubePath\n    shutil.copy(cubePath,ocioCubePath)\n\n\n    # # remove original cube if it isnt the same as the clean version\n    # if cubePathClean != cubePath:\n    #     # delete cubeName\n        # os.remove(cubePath)\n    if os.path.exists(cubePath):\n        os.remove(cubePath)\n    if os.path.exists(cubePathClean):\n        os.remove(cubePathClean)\n\n\n\n\n\n\n    ## write the fltransform\n    if target == 'Rec709':\n        if  inverse == False:\n            fltransformPath = cubPath.replace('.cub','.fltransform')\n            cubeToken = os.path.basename(cubPath.replace('_Rec709','').replace('.cub',''))\n            with open(fltransformTemplatePath) as f:\n                lines = f.readlines()\n            newLines = \[x.replace('replaceTransformName','ACES 2.0 Candidate'+ candidate + ' rev'+revision) for x in lines]\n            newLines = \[x.replace('replaceForward',cubeToken) for x in newLines]\n            # newLines = \[x.replace('replaceForward_Rec2100',os.path.basename(cubPath).replace('Rec709','Rec2100').replace('.cub','')) for x in newLines]\n            with open(fltransformPath, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\n\n    # check ACEScct_AP0.flspace exists, if not, copy it\n    for flspace in \['/ACEScct_AP0.flspace','/ACEScct_APS4.flspace']:\n        flSpaceSourcePath = os.path.join(nukeScriptDir,'resources' + flspace)\n        flSpaceDestPath = os.path.dirname(cubPath) + flspace\n        if not os.path.exists(flSpaceDestPath):\n            shutil.copy(flSpaceSourcePath,flSpaceDestPath)\n\n\n\n\n\n\ndef createOCIOconfigs(revision):\n    nukeScriptDir = nuke.script_directory()\n    revision = nuke.thisNode().knob('revision').value()\n    ocioTemplateDir = os.path.join(nukeScriptDir,'resources/')\n    newOcioTemplateDir = os.path.join(nukeScriptDir,'OCIO/')\n    ocioConfigTemplates = \[x for x in os.listdir(ocioTemplateDir) if x.endswith('.ocio')]\n    ocioConfigTemplatePaths = \[os.path.join(ocioTemplateDir,x) for x in ocioConfigTemplates]\n\n\n\n    activeViewDicts = \[]\n    activeViewDicts.append(\{'name':'All','values':\[\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.709',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',\n        ]\})\n\n\n    activeViewDicts.append(\{'name':'DisplayP3','values':\[\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',\n        ]\})\n\n\n    activeViewDicts.append(\{'name':'Limited','values':\[\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.709',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)',\n        ]\})\n\n\n\n    for config in ocioConfigTemplatePaths:\n        for activeViewDict in activeViewDicts:\n\n\n            configName = config.split('/').pop(-1)\n            newConfigName = configName.replace('revXXX','rev'+revision).replace('TEMPLATE',activeViewDict\['name'])\n            newConfigPath = os.path.join(newOcioTemplateDir,newConfigName)\n            with open(config) as f:\n                lines = f.readlines()\n            activeViewsStrings = \[ x.replace('revXXX','rev'+revision) for x in  activeViewDict\['values']]\n            activeViews = ','.join(activeViewsStrings)\n            newLines = \[x.replace('revXXX','rev'+revision).replace('ACTIVEVIEWSPLACEHOLDER',activeViews) for x in lines]\n            with open(newConfigPath, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\nODTWrites = \[]\nfor node in nuke.allNodes():\n    if 'Write_ResolveACES_ODT_LUT' in node.name():\n        ODTWrites.append(node)\n\n\n\n\n\nfor ODTWriteNode in ODTWrites:\n    masterNode.knob('inverseMode').setValue(False)\n    bakeCandidateLUTfromNode(ODTWriteNode)\n    masterNode.knob('inverseMode').setValue(True)\n    bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)\n\n\n\n\n\n# createOCIOconfigs(revision)\ncreateOCIOconfigs(nuke.thisNode().knob('revision').getValue())" +STARTLINE}
+ addUserKnob {22 bakeAllODTs T "### This code is embedded in the nukescript, not accessed from here\n\n\n\n\n\n\nimport os\nimport shutil\n\n\n\nmasterNode = nuke.thisNode()\n\n\n\nbakeLuts = nuke.thisNode().knob('bakeLUTs').value()\n\n\n\ndef cubeToCub(cubePath,cubPath):\n    inputCubePath = cubePath\n    ouputCubPath = cubPath\n\n\n    # read the cube\n    with open(inputCubePath) as f:\n        lines = f.readlines()\n\n\n    cubeSize = lines\[1].split(' ')\[1].replace('\\n','')\n\n\n    # header\n    tlHeader = '''# Truelight Cube v2.1\n    # iDims     3\n    # oDims     3\n    # width     CUBESIZE CUBESIZE CUBESIZE\\n\n    # Cube'''\n\n\n    tlHeader = tlHeader.replace('CUBESIZE',cubeSize)\n\n\n    # footer\n    tlFooter = '''\\n# end\\n'''\n\n\n    LUTlines = lines\[2:]\n    LUTlines = \[x.replace('\\n','').split(' ') for x in LUTlines]\n    LUTlines = \[\[float(i) for i in x] for x in LUTlines]\n    LUTlines = \[\[str(i) for i in x] for x in LUTlines]\n\n\n    ## remove decimal from 0.0 and 1.0\n    for i, x in enumerate(LUTlines):\n        for j, a in enumerate(x):\n            if '0.0' == a:\n                LUTlines\[i]\[j] = '0'\n            if '1.0' == a:\n                LUTlines\[i]\[j] = '1'\n\n\n    # reconstruct the cube string\n    stringLUTlines = \[]\n    for line in LUTlines:\n        stringLUTlines.append(' '.join(line))\n    newLUTStringBlock = '\\n'.join(stringLUTlines)\n\n\n    # join it all up\n    outputContents = tlHeader + '\\n' + newLUTStringBlock + '\\n' + tlFooter\n\n\n    # check directory for outputCubPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ouputCubPath)):\n        os.makedirs(os.path.dirname(ouputCubPath))\n\n\n    # write the file\n    with open(ouputCubPath, 'w') as f:\n        f.write(outputContents)\n\n\n\n\n\n\ndef bakeCandidateLUTfromNode(node,inverse=False):\n    candidate = node.knob('candidate').value()\n    revision = node.knob('revision').value()\n    target = node.knob('target').value()\n\n\n\n\n\n\n    nukeScriptDir = nuke.script_directory()\n    print(nukeScriptDir)\n    dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())\n    if inverse:\n        dctltemplatePath = dctltemplatePath.replace('.dctl','_inverse.dctl')\n\n\n    fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())\n    # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')\n    # print(flSpacePath)\n\n\n\n\n\n\n    cubePath = os.path.join(nukeScriptDir,node.knob('cubePath').evaluate())\n    cubePathClean = cubePath.replace('(','').replace(')','')\n    ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())\n    cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())\n\n\n    if inverse:\n        cubePath = cubePath.replace('.cube','_inverse.cube')\n        cubePathClean = cubePathClean.replace('.cube','_inverse.cube')\n        ocioCubePath = ocioCubePath.replace('.cube','_inverse.cube')\n        cubPath = cubPath.replace('.cub','_inverse.cub')\n\n\n    # replace LUT writer path with evaluated path\n    node.knob('file').setValue(cubePath)\n\n\n\n\n\n\n    # check cubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(cubePath)):\n        os.makedirs(os.path.dirname(cubePath))\n\n\n\n\n\n    # check ocioCubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ocioCubePath)):\n        os.makedirs(os.path.dirname(ocioCubePath))\n\n\n    dctlPath = cubePath.replace('.cube','.dctl')\n    if inverse:\n        dctlPath = dctlPath.replace('/ODT/','/IDT/')\n\n\n    # check dctlPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(dctlPath)):\n        os.makedirs(os.path.dirname(dctlPath))\n\n\n    cubeName = cubePath.split('/').pop(-1)\n    cubeNameClean = cubeName.replace('(','').replace(')','')\n\n\n\n\n\n\n\n    if bakeLuts == True:\n        node.knob('generate').execute()\n        # if cubeName does not match cubeNameClean copy cubeName to cubeNameClean\n        if cubePath != cubePathClean:\n            shutil.copy(cubePath,cubePathClean)\n\n\n\n    # read contents of cube file\n    with open(cubePathClean) as f:\n        cubelines = f.readlines()\n\n\n\n\n    ## write the dctl file\n    with open(dctltemplatePath) as f:\n        lines = f.readlines()\n    newLines = \[x.replace('replace.cube',cubeNameClean) for x in lines]\n    # replace the string REPLACE_WITH_CUBE_DATA with the contents of cubelines\n    newLines = \[x.replace('REPLACE_WITH_CUBE_DATA',''.join(cubelines)) for x in newLines]\n\n\n    with open(dctlPath, 'w') as f:\n        f.write(''.join(newLines))\n\n\n\n\n\n\n    # Baselight\n    # convert cube to cub\n    cubeToCub(cubePath,cubPath)\n\n\n    # copy cubePath to ocioCubePath\n    shutil.copy(cubePath,ocioCubePath)\n\n\n    # # remove original cube if it isnt the same as the clean version\n    # if cubePathClean != cubePath:\n    #     # delete cubeName\n        # os.remove(cubePath)\n    if os.path.exists(cubePath):\n        os.remove(cubePath)\n    if os.path.exists(cubePathClean):\n        os.remove(cubePathClean)\n\n\n\n\n\n\n    ## write the fltransform\n    if target == 'Rec709':\n        if  inverse == False:\n            fltransformPath = cubPath.replace('.cub','.fltransform')\n            cubeToken = os.path.basename(cubPath.replace('_Rec709','').replace('.cub',''))\n            with open(fltransformTemplatePath) as f:\n                lines = f.readlines()\n            newLines = \[x.replace('replaceTransformName','ACES 2.0 Candidate'+ candidate + ' rev'+revision) for x in lines]\n            newLines = \[x.replace('replaceForward',cubeToken) for x in newLines]\n            # newLines = \[x.replace('replaceForward_Rec2100',os.path.basename(cubPath).replace('Rec709','Rec2100').replace('.cub','')) for x in newLines]\n            with open(fltransformPath, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\n\n    # check ACEScct_AP0.flspace exists, if not, copy it\n    for flspace in \['/ACEScct_AP0.flspace','/ACEScct_APS4.flspace']:\n        flSpaceSourcePath = os.path.join(nukeScriptDir,'resources' + flspace)\n        flSpaceDestPath = os.path.dirname(cubPath) + flspace\n        if not os.path.exists(flSpaceDestPath):\n            shutil.copy(flSpaceSourcePath,flSpaceDestPath)\n\n\n\n\n\n\ndef createOCIOconfigs(revision):\n    nukeScriptDir = nuke.script_directory()\n    revision = nuke.thisNode().knob('revision').value()\n    ocioTemplateDir = os.path.join(nukeScriptDir,'resources/')\n    newOcioTemplateDir = os.path.join(nukeScriptDir,'OCIO/')\n    ocioConfigTemplates = \[x for x in os.listdir(ocioTemplateDir) if x.endswith('.ocio')]\n    ocioConfigTemplatePaths = \[os.path.join(ocioTemplateDir,x) for x in ocioConfigTemplates]\n\n\n\n    activeViewDicts = \[]\n    activeViewDicts.append(\{'name':'All','values':\[\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.709',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',\n        ]\})\n\n\n    activeViewDicts.append(\{'name':'DisplayP3','values':\[\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',\n        ]\})\n\n\n    activeViewDicts.append(\{'name':'Limited','values':\[\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.709',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65',\n        'ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)',\n        'ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)',\n        ]\})\n\n\n\n    for config in ocioConfigTemplatePaths:\n        for activeViewDict in activeViewDicts:\n\n\n            configName = config.split('/').pop(-1)\n            newConfigName = configName.replace('revXXX','rev'+revision).replace('TEMPLATE',activeViewDict\['name'])\n            newConfigPath = os.path.join(newOcioTemplateDir,newConfigName)\n            with open(config) as f:\n                lines = f.readlines()\n            activeViewsStrings = \[ x.replace('revXXX','rev'+revision) for x in  activeViewDict\['values']]\n            activeViews = ','.join(activeViewsStrings)\n            newLines = \[x.replace('revXXX','rev'+revision).replace('ACTIVEVIEWSPLACEHOLDER',activeViews) for x in lines]\n            with open(newConfigPath, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\nODTWrites = \[]\nfor node in nuke.allNodes():\n    if 'Write_ResolveACES_ODT_LUT' in node.name():\n        ODTWrites.append(node)\n\n\n\n\n\nfor ODTWriteNode in ODTWrites:\n    masterNode.knob('inverseMode').setValue(False)\n    bakeCandidateLUTfromNode(ODTWriteNode)\n    masterNode.knob('inverseMode').setValue(True)\n    bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)\n\n\n\n\n\n# createOCIOconfigs(revision)\ncreateOCIOconfigs(nuke.thisNode().knob('revision').getValue())" +STARTLINE}
  addUserKnob {6 bakeLUTs +STARTLINE}
  bakeLUTs true
  addUserKnob {26 ""}
