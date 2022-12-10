@@ -1,29 +1,28 @@
 DEFINE_ACES_PARAM(IS_PARAMETRIC_ACES_TRANSFORM: 0)
 
-__DEVICE__ float lin_to_ACEScct(float in) {
-  if (in <= 0.0078125f) {
-    return 10.5402377416545f * in + 0.0729055341958355f;
+__DEVICE__ float acescct_to_lin(float in) {
+  if (in > 0.155251141552511f) {
+    return _powf( 2.0f, in*17.52f - 9.72f);
   } else {
-    return (_log2f(in) + 9.72f) / 17.52f;
+    return (in - 0.0729055341958355f) / 10.5402377416545f;
   }
 }
 
+
 __DEVICE__ float3 transform(int p_Width, int p_Height, int p_X, int p_Y, float p_R, float p_G, float p_B)
 {
+    const float3 res = APPLY_LUT(p_R, p_G, p_B, DRTLUT);
 
-    // AP0 to APS4
-    float r = ( 0.951951f      * p_R) + (  0.0209747f * p_G) + (  0.0270741f    * p_B);
-    float g = (-2.54847e-05f   * p_R) + (  1.0012f    * p_G) + ( -0.00117955f   * p_B);
-    float b = ( 0.235717f      * p_R) + (  0.0380684f * p_G) + (  0.726218f     * p_B);
+    float r_lin = acescct_to_lin(res.x);
+    float g_lin = acescct_to_lin(res.y);
+    float b_lin = acescct_to_lin(res.z);
+    
+    // APS4 to AP0
+    float r = ( 1.06026969f * r_lin) + ( -0.02070795f * g_lin) + ( -0.03956150f * b_lin);
+    float g = (-0.00037844f * r_lin) + (  0.99874715f * g_lin) + (  0.00163631f * b_lin);
+    float b = (-0.34412419f * r_lin) + ( -0.04563298f * g_lin) + (  1.38975215f * b_lin);
 
-
-    float r_cct = lin_to_ACEScct(r);
-    float g_cct = lin_to_ACEScct(g);
-    float b_cct = lin_to_ACEScct(b);
-
-    const float3 res = APPLY_LUT(r_cct, g_cct, b_cct, DRTLUT);
-
-    return res;
+    return make_float3(r, g, b);
 }
 
 
