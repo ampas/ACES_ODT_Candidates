@@ -7,12 +7,14 @@ This repo contains:
 * A FilmLight Display Rendering Transforms intended for use in Baselight.
 * OCIO configs, both for standard Linux/Windows environments, and Macs using EDR displays.
 
+Inverse Transforms are now implemented for all platforms.
+
 ## Variations
 
 There are currently 3 sets of transforms in the repo.
-* rev025  - CAM_DRT_v025.blink with HK_mode_in **enabled**
 * rev026  - CAM_DRT_v026.blink with HK_mode_in **disabled**
-* rev026b  - CAM_DRT_v026.blink with HK_mode_in **enabled**
+* rev027  - CAM_DRT_v027.blink with HK_mode_in **disabled**
+
 
 # Installation
 
