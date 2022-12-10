@@ -16,15 +16,14 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="Viewer.2"/>
                 </dock>
                 <split size="468"/>
-                <dock id="" activePageId="DAG.1">
+                <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
-                    <page id="DAG.2"/>
                 </dock>
             </splitter>
             <split size="615"/>
-            <dock id="" activePageId="Properties.1" focus="true">
+            <dock id="" activePageId="Properties.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
             </dock>
@@ -451,22 +450,22 @@ push $N13117600
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set N13dc4bd0 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{input.DRT_CAM_Kernel_sstsLuminance.z/100}}
   name Clamp1
   selected true
   xpos -908
-  ypos -112
-  disable {{1-parent.clamp_output}}
+  ypos -150
+  disable {{max((1-parent.clamp_output),parent.invert)}}
  }
+set Ne677ff00 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $N13dc4bd0
+push $Ne677ff00
  Multiply {
   value 0.01
   name Multiply1
@@ -3430,7 +3429,7 @@ push $Ne5d10670
    ypos 1046
   }
  end_group
-push $N13dc4bd0
+push $Ne677ff00
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -3787,22 +3786,22 @@ push $Ne2b08600
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Ne4da4ee0 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{input.DRT_CAM_Kernel_sstsLuminance.z/100}}
   name Clamp1
   selected true
   xpos -908
-  ypos -112
-  disable {{1-parent.clamp_output}}
+  ypos -150
+  disable {{max((1-parent.clamp_output),parent.invert)}}
  }
+set Ne67dc140 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Ne4da4ee0
+push $Ne67dc140
  Multiply {
   value 0.01
   name Multiply1
@@ -6766,7 +6765,7 @@ push $Ne65e1030
    ypos 1046
   }
  end_group
-push $Ne4da4ee0
+push $Ne67dc140
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -7124,22 +7123,22 @@ push $N263a7600
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set N1417cc10 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{input.DRT_CAM_Kernel_sstsLuminance.z/100}}
   name Clamp1
   selected true
   xpos -908
-  ypos -112
-  disable {{1-parent.clamp_output}}
+  ypos -150
+  disable {{max((1-parent.clamp_output),parent.invert)}}
  }
+set Ne67bb760 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $N1417cc10
+push $Ne67bb760
  Multiply {
   value 0.01
   name Multiply1
@@ -10103,7 +10102,7 @@ push $Ne3ec9800
    ypos 1046
   }
  end_group
-push $N1417cc10
+push $Ne67bb760
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -10460,22 +10459,22 @@ push $N13365000
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set Ne5894550 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{input.DRT_CAM_Kernel_sstsLuminance.z/100}}
   name Clamp1
   selected true
   xpos -908
-  ypos -112
-  disable {{1-parent.clamp_output}}
+  ypos -150
+  disable {{max((1-parent.clamp_output),parent.invert)}}
  }
+set Ne68759c0 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $Ne5894550
+push $Ne68759c0
  Multiply {
   value 0.01
   name Multiply1
@@ -13439,7 +13438,7 @@ push $Ne70390f0
    ypos 1046
   }
  end_group
-push $Ne5894550
+push $Ne68759c0
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -13804,7 +13803,7 @@ set N62729220 [stack 0]
   selected true
   xpos -908
   ypos -112
-  disable {{1-parent.clamp_output}}
+  disable {{max((1-parent.clamp_output),parent.invert)}}
  }
  Output {
   name Output1
@@ -17111,105 +17110,6 @@ push $N27bcf580
   ypos 104
  }
 end_group
-push $N27b8d940
-Dot {
- name Dot7
- xpos 51
- ypos 684
-}
-set N27c1cec0 [stack 0]
-Colorspace {
- illuminant_in ACES
- primary_in ACES
- colorspace_out CIE-XYZ
- name Colorspace3
- label "XYZ to AP0"
- xpos 63
- ypos 725
-}
-ColorMatrix {
- matrix {
-     {1.009929895 -0.01972960308 -0.03755422309}
-     {0.3892438412 0.7234188318 -0.112662673}
-     {-0.347163409 -0.04603575915 1.402024388}
-   }
- invert true
- name ColorMatrix1
- label "APS4 to XYZ"
- xpos 63
- ypos 757
-}
-Expression {
- temp_name0 cut_lin
- temp_expr0 0.0078125
- temp_name1 cut_log
- temp_expr1 0.155251141552511
- temp_name2 A
- temp_expr2 10.5402377416545
- temp_name3 B
- temp_expr3 0.0729055341958355
- expr0 r<=cut_lin?A*r+B:(log(r)/log(2)+9.72)/17.52
- expr1 g<=cut_lin?A*g+B:(log(g)/log(2)+9.72)/17.52
- expr2 b<=cut_lin?A*b+B:(log(b)/log(2)+9.72)/17.52
- channel3 none
- name lin2log
- label ACEScct
- xpos 63
- ypos 789
-}
-push $N27c1cec0
-Switch {
- inputs 2
- which {{master.inverseMode}}
- name Switch3
- xpos 17
- ypos 837
-}
-Group {
- name Write_ResolveACES_ODT_LUT3
- label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
- xpos 17
- ypos 967
- addUserKnob {20 User}
- addUserKnob {1 candidate}
- candidate CAMDRT
- addUserKnob {1 revision}
- revision "\[value master.revision]"
- addUserKnob {1 target}
- target Rec709
- addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2 Candidate \[value candidate] rev\[value revision] \[value target].cube"
- addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Candidates_rev\[value revision]/ACES2 Candidate \[value candidate] rev\[value revision] \[value target].cube"
- addUserKnob {1 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Candidates_rev\[value revision]/ACES2_Candidate_\[value candidate]_rev\[value revision]_\[value target].cub"
- addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
- addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
- addUserKnob {26 ""}
- addUserKnob {2 dctlTemplate}
- dctlTemplate resources/ACES_ApplyLUT_Template_APS4.dctl
- addUserKnob {2 fltransformTemplate}
- fltransformTemplate resources/ACES_DRT_Template_APS4.fltransform
-}
- Input {
-  inputs 0
-  name Input1
-  xpos 411
-  ypos 213
- }
- GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev027/ACES2 Candidate CAMDRT rev027 Rec709_inverse.cube"
-  file_type .cube
-  name GenerateLUT1
-  xpos 411
-  ypos 283
- }
- Output {
-  name Output1
-  xpos 411
-  ypos 353
- }
-end_group
 push $N45883800
 push $N634d71a0
 push $N261fde00
@@ -17465,22 +17365,22 @@ push $N64ca5e00
   addUserKnob {7 matrixScaler R 0 2}
   matrixScaler 0.99415
  }
-set N404d4d50 [stack 0]
  Clamp {
   minimum_enable false
   maximum {{input.DRT_CAM_Kernel_sstsLuminance.z/100}}
   name Clamp1
   selected true
   xpos -908
-  ypos -112
-  disable {{1-parent.clamp_output}}
+  ypos -150
+  disable {{max((1-parent.clamp_output),parent.invert)}}
  }
+set Ne304d9e0 [stack 0]
  Output {
   name Output1
   xpos -908
   ypos -10
  }
-push $N404d4d50
+push $Ne304d9e0
  Multiply {
   value 0.01
   name Multiply1
@@ -20444,7 +20344,7 @@ push $Ne40e6760
    ypos 1046
   }
  end_group
-push $N404d4d50
+push $Ne304d9e0
  Viewer {
   frame_range 1-77
   colour_sample_bbox {-0.33984375 -0.30859375 -0.3388671875 -0.3076171875}
@@ -20568,7 +20468,6 @@ NoOp {
  label "rev\[value revision]"
  note_font_size 50
  note_font_color 0x347216ff
- selected true
  xpos 832
  ypos -2
  addUserKnob {20 User}
@@ -20581,3 +20480,102 @@ NoOp {
  addUserKnob {6 inverseMode +STARTLINE}
  inverseMode true
 }
+push $N27b8d940
+Dot {
+ name Dot7
+ xpos 51
+ ypos 684
+}
+set N27c1cec0 [stack 0]
+Colorspace {
+ illuminant_in ACES
+ primary_in ACES
+ colorspace_out CIE-XYZ
+ name Colorspace3
+ label "XYZ to AP0"
+ xpos 63
+ ypos 725
+}
+ColorMatrix {
+ matrix {
+     {1.009929895 -0.01972960308 -0.03755422309}
+     {0.3892438412 0.7234188318 -0.112662673}
+     {-0.347163409 -0.04603575915 1.402024388}
+   }
+ invert true
+ name ColorMatrix1
+ label "APS4 to XYZ"
+ xpos 63
+ ypos 757
+}
+Expression {
+ temp_name0 cut_lin
+ temp_expr0 0.0078125
+ temp_name1 cut_log
+ temp_expr1 0.155251141552511
+ temp_name2 A
+ temp_expr2 10.5402377416545
+ temp_name3 B
+ temp_expr3 0.0729055341958355
+ expr0 r<=cut_lin?A*r+B:(log(r)/log(2)+9.72)/17.52
+ expr1 g<=cut_lin?A*g+B:(log(g)/log(2)+9.72)/17.52
+ expr2 b<=cut_lin?A*b+B:(log(b)/log(2)+9.72)/17.52
+ channel3 none
+ name lin2log
+ label ACEScct
+ xpos 63
+ ypos 789
+}
+push $N27c1cec0
+Switch {
+ inputs 2
+ which {{master.inverseMode}}
+ name Switch3
+ xpos 17
+ ypos 837
+}
+Group {
+ name Write_ResolveACES_ODT_LUT3
+ label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
+ xpos 17
+ ypos 967
+ addUserKnob {20 User}
+ addUserKnob {1 candidate}
+ candidate CAMDRT
+ addUserKnob {1 revision}
+ revision "\[value master.revision]"
+ addUserKnob {1 target}
+ target Rec709
+ addUserKnob {2 cubePath}
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2 Candidate \[value candidate] rev\[value revision] \[value target].cube"
+ addUserKnob {2 ocioCubePath}
+ ocioCubePath "OCIO/luts/ACES2_Candidates_rev\[value revision]/ACES2 Candidate \[value candidate] rev\[value revision] \[value target].cube"
+ addUserKnob {1 cubPath t "For truelight cub files"}
+ cubPath "Baselight/ACES2_Candidates_rev\[value revision]/ACES2_Candidate_\[value candidate]_rev\[value revision]_\[value target].cub"
+ addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
+ addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
+ addUserKnob {26 ""}
+ addUserKnob {2 dctlTemplate}
+ dctlTemplate resources/ACES_ApplyLUT_Template_APS4.dctl
+ addUserKnob {2 fltransformTemplate}
+ fltransformTemplate resources/ACES_DRT_Template_APS4.fltransform
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 411
+  ypos 213
+ }
+ GenerateLUT {
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev027/ACES2 Candidate CAMDRT rev027 Rec709_inverse.cube"
+  file_type .cube
+  name GenerateLUT1
+  xpos 411
+  ypos 283
+ }
+ Output {
+  name Output1
+  xpos 411
+  ypos 353
+ }
+end_group
