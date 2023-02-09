@@ -15,7 +15,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="Viewer.1"/>
                 </dock>
                 <split size="599"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -23,7 +23,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                 </dock>
             </splitter>
             <split size="615"/>
-            <dock id="" activePageId="Properties.1">
+            <dock id="" activePageId="Properties.1" focus="true">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
             </dock>
@@ -3465,7 +3465,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev028/ACES2 Candidate CAMDRT rev028 P3D65_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev029/ACES2 Candidate CAMDRT rev029 P3D65_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -6745,7 +6745,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev028/ACES2 Candidate CAMDRT rev028 Rec2100 (P3D65 1000nit Limited)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev029/ACES2 Candidate CAMDRT rev029 Rec2100 (P3D65 1000nit Limited)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -10024,7 +10024,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev028/ACES2 Candidate CAMDRT rev028 Rec2100 (Rec709 sim)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev029/ACES2 Candidate CAMDRT rev029 Rec2100 (Rec709 sim)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -13303,7 +13303,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev028/ACES2 Candidate CAMDRT rev028 Rec2100 (P3D65 540nit Limited)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev029/ACES2 Candidate CAMDRT rev029 Rec2100 (P3D65 540nit Limited)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -20079,7 +20079,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev028/ACES2 Candidate CAMDRT rev028 P3D65 (Rec709 sim)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev029/ACES2 Candidate CAMDRT rev029 P3D65 (Rec709 sim)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -20178,7 +20178,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev028/ACES2 Candidate CAMDRT rev028 Rec709_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev029/ACES2 Candidate CAMDRT rev029 Rec709_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -20224,6 +20224,7 @@ NoOp {
  label "rev\[value revision]"
  note_font_size 50
  note_font_color 0x347216ff
+ selected true
  xpos 832
  ypos -2
  addUserKnob {20 User}
