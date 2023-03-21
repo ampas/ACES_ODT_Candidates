@@ -294,8 +294,8 @@ for ODTWriteNode in ODTWrites:
     masterNode.knob('inverseMode').setValue(True)
     bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)
 
-
-
+## flip flag back to nukescript makes more sense when opened afterwards
+masterNode.knob('inverseMode').setValue(False)
 
 # createOCIOconfigs(revision)
 createOCIOconfigs(nuke.thisNode().knob('revision').getValue())
