@@ -6793,7 +6793,6 @@ Expression {
  xpos 657
  ypos 822
 }
-set N4ca53200 [stack 0]
 push $Nd0e22800
 Switch {
  inputs 2
@@ -13426,117 +13425,6 @@ Group {
 end_group
 Group {
  inputs 0
- name GamutToXYZ3
- tile_color 0xbd91c9ff
- label "APS4 to XYZ"
- xpos 310
- ypos 264
- addUserKnob {20 GamutToXYZ_tab l GamutToXYZ}
- addUserKnob {35 colorspace_presets l preset M {colorspace/ACES "knobs this \{rxy \{0.73470 0.26530\} gxy \{0.00000 1.00000\} bxy \{0.00010 -0.07700\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACES\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ACEScg "knobs this \{rxy \{0.713 0.293\} gxy \{0.165 0.830\} bxy \{0.128 0.044\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACEScg\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Filmlight E-Gamut" "knobs this \{rxy \{0.8 0.3177\} gxy \{0.18 0.9\} bxy \{0.065 -0.0805\} wxy \{0.3127 0.329\} src_colorspace_name \{Filmlight E-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec709 "knobs this \{rxy \{0.64000 0.33000\} gxy \{0.30000 0.60000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec709\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec2020 "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec2020\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D60 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.32168 0.33767\} src_colorspace_name \{P3D60\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D65 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{P3D65\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3DCI "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.314 0.351\} src_colorspace_name \{P3DCI\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Arri AlexaWideGamut" "knobs this \{rxy \{0.68400 0.31300\} gxy \{0.22100 0.84800\} bxy \{0.08610 -0.10200\} wxy \{0.3127 0.329\} src_colorspace_name \{Arri AlexaWideGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor "knobs this \{rxy \{0.753044222785 0.327830576682\} gxy \{0.299570228481 0.700699321956\} bxy \{0.079642066735 -0.0549379510888\} wxy \{0.321683187724 0.337673316035\} src_colorspace_name \{REDDRAGONcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor2 "knobs this \{rxy \{0.753044491143 0.327831029513\} gxy \{0.299570490451 0.700699415614\} bxy \{0.145011584278 0.0510971250879\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDDRAGONcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor "knobs this \{rxy \{0.699747001291 0.329046930313\} gxy \{0.304264039024 0.623641145129\} bxy \{0.134913961296 0.0347174412813\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor2 "knobs this \{rxy \{0.878682510476 0.32496400741\} gxy \{0.300888714367 0.679054755791\} bxy \{0.0953986946056 -0.0293793268343\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor3 "knobs this \{rxy \{0.701181035906 0.329014155583\} gxy \{0.300600304652 0.683788834269\} bxy \{0.108154455624 -0.00868817578666\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDcolor3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor4 "knobs this \{rxy \{0.701180591892 0.329013699116\} gxy \{0.300600395529 0.683788824257\} bxy \{0.145331946229 0.0516168036226\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDWideGamutRGB "knobs this \{rxy \{0.780308 0.304253\} gxy \{0.121595 1.493994\} bxy \{0.095612 -0.084589\} wxy \{0.3127 0.329\} src_colorspace_name \{REDWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/GoPro Protune Native" "knobs this \{rxy \{0.69848046 0.19302645\} gxy \{0.32955538 1.02459662\} bxy \{0.10844263 -0.03467857\} wxy \{0.3127 0.329\} src_colorspace_name \{GoPro Protune Native\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/CanonCinemaGamut "knobs this \{rxy \{0.74 0.27\} gxy \{0.17 1.14\} bxy \{0.08 -0.1\} wxy \{0.3127 0.329\} src_colorspace_name \{CanonCinemaGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut "knobs this \{rxy \{0.73 0.28\} gxy \{0.14 0.855\} bxy \{0.1 -0.05\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut3Cine "knobs this \{rxy \{0.766 0.275\} gxy \{0.225 0.8\} bxy \{0.089 -0.087\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut3Cine\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/PanasonicVGamut "knobs this \{rxy \{0.730 0.280\} gxy \{0.165 0.840\} bxy \{0.100 -0.030\} wxy \{0.3127 0.329\} src_colorspace_name \{PanasonicVGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/DJI D-Gamut" "knobs this \{rxy \{0.71 0.31\} gxy \{0.21 0.88\} bxy \{0.09 -0.08\} wxy \{0.3127 0.329\} src_colorspace_name \{DJI D-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Fujifilm F-Gamut" "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Fujifilm F-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDFilmV1 "knobs this \{rxy \{0.9173 0.2502\} gxy \{0.2833 1.7072\} bxy \{0.0856 -0.0708\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMDFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV1 "knobs this \{rxy \{0.7422 0.2859\} gxy \{0.4140 1.3035\} bxy \{0.0342 -0.0833\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV3 "knobs this \{rxy \{1.0625 0.3948\} gxy \{0.3689 0.7775\} bxy \{0.0956 -0.0332\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV1 "knobs this \{rxy \{0.9175 0.2983\} gxy \{0.2983 1.2835\} bxy \{0.0756 -0.0860\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV3 "knobs this \{rxy \{0.8608 0.3689\} gxy \{0.3282 0.6156\} bxy \{0.0783 -0.0233\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDWideGamutV4 "knobs this \{rxy \{0.7177 0.3171\} gxy \{0.2280 0.8616\} bxy \{0.1006 -0.0820\} wxy \{0.3127 0.329\} src_colorspace_name \{BMDWideGamutV4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/AdobeRGB\t" "knobs this \{rxy \{0.6400 0.3300\} gxy \{0.2100 0.7100\} bxy \{0.1500 0.0600\} wxy \{0.3127 0.329\} src_colorspace_name \{AdobeRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AdobeWideGamutRGB "knobs this \{rxy \{0.7347 0.2653\} gxy \{0.1152 0.8264\} bxy \{0.1566 0.0177\} wxy \{0.3457 0.3585\} src_colorspace_name \{AdobeWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ROMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01  8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ROMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{RIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ERIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ERIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ProPhotoRGB "knobs this \{rxy \{0.734699 0.265301\} gxy \{0.159597 0.840403\} bxy \{0.036598 0.000105\} wxy \{0.345704 0.358540\} src_colorspace_name \{ProPhotoRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RusselRGB "knobs this \{rxy \{0.6900 0.3100\} gxy \{0.1800 0.7700\} bxy \{0.1000 0.0200\} wxy \{0.33243 0.34744\} src_colorspace_name \{RusselRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SharpRGB "knobs this \{rxy \{0.6898 0.3206\} gxy \{0.0736 0.9003\} bxy \{0.1166 0.0374\} wxy \{0.33333333 0.33333333\} src_colorspace_name \{SharpRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AppleRGB "knobs this \{rxy \{0.6250 0.3400\} gxy \{0.2800 0.5950\} bxy \{0.1550 0.0700\} wxy \{0.3127 0.329\} src_colorspace_name \{AppleRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BestRGB "knobs this \{rxy \{0.735191637630662 0.264808362369338\} gxy \{0.215336134453781 0.774159663865546\} bxy \{0.130122950819672 0.034836065573770\} wxy \{0.3457 0.3585\} src_colorspace_name \{BestRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/XYZ "knobs this \{rxy \{0 0\} gxy \{0 0\} bxy \{0 0\} wxy \{0 0\} src_colorspace_name \{XYZ\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()"}}
- addUserKnob {26 colorspace_chromaticities_label l " " T "<b>Colorspace Chromaticities</b>"}
- addUserKnob {12 rxy l r t "Red xy chromaticity coordinates in CIE 1931 colorspace."}
- rxy {0.96 0.37}
- addUserKnob {12 gxy l g t "Green xy chromaticity coordinates in CIE 1931 colorspace."}
- gxy {-0.03 1.1}
- addUserKnob {12 bxy l b t "Blue xy chromaticity coordinates in CIE 1931 colorspace."}
- bxy {{gxy.x} -0.09}
- addUserKnob {12 wxy l w t "Whitepoint xy chromaticity coordinates in CIE 1931 colorspace."}
- wxy {0.32168 0.33767}
- addUserKnob {1 src_colorspace_name l src}
- src_colorspace_name APS4
- addUserKnob {26 ""}
- addUserKnob {6 invert t "Invert direction of matrix: XYZtoRGB" +STARTLINE}
- addUserKnob {22 calculate_matrix l "Calculate Matrix" t "Calculate 3x3 matrix based on the specified colorspace chromaticities." T "import nuke\nfloat2 = nuke.math.Vector2\nfloat3 = nuke.math.Vector3\nfloat3x3 = nuke.math.Matrix3\nfloat4x4 = nuke.math.Matrix4\n\n\ndef get_primaries(node, dst=False):\n    # get xy coordinates from node\n    dst_pri = \['drxy', 'dgxy', 'dbxy', 'dwxy']\n    pri = \['rxy', 'gxy', 'bxy', 'wxy']\n    d = \{\}\n    for i, p in enumerate(pri):\n        if dst:\n            d\[p] = float2(node\[dst_pri\[i]].getValue()\[0], node\[dst_pri\[i]].getValue()\[1])\n        else:\n            d\[p] = float2(node\[p].getValue()\[0], node\[p].getValue()\[1])\n    return d\n\n\ndef RGBtoXYZ(xy, Y=1.0, inverse=False):\n    # given r g b chromaticities and whitepoint, convert RGB colors to XYZ\n    # based on CtlColorSpace.cpp from the CTL source code : 77\n    # param: xy - dict of chromaticity xy coordinates: rxy: float2(x, y) etc\n    # param: Y - luminance of \"white\" - defaults to 1.0\n    # param: inverse - calculate XYZ to RGB instead\n    r = xy\['rxy']\n    g = xy\['gxy']\n    b = xy\['bxy']\n    w = xy\['wxy']\n\n    X = w.x * Y / w.y\n    Z = (1 - w.x - w.y) * Y / w.y\n\n    # Scale factors for matrix rows\n    d = r.x * (b.y - g.y) + b.x * (g.y - r.y) + g.x * (r.y - b.y)\n\n    Sr =    (X * (b.y - g.y) -      \\\n            g.x * (Y * (b.y - 1) +  \\\n            b.y  * (X + Z)) +       \\\n            b.x  * (Y * (g.y - 1) + \\\n            g.y * (X + Z))) / d\n    \n    Sg =    (X * (r.y - b.y) +      \\\n            r.x * (Y * (b.y - 1) +  \\\n            b.y * (X + Z)) -        \\\n            b.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    Sb =    (X * (g.y - r.y) -      \\\n            r.x * (Y * (g.y - 1) +  \\\n            g.y * (X + Z)) +        \\\n            g.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    # Assemble the matrix\n    M = float3x3()\n    M.set(  Sr * r.x, Sr * r.y, Sr * (1 - r.x - r.y),\n            Sg * g.x, Sg * g.y, Sg * (1 - g.x - g.y),\n            Sb * b.x, Sb * b.y, Sb * (1 - b.x - b.y))\n    if inverse:\n        M = M.inverse()\n        return M\n    else:\n        return M\n\n\ndef start():\n    node = nuke.thisNode()\n    \n    invert = node\['invert'].getValue()\n    label = node\['label']\n    \n    if invert:\n        # Convert from XYZ colorspace to Src RGB\n        mtx = RGBtoXYZ(get_primaries(node), inverse=True)\n        label.setValue('XYZ to \{0\}'.format(node\['src_colorspace_name'].getValue()))\n    else:\n        # Convert from Src RGB colorspace to XYZ\n        mtx = RGBtoXYZ(get_primaries(node))\n        label.setValue('\{0\} to XYZ'.format(node\['src_colorspace_name'].getValue()))\n\n    node\['matrix'].setValue((mtx))\n    \n   \n\nif __name__=='__main__':\n    start()" +STARTLINE}
- addUserKnob {22 create_matrix_node l "Create Matrix" t "Create ColorMatrix node with the current values." -STARTLINE T "node = nuke.thisNode()\nnode\['calculate_matrix'].execute()\nnuke.root().begin()\n_ = \[n.setSelected(False) for n in nuke.allNodes(recurseGroups=True)]\nm = nuke.createNode('ColorMatrix')\nm\['matrix'].setValue(node\['matrix'].getValue())\nm.setXYpos(node.xpos()-120, node.ypos())\nm\['label'].setValue(node\['label'].getValue())"}
- addUserKnob {41 matrix T ColorMatrix.matrix}
- addUserKnob {22 clear l Clear T "n = nuke.thisNode()\nn\['matrix'].setValue(\[1,0,0,0,1,0,0,0,1])\nn\['label'].setValue('')" +STARTLINE}
-}
- Input {
-  inputs 0
-  name Input
-  xpos -40
-  ypos 206
- }
- ColorMatrix {
-  matrix {
-      {1.009929895 -0.01972960308 -0.03755422309}
-      {0.3892438412 0.7234188318 -0.112662673}
-      {-0.347163409 -0.04603575915 1.402024388}
-    }
-  name ColorMatrix
-  xpos -40
-  ypos 254
- }
- Output {
-  name Output
-  xpos -40
-  ypos 302
- }
-end_group
-Group {
- inputs 0
- name GamutToXYZ1
- tile_color 0xbd91c9ff
- label "XYZ to APS4"
- xpos 422
- ypos 263
- addUserKnob {20 GamutToXYZ_tab l GamutToXYZ}
- addUserKnob {35 colorspace_presets l preset M {colorspace/ACES "knobs this \{rxy \{0.73470 0.26530\} gxy \{0.00000 1.00000\} bxy \{0.00010 -0.07700\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACES\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ACEScg "knobs this \{rxy \{0.713 0.293\} gxy \{0.165 0.830\} bxy \{0.128 0.044\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACEScg\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Filmlight E-Gamut" "knobs this \{rxy \{0.8 0.3177\} gxy \{0.18 0.9\} bxy \{0.065 -0.0805\} wxy \{0.3127 0.329\} src_colorspace_name \{Filmlight E-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec709 "knobs this \{rxy \{0.64000 0.33000\} gxy \{0.30000 0.60000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec709\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec2020 "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec2020\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D60 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.32168 0.33767\} src_colorspace_name \{P3D60\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D65 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{P3D65\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3DCI "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.314 0.351\} src_colorspace_name \{P3DCI\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Arri AlexaWideGamut" "knobs this \{rxy \{0.68400 0.31300\} gxy \{0.22100 0.84800\} bxy \{0.08610 -0.10200\} wxy \{0.3127 0.329\} src_colorspace_name \{Arri AlexaWideGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor "knobs this \{rxy \{0.753044222785 0.327830576682\} gxy \{0.299570228481 0.700699321956\} bxy \{0.079642066735 -0.0549379510888\} wxy \{0.321683187724 0.337673316035\} src_colorspace_name \{REDDRAGONcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor2 "knobs this \{rxy \{0.753044491143 0.327831029513\} gxy \{0.299570490451 0.700699415614\} bxy \{0.145011584278 0.0510971250879\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDDRAGONcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor "knobs this \{rxy \{0.699747001291 0.329046930313\} gxy \{0.304264039024 0.623641145129\} bxy \{0.134913961296 0.0347174412813\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor2 "knobs this \{rxy \{0.878682510476 0.32496400741\} gxy \{0.300888714367 0.679054755791\} bxy \{0.0953986946056 -0.0293793268343\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor3 "knobs this \{rxy \{0.701181035906 0.329014155583\} gxy \{0.300600304652 0.683788834269\} bxy \{0.108154455624 -0.00868817578666\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDcolor3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor4 "knobs this \{rxy \{0.701180591892 0.329013699116\} gxy \{0.300600395529 0.683788824257\} bxy \{0.145331946229 0.0516168036226\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDWideGamutRGB "knobs this \{rxy \{0.780308 0.304253\} gxy \{0.121595 1.493994\} bxy \{0.095612 -0.084589\} wxy \{0.3127 0.329\} src_colorspace_name \{REDWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/GoPro Protune Native" "knobs this \{rxy \{0.69848046 0.19302645\} gxy \{0.32955538 1.02459662\} bxy \{0.10844263 -0.03467857\} wxy \{0.3127 0.329\} src_colorspace_name \{GoPro Protune Native\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/CanonCinemaGamut "knobs this \{rxy \{0.74 0.27\} gxy \{0.17 1.14\} bxy \{0.08 -0.1\} wxy \{0.3127 0.329\} src_colorspace_name \{CanonCinemaGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut "knobs this \{rxy \{0.73 0.28\} gxy \{0.14 0.855\} bxy \{0.1 -0.05\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut3Cine "knobs this \{rxy \{0.766 0.275\} gxy \{0.225 0.8\} bxy \{0.089 -0.087\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut3Cine\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/PanasonicVGamut "knobs this \{rxy \{0.730 0.280\} gxy \{0.165 0.840\} bxy \{0.100 -0.030\} wxy \{0.3127 0.329\} src_colorspace_name \{PanasonicVGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/DJI D-Gamut" "knobs this \{rxy \{0.71 0.31\} gxy \{0.21 0.88\} bxy \{0.09 -0.08\} wxy \{0.3127 0.329\} src_colorspace_name \{DJI D-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Fujifilm F-Gamut" "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Fujifilm F-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDFilmV1 "knobs this \{rxy \{0.9173 0.2502\} gxy \{0.2833 1.7072\} bxy \{0.0856 -0.0708\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMDFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV1 "knobs this \{rxy \{0.7422 0.2859\} gxy \{0.4140 1.3035\} bxy \{0.0342 -0.0833\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV3 "knobs this \{rxy \{1.0625 0.3948\} gxy \{0.3689 0.7775\} bxy \{0.0956 -0.0332\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV1 "knobs this \{rxy \{0.9175 0.2983\} gxy \{0.2983 1.2835\} bxy \{0.0756 -0.0860\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV3 "knobs this \{rxy \{0.8608 0.3689\} gxy \{0.3282 0.6156\} bxy \{0.0783 -0.0233\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDWideGamutV4 "knobs this \{rxy \{0.7177 0.3171\} gxy \{0.2280 0.8616\} bxy \{0.1006 -0.0820\} wxy \{0.3127 0.329\} src_colorspace_name \{BMDWideGamutV4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/AdobeRGB\t" "knobs this \{rxy \{0.6400 0.3300\} gxy \{0.2100 0.7100\} bxy \{0.1500 0.0600\} wxy \{0.3127 0.329\} src_colorspace_name \{AdobeRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AdobeWideGamutRGB "knobs this \{rxy \{0.7347 0.2653\} gxy \{0.1152 0.8264\} bxy \{0.1566 0.0177\} wxy \{0.3457 0.3585\} src_colorspace_name \{AdobeWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ROMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01  8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ROMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{RIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ERIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ERIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ProPhotoRGB "knobs this \{rxy \{0.734699 0.265301\} gxy \{0.159597 0.840403\} bxy \{0.036598 0.000105\} wxy \{0.345704 0.358540\} src_colorspace_name \{ProPhotoRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RusselRGB "knobs this \{rxy \{0.6900 0.3100\} gxy \{0.1800 0.7700\} bxy \{0.1000 0.0200\} wxy \{0.33243 0.34744\} src_colorspace_name \{RusselRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SharpRGB "knobs this \{rxy \{0.6898 0.3206\} gxy \{0.0736 0.9003\} bxy \{0.1166 0.0374\} wxy \{0.33333333 0.33333333\} src_colorspace_name \{SharpRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AppleRGB "knobs this \{rxy \{0.6250 0.3400\} gxy \{0.2800 0.5950\} bxy \{0.1550 0.0700\} wxy \{0.3127 0.329\} src_colorspace_name \{AppleRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BestRGB "knobs this \{rxy \{0.735191637630662 0.264808362369338\} gxy \{0.215336134453781 0.774159663865546\} bxy \{0.130122950819672 0.034836065573770\} wxy \{0.3457 0.3585\} src_colorspace_name \{BestRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/XYZ "knobs this \{rxy \{0 0\} gxy \{0 0\} bxy \{0 0\} wxy \{0 0\} src_colorspace_name \{XYZ\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()"}}
- addUserKnob {26 colorspace_chromaticities_label l " " T "<b>Colorspace Chromaticities</b>"}
- addUserKnob {12 rxy l r t "Red xy chromaticity coordinates in CIE 1931 colorspace."}
- rxy {0.96 0.37}
- addUserKnob {12 gxy l g t "Green xy chromaticity coordinates in CIE 1931 colorspace."}
- gxy {-0.03 1.1}
- addUserKnob {12 bxy l b t "Blue xy chromaticity coordinates in CIE 1931 colorspace."}
- bxy {{gxy.x} -0.09}
- addUserKnob {12 wxy l w t "Whitepoint xy chromaticity coordinates in CIE 1931 colorspace."}
- wxy {0.32168 0.33767}
- addUserKnob {1 src_colorspace_name l src}
- src_colorspace_name APS4
- addUserKnob {26 ""}
- addUserKnob {6 invert t "Invert direction of matrix: XYZtoRGB" +STARTLINE}
- invert true
- addUserKnob {22 calculate_matrix l "Calculate Matrix" t "Calculate 3x3 matrix based on the specified colorspace chromaticities." T "import nuke\nfloat2 = nuke.math.Vector2\nfloat3 = nuke.math.Vector3\nfloat3x3 = nuke.math.Matrix3\nfloat4x4 = nuke.math.Matrix4\n\n\ndef get_primaries(node, dst=False):\n    # get xy coordinates from node\n    dst_pri = \['drxy', 'dgxy', 'dbxy', 'dwxy']\n    pri = \['rxy', 'gxy', 'bxy', 'wxy']\n    d = \{\}\n    for i, p in enumerate(pri):\n        if dst:\n            d\[p] = float2(node\[dst_pri\[i]].getValue()\[0], node\[dst_pri\[i]].getValue()\[1])\n        else:\n            d\[p] = float2(node\[p].getValue()\[0], node\[p].getValue()\[1])\n    return d\n\n\ndef RGBtoXYZ(xy, Y=1.0, inverse=False):\n    # given r g b chromaticities and whitepoint, convert RGB colors to XYZ\n    # based on CtlColorSpace.cpp from the CTL source code : 77\n    # param: xy - dict of chromaticity xy coordinates: rxy: float2(x, y) etc\n    # param: Y - luminance of \"white\" - defaults to 1.0\n    # param: inverse - calculate XYZ to RGB instead\n    r = xy\['rxy']\n    g = xy\['gxy']\n    b = xy\['bxy']\n    w = xy\['wxy']\n\n    X = w.x * Y / w.y\n    Z = (1 - w.x - w.y) * Y / w.y\n\n    # Scale factors for matrix rows\n    d = r.x * (b.y - g.y) + b.x * (g.y - r.y) + g.x * (r.y - b.y)\n\n    Sr =    (X * (b.y - g.y) -      \\\n            g.x * (Y * (b.y - 1) +  \\\n            b.y  * (X + Z)) +       \\\n            b.x  * (Y * (g.y - 1) + \\\n            g.y * (X + Z))) / d\n    \n    Sg =    (X * (r.y - b.y) +      \\\n            r.x * (Y * (b.y - 1) +  \\\n            b.y * (X + Z)) -        \\\n            b.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    Sb =    (X * (g.y - r.y) -      \\\n            r.x * (Y * (g.y - 1) +  \\\n            g.y * (X + Z)) +        \\\n            g.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    # Assemble the matrix\n    M = float3x3()\n    M.set(  Sr * r.x, Sr * r.y, Sr * (1 - r.x - r.y),\n            Sg * g.x, Sg * g.y, Sg * (1 - g.x - g.y),\n            Sb * b.x, Sb * b.y, Sb * (1 - b.x - b.y))\n    if inverse:\n        M = M.inverse()\n        return M\n    else:\n        return M\n\n\ndef start():\n    node = nuke.thisNode()\n    \n    invert = node\['invert'].getValue()\n    label = node\['label']\n    \n    if invert:\n        # Convert from XYZ colorspace to Src RGB\n        mtx = RGBtoXYZ(get_primaries(node), inverse=True)\n        label.setValue('XYZ to \{0\}'.format(node\['src_colorspace_name'].getValue()))\n    else:\n        # Convert from Src RGB colorspace to XYZ\n        mtx = RGBtoXYZ(get_primaries(node))\n        label.setValue('\{0\} to XYZ'.format(node\['src_colorspace_name'].getValue()))\n\n    node\['matrix'].setValue((mtx))\n    \n   \n\nif __name__=='__main__':\n    start()" +STARTLINE}
- addUserKnob {22 create_matrix_node l "Create Matrix" t "Create ColorMatrix node with the current values." -STARTLINE T "node = nuke.thisNode()\nnode\['calculate_matrix'].execute()\nnuke.root().begin()\n_ = \[n.setSelected(False) for n in nuke.allNodes(recurseGroups=True)]\nm = nuke.createNode('ColorMatrix')\nm\['matrix'].setValue(node\['matrix'].getValue())\nm.setXYpos(node.xpos()-120, node.ypos())\nm\['label'].setValue(node\['label'].getValue())"}
- addUserKnob {41 matrix T ColorMatrix.matrix}
- addUserKnob {22 clear l Clear T "n = nuke.thisNode()\nn\['matrix'].setValue(\[1,0,0,0,1,0,0,0,1])\nn\['label'].setValue('')" +STARTLINE}
-}
- Input {
-  inputs 0
-  name Input
-  xpos -40
-  ypos 206
- }
- ColorMatrix {
-  matrix {
-      {0.9889673591 0.02880487405 0.02880487405}
-      {-0.4965269566 1.374968052 0.09718866646}
-      {0.2285804003 0.05227990076 0.7235780358}
-    }
-  name ColorMatrix
-  xpos -40
-  ypos 254
- }
- Output {
-  name Output
-  xpos -40
-  ypos 302
- }
-end_group
-ColorMatrix {
- inputs 0
- matrix {
-     {0.9889673591 0.02880487405 0.02880487405}
-     {-0.4965269566 1.374968052 0.09718866646}
-     {0.2285804003 0.05227990076 0.7235780358}
-   }
- name ColorMatrix7
- label "XYZ to APS4"
- xpos 416
- ypos 305
-}
-Group {
- inputs 0
  name LogConvert_ACESLog
  xpos -247
  ypos 876
@@ -17144,7 +17032,6 @@ Read {
  xpos 190
  ypos -147
 }
-push $Nd3b0be00
 push $Nd0e23000
 Expression {
  expr0 isnan(r)
@@ -17153,18 +17040,6 @@ Expression {
  name Expression2
  xpos 744
  ypos 794
-}
-push $N4ca53200
-Viewer {
- inputs 3
- frame_range 1-100
- colour_sample_bbox {-0.02476190403 -0.4293877482 -0.02421768755 -0.428843528}
- gl_buffer_depth half-float
- viewerProcess None
- monitorOutOutputTransform rec709
- name Viewer1
- xpos 962
- ypos 909
 }
 push $Nd0533400
 Group {
@@ -20507,4 +20382,298 @@ NoOp {
  addUserKnob {26 ""}
  addUserKnob {6 inverseMode +STARTLINE}
  inverseMode true
+}
+Group {
+ inputs 0
+ name GamutToXYZ3
+ tile_color 0xbd91c9ff
+ label "APS4 to XYZ"
+ xpos 310
+ ypos 264
+ addUserKnob {20 GamutToXYZ_tab l GamutToXYZ}
+ addUserKnob {35 colorspace_presets l preset M {colorspace/ACES "knobs this \{rxy \{0.73470 0.26530\} gxy \{0.00000 1.00000\} bxy \{0.00010 -0.07700\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACES\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ACEScg "knobs this \{rxy \{0.713 0.293\} gxy \{0.165 0.830\} bxy \{0.128 0.044\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACEScg\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Filmlight E-Gamut" "knobs this \{rxy \{0.8 0.3177\} gxy \{0.18 0.9\} bxy \{0.065 -0.0805\} wxy \{0.3127 0.329\} src_colorspace_name \{Filmlight E-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec709 "knobs this \{rxy \{0.64000 0.33000\} gxy \{0.30000 0.60000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec709\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec2020 "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec2020\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D60 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.32168 0.33767\} src_colorspace_name \{P3D60\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D65 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{P3D65\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3DCI "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.314 0.351\} src_colorspace_name \{P3DCI\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Arri AlexaWideGamut" "knobs this \{rxy \{0.68400 0.31300\} gxy \{0.22100 0.84800\} bxy \{0.08610 -0.10200\} wxy \{0.3127 0.329\} src_colorspace_name \{Arri AlexaWideGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor "knobs this \{rxy \{0.753044222785 0.327830576682\} gxy \{0.299570228481 0.700699321956\} bxy \{0.079642066735 -0.0549379510888\} wxy \{0.321683187724 0.337673316035\} src_colorspace_name \{REDDRAGONcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor2 "knobs this \{rxy \{0.753044491143 0.327831029513\} gxy \{0.299570490451 0.700699415614\} bxy \{0.145011584278 0.0510971250879\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDDRAGONcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor "knobs this \{rxy \{0.699747001291 0.329046930313\} gxy \{0.304264039024 0.623641145129\} bxy \{0.134913961296 0.0347174412813\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor2 "knobs this \{rxy \{0.878682510476 0.32496400741\} gxy \{0.300888714367 0.679054755791\} bxy \{0.0953986946056 -0.0293793268343\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor3 "knobs this \{rxy \{0.701181035906 0.329014155583\} gxy \{0.300600304652 0.683788834269\} bxy \{0.108154455624 -0.00868817578666\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDcolor3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor4 "knobs this \{rxy \{0.701180591892 0.329013699116\} gxy \{0.300600395529 0.683788824257\} bxy \{0.145331946229 0.0516168036226\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDWideGamutRGB "knobs this \{rxy \{0.780308 0.304253\} gxy \{0.121595 1.493994\} bxy \{0.095612 -0.084589\} wxy \{0.3127 0.329\} src_colorspace_name \{REDWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/GoPro Protune Native" "knobs this \{rxy \{0.69848046 0.19302645\} gxy \{0.32955538 1.02459662\} bxy \{0.10844263 -0.03467857\} wxy \{0.3127 0.329\} src_colorspace_name \{GoPro Protune Native\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/CanonCinemaGamut "knobs this \{rxy \{0.74 0.27\} gxy \{0.17 1.14\} bxy \{0.08 -0.1\} wxy \{0.3127 0.329\} src_colorspace_name \{CanonCinemaGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut "knobs this \{rxy \{0.73 0.28\} gxy \{0.14 0.855\} bxy \{0.1 -0.05\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut3Cine "knobs this \{rxy \{0.766 0.275\} gxy \{0.225 0.8\} bxy \{0.089 -0.087\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut3Cine\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/PanasonicVGamut "knobs this \{rxy \{0.730 0.280\} gxy \{0.165 0.840\} bxy \{0.100 -0.030\} wxy \{0.3127 0.329\} src_colorspace_name \{PanasonicVGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/DJI D-Gamut" "knobs this \{rxy \{0.71 0.31\} gxy \{0.21 0.88\} bxy \{0.09 -0.08\} wxy \{0.3127 0.329\} src_colorspace_name \{DJI D-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Fujifilm F-Gamut" "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Fujifilm F-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDFilmV1 "knobs this \{rxy \{0.9173 0.2502\} gxy \{0.2833 1.7072\} bxy \{0.0856 -0.0708\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMDFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV1 "knobs this \{rxy \{0.7422 0.2859\} gxy \{0.4140 1.3035\} bxy \{0.0342 -0.0833\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV3 "knobs this \{rxy \{1.0625 0.3948\} gxy \{0.3689 0.7775\} bxy \{0.0956 -0.0332\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV1 "knobs this \{rxy \{0.9175 0.2983\} gxy \{0.2983 1.2835\} bxy \{0.0756 -0.0860\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV3 "knobs this \{rxy \{0.8608 0.3689\} gxy \{0.3282 0.6156\} bxy \{0.0783 -0.0233\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDWideGamutV4 "knobs this \{rxy \{0.7177 0.3171\} gxy \{0.2280 0.8616\} bxy \{0.1006 -0.0820\} wxy \{0.3127 0.329\} src_colorspace_name \{BMDWideGamutV4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/AdobeRGB\t" "knobs this \{rxy \{0.6400 0.3300\} gxy \{0.2100 0.7100\} bxy \{0.1500 0.0600\} wxy \{0.3127 0.329\} src_colorspace_name \{AdobeRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AdobeWideGamutRGB "knobs this \{rxy \{0.7347 0.2653\} gxy \{0.1152 0.8264\} bxy \{0.1566 0.0177\} wxy \{0.3457 0.3585\} src_colorspace_name \{AdobeWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ROMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01  8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ROMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{RIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ERIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ERIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ProPhotoRGB "knobs this \{rxy \{0.734699 0.265301\} gxy \{0.159597 0.840403\} bxy \{0.036598 0.000105\} wxy \{0.345704 0.358540\} src_colorspace_name \{ProPhotoRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RusselRGB "knobs this \{rxy \{0.6900 0.3100\} gxy \{0.1800 0.7700\} bxy \{0.1000 0.0200\} wxy \{0.33243 0.34744\} src_colorspace_name \{RusselRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SharpRGB "knobs this \{rxy \{0.6898 0.3206\} gxy \{0.0736 0.9003\} bxy \{0.1166 0.0374\} wxy \{0.33333333 0.33333333\} src_colorspace_name \{SharpRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AppleRGB "knobs this \{rxy \{0.6250 0.3400\} gxy \{0.2800 0.5950\} bxy \{0.1550 0.0700\} wxy \{0.3127 0.329\} src_colorspace_name \{AppleRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BestRGB "knobs this \{rxy \{0.735191637630662 0.264808362369338\} gxy \{0.215336134453781 0.774159663865546\} bxy \{0.130122950819672 0.034836065573770\} wxy \{0.3457 0.3585\} src_colorspace_name \{BestRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/XYZ "knobs this \{rxy \{0 0\} gxy \{0 0\} bxy \{0 0\} wxy \{0 0\} src_colorspace_name \{XYZ\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()"}}
+ addUserKnob {26 colorspace_chromaticities_label l " " T "<b>Colorspace Chromaticities</b>"}
+ addUserKnob {12 rxy l r t "Red xy chromaticity coordinates in CIE 1931 colorspace."}
+ rxy {0.96 0.37}
+ addUserKnob {12 gxy l g t "Green xy chromaticity coordinates in CIE 1931 colorspace."}
+ gxy {-0.03 1.1}
+ addUserKnob {12 bxy l b t "Blue xy chromaticity coordinates in CIE 1931 colorspace."}
+ bxy {{gxy.x} -0.09}
+ addUserKnob {12 wxy l w t "Whitepoint xy chromaticity coordinates in CIE 1931 colorspace."}
+ wxy {0.32168 0.33767}
+ addUserKnob {1 src_colorspace_name l src}
+ src_colorspace_name APS4
+ addUserKnob {26 ""}
+ addUserKnob {6 invert t "Invert direction of matrix: XYZtoRGB" +STARTLINE}
+ addUserKnob {22 calculate_matrix l "Calculate Matrix" t "Calculate 3x3 matrix based on the specified colorspace chromaticities." T "import nuke\nfloat2 = nuke.math.Vector2\nfloat3 = nuke.math.Vector3\nfloat3x3 = nuke.math.Matrix3\nfloat4x4 = nuke.math.Matrix4\n\n\ndef get_primaries(node, dst=False):\n    # get xy coordinates from node\n    dst_pri = \['drxy', 'dgxy', 'dbxy', 'dwxy']\n    pri = \['rxy', 'gxy', 'bxy', 'wxy']\n    d = \{\}\n    for i, p in enumerate(pri):\n        if dst:\n            d\[p] = float2(node\[dst_pri\[i]].getValue()\[0], node\[dst_pri\[i]].getValue()\[1])\n        else:\n            d\[p] = float2(node\[p].getValue()\[0], node\[p].getValue()\[1])\n    return d\n\n\ndef RGBtoXYZ(xy, Y=1.0, inverse=False):\n    # given r g b chromaticities and whitepoint, convert RGB colors to XYZ\n    # based on CtlColorSpace.cpp from the CTL source code : 77\n    # param: xy - dict of chromaticity xy coordinates: rxy: float2(x, y) etc\n    # param: Y - luminance of \"white\" - defaults to 1.0\n    # param: inverse - calculate XYZ to RGB instead\n    r = xy\['rxy']\n    g = xy\['gxy']\n    b = xy\['bxy']\n    w = xy\['wxy']\n\n    X = w.x * Y / w.y\n    Z = (1 - w.x - w.y) * Y / w.y\n\n    # Scale factors for matrix rows\n    d = r.x * (b.y - g.y) + b.x * (g.y - r.y) + g.x * (r.y - b.y)\n\n    Sr =    (X * (b.y - g.y) -      \\\n            g.x * (Y * (b.y - 1) +  \\\n            b.y  * (X + Z)) +       \\\n            b.x  * (Y * (g.y - 1) + \\\n            g.y * (X + Z))) / d\n    \n    Sg =    (X * (r.y - b.y) +      \\\n            r.x * (Y * (b.y - 1) +  \\\n            b.y * (X + Z)) -        \\\n            b.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    Sb =    (X * (g.y - r.y) -      \\\n            r.x * (Y * (g.y - 1) +  \\\n            g.y * (X + Z)) +        \\\n            g.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    # Assemble the matrix\n    M = float3x3()\n    M.set(  Sr * r.x, Sr * r.y, Sr * (1 - r.x - r.y),\n            Sg * g.x, Sg * g.y, Sg * (1 - g.x - g.y),\n            Sb * b.x, Sb * b.y, Sb * (1 - b.x - b.y))\n    if inverse:\n        M = M.inverse()\n        return M\n    else:\n        return M\n\n\ndef start():\n    node = nuke.thisNode()\n    \n    invert = node\['invert'].getValue()\n    label = node\['label']\n    \n    if invert:\n        # Convert from XYZ colorspace to Src RGB\n        mtx = RGBtoXYZ(get_primaries(node), inverse=True)\n        label.setValue('XYZ to \{0\}'.format(node\['src_colorspace_name'].getValue()))\n    else:\n        # Convert from Src RGB colorspace to XYZ\n        mtx = RGBtoXYZ(get_primaries(node))\n        label.setValue('\{0\} to XYZ'.format(node\['src_colorspace_name'].getValue()))\n\n    node\['matrix'].setValue((mtx))\n    \n   \n\nif __name__=='__main__':\n    start()" +STARTLINE}
+ addUserKnob {22 create_matrix_node l "Create Matrix" t "Create ColorMatrix node with the current values." -STARTLINE T "node = nuke.thisNode()\nnode\['calculate_matrix'].execute()\nnuke.root().begin()\n_ = \[n.setSelected(False) for n in nuke.allNodes(recurseGroups=True)]\nm = nuke.createNode('ColorMatrix')\nm\['matrix'].setValue(node\['matrix'].getValue())\nm.setXYpos(node.xpos()-120, node.ypos())\nm\['label'].setValue(node\['label'].getValue())"}
+ addUserKnob {41 matrix T ColorMatrix.matrix}
+ addUserKnob {22 clear l Clear T "n = nuke.thisNode()\nn\['matrix'].setValue(\[1,0,0,0,1,0,0,0,1])\nn\['label'].setValue('')" +STARTLINE}
+}
+ Input {
+  inputs 0
+  name Input
+  xpos -40
+  ypos 206
+ }
+ ColorMatrix {
+  matrix {
+      {1.009929895 -0.01972960308 -0.03755422309}
+      {0.3892438412 0.7234188318 -0.112662673}
+      {-0.347163409 -0.04603575915 1.402024388}
+    }
+  name ColorMatrix
+  xpos -40
+  ypos 254
+ }
+ Output {
+  name Output
+  xpos -40
+  ypos 302
+ }
+end_group
+Group {
+ inputs 0
+ name GamutToXYZ1
+ tile_color 0xbd91c9ff
+ label "XYZ to APS4"
+ xpos 422
+ ypos 263
+ addUserKnob {20 GamutToXYZ_tab l GamutToXYZ}
+ addUserKnob {35 colorspace_presets l preset M {colorspace/ACES "knobs this \{rxy \{0.73470 0.26530\} gxy \{0.00000 1.00000\} bxy \{0.00010 -0.07700\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACES\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ACEScg "knobs this \{rxy \{0.713 0.293\} gxy \{0.165 0.830\} bxy \{0.128 0.044\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACEScg\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Filmlight E-Gamut" "knobs this \{rxy \{0.8 0.3177\} gxy \{0.18 0.9\} bxy \{0.065 -0.0805\} wxy \{0.3127 0.329\} src_colorspace_name \{Filmlight E-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec709 "knobs this \{rxy \{0.64000 0.33000\} gxy \{0.30000 0.60000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec709\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec2020 "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec2020\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D60 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.32168 0.33767\} src_colorspace_name \{P3D60\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D65 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{P3D65\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3DCI "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.314 0.351\} src_colorspace_name \{P3DCI\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Arri AlexaWideGamut" "knobs this \{rxy \{0.68400 0.31300\} gxy \{0.22100 0.84800\} bxy \{0.08610 -0.10200\} wxy \{0.3127 0.329\} src_colorspace_name \{Arri AlexaWideGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor "knobs this \{rxy \{0.753044222785 0.327830576682\} gxy \{0.299570228481 0.700699321956\} bxy \{0.079642066735 -0.0549379510888\} wxy \{0.321683187724 0.337673316035\} src_colorspace_name \{REDDRAGONcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor2 "knobs this \{rxy \{0.753044491143 0.327831029513\} gxy \{0.299570490451 0.700699415614\} bxy \{0.145011584278 0.0510971250879\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDDRAGONcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor "knobs this \{rxy \{0.699747001291 0.329046930313\} gxy \{0.304264039024 0.623641145129\} bxy \{0.134913961296 0.0347174412813\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor2 "knobs this \{rxy \{0.878682510476 0.32496400741\} gxy \{0.300888714367 0.679054755791\} bxy \{0.0953986946056 -0.0293793268343\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor3 "knobs this \{rxy \{0.701181035906 0.329014155583\} gxy \{0.300600304652 0.683788834269\} bxy \{0.108154455624 -0.00868817578666\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDcolor3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor4 "knobs this \{rxy \{0.701180591892 0.329013699116\} gxy \{0.300600395529 0.683788824257\} bxy \{0.145331946229 0.0516168036226\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDWideGamutRGB "knobs this \{rxy \{0.780308 0.304253\} gxy \{0.121595 1.493994\} bxy \{0.095612 -0.084589\} wxy \{0.3127 0.329\} src_colorspace_name \{REDWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/GoPro Protune Native" "knobs this \{rxy \{0.69848046 0.19302645\} gxy \{0.32955538 1.02459662\} bxy \{0.10844263 -0.03467857\} wxy \{0.3127 0.329\} src_colorspace_name \{GoPro Protune Native\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/CanonCinemaGamut "knobs this \{rxy \{0.74 0.27\} gxy \{0.17 1.14\} bxy \{0.08 -0.1\} wxy \{0.3127 0.329\} src_colorspace_name \{CanonCinemaGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut "knobs this \{rxy \{0.73 0.28\} gxy \{0.14 0.855\} bxy \{0.1 -0.05\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut3Cine "knobs this \{rxy \{0.766 0.275\} gxy \{0.225 0.8\} bxy \{0.089 -0.087\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut3Cine\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/PanasonicVGamut "knobs this \{rxy \{0.730 0.280\} gxy \{0.165 0.840\} bxy \{0.100 -0.030\} wxy \{0.3127 0.329\} src_colorspace_name \{PanasonicVGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/DJI D-Gamut" "knobs this \{rxy \{0.71 0.31\} gxy \{0.21 0.88\} bxy \{0.09 -0.08\} wxy \{0.3127 0.329\} src_colorspace_name \{DJI D-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Fujifilm F-Gamut" "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Fujifilm F-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDFilmV1 "knobs this \{rxy \{0.9173 0.2502\} gxy \{0.2833 1.7072\} bxy \{0.0856 -0.0708\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMDFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV1 "knobs this \{rxy \{0.7422 0.2859\} gxy \{0.4140 1.3035\} bxy \{0.0342 -0.0833\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV3 "knobs this \{rxy \{1.0625 0.3948\} gxy \{0.3689 0.7775\} bxy \{0.0956 -0.0332\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV1 "knobs this \{rxy \{0.9175 0.2983\} gxy \{0.2983 1.2835\} bxy \{0.0756 -0.0860\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV3 "knobs this \{rxy \{0.8608 0.3689\} gxy \{0.3282 0.6156\} bxy \{0.0783 -0.0233\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDWideGamutV4 "knobs this \{rxy \{0.7177 0.3171\} gxy \{0.2280 0.8616\} bxy \{0.1006 -0.0820\} wxy \{0.3127 0.329\} src_colorspace_name \{BMDWideGamutV4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/AdobeRGB\t" "knobs this \{rxy \{0.6400 0.3300\} gxy \{0.2100 0.7100\} bxy \{0.1500 0.0600\} wxy \{0.3127 0.329\} src_colorspace_name \{AdobeRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AdobeWideGamutRGB "knobs this \{rxy \{0.7347 0.2653\} gxy \{0.1152 0.8264\} bxy \{0.1566 0.0177\} wxy \{0.3457 0.3585\} src_colorspace_name \{AdobeWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ROMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01  8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ROMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{RIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ERIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ERIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ProPhotoRGB "knobs this \{rxy \{0.734699 0.265301\} gxy \{0.159597 0.840403\} bxy \{0.036598 0.000105\} wxy \{0.345704 0.358540\} src_colorspace_name \{ProPhotoRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RusselRGB "knobs this \{rxy \{0.6900 0.3100\} gxy \{0.1800 0.7700\} bxy \{0.1000 0.0200\} wxy \{0.33243 0.34744\} src_colorspace_name \{RusselRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SharpRGB "knobs this \{rxy \{0.6898 0.3206\} gxy \{0.0736 0.9003\} bxy \{0.1166 0.0374\} wxy \{0.33333333 0.33333333\} src_colorspace_name \{SharpRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AppleRGB "knobs this \{rxy \{0.6250 0.3400\} gxy \{0.2800 0.5950\} bxy \{0.1550 0.0700\} wxy \{0.3127 0.329\} src_colorspace_name \{AppleRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BestRGB "knobs this \{rxy \{0.735191637630662 0.264808362369338\} gxy \{0.215336134453781 0.774159663865546\} bxy \{0.130122950819672 0.034836065573770\} wxy \{0.3457 0.3585\} src_colorspace_name \{BestRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/XYZ "knobs this \{rxy \{0 0\} gxy \{0 0\} bxy \{0 0\} wxy \{0 0\} src_colorspace_name \{XYZ\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()"}}
+ addUserKnob {26 colorspace_chromaticities_label l " " T "<b>Colorspace Chromaticities</b>"}
+ addUserKnob {12 rxy l r t "Red xy chromaticity coordinates in CIE 1931 colorspace."}
+ rxy {0.96 0.37}
+ addUserKnob {12 gxy l g t "Green xy chromaticity coordinates in CIE 1931 colorspace."}
+ gxy {-0.03 1.1}
+ addUserKnob {12 bxy l b t "Blue xy chromaticity coordinates in CIE 1931 colorspace."}
+ bxy {{gxy.x} -0.09}
+ addUserKnob {12 wxy l w t "Whitepoint xy chromaticity coordinates in CIE 1931 colorspace."}
+ wxy {0.32168 0.33767}
+ addUserKnob {1 src_colorspace_name l src}
+ src_colorspace_name APS4
+ addUserKnob {26 ""}
+ addUserKnob {6 invert t "Invert direction of matrix: XYZtoRGB" +STARTLINE}
+ invert true
+ addUserKnob {22 calculate_matrix l "Calculate Matrix" t "Calculate 3x3 matrix based on the specified colorspace chromaticities." T "import nuke\nfloat2 = nuke.math.Vector2\nfloat3 = nuke.math.Vector3\nfloat3x3 = nuke.math.Matrix3\nfloat4x4 = nuke.math.Matrix4\n\n\ndef get_primaries(node, dst=False):\n    # get xy coordinates from node\n    dst_pri = \['drxy', 'dgxy', 'dbxy', 'dwxy']\n    pri = \['rxy', 'gxy', 'bxy', 'wxy']\n    d = \{\}\n    for i, p in enumerate(pri):\n        if dst:\n            d\[p] = float2(node\[dst_pri\[i]].getValue()\[0], node\[dst_pri\[i]].getValue()\[1])\n        else:\n            d\[p] = float2(node\[p].getValue()\[0], node\[p].getValue()\[1])\n    return d\n\n\ndef RGBtoXYZ(xy, Y=1.0, inverse=False):\n    # given r g b chromaticities and whitepoint, convert RGB colors to XYZ\n    # based on CtlColorSpace.cpp from the CTL source code : 77\n    # param: xy - dict of chromaticity xy coordinates: rxy: float2(x, y) etc\n    # param: Y - luminance of \"white\" - defaults to 1.0\n    # param: inverse - calculate XYZ to RGB instead\n    r = xy\['rxy']\n    g = xy\['gxy']\n    b = xy\['bxy']\n    w = xy\['wxy']\n\n    X = w.x * Y / w.y\n    Z = (1 - w.x - w.y) * Y / w.y\n\n    # Scale factors for matrix rows\n    d = r.x * (b.y - g.y) + b.x * (g.y - r.y) + g.x * (r.y - b.y)\n\n    Sr =    (X * (b.y - g.y) -      \\\n            g.x * (Y * (b.y - 1) +  \\\n            b.y  * (X + Z)) +       \\\n            b.x  * (Y * (g.y - 1) + \\\n            g.y * (X + Z))) / d\n    \n    Sg =    (X * (r.y - b.y) +      \\\n            r.x * (Y * (b.y - 1) +  \\\n            b.y * (X + Z)) -        \\\n            b.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    Sb =    (X * (g.y - r.y) -      \\\n            r.x * (Y * (g.y - 1) +  \\\n            g.y * (X + Z)) +        \\\n            g.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    # Assemble the matrix\n    M = float3x3()\n    M.set(  Sr * r.x, Sr * r.y, Sr * (1 - r.x - r.y),\n            Sg * g.x, Sg * g.y, Sg * (1 - g.x - g.y),\n            Sb * b.x, Sb * b.y, Sb * (1 - b.x - b.y))\n    if inverse:\n        M = M.inverse()\n        return M\n    else:\n        return M\n\n\ndef start():\n    node = nuke.thisNode()\n    \n    invert = node\['invert'].getValue()\n    label = node\['label']\n    \n    if invert:\n        # Convert from XYZ colorspace to Src RGB\n        mtx = RGBtoXYZ(get_primaries(node), inverse=True)\n        label.setValue('XYZ to \{0\}'.format(node\['src_colorspace_name'].getValue()))\n    else:\n        # Convert from Src RGB colorspace to XYZ\n        mtx = RGBtoXYZ(get_primaries(node))\n        label.setValue('\{0\} to XYZ'.format(node\['src_colorspace_name'].getValue()))\n\n    node\['matrix'].setValue((mtx))\n    \n   \n\nif __name__=='__main__':\n    start()" +STARTLINE}
+ addUserKnob {22 create_matrix_node l "Create Matrix" t "Create ColorMatrix node with the current values." -STARTLINE T "node = nuke.thisNode()\nnode\['calculate_matrix'].execute()\nnuke.root().begin()\n_ = \[n.setSelected(False) for n in nuke.allNodes(recurseGroups=True)]\nm = nuke.createNode('ColorMatrix')\nm\['matrix'].setValue(node\['matrix'].getValue())\nm.setXYpos(node.xpos()-120, node.ypos())\nm\['label'].setValue(node\['label'].getValue())"}
+ addUserKnob {41 matrix T ColorMatrix.matrix}
+ addUserKnob {22 clear l Clear T "n = nuke.thisNode()\nn\['matrix'].setValue(\[1,0,0,0,1,0,0,0,1])\nn\['label'].setValue('')" +STARTLINE}
+}
+ Input {
+  inputs 0
+  name Input
+  xpos -40
+  ypos 206
+ }
+ ColorMatrix {
+  matrix {
+      {0.9889673591 0.02880487405 0.02880487405}
+      {-0.4965269566 1.374968052 0.09718866646}
+      {0.2285804003 0.05227990076 0.7235780358}
+    }
+  name ColorMatrix
+  xpos -40
+  ypos 254
+ }
+ Output {
+  name Output
+  xpos -40
+  ypos 302
+ }
+end_group
+ColorWheel {
+ inputs 0
+ gamma 0.45
+ name ColorWheel1
+ xpos -416
+ ypos 159
+}
+set Nbc886600 [stack 0]
+ColorMatrix {
+ matrix {
+     {0.6924252091 0.1529261621 0.1546486288}
+     {0.2859757403 0.661093832 0.0529304277}
+     {-0.0058020195 0.0027375707 1.003094449}
+   }
+ name ColorMatrix9
+ label "ACEScg -> XYZ (bradford)"
+ xpos -532
+ ypos 343
+}
+ColorMatrix {
+ matrix {
+     {0.9889673591 0.02880487405 0.02880487405}
+     {-0.4965269566 1.374968052 0.09718866646}
+     {0.2285804003 0.05227990076 0.7235780358}
+   }
+ name ColorMatrix7
+ label "XYZ to APS4"
+ xpos -532
+ ypos 375
+}
+push $Nbc886600
+ColorMatrix {
+ matrix {
+     {1.451439316 -0.2365107469 -0.2149285693}
+     {-0.0765537734 1.1762297 -0.0996759264}
+     {0.0083161484 -0.0060324498 0.9977163014}
+   }
+ invert true
+ name ColorMatrix8
+ label "ACES2065-1 -> ACEScg (bradford)\ninvert \[value invert]"
+ xpos -219
+ ypos 322
+}
+set Nec141c00 [stack 0]
+Colorspace {
+ illuminant_in ACES
+ primary_in ACES
+ colorspace_out CIE-XYZ
+ name Colorspace12
+ label "XYZ to AP0"
+ xpos -134
+ ypos 362
+}
+push $Nbc886600
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "ACES - ACES2065-1"
+ name OCIOColorSpace1
+ xpos -658
+ ypos 313
+}
+Colorspace {
+ illuminant_in ACES
+ primary_in ACES
+ colorspace_out CIE-XYZ
+ bradford_matrix true
+ name Colorspace10
+ xpos -645
+ ypos 341
+}
+Group {
+ name GamutToXYZ2
+ tile_color 0xbd91c9ff
+ label "XYZ to APS4"
+ xpos -657
+ ypos 379
+ addUserKnob {20 GamutToXYZ_tab l GamutToXYZ}
+ addUserKnob {35 colorspace_presets l preset M {colorspace/ACES "knobs this \{rxy \{0.73470 0.26530\} gxy \{0.00000 1.00000\} bxy \{0.00010 -0.07700\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACES\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ACEScg "knobs this \{rxy \{0.713 0.293\} gxy \{0.165 0.830\} bxy \{0.128 0.044\} wxy \{0.32168 0.33767\} src_colorspace_name \{ACEScg\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Filmlight E-Gamut" "knobs this \{rxy \{0.8 0.3177\} gxy \{0.18 0.9\} bxy \{0.065 -0.0805\} wxy \{0.3127 0.329\} src_colorspace_name \{Filmlight E-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec709 "knobs this \{rxy \{0.64000 0.33000\} gxy \{0.30000 0.60000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec709\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/Rec2020 "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Rec2020\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D60 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.32168 0.33767\} src_colorspace_name \{P3D60\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3D65 "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.3127 0.329\} src_colorspace_name \{P3D65\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/P3DCI "knobs this \{rxy \{0.68000 0.32000\} gxy \{0.26500 0.69000\} bxy \{0.15000 0.06000\} wxy \{0.314 0.351\} src_colorspace_name \{P3DCI\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Arri AlexaWideGamut" "knobs this \{rxy \{0.68400 0.31300\} gxy \{0.22100 0.84800\} bxy \{0.08610 -0.10200\} wxy \{0.3127 0.329\} src_colorspace_name \{Arri AlexaWideGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor "knobs this \{rxy \{0.753044222785 0.327830576682\} gxy \{0.299570228481 0.700699321956\} bxy \{0.079642066735 -0.0549379510888\} wxy \{0.321683187724 0.337673316035\} src_colorspace_name \{REDDRAGONcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDDRAGONcolor2 "knobs this \{rxy \{0.753044491143 0.327831029513\} gxy \{0.299570490451 0.700699415614\} bxy \{0.145011584278 0.0510971250879\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDDRAGONcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor "knobs this \{rxy \{0.699747001291 0.329046930313\} gxy \{0.304264039024 0.623641145129\} bxy \{0.134913961296 0.0347174412813\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor2 "knobs this \{rxy \{0.878682510476 0.32496400741\} gxy \{0.300888714367 0.679054755791\} bxy \{0.0953986946056 -0.0293793268343\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor2\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor3 "knobs this \{rxy \{0.701181035906 0.329014155583\} gxy \{0.300600304652 0.683788834269\} bxy \{0.108154455624 -0.00868817578666\} wxy \{0.321683210353 0.337673610062\} src_colorspace_name \{REDcolor3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDcolor4 "knobs this \{rxy \{0.701180591892 0.329013699116\} gxy \{0.300600395529 0.683788824257\} bxy \{0.145331946229 0.0516168036226\} wxy \{0.321683289449 0.337673447208\} src_colorspace_name \{REDcolor4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/REDWideGamutRGB "knobs this \{rxy \{0.780308 0.304253\} gxy \{0.121595 1.493994\} bxy \{0.095612 -0.084589\} wxy \{0.3127 0.329\} src_colorspace_name \{REDWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/GoPro Protune Native" "knobs this \{rxy \{0.69848046 0.19302645\} gxy \{0.32955538 1.02459662\} bxy \{0.10844263 -0.03467857\} wxy \{0.3127 0.329\} src_colorspace_name \{GoPro Protune Native\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/CanonCinemaGamut "knobs this \{rxy \{0.74 0.27\} gxy \{0.17 1.14\} bxy \{0.08 -0.1\} wxy \{0.3127 0.329\} src_colorspace_name \{CanonCinemaGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut "knobs this \{rxy \{0.73 0.28\} gxy \{0.14 0.855\} bxy \{0.1 -0.05\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SonySGamut3Cine "knobs this \{rxy \{0.766 0.275\} gxy \{0.225 0.8\} bxy \{0.089 -0.087\} wxy \{0.3127 0.329\} src_colorspace_name \{SonySGamut3Cine\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/PanasonicVGamut "knobs this \{rxy \{0.730 0.280\} gxy \{0.165 0.840\} bxy \{0.100 -0.030\} wxy \{0.3127 0.329\} src_colorspace_name \{PanasonicVGamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/DJI D-Gamut" "knobs this \{rxy \{0.71 0.31\} gxy \{0.21 0.88\} bxy \{0.09 -0.08\} wxy \{0.3127 0.329\} src_colorspace_name \{DJI D-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/Fujifilm F-Gamut" "knobs this \{rxy \{0.70800 0.29200\} gxy \{0.17000 0.79700\} bxy \{0.13100 0.04600\} wxy \{0.3127 0.329\} src_colorspace_name \{Fujifilm F-Gamut\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDFilmV1 "knobs this \{rxy \{0.9173 0.2502\} gxy \{0.2833 1.7072\} bxy \{0.0856 -0.0708\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMDFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV1 "knobs this \{rxy \{0.7422 0.2859\} gxy \{0.4140 1.3035\} bxy \{0.0342 -0.0833\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD4kFilmV3 "knobs this \{rxy \{1.0625 0.3948\} gxy \{0.3689 0.7775\} bxy \{0.0956 -0.0332\} wxy \{0.3135 0.3305\} src_colorspace_name \{BMD4kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV1 "knobs this \{rxy \{0.9175 0.2983\} gxy \{0.2983 1.2835\} bxy \{0.0756 -0.0860\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV1\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMD46kFilmV3 "knobs this \{rxy \{0.8608 0.3689\} gxy \{0.3282 0.6156\} bxy \{0.0783 -0.0233\} wxy \{0.3127 0.329\} src_colorspace_name \{BMD46kFilmV3\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BMDWideGamutV4 "knobs this \{rxy \{0.7177 0.3171\} gxy \{0.2280 0.8616\} bxy \{0.1006 -0.0820\} wxy \{0.3127 0.329\} src_colorspace_name \{BMDWideGamutV4\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" "colorspace/AdobeRGB\t" "knobs this \{rxy \{0.6400 0.3300\} gxy \{0.2100 0.7100\} bxy \{0.1500 0.0600\} wxy \{0.3127 0.329\} src_colorspace_name \{AdobeRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AdobeWideGamutRGB "knobs this \{rxy \{0.7347 0.2653\} gxy \{0.1152 0.8264\} bxy \{0.1566 0.0177\} wxy \{0.3457 0.3585\} src_colorspace_name \{AdobeWideGamutRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ROMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01  8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ROMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{RIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ERIMM "knobs this \{rxy \{7.34700000e-01 2.65300000e-01\} gxy \{1.59600000e-01 8.40400000e-01\} bxy \{3.66000000e-02 1.00000000e-04\} wxy \{0.3457 0.3585\} src_colorspace_name \{ERIMM\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/ProPhotoRGB "knobs this \{rxy \{0.734699 0.265301\} gxy \{0.159597 0.840403\} bxy \{0.036598 0.000105\} wxy \{0.345704 0.358540\} src_colorspace_name \{ProPhotoRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/RusselRGB "knobs this \{rxy \{0.6900 0.3100\} gxy \{0.1800 0.7700\} bxy \{0.1000 0.0200\} wxy \{0.33243 0.34744\} src_colorspace_name \{RusselRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/SharpRGB "knobs this \{rxy \{0.6898 0.3206\} gxy \{0.0736 0.9003\} bxy \{0.1166 0.0374\} wxy \{0.33333333 0.33333333\} src_colorspace_name \{SharpRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/AppleRGB "knobs this \{rxy \{0.6250 0.3400\} gxy \{0.2800 0.5950\} bxy \{0.1550 0.0700\} wxy \{0.3127 0.329\} src_colorspace_name \{AppleRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/BestRGB "knobs this \{rxy \{0.735191637630662 0.264808362369338\} gxy \{0.215336134453781 0.774159663865546\} bxy \{0.130122950819672 0.034836065573770\} wxy \{0.3457 0.3585\} src_colorspace_name \{BestRGB\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()" colorspace/XYZ "knobs this \{rxy \{0 0\} gxy \{0 0\} bxy \{0 0\} wxy \{0 0\} src_colorspace_name \{XYZ\}\}; python -exec nuke.thisNode().knob('calculate_matrix').execute()"}}
+ addUserKnob {26 colorspace_chromaticities_label l " " T "<b>Colorspace Chromaticities</b>"}
+ addUserKnob {12 rxy l r t "Red xy chromaticity coordinates in CIE 1931 colorspace."}
+ rxy {0.96 0.37}
+ addUserKnob {12 gxy l g t "Green xy chromaticity coordinates in CIE 1931 colorspace."}
+ gxy {-0.03 1.1}
+ addUserKnob {12 bxy l b t "Blue xy chromaticity coordinates in CIE 1931 colorspace."}
+ bxy {{gxy.x} -0.09}
+ addUserKnob {12 wxy l w t "Whitepoint xy chromaticity coordinates in CIE 1931 colorspace."}
+ wxy {0.32168 0.33767}
+ addUserKnob {1 src_colorspace_name l src}
+ src_colorspace_name APS4
+ addUserKnob {26 ""}
+ addUserKnob {6 invert t "Invert direction of matrix: XYZtoRGB" +STARTLINE}
+ invert true
+ addUserKnob {22 calculate_matrix l "Calculate Matrix" t "Calculate 3x3 matrix based on the specified colorspace chromaticities." T "import nuke\nfloat2 = nuke.math.Vector2\nfloat3 = nuke.math.Vector3\nfloat3x3 = nuke.math.Matrix3\nfloat4x4 = nuke.math.Matrix4\n\n\ndef get_primaries(node, dst=False):\n    # get xy coordinates from node\n    dst_pri = \['drxy', 'dgxy', 'dbxy', 'dwxy']\n    pri = \['rxy', 'gxy', 'bxy', 'wxy']\n    d = \{\}\n    for i, p in enumerate(pri):\n        if dst:\n            d\[p] = float2(node\[dst_pri\[i]].getValue()\[0], node\[dst_pri\[i]].getValue()\[1])\n        else:\n            d\[p] = float2(node\[p].getValue()\[0], node\[p].getValue()\[1])\n    return d\n\n\ndef RGBtoXYZ(xy, Y=1.0, inverse=False):\n    # given r g b chromaticities and whitepoint, convert RGB colors to XYZ\n    # based on CtlColorSpace.cpp from the CTL source code : 77\n    # param: xy - dict of chromaticity xy coordinates: rxy: float2(x, y) etc\n    # param: Y - luminance of \"white\" - defaults to 1.0\n    # param: inverse - calculate XYZ to RGB instead\n    r = xy\['rxy']\n    g = xy\['gxy']\n    b = xy\['bxy']\n    w = xy\['wxy']\n\n    X = w.x * Y / w.y\n    Z = (1 - w.x - w.y) * Y / w.y\n\n    # Scale factors for matrix rows\n    d = r.x * (b.y - g.y) + b.x * (g.y - r.y) + g.x * (r.y - b.y)\n\n    Sr =    (X * (b.y - g.y) -      \\\n            g.x * (Y * (b.y - 1) +  \\\n            b.y  * (X + Z)) +       \\\n            b.x  * (Y * (g.y - 1) + \\\n            g.y * (X + Z))) / d\n    \n    Sg =    (X * (r.y - b.y) +      \\\n            r.x * (Y * (b.y - 1) +  \\\n            b.y * (X + Z)) -        \\\n            b.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    Sb =    (X * (g.y - r.y) -      \\\n            r.x * (Y * (g.y - 1) +  \\\n            g.y * (X + Z)) +        \\\n            g.x * (Y * (r.y - 1) +  \\\n            r.y * (X + Z))) / d\n\n    # Assemble the matrix\n    M = float3x3()\n    M.set(  Sr * r.x, Sr * r.y, Sr * (1 - r.x - r.y),\n            Sg * g.x, Sg * g.y, Sg * (1 - g.x - g.y),\n            Sb * b.x, Sb * b.y, Sb * (1 - b.x - b.y))\n    if inverse:\n        M = M.inverse()\n        return M\n    else:\n        return M\n\n\ndef start():\n    node = nuke.thisNode()\n    \n    invert = node\['invert'].getValue()\n    label = node\['label']\n    \n    if invert:\n        # Convert from XYZ colorspace to Src RGB\n        mtx = RGBtoXYZ(get_primaries(node), inverse=True)\n        label.setValue('XYZ to \{0\}'.format(node\['src_colorspace_name'].getValue()))\n    else:\n        # Convert from Src RGB colorspace to XYZ\n        mtx = RGBtoXYZ(get_primaries(node))\n        label.setValue('\{0\} to XYZ'.format(node\['src_colorspace_name'].getValue()))\n\n    node\['matrix'].setValue((mtx))\n    \n   \n\nif __name__=='__main__':\n    start()" +STARTLINE}
+ addUserKnob {22 create_matrix_node l "Create Matrix" t "Create ColorMatrix node with the current values." -STARTLINE T "node = nuke.thisNode()\nnode\['calculate_matrix'].execute()\nnuke.root().begin()\n_ = \[n.setSelected(False) for n in nuke.allNodes(recurseGroups=True)]\nm = nuke.createNode('ColorMatrix')\nm\['matrix'].setValue(node\['matrix'].getValue())\nm.setXYpos(node.xpos()-120, node.ypos())\nm\['label'].setValue(node\['label'].getValue())"}
+ addUserKnob {41 matrix T ColorMatrix.matrix}
+ addUserKnob {22 clear l Clear T "n = nuke.thisNode()\nn\['matrix'].setValue(\[1,0,0,0,1,0,0,0,1])\nn\['label'].setValue('')" +STARTLINE}
+}
+ Input {
+  inputs 0
+  name Input
+  xpos -40
+  ypos 206
+ }
+ ColorMatrix {
+  matrix {
+      {0.9889673591 0.02880487405 0.02880487405}
+      {-0.4965269566 1.374968052 0.09718866646}
+      {0.2285804003 0.05227990076 0.7235780358}
+    }
+  name ColorMatrix
+  xpos -40
+  ypos 254
+ }
+ Output {
+  name Output
+  xpos -40
+  ypos 302
+ }
+end_group
+push $Nd3b0be00
+push $Nec141c00
+ColorMatrix {
+ matrix {
+     {0.952552 0 9.36786e-05}
+     {0.343966 0.728166 -0.0721325}
+     {-3.86393e-08 0 1.00883}
+   }
+ name ColorMatrix11
+ label "AP0 to XYZ"
+ xpos -219
+ ypos 364
+}
+ColorMatrix {
+ matrix {
+     {0.9889673591 0.02880487405 0.02880487405}
+     {-0.4965269566 1.374968052 0.09718866646}
+     {0.2285804003 0.05227990076 0.7235780358}
+   }
+ name ColorMatrix10
+ label "XYZ to APS4"
+ xpos -219
+ ypos 396
+}
+push $Nbc886600
+Group {
+ name MatrixTools
+ label "AP1 to APS4"
+ xpos -336
+ ypos 371
+ addUserKnob {20 MatrixTools_tab l MatrixTools}
+ addUserKnob {22 calculate_matrix l Calculate t "Select 2 or more matrix nodes with or without invert knobs checked.\n\nEach matrix will be multiplied and this node will have the result set.\n\nIf 1 node is selected, that matrix value will be copied to this node (inverted if the invert knob is checked)." T "import nuke\nfloat3x3 = nuke.math.Matrix3\n\ndef matrix_from_node(node):\n    # return 3x3 matrix object from node\n    if not 'matrix' in node.knobs():\n        print('Error: node \{0\} does not contain a matrix knob.'.format(\n            node.fullName()))\n        return None\n    mtx_list = node\['matrix'].getValue()\n    M = float3x3()\n    for i in range(9):\n        M\[i] = mtx_list\[i]\n    if node\['invert'].getValue():\n        M = M.inverse()\n    return M\n    \ndef start():\n    node = nuke.thisNode()\n    selected_nodes = nuke.root().selectedNodes()\n    matrices = \[matrix_from_node(n) for n in selected_nodes if 'matrix' in n.knobs()]\n    if len(matrices) > 1:\n        M = float3x3()\n        num = len(matrices)\n        for i in range(num-1):\n            A = matrices\[i]\n            if i == 0:\n                M = A\n            B = matrices\[i+1]\n            M = M * B\n        node\['matrix'].setValue(M)\n    elif len(matrices) == 1:\n        # Set the matrix \n        node\['matrix'].setValue(matrices\[0])\n        node\['invert'].setValue(0)\n    \n    \nif __name__=='__main__':\n    start()" +STARTLINE}
+ addUserKnob {22 create_matrix_node l "Create Matrix" t "Create ColorMatrix node with the current values." -STARTLINE T "node = nuke.thisNode()\n\nnuke.root().begin()\n_ = \[n.setSelected(False) for n in nuke.allNodes(recurseGroups=True)]\nm = nuke.createNode('ColorMatrix')\nm\['matrix'].setValue(node\['matrix'].getValue())\nm.setXYpos(node.xpos()-120, node.ypos())\nm\['label'].setValue(node\['label'].getValue())"}
+ addUserKnob {41 matrix T ColorMatrix.matrix}
+ addUserKnob {41 invert -STARTLINE T ColorMatrix.invert}
+ addUserKnob {22 clear l Clear T "n = nuke.thisNode()\nn\['matrix'].setValue(\[1,0,0,0,1,0,0,0,1])\nn\['label'].setValue('')" +STARTLINE}
+ addUserKnob {22 show_matrix l Show t "Show matrix values in a popup window for copying." T "node = nuke.thisNode()\nshow_4x4 = node\['show_matrix_4x4'].getValue()\nshow_commas = node\['show_matrix_commas'].getValue()\n\nif show_commas:\n    sep = ', '\nelse:\n    sep = ' '\n\nmtx = \[format(i, '.8f') for i in node\['matrix'].getValue()]\n\nif show_4x4:\n    z = \['0']\n    mtx = mtx\[0:3] + z + mtx\[3:6] + z + mtx\[6:9] + z*4 + \['1']\n\nnuke.message(sep.join(mtx))" +STARTLINE}
+ addUserKnob {6 show_matrix_4x4 l "show 4x4" t "present values in a 4x4 matrix (useful for ocio)" -STARTLINE}
+ addUserKnob {6 show_matrix_commas l "show comma sep" t "show matrix comma separated." -STARTLINE}
+ addUserKnob {22 save_spimtx l "Save spimtx" T "# inspired by ColorMatrixPlus by hpd\ndef write_spimtx(mtx_node, spimtx_file):\n    mtx_vals = mtx_node\['matrix'].getValue()\n    with open(spimtx_file, \"w\") as f:\n        f.write( \"%3.6f %3.6f %3.6f 0.0\\n\" % (\n            mtx_vals\[0], mtx_vals\[1], mtx_vals\[2]) )\n        f.write( \"%3.6f %3.6f %3.6f 0.0\\n\" % (\n            mtx_vals\[3], mtx_vals\[4], mtx_vals\[5]) )\n        f.write( \"%3.6f %3.6f %3.6f 0.0\\n\" % (\n            mtx_vals\[6], mtx_vals\[7], mtx_vals\[8]) )\n\nnode = nuke.thisNode()\nfilepath = nuke.getFilename('Save Matrix', '*.spimtx')\n\nif filepath:\n    if not filepath.endswith('.spimtx'):\n        filepath = filepath + '.spimtx'\n    write_spimtx(node, filepath)" +STARTLINE}
+ addUserKnob {22 load_spimtx l "Load spimtx" -STARTLINE T "# Inspired by ColorMatrixPlus by hpd\ndef load_spimtx(spimtx, mtx_node):\n    with open( spimtx, 'r') as file:\n        lines = file.readlines()\n    matrix_values = list()\n    for line in lines:\n        matrix_values.extend( map(float, line.strip().split(' ')\[0:3]) )\n    mtx_node\['matrix'].setValue(matrix_values)\n\nspimtx = nuke.getFilename('Load SPIMTX', '*.spimtx')\nif spimtx:\n    load_spimtx( spimtx, nuke.thisNode() )\n"}
+}
+ Input {
+  inputs 0
+  name Input
+  xpos -40
+  ypos 206
+ }
+ ColorMatrix {
+  matrix {
+      {0.6628262401 0.1520595402 0.1851138175}
+      {0.04483733326 0.8606985807 0.09446392208}
+      {0.1616223156 0.06880991161 0.7695708871}
+    }
+  name ColorMatrix
+  xpos -40
+  ypos 254
+ }
+ Output {
+  name Output
+  xpos -40
+  ypos 302
+ }
+end_group
+Viewer {
+ inputs 3
+ frame_range 1-100
+ input_number 1
+ colour_sample_bbox {-0.02476190403 -0.4293877482 -0.02421768755 -0.428843528}
+ gl_buffer_depth half-float
+ viewerProcess None
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 962
+ ypos 909
 }

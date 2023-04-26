@@ -1,0 +1,49 @@
+DisplayName="ACEScct: ACEScct / APS4";
+
+to_lin = upto("@@");
+vec4 convertToLinear(vec4 val)
+{   
+
+    float X_BRK = 0.0078125;
+    float Y_BRK = 0.155251141552511;
+    float A = 10.5402377416545;
+    float B = 0.0729055341958355;
+
+    vec3 v = min(val.rgb, vec3(7.5));
+    v.r = v.r > Y_BRK ? pow( 2.0, v.r*17.52-9.72) : (v.r - B) / A;
+    v.g = v.g > Y_BRK ? pow( 2.0, v.g*17.52-9.72) : (v.g - B) / A;
+    v.b = v.b > Y_BRK ? pow( 2.0, v.b*17.52-9.72) : (v.b - B) / A;
+ 
+    return vec4(v, val.a);
+}
+@@
+
+from_lin = upto("@@");
+vec4 convertFromLinear(vec4 val, int clip)
+{    
+
+    float X_BRK = 0.0078125;
+    float Y_BRK = 0.155251141552511;
+    float A = 10.5402377416545;
+    float B = 0.0729055341958355;
+    vec3 v = val.rgb;
+    v.r =  v.r <= X_BRK ?  A * v.r + B : (log2(v.r) + 9.72) / 17.52;
+    v.g =  v.g <= X_BRK ?  A * v.g + B : (log2(v.g) + 9.72) / 17.52;
+    v.b =  v.b <= X_BRK ?  A * v.b + B : (log2(v.b) + 9.72) / 17.52;
+
+    return vec4(v, val.a);
+}
+@@
+
+// Matrix calculated from CIE x,y values...
+// RGB:            0.713,0.293 0.165,0.83 0.128,0.044
+// White = D60:    0.32168,0.33767
+
+mat = [array
+ 1.0601312720473408, -0.020710314797183806, -0.03942095725015692,
+ 0.38924384,  0.72341883, -0.11266267,
+-0.3441264186476226, -0.04563303839687909,  1.3897594570445015];
+
+type = "scene";
+range="full";
+Invisible = 1;
