@@ -4,25 +4,32 @@
 
 
 
+
 import os
 import shutil
+
 
 
 masterNode = nuke.thisNode()
 
 
+
 bakeLuts = nuke.thisNode().knob('bakeLUTs').value()
+
 
 
 def cubeToCub(cubePath,cubPath):
     inputCubePath = cubePath
     ouputCubPath = cubPath
 
+
     # read the cube
     with open(inputCubePath) as f:
         lines = f.readlines()
 
+
     cubeSize = lines[1].split(' ')[1].replace('\n','')
+
 
     # header
     tlHeader = '''# Truelight Cube v2.1
@@ -31,15 +38,19 @@ def cubeToCub(cubePath,cubPath):
     # width     CUBESIZE CUBESIZE CUBESIZE\n
     # Cube'''
 
+
     tlHeader = tlHeader.replace('CUBESIZE',cubeSize)
+
 
     # footer
     tlFooter = '''\n# end\n'''
+
 
     LUTlines = lines[2:]
     LUTlines = [x.replace('\n','').split(' ') for x in LUTlines]
     LUTlines = [[float(i) for i in x] for x in LUTlines]
     LUTlines = [[str(i) for i in x] for x in LUTlines]
+
 
     ## remove decimal from 0.0 and 1.0
     for i, x in enumerate(LUTlines):
@@ -49,22 +60,27 @@ def cubeToCub(cubePath,cubPath):
             if '1.0' == a:
                 LUTlines[i][j] = '1'
 
+
     # reconstruct the cube string
     stringLUTlines = []
     for line in LUTlines:
         stringLUTlines.append(' '.join(line))
     newLUTStringBlock = '\n'.join(stringLUTlines)
 
+
     # join it all up
     outputContents = tlHeader + '\n' + newLUTStringBlock + '\n' + tlFooter
+
 
     # check directory for outputCubPath exists, if not, create it
     if not os.path.exists(os.path.dirname(ouputCubPath)):
         os.makedirs(os.path.dirname(ouputCubPath))
 
+
     # write the file
     with open(ouputCubPath, 'w') as f:
         f.write(outputContents)
+
 
 
 
@@ -79,11 +95,13 @@ def bakeCandidateLUTfromNode(node,inverse=False):
 
 
 
+
     nukeScriptDir = nuke.script_directory()
     print(nukeScriptDir)
     dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())
     if inverse:
         dctltemplatePath = dctltemplatePath.replace('.dctl','_inverse.dctl')
+
 
     fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())
     # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')
@@ -93,10 +111,13 @@ def bakeCandidateLUTfromNode(node,inverse=False):
 
 
 
+
     cubePath = os.path.join(nukeScriptDir,node.knob('cubePath').evaluate())
     cubePathClean = cubePath.replace('(','').replace(')','')
     ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())
     cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())
+    dctlColorspaceBufferTag = node.knob('dctlColorspaceBufferTag').getValue()
+
 
     if inverse:
         cubePath = cubePath.replace('.cube','_inverse.cube')
@@ -104,8 +125,10 @@ def bakeCandidateLUTfromNode(node,inverse=False):
         ocioCubePath = ocioCubePath.replace('.cube','_inverse.cube')
         cubPath = cubPath.replace('.cub','_inverse.cub')
 
+
     # replace LUT writer path with evaluated path
     node.knob('file').setValue(cubePath)
+
 
 
 
@@ -118,20 +141,25 @@ def bakeCandidateLUTfromNode(node,inverse=False):
 
 
 
+
     # check ocioCubePath exists, if not, create it
     if not os.path.exists(os.path.dirname(ocioCubePath)):
         os.makedirs(os.path.dirname(ocioCubePath))
+
 
     dctlPath = cubePath.replace('.cube','.dctl')
     if inverse:
         dctlPath = dctlPath.replace('/ODT/','/IDT/')
 
+
     # check dctlPath exists, if not, create it
     if not os.path.exists(os.path.dirname(dctlPath)):
         os.makedirs(os.path.dirname(dctlPath))
 
+
     cubeName = cubePath.split('/').pop(-1)
     cubeNameClean = cubeName.replace('(','').replace(')','')
+
 
 
 
@@ -145,9 +173,11 @@ def bakeCandidateLUTfromNode(node,inverse=False):
             shutil.copy(cubePath,cubePathClean)
 
 
+
     # read contents of cube file
     with open(cubePathClean) as f:
         cubelines = f.readlines()
+
 
 
 
@@ -155,11 +185,14 @@ def bakeCandidateLUTfromNode(node,inverse=False):
     with open(dctltemplatePath) as f:
         lines = f.readlines()
     newLines = [x.replace('replace.cube',cubeNameClean) for x in lines]
+    newLines = [x.replace('DCTL_ACES_COLORSPACE_BUFFER_TAG_PLACEHOLDER',dctlColorspaceBufferTag) for x in lines]
     # replace the string REPLACE_WITH_CUBE_DATA with the contents of cubelines
     newLines = [x.replace('REPLACE_WITH_CUBE_DATA',''.join(cubelines)) for x in newLines]
 
+
     with open(dctlPath, 'w') as f:
         f.write(''.join(newLines))
+
 
 
 
@@ -169,8 +202,10 @@ def bakeCandidateLUTfromNode(node,inverse=False):
     # convert cube to cub
     cubeToCub(cubePath,cubPath)
 
+
     # copy cubePath to ocioCubePath
     shutil.copy(cubePath,ocioCubePath)
+
 
     # # remove original cube if it isnt the same as the clean version
     # if cubePathClean != cubePath:
@@ -180,6 +215,7 @@ def bakeCandidateLUTfromNode(node,inverse=False):
         os.remove(cubePath)
     if os.path.exists(cubePathClean):
         os.remove(cubePathClean)
+
 
 
 
@@ -202,12 +238,14 @@ def bakeCandidateLUTfromNode(node,inverse=False):
 
 
 
+
     # check ACEScct_AP0.flspace exists, if not, copy it
     for flspace in ['/ACEScct_AP0.flspace','/ACEScct_APS4.flspace']:
         flSpaceSourcePath = os.path.join(nukeScriptDir,'resources' + flspace)
         flSpaceDestPath = os.path.dirname(cubPath) + flspace
         if not os.path.exists(flSpaceDestPath):
             shutil.copy(flSpaceSourcePath,flSpaceDestPath)
+
 
 
 
@@ -220,6 +258,7 @@ def createOCIOconfigs(revision):
     newOcioTemplateDir = os.path.join(nukeScriptDir,'OCIO/')
     ocioConfigTemplates = [x for x in os.listdir(ocioTemplateDir) if x.endswith('.ocio')]
     ocioConfigTemplatePaths = [os.path.join(ocioTemplateDir,x) for x in ocioConfigTemplates]
+
 
 
     activeViewDicts = []
@@ -241,6 +280,7 @@ def createOCIOconfigs(revision):
         'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',
         ]})
 
+
     activeViewDicts.append({'name':'DisplayP3','values':[
         'ACES 1.2 - DisplayP3 (Rec.709 Limited)',
         'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',
@@ -249,6 +289,7 @@ def createOCIOconfigs(revision):
         'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited)',
         'ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited)',
         ]})
+
 
     activeViewDicts.append({'name':'Limited','values':[
         'ACES 1.2 - Rec.709',
@@ -263,8 +304,10 @@ def createOCIOconfigs(revision):
         ]})
 
 
+
     for config in ocioConfigTemplatePaths:
         for activeViewDict in activeViewDicts:
+
 
             configName = config.split('/').pop(-1)
             newConfigName = configName.replace('revXXX','rev'+revision).replace('TEMPLATE',activeViewDict['name'])
@@ -280,10 +323,12 @@ def createOCIOconfigs(revision):
 
 
 
+
 ODTWrites = []
 for node in nuke.allNodes():
     if 'Write_ResolveACES_ODT_LUT' in node.name():
         ODTWrites.append(node)
+
 
 
 
@@ -294,8 +339,10 @@ for ODTWriteNode in ODTWrites:
     masterNode.knob('inverseMode').setValue(True)
     bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)
 
+
 ## flip flag back to nukescript makes more sense when opened afterwards
 masterNode.knob('inverseMode').setValue(False)
+
 
 # createOCIOconfigs(revision)
 createOCIOconfigs(nuke.thisNode().knob('revision').getValue())
