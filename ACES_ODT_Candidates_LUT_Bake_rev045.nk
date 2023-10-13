@@ -108,13 +108,13 @@ Dot {
  xpos 16
  ypos -51
 }
-set Ncfae9000 [stack 0]
+set N4725b400 [stack 0]
 Dot {
  name Dot5
  xpos 84
  ypos -4
 }
-push $Ncfae9000
+push $N4725b400
 Expression {
  temp_name0 cut_lin
  temp_expr0 0.0078125
@@ -159,13 +159,13 @@ Reformat {
  xpos -19
  ypos 192
 }
-set Nceb25200 [stack 0]
+set N4981ea00 [stack 0]
 Dot {
  name Dot3
  xpos 157
  ypos 272
 }
-push $Nceb25200
+push $N4981ea00
 ColorMatrix {
  matrix {
      {1.009929895 -0.01972960308 -0.03755422309}
@@ -198,7 +198,7 @@ Dot {
  xpos 15
  ypos 411
 }
-set Nce2fae00 [stack 0]
+set N478c4e00 [stack 0]
 Group {
  name DRT_CAM20
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -302,6 +302,7 @@ Group {
  addUserKnob {7 background_luminance l "background luminance" t "the ZCAM background luminance in Cd/sqm" R 0 100}
  background_luminance 10
  addUserKnob {6 clamp_output l "clamp output" t "clamp the output values between 0,0 and 1.0" +STARTLINE}
+ clamp_output true
  addUserKnob {6 soft_clamp l "soft clamp output" t "Soft clamp display output values so that no negative RGB channels occur" -STARTLINE}
  soft_clamp true
  addUserKnob {26 ""}
@@ -433,7 +434,6 @@ Group {
   ypos -84
  }
 end_group
-set Ncfb43800 [stack 0]
 Reformat {
  type scale
  scale 7
@@ -443,7 +443,7 @@ Reformat {
  xpos 17
  ypos 652
 }
-set Nce2ffa00 [stack 0]
+set N47a9a000 [stack 0]
 Group {
  name SDR_to_HDR3
  xpos -230
@@ -523,19 +523,19 @@ Group {
   xpos -6
   ypos 74
  }
-set Ncea30c00 [stack 0]
+set N48413400 [stack 0]
  Dot {
   name Dot2
   xpos 234
   ypos 74
  }
-set Nce9e0600 [stack 0]
+set N48415000 [stack 0]
  Dot {
   name Dot3
   xpos 474
   ypos 74
  }
-set Nce9e7200 [stack 0]
+set N48415400 [stack 0]
  Expression {
   expr0 r<0?0:((log(r)/log(2)+2.5)*50+425)/1023
   expr1 g<0?0:((log(g)/log(2)+2.5)*50+425)/1023
@@ -546,7 +546,7 @@ set Nce9e7200 [stack 0]
   xpos 440
   ypos 108
  }
-push $Nce9e7200
+push $N48415400
  Expression {
   expr0 pow(2,((r*1023)-425)/50-2.5)
   expr1 pow(2,((g*1023)-425)/50-2.5)
@@ -564,7 +564,7 @@ push $Nce9e7200
   xpos 440
   ypos 190
  }
-push $Nce9e0600
+push $N48415000
  Expression {
   expr0 r<0?(log(pow(2,-16))/log(2)+9.72)/17.52:r<pow(2,-15)?(log(pow(2,-16)+r*0.5)/log(2)+9.72)/17.52:(log(r)/log(2)+9.72)/17.52
   expr1 g<0?(log(pow(2,-16))/log(2)+9.72)/17.52:g<pow(2,-15)?(log(pow(2,-16)+g*0.5)/log(2)+9.72)/17.52:(log(g)/log(2)+9.72)/17.52
@@ -575,7 +575,7 @@ push $Nce9e0600
   xpos 200
   ypos 104
  }
-push $Nce9e0600
+push $N48415000
  Expression {
   expr0 r<(9.72-15)/17.52?(pow(2,(r*17.52-9.72))-pow(2,-16))*2:pow(2,(r*17.52-9.72))
   expr1 g<(9.72-15)/17.52?(pow(2,(g*17.52-9.72))-pow(2,-16))*2:pow(2,(g*17.52-9.72))
@@ -593,7 +593,7 @@ push $Nce9e0600
   xpos 200
   ypos 190
  }
-push $Ncea30c00
+push $N48413400
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -612,7 +612,7 @@ push $Ncea30c00
   xpos -40
   ypos 108
  }
-push $Ncea30c00
+push $N48413400
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -650,7 +650,7 @@ push $Ncea30c00
   xpos -40
   ypos 430
  }
-push $Nce9e7200
+push $N48415400
  Expression {
   temp_name0 StepsPerStop
   temp_expr0 50
@@ -853,7 +853,7 @@ ColorMatrix {
  xpos 504
  ypos 304
 }
-push $Nce2fae00
+push $N478c4e00
 Group {
  name DRT_CAM4
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -957,6 +957,7 @@ Group {
  addUserKnob {7 background_luminance l "background luminance" t "the ZCAM background luminance in Cd/sqm" R 0 100}
  background_luminance 10
  addUserKnob {6 clamp_output l "clamp output" t "clamp the output values between 0,0 and 1.0" +STARTLINE}
+ clamp_output true
  addUserKnob {6 soft_clamp l "soft clamp output" t "Soft clamp display output values so that no negative RGB channels occur" -STARTLINE}
  soft_clamp true
  addUserKnob {26 ""}
@@ -1088,21 +1089,7 @@ Group {
   ypos -84
  }
 end_group
-set N5b5b2200 [stack 0]
-push $Nce2fae00
-push $Ncfb43800
-Viewer {
- inputs 3
- frame_range 1-100
- colour_sample_bbox {-0.4160583913 -0.3138686121 -0.4087591171 -0.3065693378}
- gl_buffer_depth half-float
- viewerProcess None
- monitorOutOutputTransform rec709
- name Viewer1
- xpos 962
- ypos 909
-}
-push $N5b5b2200
+set N49b6b800 [stack 0]
 Reformat {
  type scale
  scale 7
@@ -1117,7 +1104,22 @@ Dot {
  xpos 645
  ypos 685
 }
-set Nceb7f600 [stack 0]
+set N49b83800 [stack 0]
+Expression {
+ expr0 isnan(r)?0:r
+ expr1 isnan(g)?0:g
+ expr2 isnan(b)?0:b
+ name killNan4
+ xpos 657
+ ypos 702
+}
+Clamp {
+ minimum -65535
+ maximum 65535
+ name Clamp2
+ xpos 657
+ ypos 726
+}
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -1125,7 +1127,7 @@ Colorspace {
  name Colorspace8
  label "XYZ to AP0"
  xpos 657
- ypos 726
+ ypos 762
 }
 ColorMatrix {
  matrix {
@@ -1137,7 +1139,7 @@ ColorMatrix {
  name ColorMatrix5
  label "APS4 to XYZ"
  xpos 657
- ypos 758
+ ypos 794
 }
 Expression {
  temp_name0 cut_lin
@@ -1155,21 +1157,21 @@ Expression {
  name lin2log4
  label ACEScct
  xpos 657
- ypos 790
+ ypos 826
 }
-push $Nceb7f600
+push $N49b83800
 Switch {
  inputs 2
  which {{master.inverseMode}}
  name Switch7
  xpos 611
- ypos 839
+ ypos 875
 }
 Group {
  name Write_ResolveACES_ODT_LUT10
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 611
- ypos 964
+ ypos 1000
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate CAMDRT
@@ -1212,7 +1214,7 @@ Group {
   ypos 353
  }
 end_group
-push $Nce2fae00
+push $N478c4e00
 Group {
  name DRT_CAM6
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1461,7 +1463,23 @@ Dot {
  xpos 808
  ypos 690
 }
-set Nd0be5000 [stack 0]
+set N49b81800 [stack 0]
+Expression {
+ expr0 isnan(r)?0:r
+ expr1 isnan(g)?0:g
+ expr2 isnan(b)?0:b
+ name killNan5
+ xpos 820
+ ypos 707
+}
+Clamp {
+ minimum -65535
+ maximum 65535
+ name Clamp1
+ xpos 820
+ ypos 731
+}
+set N408d5800 [stack 0]
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -1469,7 +1487,7 @@ Colorspace {
  name Colorspace9
  label "XYZ to AP0"
  xpos 820
- ypos 731
+ ypos 767
 }
 ColorMatrix {
  matrix {
@@ -1481,7 +1499,7 @@ ColorMatrix {
  name ColorMatrix6
  label "APS4 to XYZ"
  xpos 820
- ypos 763
+ ypos 799
 }
 Expression {
  temp_name0 cut_lin
@@ -1499,21 +1517,21 @@ Expression {
  name lin2log5
  label ACEScct
  xpos 820
- ypos 795
+ ypos 831
 }
-push $Nd0be5000
+push $N49b81800
 Switch {
  inputs 2
  which {{master.inverseMode}}
  name Switch8
  xpos 774
- ypos 838
+ ypos 874
 }
 Group {
  name Write_ResolveACES_ODT_LUT11
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 774
- ypos 960
+ ypos 996
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate CAMDRT
@@ -1556,7 +1574,7 @@ Group {
   ypos 353
  }
 end_group
-push $Nce2fae00
+push $N478c4e00
 Group {
  name DRT_CAM1
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1660,6 +1678,7 @@ Group {
  addUserKnob {7 background_luminance l "background luminance" t "the ZCAM background luminance in Cd/sqm" R 0 100}
  background_luminance 10
  addUserKnob {6 clamp_output l "clamp output" t "clamp the output values between 0,0 and 1.0" +STARTLINE}
+ clamp_output true
  addUserKnob {6 soft_clamp l "soft clamp output" t "Soft clamp display output values so that no negative RGB channels occur" -STARTLINE}
  soft_clamp true
  addUserKnob {26 ""}
@@ -1805,7 +1824,22 @@ Dot {
  xpos 182
  ypos 688
 }
-set Nd0be2e00 [stack 0]
+set N27986200 [stack 0]
+Expression {
+ expr0 isnan(r)?0:r
+ expr1 isnan(g)?0:g
+ expr2 isnan(b)?0:b
+ name killNan1
+ xpos 194
+ ypos 705
+}
+Clamp {
+ minimum -65535
+ maximum 65535
+ name Clamp5
+ xpos 194
+ ypos 729
+}
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -1813,7 +1847,7 @@ Colorspace {
  name Colorspace5
  label "XYZ to AP0"
  xpos 194
- ypos 729
+ ypos 765
 }
 ColorMatrix {
  matrix {
@@ -1825,7 +1859,7 @@ ColorMatrix {
  name ColorMatrix2
  label "APS4 to XYZ"
  xpos 194
- ypos 761
+ ypos 797
 }
 Expression {
  temp_name0 cut_lin
@@ -1843,21 +1877,21 @@ Expression {
  name lin2log1
  label ACEScct
  xpos 194
- ypos 793
+ ypos 829
 }
-push $Nd0be2e00
+push $N27986200
 Switch {
  inputs 2
  which {{master.inverseMode}}
  name Switch4
  xpos 148
- ypos 838
+ ypos 874
 }
 Group {
  name Write_ResolveACES_ODT_LUT5
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 148
- ypos 968
+ ypos 1004
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate CAMDRT
@@ -1900,7 +1934,7 @@ Group {
   ypos 353
  }
 end_group
-push $Nce2fae00
+push $N478c4e00
 Group {
  name DRT_CAM3
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -2004,6 +2038,7 @@ Group {
  addUserKnob {7 background_luminance l "background luminance" t "the ZCAM background luminance in Cd/sqm" R 0 100}
  background_luminance 10
  addUserKnob {6 clamp_output l "clamp output" t "clamp the output values between 0,0 and 1.0" +STARTLINE}
+ clamp_output true
  addUserKnob {6 soft_clamp l "soft clamp output" t "Soft clamp display output values so that no negative RGB channels occur" -STARTLINE}
  soft_clamp true
  addUserKnob {26 ""}
@@ -2149,7 +2184,22 @@ Dot {
  xpos 492
  ypos 690
 }
-set Nceb44e00 [stack 0]
+set N27a92600 [stack 0]
+Expression {
+ expr0 isnan(r)?0:r
+ expr1 isnan(g)?0:g
+ expr2 isnan(b)?0:b
+ name killNan3
+ xpos 504
+ ypos 707
+}
+Clamp {
+ minimum -65535
+ maximum 65535
+ name Clamp3
+ xpos 504
+ ypos 731
+}
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -2157,7 +2207,7 @@ Colorspace {
  name Colorspace7
  label "XYZ to AP0"
  xpos 504
- ypos 731
+ ypos 767
 }
 ColorMatrix {
  matrix {
@@ -2169,7 +2219,7 @@ ColorMatrix {
  name ColorMatrix4
  label "APS4 to XYZ"
  xpos 504
- ypos 763
+ ypos 799
 }
 Expression {
  temp_name0 cut_lin
@@ -2187,21 +2237,21 @@ Expression {
  name lin2log3
  label ACEScct
  xpos 504
- ypos 795
+ ypos 831
 }
-push $Nceb44e00
+push $N27a92600
 Switch {
  inputs 2
  which {{master.inverseMode}}
  name Switch6
  xpos 458
- ypos 843
+ ypos 879
 }
 Group {
  name Write_ResolveACES_ODT_LUT9
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 458
- ypos 959
+ ypos 995
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate CAMDRT
@@ -2244,7 +2294,7 @@ Group {
   ypos 353
  }
 end_group
-push $Nce2fae00
+push $N478c4e00
 Group {
  name DRT_CAM2
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value ssts_luminance.2]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -2348,6 +2398,7 @@ Group {
  addUserKnob {7 background_luminance l "background luminance" t "the ZCAM background luminance in Cd/sqm" R 0 100}
  background_luminance 10
  addUserKnob {6 clamp_output l "clamp output" t "clamp the output values between 0,0 and 1.0" +STARTLINE}
+ clamp_output true
  addUserKnob {6 soft_clamp l "soft clamp output" t "Soft clamp display output values so that no negative RGB channels occur" -STARTLINE}
  soft_clamp true
  addUserKnob {26 ""}
@@ -2493,7 +2544,22 @@ Dot {
  xpos 354
  ypos 692
 }
-set Nd041b000 [stack 0]
+set N27ad2800 [stack 0]
+Expression {
+ expr0 isnan(r)?0:r
+ expr1 isnan(g)?0:g
+ expr2 isnan(b)?0:b
+ name killNan2
+ xpos 366
+ ypos 709
+}
+Clamp {
+ minimum -65535
+ maximum 65535
+ name Clamp4
+ xpos 366
+ ypos 733
+}
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -2501,7 +2567,7 @@ Colorspace {
  name Colorspace6
  label "XYZ to AP0"
  xpos 366
- ypos 733
+ ypos 769
 }
 ColorMatrix {
  matrix {
@@ -2513,7 +2579,7 @@ ColorMatrix {
  name ColorMatrix3
  label "APS4 to XYZ"
  xpos 366
- ypos 765
+ ypos 801
 }
 Expression {
  temp_name0 cut_lin
@@ -2531,21 +2597,21 @@ Expression {
  name lin2log2
  label ACEScct
  xpos 366
- ypos 797
+ ypos 833
 }
-push $Nd041b000
+push $N27ad2800
 Switch {
  inputs 2
  which {{master.inverseMode}}
  name Switch5
  xpos 320
- ypos 848
+ ypos 884
 }
 Group {
  name Write_ResolveACES_ODT_LUT7
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 320
- ypos 962
+ ypos 998
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate CAMDRT
@@ -2588,13 +2654,28 @@ Group {
   ypos 353
  }
 end_group
-push $Nce2ffa00
+push $N47a9a000
 Dot {
  name Dot7
  xpos 51
  ypos 684
 }
-set Nd0c01800 [stack 0]
+set N27ada800 [stack 0]
+Expression {
+ expr0 isnan(r)?0:r
+ expr1 isnan(g)?0:g
+ expr2 isnan(b)?0:b
+ name killNan
+ xpos 63
+ ypos 701
+}
+Clamp {
+ minimum -65535
+ maximum 65535
+ name Clamp6
+ xpos 63
+ ypos 725
+}
 Colorspace {
  illuminant_in ACES
  primary_in ACES
@@ -2602,7 +2683,7 @@ Colorspace {
  name Colorspace3
  label "XYZ to AP0"
  xpos 63
- ypos 725
+ ypos 761
 }
 ColorMatrix {
  matrix {
@@ -2614,7 +2695,7 @@ ColorMatrix {
  name ColorMatrix1
  label "APS4 to XYZ"
  xpos 63
- ypos 757
+ ypos 793
 }
 Expression {
  temp_name0 cut_lin
@@ -2632,21 +2713,21 @@ Expression {
  name lin2log
  label ACEScct
  xpos 63
- ypos 789
+ ypos 825
 }
-push $Nd0c01800
+push $N27ada800
 Switch {
  inputs 2
  which {{master.inverseMode}}
  name Switch3
  xpos 17
- ypos 837
+ ypos 873
 }
 Group {
  name Write_ResolveACES_ODT_LUT12
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 17
- ypos 967
+ ypos 1003
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate CAMDRT
@@ -2689,6 +2770,20 @@ Group {
   ypos 353
  }
 end_group
+push $N49b6b800
+push $N478c4e00
+push $N408d5800
+Viewer {
+ inputs 3
+ frame_range 1-100
+ colour_sample_bbox {0.1907483041 0.9801360369 0.1912925243 0.9806802869}
+ gl_buffer_depth half-float
+ viewerProcess None
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 962
+ ypos 909
+}
 NoOp {
  inputs 0
  name master
@@ -2696,6 +2791,7 @@ NoOp {
  label "rev\[value revision]"
  note_font_size 50
  note_font_color 0x347216ff
+ selected true
  xpos 832
  ypos 5
  addUserKnob {20 User}
