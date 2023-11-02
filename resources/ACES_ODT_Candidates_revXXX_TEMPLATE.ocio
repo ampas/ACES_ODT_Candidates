@@ -1411,14 +1411,14 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
+        ##- !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec709.cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec709_inverse.cube, interpolation: tetrahedral}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
-        - !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
+        ##- !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
 
 
   - !<ColorSpace>
@@ -1433,14 +1433,14 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
+        ##- !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX P3D65.cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX P3D65_inverse.cube, interpolation: tetrahedral}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
-        - !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
+        ##- !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
 
 
   - !<ColorSpace>
@@ -1455,14 +1455,14 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
+        ##- !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX P3D65 (Rec709 sim).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX P3D65 (Rec709 sim)_inverse.cube, interpolation: tetrahedral}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
-        - !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
+        ##- !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
 
 
   - !<ColorSpace>
@@ -1477,14 +1477,14 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
+        ##- !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 540nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 540nit Limited)_inverse.cube, interpolation: tetrahedral}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
-        - !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
+        ##- !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
 
 
 
@@ -1500,14 +1500,14 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
+        ##- !<MatrixTransform> {matrix: [0.951951, 0.0209747, 0.0270741, 0.0, -2.54847e-05, 1.0012, -0.00117955, 0.0, 0.235717, 0.0380684, 0.726218, 0.0,0.0,0.0,0.0,0.0]}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
-        - !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
+        ##- !<MatrixTransform> {matrix: [1.0602696993490630352, -0.020707946293620518025, -0.039561500713555857337, 0.0, -0.00037895018235437337774, 0.99874715932872877771, 0.0016363295138901577348, 0.0,-0.34412417028267152872,-0.045632979881655964124, 1.3897521485521298975, 0,0,0,0,0]}
 
 
 
