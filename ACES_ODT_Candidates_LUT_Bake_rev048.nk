@@ -2,27 +2,27 @@
 version 14.0 v1
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="25" w="3008" h="1562" maximized="1" screen="0">
+    <window x="0" y="25" w="2560" h="1470" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="2345" stretch="1"/>
+            <split size="1683" stretch="1"/>
             <splitter orientation="2">
-                <split size="905"/>
+                <split size="851"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="637"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <split size="599"/>
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
-            <split size="615"/>
-            <dock id="" activePageId="Properties.1">
+            <split size="829"/>
+            <dock id="" activePageId="Properties.1" focus="true">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
                 <page id="Scenegraph.1"/>
@@ -139,19 +139,19 @@ Group {
   xpos -6
   ypos 74
  }
-set Ndbdee00 [stack 0]
+set Ne3b84000 [stack 0]
  Dot {
   name Dot2
   xpos 234
   ypos 74
  }
-set Ndbdf200 [stack 0]
+set Ne3b5b600 [stack 0]
  Dot {
   name Dot3
   xpos 474
   ypos 74
  }
-set Ndbdf600 [stack 0]
+set Ne3bfd600 [stack 0]
  Expression {
   expr0 r<0?0:((log(r)/log(2)+2.5)*50+425)/1023
   expr1 g<0?0:((log(g)/log(2)+2.5)*50+425)/1023
@@ -162,7 +162,7 @@ set Ndbdf600 [stack 0]
   xpos 440
   ypos 108
  }
-push $Ndbdf600
+push $Ne3bfd600
  Expression {
   expr0 pow(2,((r*1023)-425)/50-2.5)
   expr1 pow(2,((g*1023)-425)/50-2.5)
@@ -180,7 +180,7 @@ push $Ndbdf600
   xpos 440
   ypos 190
  }
-push $Ndbdf200
+push $Ne3b5b600
  Expression {
   expr0 r<0?(log(pow(2,-16))/log(2)+9.72)/17.52:r<pow(2,-15)?(log(pow(2,-16)+r*0.5)/log(2)+9.72)/17.52:(log(r)/log(2)+9.72)/17.52
   expr1 g<0?(log(pow(2,-16))/log(2)+9.72)/17.52:g<pow(2,-15)?(log(pow(2,-16)+g*0.5)/log(2)+9.72)/17.52:(log(g)/log(2)+9.72)/17.52
@@ -191,7 +191,7 @@ push $Ndbdf200
   xpos 200
   ypos 104
  }
-push $Ndbdf200
+push $Ne3b5b600
  Expression {
   expr0 r<(9.72-15)/17.52?(pow(2,(r*17.52-9.72))-pow(2,-16))*2:pow(2,(r*17.52-9.72))
   expr1 g<(9.72-15)/17.52?(pow(2,(g*17.52-9.72))-pow(2,-16))*2:pow(2,(g*17.52-9.72))
@@ -209,7 +209,7 @@ push $Ndbdf200
   xpos 200
   ypos 190
  }
-push $Ndbdee00
+push $Ne3b84000
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -228,7 +228,7 @@ push $Ndbdee00
   xpos -40
   ypos 108
  }
-push $Ndbdee00
+push $Ne3b84000
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -266,7 +266,7 @@ push $Ndbdee00
   xpos -40
   ypos 430
  }
-push $Ndbdf600
+push $Ne3bfd600
  Expression {
   temp_name0 StepsPerStop
   temp_expr0 50
@@ -481,13 +481,13 @@ Dot {
  xpos 16
  ypos -51
 }
-set Ndbfd000 [stack 0]
+set Ne3c5ce00 [stack 0]
 Dot {
  name Dot5
  xpos 84
  ypos -4
 }
-push $Ndbfd000
+push $Ne3c5ce00
 Expression {
  temp_name0 cut_lin
  temp_expr0 0.0078125
@@ -532,13 +532,13 @@ Reformat {
  xpos -19
  ypos 192
 }
-set Ndbeb600 [stack 0]
+set Ne3c65600 [stack 0]
 Dot {
  name Dot3
  xpos 154
  ypos 284
 }
-push $Ndbeb600
+push $Ne3c65600
 ColorMatrix {
  matrix {
      {1.009929895 -0.01972960308 -0.03755422309}
@@ -573,7 +573,7 @@ Dot {
  xpos 15
  ypos 411
 }
-set Ndbef400 [stack 0]
+set Nc4445600 [stack 0]
 Group {
  name DRT_CAM4
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -830,7 +830,7 @@ Reformat {
  xpos 17
  ypos 652
 }
-set Neaa3e00 [stack 0]
+set Ne43a3200 [stack 0]
 Group {
  name SDR_to_HDR3
  xpos -309
@@ -867,7 +867,7 @@ Group {
   ypos 14
  }
 end_group
-push $Ndbef400
+push $Nc4445600
 Group {
  name DRT_CAM1
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1115,9 +1115,9 @@ Group {
   ypos -84
  }
 end_group
-set N9d4b2a00 [stack 0]
-push $Ndbef400
-push $Ndbef400
+set Nc42eb200 [stack 0]
+push $Nc4445600
+push $Nc4445600
 Group {
  name DRT_CAM7
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1379,7 +1379,7 @@ Dot {
  xpos 354
  ypos 692
 }
-set Ndc15c00 [stack 0]
+set Ne342f800 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -1436,7 +1436,7 @@ Expression {
  xpos 366
  ypos 833
 }
-push $Ndc15c00
+push $Ne342f800
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -1444,7 +1444,7 @@ Switch {
  xpos 320
  ypos 884
 }
-set Nead2000 [stack 0]
+set Nd322b000 [stack 0]
 Viewer {
  inputs 3
  frame_range 1-100
@@ -1456,13 +1456,13 @@ Viewer {
  xpos 602
  ypos 1074
 }
-push $Neaa3e00
+push $Ne43a3200
 Dot {
  name Dot7
  xpos 51
  ypos 684
 }
-set Nead4e00 [stack 0]
+set Nd3239a00 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -1519,7 +1519,7 @@ Expression {
  xpos 63
  ypos 825
 }
-push $Nead4e00
+push $Nd3239a00
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -1574,7 +1574,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ndbef400
+push $Nc4445600
 Group {
  name DRT_CAM8
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1836,7 +1836,7 @@ Dot {
  xpos 182
  ypos 688
 }
-set Ndc19000 [stack 0]
+set Ne43b1800 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -1893,7 +1893,7 @@ Expression {
  xpos 194
  ypos 829
 }
-push $Ndc19000
+push $Ne43b1800
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -1948,7 +1948,7 @@ Group {
   ypos 353
  }
 end_group
-push $Nead2000
+push $Nd322b000
 Group {
  name Write_ResolveACES_ODT_LUT7
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
@@ -1996,7 +1996,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ndbef400
+push $Nc4445600
 Group {
  name DRT_CAM5
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -2258,7 +2258,7 @@ Dot {
  xpos 492
  ypos 690
 }
-set Nc3ed400 [stack 0]
+set Ne4454800 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -2315,7 +2315,7 @@ Expression {
  xpos 504
  ypos 831
 }
-push $Nc3ed400
+push $Ne4454800
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -2370,7 +2370,7 @@ Group {
   ypos 353
  }
 end_group
-push $N9d4b2a00
+push $Nc42eb200
 Reformat {
  type scale
  scale 7
@@ -2385,7 +2385,7 @@ Dot {
  xpos 645
  ypos 685
 }
-set Nc3f8a00 [stack 0]
+set Ne4450400 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -2442,7 +2442,7 @@ Expression {
  xpos 657
  ypos 826
 }
-push $Nc3f8a00
+push $Ne4450400
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -2497,7 +2497,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ndbef400
+push $Nc4445600
 Group {
  name DRT_CAM2
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -2759,7 +2759,7 @@ Dot {
  xpos 808
  ypos 690
 }
-set Nc418400 [stack 0]
+set Ne4472200 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -2816,7 +2816,7 @@ Expression {
  xpos 820
  ypos 831
 }
-push $Nc418400
+push $Ne4472200
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -2871,7 +2871,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ndbef400
+push $Nc4445600
 Group {
  name DRT_CAM3
  label "Input: \[value encoding_in] / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value peakLuminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -3133,7 +3133,7 @@ Dot {
  xpos 969
  ypos 690
 }
-set Nc445c00 [stack 0]
+set Ne44b3200 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -3190,7 +3190,7 @@ Expression {
  xpos 981
  ypos 831
 }
-push $Nc445c00
+push $Ne44b3200
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -3245,6 +3245,13 @@ Group {
   ypos 353
  }
 end_group
+Colorspace {
+ inputs 0
+ primary_out DCI-P3
+ name Colorspace12
+ xpos 1335
+ ypos 267
+}
 NoOp {
  inputs 0
  name master
@@ -3252,8 +3259,9 @@ NoOp {
  label "rev\[value revision]"
  note_font_size 50
  note_font_color 0x347216ff
+ selected true
  xpos 831
- ypos 6
+ ypos 5
  addUserKnob {20 User}
  addUserKnob {1 revision}
  revision 048
