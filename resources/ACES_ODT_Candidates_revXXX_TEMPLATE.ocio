@@ -31,11 +31,11 @@ displays:
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - P3D65, colorspace: Candidate CAMDRT revXXX - P3D65}
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - P3D65 (Rec709 sim), colorspace: Candidate CAMDRT revXXX - P3D65 (Rec709 sim)}
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim), colorspace: Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)}
-    - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited), colorspace: Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)}
+    - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited), colorspace: Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited)}
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited), colorspace: Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)}
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (Rec709 Limited)}
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 Limited)}
-    - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 540nit Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 540nit Limited)}
+    - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 500nit Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 500nit Limited)}
     - !<View> {name: ACES 2.0 Candidate CAMDRT revXXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 1000nit Limited)}
     - !<View> {name: Raw, colorspace: Utility - Raw}
     - !<View> {name: Log, colorspace: Input - ADX - ADX10}
@@ -1457,22 +1457,22 @@ colorspaces:
         - !<ExponentTransform> {value: [2.6, 2.6, 2.6, 1], direction: inverse}
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)
+    name: Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Testing Candiadate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited) Output Transform
+      ACES 2.0 Testing Candiadate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited) Output Transform
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
-        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 540nit Limited).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 500nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 540nit Limited)_inverse.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2100 (P3D65 500nit Limited)_inverse.cube, interpolation: tetrahedral}
         - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
 
 
@@ -1607,18 +1607,18 @@ colorspaces:
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 540nit Limited)
+    name: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 500nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 540nit Limited)
+      ACES 2.0 Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 500nit Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.2100 (P3D65 540nit Limited)}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited)}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
