@@ -31,7 +31,7 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
 ## Filmlight Baselight
 
 ### 1. Adding the DRTs to Baselight:
-- Copy all the files contained in `ACES2_Candidates_rev053` to the colourspace folder 
+- Copy all the files contained in `ACES2_Candidates_rev055` to the colourspace folder 
     - Linux & Mac: `/vol/.support/etc/colourspaces`
 
 - Restart Baselight
@@ -48,7 +48,7 @@ This can be enabled via the `Preferences -> Color Management -> Enable macOS HDR
     - Windows: `C:\Users\<User>\AppData\Roaming\Blackmagic Design\DaVinci Resolve\Support\ACES Transforms\ODT`
     - Linux: `~/.local/share/DaVinciResolve/ACES Transforms/ODT`
 
-- Copy the `ACES2 Candidates rev053` folder into the ODT folder.
+- Copy the `ACES2 Candidates rev055` folder into the ODT folder.
 - Start Resolve.
 
 There are two pathways for testing the candidate transform in Resolve.
