@@ -10,6 +10,16 @@ MasteringSpec = [struct space = "Video_Full", whitepoint = "None"];
 
 ViewingConditions = 
 [struct
+  ( "Cinema-48") = [struct  
+      Name = "P3  - 48 nits",         
+      Type = "cube",  
+      InSpace = "ACEScct_AP0",  
+      OutSpace = "DCI_P3D65",      
+      Forward = "replaceForward_P3D65.cub",             
+      Inverse = "replaceForward_P3D65_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "DCI_P3D65", whitepoint = "None"],
+ ],
  ( "Video-100") = [struct  
       Name = "709 - 100 nits",         
       Type = "cube",  
