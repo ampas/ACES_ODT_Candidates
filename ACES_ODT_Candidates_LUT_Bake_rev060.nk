@@ -2,24 +2,23 @@
 version 15.0 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-2564" y="30" w="2560" h="1470" screen="1">
+    <window x="0" y="25" w="2048" h="1155" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1897" stretch="1"/>
+            <split size="1385" stretch="1"/>
             <splitter orientation="2">
-                <split size="851"/>
+                <split size="666"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="599"/>
+                <split size="469"/>
                 <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
-                    <page id="DAG.5"/>
                 </dock>
             </splitter>
             <split size="615"/>
@@ -223,13 +222,13 @@ Dot {
  xpos 16
  ypos -51
 }
-set Ncf2e9800 [stack 0]
+set N717b1600 [stack 0]
 Dot {
  name Dot5
  xpos 84
  ypos -4
 }
-push $Ncf2e9800
+push $N717b1600
 Expression {
  temp_name0 cut_lin
  temp_expr0 0.0078125
@@ -274,13 +273,13 @@ Reformat {
  xpos -19
  ypos 192
 }
-set Nd038fa00 [stack 0]
+set N70e20200 [stack 0]
 Dot {
  name Dot3
  xpos 154
  ypos 284
 }
-push $Nd038fa00
+push $N70e20200
 ColorMatrix {
  matrix {
      {1.009929895 -0.01972960308 -0.03755422309}
@@ -315,7 +314,7 @@ Dot {
  xpos 15
  ypos 411
 }
-set Ncd0c2400 [stack 0]
+set N71786400 [stack 0]
 Group {
  name DRT_CAMv10
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -326,7 +325,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -610,7 +608,7 @@ Reformat {
  xpos 17
  ypos 652
 }
-set N8e7ffc00 [stack 0]
+set N2985c200 [stack 0]
 Group {
  name SDR_to_HDR3
  xpos -309
@@ -647,13 +645,13 @@ Group {
   ypos 14
  }
 end_group
-push $N8e7ffc00
+push $N2985c200
 Dot {
  name Dot7
  xpos 51
  ypos 684
 }
-set Nd037e000 [stack 0]
+set N6f95a600 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -710,7 +708,7 @@ Expression {
  xpos 63
  ypos 825
 }
-push $Nd037e000
+push $N6f95a600
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -765,7 +763,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncd0c2400
+push $N71786400
 Group {
  name DRT_CAMv2
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -776,7 +774,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -1065,7 +1062,7 @@ Dot {
  xpos 182
  ypos 688
 }
-set Nceafac00 [stack 0]
+set N70a5a800 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -1122,7 +1119,7 @@ Expression {
  xpos 194
  ypos 829
 }
-push $Nceafac00
+push $N70a5a800
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -1290,19 +1287,19 @@ Group {
   xpos -6
   ypos 74
  }
-set Nceb1be00 [stack 0]
+set N2988ca00 [stack 0]
  Dot {
   name Dot2
   xpos 234
   ypos 74
  }
-set Nceb1c200 [stack 0]
+set N2988ce00 [stack 0]
  Dot {
   name Dot3
   xpos 474
   ypos 74
  }
-set Nceb1c600 [stack 0]
+set N2988d200 [stack 0]
  Expression {
   expr0 r<0?0:((log(r)/log(2)+2.5)*50+425)/1023
   expr1 g<0?0:((log(g)/log(2)+2.5)*50+425)/1023
@@ -1313,7 +1310,7 @@ set Nceb1c600 [stack 0]
   xpos 440
   ypos 108
  }
-push $Nceb1c600
+push $N2988d200
  Expression {
   expr0 pow(2,((r*1023)-425)/50-2.5)
   expr1 pow(2,((g*1023)-425)/50-2.5)
@@ -1331,7 +1328,7 @@ push $Nceb1c600
   xpos 440
   ypos 190
  }
-push $Nceb1c200
+push $N2988ce00
  Expression {
   expr0 r<0?(log(pow(2,-16))/log(2)+9.72)/17.52:r<pow(2,-15)?(log(pow(2,-16)+r*0.5)/log(2)+9.72)/17.52:(log(r)/log(2)+9.72)/17.52
   expr1 g<0?(log(pow(2,-16))/log(2)+9.72)/17.52:g<pow(2,-15)?(log(pow(2,-16)+g*0.5)/log(2)+9.72)/17.52:(log(g)/log(2)+9.72)/17.52
@@ -1342,7 +1339,7 @@ push $Nceb1c200
   xpos 200
   ypos 104
  }
-push $Nceb1c200
+push $N2988ce00
  Expression {
   expr0 r<(9.72-15)/17.52?(pow(2,(r*17.52-9.72))-pow(2,-16))*2:pow(2,(r*17.52-9.72))
   expr1 g<(9.72-15)/17.52?(pow(2,(g*17.52-9.72))-pow(2,-16))*2:pow(2,(g*17.52-9.72))
@@ -1360,7 +1357,7 @@ push $Nceb1c200
   xpos 200
   ypos 190
  }
-push $Nceb1be00
+push $N2988ca00
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -1379,7 +1376,7 @@ push $Nceb1be00
   xpos -40
   ypos 108
  }
-push $Nceb1be00
+push $N2988ca00
  Expression {
   temp_name0 cut_lin
   temp_expr0 0.0078125
@@ -1417,7 +1414,7 @@ push $Nceb1be00
   xpos -40
   ypos 430
  }
-push $Nceb1c600
+push $N2988d200
  Expression {
   temp_name0 StepsPerStop
   temp_expr0 50
@@ -1435,7 +1432,7 @@ push $Nceb1c600
   ypos 104
  }
 end_group
-push $Ncd0c2400
+push $N71786400
 Group {
  name DRT_CAMv5
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1446,7 +1443,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -1721,7 +1717,7 @@ Group {
   ypos -84
  }
 end_group
-set Ncd0c1e00 [stack 0]
+set N29890000 [stack 0]
 Reformat {
  type scale
  scale 7
@@ -1736,7 +1732,7 @@ Dot {
  xpos 645
  ypos 685
 }
-set Ncd3a5400 [stack 0]
+set N3f350200 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -1793,7 +1789,7 @@ Expression {
  xpos 657
  ypos 826
 }
-push $Ncd3a5400
+push $N3f350200
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -1848,7 +1844,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncd0c2400
+push $N71786400
 Group {
  name DRT_CAMv4
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -1859,7 +1855,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -2148,7 +2143,7 @@ Dot {
  xpos 492
  ypos 690
 }
-set Nad113600 [stack 0]
+set N72cc8e00 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -2205,7 +2200,7 @@ Expression {
  xpos 504
  ypos 831
 }
-push $Nad113600
+push $N72cc8e00
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -2260,7 +2255,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncd0c2400
+push $N71786400
 Group {
  name DRT_CAMv3
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -2271,7 +2266,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -2560,7 +2554,7 @@ Dot {
  xpos 354
  ypos 692
 }
-set Nd03e2000 [stack 0]
+set N298c5a00 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -2617,7 +2611,7 @@ Expression {
  xpos 366
  ypos 833
 }
-push $Nd03e2000
+push $N298c5a00
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -2672,7 +2666,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncd0c2400
+push $N71786400
 Group {
  name DRT_CAMv7
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -2683,7 +2677,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -2972,7 +2965,7 @@ Dot {
  xpos 969
  ypos 690
 }
-set Nad222000 [stack 0]
+set N72d01600 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -3029,7 +3022,7 @@ Expression {
  xpos 981
  ypos 831
 }
-push $Nad222000
+push $N72d01600
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -3084,7 +3077,7 @@ Group {
   ypos 353
  }
 end_group
-push $Ncd0c2400
+push $N71786400
 Group {
  name DRT_CAMv6
  label "Input: \[value encoding_in]  / \[value primaries_in]\nLimit: \[value primaries_limit] / \[value white_limit] / \[value peak_luminance]nits\nOutput: \[value encoding_out] / \[value primaries_out]\n\[value toneScaleMode]\n\[file tail \[value BlinkScript1.kernelSourceFile]]"
@@ -3095,7 +3088,6 @@ Group {
  addUserKnob {26 input_div l Input}
  addUserKnob {4 encoding_in l encoding t "the input log or gamma encoding" M {Linear ACEScct sRGB BT.1886 "Gamma 2.6" ST2084 "" ""}}
  addUserKnob {4 primaries_in l primaries t "the input primaries and white point" -STARTLINE M {AP0-ACES AP1-ACES sRGB/Rec.709-D65 Rec.2020-D65 P3-D65 P3-DCI "" "" ""}}
- primaries_in AP1-ACES
  addUserKnob {6 ap1_clamp l "AP1 clamp" t "Clamp input chromaticities to AP1 rendering space" +STARTLINE}
  ap1_clamp true
  addUserKnob {26 ""}
@@ -3384,7 +3376,7 @@ Dot {
  xpos 808
  ypos 690
 }
-set Ncd3bf400 [stack 0]
+set N3f36da00 [stack 0]
 Expression {
  expr0 isnan(r)?0:r
  expr1 isnan(g)?0:g
@@ -3441,7 +3433,7 @@ Expression {
  xpos 820
  ypos 831
 }
-push $Ncd3bf400
+push $N3f36da00
 Switch {
  inputs 2
  which {{master.inverseMode}}
@@ -3496,14 +3488,12 @@ Group {
   ypos 353
  }
 end_group
-push $Ncd0c1e00
+push $N29890000
 push 0
 push 0
 Viewer {
  inputs 3
- frame 1
  frame_range 1-100
- input_number 1
  colour_sample_bbox {0.03296703473 -0.7857142687 0.04395604506 -0.7747252584}
  gl_buffer_depth half-float
  viewerProcess None
