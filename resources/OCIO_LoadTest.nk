@@ -1,0 +1,95 @@
+#! /Applications/Nuke15.0v5/Nuke15.0v5.app/Contents/MacOS/libnuke-15.0.5.dylib -nx
+version 15.0 v5
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="25" w="3008" h="1554" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="2345" stretch="1"/>
+            <splitter orientation="2">
+                <split size="901"/>
+                <dock id="" activePageId="Viewer.1" focus="true">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="633"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+                <page id="Scenegraph.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/afry/GitHub/ACES_ODT_Candidates/resources/OCIO_LoadTest.nk
+ frame 2
+ last_frame 80
+ lock_range true
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement OCIO
+ OCIO_config custom
+ customOCIOConfigPath /Users/afry/GitHub/ACES_ODT_Candidates/OCIO/ACES_ODT_Candidates_rev060_All.ocio
+ defaultViewerLUT "OCIO LUTs"
+ workingSpaceLUT scene_linear
+ monitorLut "ACES 2.0 Candidate CAMDRT rev060 - Rec.709 (ACES)"
+ monitorOutLUT "ACES 2.0 Candidate CAMDRT rev060 - Rec.709 (ACES)"
+ int8Lut matte_paint
+ int16Lut texture_paint
+ logLut compositing_log
+ floatLut scene_linear
+}
+Read {
+ inputs 0
+ file_type exr
+ file /Users/afry/GitHub/ACES_ODT_SampleFrames/ACES_OT_VWG_SampleFrames/ACES_OT_VWG_SampleFrames.####.exr
+ format "1920 1080 0 0 1920 1080 1 HD_1080"
+ last 80
+ origlast 80
+ origset true
+ colorspace default
+ name Read1
+ xpos -33
+ ypos -249
+}
+set N22971000 [stack 0]
+OCIOColorSpace {
+ in_colorspace scene_linear
+ out_colorspace "ACES - ACEScct"
+ name OCIOColorSpace1
+ xpos -33
+ ypos -42
+}
+OCIOFileTransform {
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/OCIO/luts/ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec709.cube"
+ version 5
+ working_space scene_linear
+ name OCIOFileTransform1
+ xpos -33
+ ypos -18
+}
+push $N22971000
+Viewer {
+ frame 2
+ frame_range 1-80
+ gl_buffer_depth half-float
+ viewerProcess "ACES 2.0 Candidate CAMDRT rev060 - DisplayP3 (Rec.709 Limited) (ACES)"
+ monitorOutNDISenderName "Nuke - untitled - Viewer1"
+ name Viewer1
+ selected true
+ xpos -195
+ ypos -41
+}

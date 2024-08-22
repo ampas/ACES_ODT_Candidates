@@ -1411,12 +1411,12 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec709.cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec709_inverse.cube, interpolation: tetrahedral}
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
+        - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
   - !<ColorSpace>
@@ -1431,12 +1431,12 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 P3D65.cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 P3D65_inverse.cube, interpolation: tetrahedral}
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
+        - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
   - !<ColorSpace>
@@ -1468,12 +1468,12 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec2100 (P3D65 500nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec2100 (P3D65 500nit Limited)_inverse.cube, interpolation: tetrahedral}
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
+        - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
 
@@ -1489,12 +1489,12 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: inverse}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec2100 (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
         - !<FileTransform> {src: ACES2_Candidates_rev060/ACES2 Candidate CAMDRT rev060 Rec2100 (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
-        - !<FileTransform> {src: ACEScct_to_linear.spi1d, interpolation: linear, direction: forward}
+        - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
 

@@ -1,0 +1,73 @@
+Name = "replaceTransformName";
+Type = "cube";
+InSpace = "ACEScct";
+OutSpace = "Video_Full";
+Forward ="replaceForward_Rec709.cub";
+Inverse = "replaceForward_Rec709_inverse.cub";
+HQ = 1;
+MasteringSpec = [struct space = "Video_Full", whitepoint = "None"];
+
+
+ViewingConditions = 
+[struct
+  ( "Cinema-48") = [struct  
+      Name = "P3  - 48 nits",         
+      Type = "cube",  
+      InSpace = "ACEScct",  
+      OutSpace = "DCI_P3D65",      
+      Forward = "replaceForward_P3D65.cub",             
+      Inverse = "replaceForward_P3D65_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "DCI_P3D65", whitepoint = "None"],
+ ],
+ ( "Video-100") = [struct  
+      Name = "709 - 100 nits",         
+      Type = "cube",  
+      InSpace = "ACEScct",  
+      OutSpace = "Video_Full",      
+      Forward = "replaceForward_Rec709.cub",             
+      Inverse = "replaceForward_Rec709_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "Video_Full", whitepoint = "None"],
+ ],
+  ( "VideoWide-100") = [struct  
+      Name = "P3  - 100 nits",         
+      Type = "cube",  
+      InSpace = "ACEScct",  
+      OutSpace = "DCI_P3D65",      
+      Forward = "replaceForward_P3D65.cub",             
+      Inverse = "replaceForward_P3D65_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "DCI_P3D65", whitepoint = "None"],
+ ],
+( "VideoWide-600") = [struct  
+      Name = "P3  - 600 nits",        
+      Type = "cube",  
+      InSpace = "ACEScct",  
+      OutSpace = "Rec2084_Rec2020",    
+      Forward = "replaceForward_Rec2100 (P3D65 500nit Limited).cub", 
+      Inverse = "replaceForward_Rec2100 (P3D65 500nit Limited)_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "DolbyPQ_P3D65_600nits", whitepoint = "None"],
+ ],
+ ( "VideoWide-1000") = [struct  
+      Name = "P3  - 1000 nits",        
+      Type = "cube",  
+      InSpace = "ACEScct",  
+      OutSpace = "Rec2084_Rec2020",    
+      Forward = "replaceForward_Rec2100 (P3D65 1000nit Limited).cub", 
+      Inverse = "replaceForward_Rec2100 (P3D65 1000nit Limited)_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "DolbyPQ_P3D65_1000nits", whitepoint = "None"],
+ ],
+ ( "VideoWide-4000") = [struct  
+      Name = "P3  - 4000 nits",        
+      Type = "cube",  
+      InSpace = "ACEScct",  
+      OutSpace = "Rec2084_Rec2020",    
+      Forward = "replaceForward_Rec2100 (P3D65 4000nit Limited).cub", 
+      Inverse = "replaceForward_Rec2100 (P3D65 4000nit Limited)_inverse.cub",
+      HQ=1, 
+      MasteringSpec = [struct space = "DolbyPQ", whitepoint = "None"],
+ ],
+];

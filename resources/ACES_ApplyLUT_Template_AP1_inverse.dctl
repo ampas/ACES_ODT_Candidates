@@ -1,0 +1,31 @@
+DEFINE_ACES_PARAM(IS_PARAMETRIC_ACES_TRANSFORM: 0)
+
+__DEVICE__ float acescct_to_lin(float in) {
+  if (in > 0.155251141552511f) {
+    return _powf( 2.0f, in*17.52f - 9.72f);
+  } else {
+    return (in - 0.0729055341958355f) / 10.5402377416545f;
+  }
+}
+
+
+__DEVICE__ float3 transform(int p_Width, int p_Height, int p_X, int p_Y, float p_R, float p_G, float p_B)
+{
+    const float3 res = APPLY_LUT(p_R, p_G, p_B, DRTLUT);
+
+    float r_lin = acescct_to_lin(res.x);
+    float g_lin = acescct_to_lin(res.y);
+    float b_lin = acescct_to_lin(res.z);
+    
+    // AP1 to AP0
+    float r = ( 0.695452f      * p_R) + (  0.140679f    * p_G) + (  0.163869f    * p_B);
+    float g = ( 0.0447946f     * p_R) + (  0.859671f    * p_G) + (  0.0955343f   * p_B);
+    float b = ( -0.00552588f   * p_R) + (  0.00402521f  * p_G) + (  1.0015f      * p_B);
+    
+    return make_float3(r, g, b);
+}
+
+
+DEFINE_CUBE_LUT(DRTLUT)
+{
+REPLACE_WITH_CUBE_DATA}
