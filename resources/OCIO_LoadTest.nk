@@ -2,7 +2,7 @@
 version 15.0 v5
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="25" w="3008" h="1554" maximized="1" screen="0">
+    <window x="0" y="25" w="3008" h="1554" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -34,7 +34,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/afry/GitHub/ACES_ODT_Candidates/resources/OCIO_LoadTest.nk
- frame 2
+ frame 59
  last_frame 80
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
@@ -63,9 +63,9 @@ Read {
  colorspace default
  name Read1
  xpos -33
- ypos -249
+ ypos -248
 }
-set N22971000 [stack 0]
+set N3883f200 [stack 0]
 OCIOColorSpace {
  in_colorspace scene_linear
  out_colorspace "ACES - ACEScct"
@@ -81,13 +81,13 @@ OCIOFileTransform {
  xpos -33
  ypos -18
 }
-push $N22971000
+push $N3883f200
 Viewer {
- frame 2
+ frame 59
  frame_range 1-80
  gl_buffer_depth half-float
  viewerProcess "ACES 2.0 Candidate CAMDRT rev060 - DisplayP3 (Rec.709 Limited) (ACES)"
- monitorOutNDISenderName "Nuke - untitled - Viewer1"
+ monitorOutNDISenderName "Nuke - OCIO_LoadTest - Viewer1"
  name Viewer1
  selected true
  xpos -195

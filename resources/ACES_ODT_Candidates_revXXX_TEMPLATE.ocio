@@ -1476,7 +1476,6 @@ colorspaces:
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
-
   - !<ColorSpace>
     name: Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)
     family: Output
@@ -1497,6 +1496,24 @@ colorspaces:
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
+  - !<ColorSpace>
+    name: Candidate CAMDRT revXXX - Rec.2020 HLG (P3D65 1000nit Limited)
+    family: Output
+    equalitygroup: ""
+    bitdepth: 32f
+    description: |
+      ACES 2.0 Testing Candiadate CAMDRT revXXX - Rec.2020 HLG (P3D65 1000nit Limited) Output Transform
+    isdata: false
+    allocation: uniform
+    allocationvars: [0, 1]
+    from_reference: !<GroupTransform>
+      children:
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2020 HLG (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
+    to_reference: !<GroupTransform>
+      children:
+        - !<FileTransform> {src: ACES2_Candidates_revXXX/ACES2 Candidate CAMDRT revXXX Rec2020 HLG (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
+        - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
   
   - !<ColorSpace>
