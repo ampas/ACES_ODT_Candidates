@@ -1,0 +1,56 @@
+DisplayName="ACEScct: ACEScct / AP0";
+BlackPoint=75;
+WhitePoint=568;
+
+Help = 
+"Primaries: AP0\n"
+"Tone curve: ACEScct\n"
+"Colour space for ACES 2.0 testing.\n"
+"This colour space is similar to ACEScc above black, but adds a toe for more traditional\n"
+"log-like colour grading behavior.\n";
+
+to_lin = upto("@@");
+vec4 convertToLinear(vec4 val)
+{   
+
+    float X_BRK = 0.0078125;
+    float Y_BRK = 0.155251141552511;
+    float A = 10.5402377416545;
+    float B = 0.0729055341958355;
+
+    vec3 v = min(val.rgb, vec3(7.5));
+    v.r = v.r > Y_BRK ? pow( 2.0, v.r*17.52-9.72) : (v.r - B) / A;
+    v.g = v.g > Y_BRK ? pow( 2.0, v.g*17.52-9.72) : (v.g - B) / A;
+    v.b = v.b > Y_BRK ? pow( 2.0, v.b*17.52-9.72) : (v.b - B) / A;
+ 
+    return vec4(v, val.a);
+}
+@@
+
+from_lin = upto("@@");
+vec4 convertFromLinear(vec4 val, int clip)
+{    
+
+    float X_BRK = 0.0078125;
+    float Y_BRK = 0.155251141552511;
+    float A = 10.5402377416545;
+    float B = 0.0729055341958355;
+    vec3 v = val.rgb;
+    v.r =  v.r <= X_BRK ?  A * v.r + B : (log2(v.r) + 9.72) / 17.52;
+    v.g =  v.g <= X_BRK ?  A * v.g + B : (log2(v.g) + 9.72) / 17.52;
+    v.b =  v.b <= X_BRK ?  A * v.b + B : (log2(v.b) + 9.72) / 17.52;
+
+    return vec4(v, val.a);
+}
+@@
+
+mat = [array
+       0.9999017,  0.0000000,  0.0000983,
+       0.3439664,  0.7281661, -0.0721325,
+       0.0000000,  0.0000000,  1.0000000];
+
+type = "scene";
+range = "full";
+Invisible = 1;
+DefaultHiddenUses = [set "Cursor","GradeResult","Input","Render",];
+ColourMetadata = [struct Primaries= "ACES-AP0" , TransferFunction="ACES-cct"];
