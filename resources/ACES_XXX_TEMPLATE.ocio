@@ -27,16 +27,16 @@ displays:
     - !<View> {name: ACES 1.2 - Rec.709, colorspace: Output - Rec.709}
     - !<View> {name: ACES 1.2 - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 (Rec709 Limited)}
     - !<View> {name: ACES 1.2 - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 (P3D65 1000nit Limited)}
-    - !<View> {name: ACES XXX - Rec.709, colorspace: Candidate CAMDRT revXXX - Rec.709}
-    - !<View> {name: ACES XXX - P3D65, colorspace: Candidate CAMDRT revXXX - P3D65}
-    - !<View> {name: ACES XXX - P3D65 (Rec709 sim), colorspace: Candidate CAMDRT revXXX - P3D65 (Rec709 sim)}
-    - !<View> {name: ACES XXX - Rec.2100 (Rec709 sim), colorspace: Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)}
-    - !<View> {name: ACES XXX - Rec.2100 (P3D65 500nit Limited), colorspace: Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited)}
-    - !<View> {name: ACES XXX - Rec.2100 (P3D65 1000nit Limited), colorspace: Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)}
-    - !<View> {name: ACES XXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (Rec709 Limited)}
-    - !<View> {name: ACES XXX - DisplayP3 (P3D65 Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 Limited)}
-    - !<View> {name: ACES XXX - DisplayP3 (P3D65 500nit Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 500nit Limited)}
-    - !<View> {name: ACES XXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 1000nit Limited)}
+    - !<View> {name: ACES XXX - Rec.709, colorspace: ACES XXX Output - Rec.709}
+    - !<View> {name: ACES XXX - P3D65, colorspace: ACES XXX Output - P3D65}
+    - !<View> {name: ACES XXX - P3D65 (Rec709 sim), colorspace: ACES XXX Output - P3D65 (Rec709 sim)}
+    - !<View> {name: ACES XXX - Rec.2100 (Rec709 sim), colorspace: ACES XXX Output - Rec.2100 (Rec709 sim)}
+    - !<View> {name: ACES XXX - Rec.2100 (P3D65 500nit Limited), colorspace: ACES XXX Output - Rec.2100 (P3D65 500nit Limited)}
+    - !<View> {name: ACES XXX - Rec.2100 (P3D65 1000nit Limited), colorspace: ACES XXX Output - Rec.2100 (P3D65 1000nit Limited)}
+    - !<View> {name: ACES XXX - DisplayP3 (Rec.709 Limited), colorspace: Output - DisplayP3 ACES XXX Output (Rec709 Limited)}
+    - !<View> {name: ACES XXX - DisplayP3 (P3D65 Limited), colorspace: Output - DisplayP3 ACES XXX Output (P3D65 Limited)}
+    - !<View> {name: ACES XXX - DisplayP3 (P3D65 500nit Limited), colorspace: Output - DisplayP3 ACES XXX Output (P3D65 500nit Limited)}
+    - !<View> {name: ACES XXX - DisplayP3 (P3D65 1000nit Limited), colorspace: Output - DisplayP3 ACES XXX Output (P3D65 1000nit Limited)}
     - !<View> {name: Raw, colorspace: Utility - Raw}
     - !<View> {name: Log, colorspace: Input - ADX - ADX10}
 
@@ -1400,7 +1400,7 @@ colorspaces:
 
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - Rec.709
+    name: ACES XXX Output - Rec.709
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1412,15 +1412,15 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec709.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec709.cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec709_inverse.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec709_inverse.cube, interpolation: tetrahedral}
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - P3D65
+    name: ACES XXX Output - P3D65
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1432,15 +1432,15 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX P3D65.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output P3D65.cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX P3D65_inverse.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output P3D65_inverse.cube, interpolation: tetrahedral}
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - P3D65 (Rec709 sim)
+    name: ACES XXX Output - P3D65 (Rec709 sim)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1451,13 +1451,13 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.709}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES XXX Output - Rec.709}
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.82246882, 0.17753105, 0, 0, 0.03319578, 0.96680403, 0.00000001, 0, 0.01708578, 0.07240722, 0.9105069, 0, 0, 0, 0, 1]}
         - !<ExponentTransform> {value: [2.6, 2.6, 2.6, 1], direction: inverse}
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited)
+    name: ACES XXX Output - Rec.2100 (P3D65 500nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1469,15 +1469,15 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec2100 (P3D65 500nit Limited).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec2100 (P3D65 500nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec2100 (P3D65 500nit Limited)_inverse.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec2100 (P3D65 500nit Limited)_inverse.cube, interpolation: tetrahedral}
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)
+    name: ACES XXX Output - Rec.2100 (P3D65 1000nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1489,15 +1489,15 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec2100 (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec2100 (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec2100 (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec2100 (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
 
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - Rec.2020 HLG (P3D65 1000nit Limited)
+    name: ACES XXX Output - Rec.2020 HLG (P3D65 1000nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1509,15 +1509,15 @@ colorspaces:
     from_reference: !<GroupTransform>
       children:
         - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES - ACEScct}
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec2020 HLG (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec2020 HLG (P3D65 1000nit Limited).cube, interpolation: tetrahedral}
     to_reference: !<GroupTransform>
       children:
-        - !<FileTransform> {src: ACES2_Output_vXXX/ACES2 Output vXXX Rec2020 HLG (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
+        - !<FileTransform> {src: ACES_vXXX/ACES vXXX Output Rec2020 HLG (P3D65 1000nit Limited)_inverse.cube, interpolation: tetrahedral}
         - !<ColorSpaceTransform> {src: ACES - ACEScct, dst: ACES - ACES2065-1}
 
   
   - !<ColorSpace>
-    name: Candidate CAMDRT revXXX - Rec.2100 (Rec709 sim)
+    name: ACES XXX Output - Rec.2100 (Rec709 sim)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
@@ -1528,7 +1528,7 @@ colorspaces:
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.709}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES XXX Output - Rec.709}
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.627419, 0.329275, 0.0433056, 0, 0.0691005, 0.919539, 0.0113606, 0, 0.0163944, 0.088025, 0.895581, 0, 0, 0, 0, 1]}
         - !<MatrixTransform> {matrix: [100, 0, 0, 0, 0, 100, 0, 0, 0, 0, 100, 0, 0, 0, 0, 1], direction: forward}
@@ -1573,35 +1573,35 @@ colorspaces:
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate CAMDRT revXXX (Rec709 Limited)
+    name: Output - DisplayP3 ACES XXX Output (Rec709 Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate CAMDRT revXXX (Rec709 Limited)
+      ACES 2.0 Output - DisplayP3 ACES XXX Output (Rec709 Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.709}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES XXX Output - Rec.709}
         - !<ExponentTransform> {value: [2.4, 2.4, 2.4, 1], direction: forward}
         - !<MatrixTransform> {matrix: [0.82246882, 0.17753105, 0, 0, 0.03319578, 0.96680403, 0.00000001, 0, 0.01708578, 0.07240722, 0.9105069, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 Limited)
+    name: Output - DisplayP3 ACES XXX Output (P3D65 Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 Limited)
+      ACES 2.0 Output - DisplayP3 ACES XXX Output (P3D65 Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - P3D65}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES XXX Output - P3D65}
         - !<ExponentTransform> {value: [2.6, 2.6, 2.6, 1], direction: forward}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
@@ -1624,36 +1624,36 @@ colorspaces:
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 500nit Limited)
+    name: Output - DisplayP3 ACES XXX Output (P3D65 500nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 500nit Limited)
+      ACES 2.0 Output - DisplayP3 ACES XXX Output (P3D65 500nit Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.2100 (P3D65 500nit Limited)}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES XXX Output - Rec.2100 (P3D65 500nit Limited)}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
         - !<FileTransform> {src: srgbf.spi1d, interpolation: linear,direction: inverse}
 
   - !<ColorSpace>
-    name: Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 1000nit Limited)
+    name: Output - DisplayP3 ACES XXX Output (P3D65 1000nit Limited)
     family: Output
     equalitygroup: ""
     bitdepth: 32f
     description: |
-      ACES 2.0 Output - DisplayP3 Candidate CAMDRT revXXX (P3D65 1000nit Limited)
+      ACES 2.0 Output - DisplayP3 ACES XXX Output (P3D65 1000nit Limited)
     isdata: false
     allocation: uniform
     allocationvars: [0, 1]
     from_reference: !<GroupTransform>
       children:
-        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: Candidate CAMDRT revXXX - Rec.2100 (P3D65 1000nit Limited)}
+        - !<ColorSpaceTransform> {src: ACES - ACES2065-1, dst: ACES XXX Output - Rec.2100 (P3D65 1000nit Limited)}
         - !<FileTransform> {src: Dolby_PQ_10000_to_linear.spi1d, interpolation: linear, direction: forward}
         - !<CDLTransform> {slope: [.01, .01, .01]}
         - !<MatrixTransform> {matrix: [1.34355676, -0.28216884, -0.06138796, 0, -0.06529886, 1.07578766, -0.01048902, 0, 0.00282224, -0.01960121, 1.01677871, 0, 0, 0, 0, 1]}
