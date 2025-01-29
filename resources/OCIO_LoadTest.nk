@@ -34,7 +34,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/afry/GitHub/ACES_ODT_Candidates/resources/OCIO_LoadTest.nk
- frame 31
+ frame 22
  last_frame 80
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
@@ -63,8 +63,9 @@ Read {
  colorspace default
  name Read1
  xpos -33
- ypos -218
+ ypos -217
 }
+set N1783f600 [stack 0]
 OCIOColorSpace {
  in_colorspace scene_linear
  out_colorspace "ACES - ACEScct"
@@ -73,18 +74,19 @@ OCIOColorSpace {
  ypos -42
 }
 OCIOFileTransform {
- file "/Users/afry/GitHub/ACES_ODT_Candidates/OCIO/luts/ACES2_Output_v2.0.0/ACES2 Output v2.0.0 Rec709.cube"
+ file "/Users/afry/GitHub/ACES_ODT_Candidates/OCIO/luts/ACES_v2.0.0/ACES v2.0.0 Output Rec709.cube"
  version 3
  working_space scene_linear
  name OCIOFileTransform2
  xpos -33
  ypos -18
 }
+push $N1783f600
 Viewer {
- frame 31
+ frame 22
  frame_range 1-80
  gl_buffer_depth half-float
- viewerProcess "ACES 2.0.0 - DisplayP3 (Rec.709 Limited) (ACES)"
+ viewerProcess "ACES 2.0.0 - DisplayP3 (P3D65 1000nit Limited) (ACES)"
  monitorOutNDISenderName "Nuke - OCIO_LoadTest - Viewer1"
  name Viewer1
  xpos -195

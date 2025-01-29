@@ -1614,11 +1614,11 @@ Group {
  addUserKnob {1 target}
  target "Rec2100 (P3D65 4000nit Limited)"
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -1636,7 +1636,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 Rec2100 (P3D65 4000nit Limited)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output Rec2100 (P3D65 4000nit Limited)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -2032,7 +2032,7 @@ Group {
  name Write_ResolveACES_ODT_LUT11
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 774
- ypos 996
+ ypos 995
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate Output
@@ -2041,11 +2041,11 @@ Group {
  addUserKnob {1 target}
  target "Rec2100 (P3D65 500nit Limited)"
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -2063,7 +2063,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 Rec2100 (P3D65 500nit Limited)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output Rec2100 (P3D65 500nit Limited)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -2163,7 +2163,7 @@ Group {
  name Write_ResolveACES_ODT_LUT10
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 611
- ypos 1000
+ ypos 997
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate Output
@@ -2172,11 +2172,11 @@ Group {
  addUserKnob {1 target}
  target "Rec2100 (P3D65 1000nit Limited)"
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -2194,7 +2194,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 Rec2100 (P3D65 1000nit Limited)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output Rec2100 (P3D65 1000nit Limited)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -2577,8 +2577,8 @@ Switch {
 Group {
  name Write_ResolveACES_ODT_LUT9
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
- xpos 458
- ypos 994
+ xpos 468
+ ypos 988
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate Output
@@ -2587,11 +2587,11 @@ Group {
  addUserKnob {1 target}
  target P3D65
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -2609,7 +2609,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 P3D65_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output P3D65_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -2993,7 +2993,7 @@ Group {
  name Write_ResolveACES_ODT_LUT7
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 320
- ypos 999
+ ypos 998
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate Output
@@ -3002,11 +3002,11 @@ Group {
  addUserKnob {1 target}
  target "P3D65 (Rec709 sim)"
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -3024,7 +3024,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 P3D65 (Rec709 sim)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output P3D65 (Rec709 sim)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -3408,7 +3408,7 @@ Group {
  name Write_ResolveACES_ODT_LUT5
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
  xpos 148
- ypos 1002
+ ypos 1001
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate Output
@@ -3417,11 +3417,11 @@ Group {
  addUserKnob {1 target}
  target "Rec2100 (Rec709 sim)"
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -3439,7 +3439,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 Rec2100 (Rec709 sim)_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output Rec2100 (Rec709 sim)_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -3529,8 +3529,8 @@ Switch {
 Group {
  name Write_ResolveACES_ODT_LUT12
  label "\[python nuke.thisNode().knob('cubePath').evaluate().split('/').pop(-1)]"
- xpos 17
- ypos 1003
+ xpos 31
+ ypos 999
  addUserKnob {20 User}
  addUserKnob {1 candidate}
  candidate Output
@@ -3539,11 +3539,11 @@ Group {
  addUserKnob {1 target}
  target Rec709
  addUserKnob {2 cubePath}
- cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev\[value revision]/ACES2  \[value candidate] v\[value revision] \[value target].cube"
+ cubePath "DaVinci Resolve/ACES Transforms/ODT/ACES v\[value revision]/ACES2 v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 ocioCubePath}
- ocioCubePath "OCIO/luts/ACES2_Output_v\[value revision]/ACES2 \[value candidate] v\[value revision] \[value target].cube"
+ ocioCubePath "OCIO/luts/ACES_v\[value revision]/ACES v\[value revision] \[value candidate] \[value target].cube"
  addUserKnob {2 cubPath t "For truelight cub files"}
- cubPath "Baselight/ACES2_Output_v\[value revision]/ACES2_\[value candidate]_v\[value revision]_\[value target].cub"
+ cubPath "Baselight/ACES_v\[value revision]/ACES_v\[value revision]_\[value candidate]_\[value target].cub"
  addUserKnob {41 file l "output file" +INVISIBLE T GenerateLUT1.file}
  addUserKnob {41 generate l "Generate and Write LUT File" +INVISIBLE T GenerateLUT1.generate}
  addUserKnob {26 ""}
@@ -3561,7 +3561,7 @@ Group {
   ypos 213
  }
  GenerateLUT {
-  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES2 Candidates rev2.0.0/ACES2  Output v2.0.0 Rec709_inverse.cube"
+  file "/Users/afry/GitHub/ACES_ODT_Candidates/DaVinci Resolve/ACES Transforms/ODT/ACES v2.0.0/ACES2 v2.0.0 Output Rec709_inverse.cube"
   file_type .cube
   name GenerateLUT1
   xpos 411
@@ -3581,11 +3581,11 @@ NoOp {
  note_font_size 50
  note_font_color 0x347216ff
  xpos 839
- ypos 9
+ ypos 7
  addUserKnob {20 User}
  addUserKnob {1 revision}
  revision 2.0.0
- addUserKnob {22 bakeAllODTs T "### This code is embedded in the nukescript, not accessed from here\n\n\n\n\n\n\n\n\n\nimport os\nimport shutil\n\n\n\n\n\n\nmasterNode = nuke.thisNode()\n\n\n\n\n\n\nbakeLuts = nuke.thisNode().knob('bakeLUTs').value()\n\n\n\n\n\n\ndef cubeToCub(cubePath,cubPath):\n    inputCubePath = cubePath\n    ouputCubPath = cubPath\n\n\n\n\n\n    # read the cube\n    with open(inputCubePath) as f:\n        lines = f.readlines()\n\n\n\n\n\n    cubeSize = lines\[1].split(' ')\[1].replace('\\n','')\n\n\n\n\n\n    # header\n    tlHeader = '''# Truelight Cube v2.1\n    # iDims     3\n    # oDims     3\n    # width     CUBESIZE CUBESIZE CUBESIZE\\n\n    # Cube'''\n\n\n\n\n\n    tlHeader = tlHeader.replace('CUBESIZE',cubeSize)\n\n\n\n\n\n    # footer\n    tlFooter = '''\\n# end\\n'''\n\n\n\n\n\n    LUTlines = lines\[2:]\n    LUTlines = \[x.replace('\\n','').split(' ') for x in LUTlines]\n    LUTlines = \[\[float(i) for i in x] for x in LUTlines]\n    LUTlines = \[\[str(i) for i in x] for x in LUTlines]\n\n\n\n\n\n    ## remove decimal from 0.0 and 1.0\n    for i, x in enumerate(LUTlines):\n        for j, a in enumerate(x):\n            if '0.0' == a:\n                LUTlines\[i]\[j] = '0'\n            if '1.0' == a:\n                LUTlines\[i]\[j] = '1'\n\n\n\n\n\n    # reconstruct the cube string\n    stringLUTlines = \[]\n    for line in LUTlines:\n        stringLUTlines.append(' '.join(line))\n    newLUTStringBlock = '\\n'.join(stringLUTlines)\n\n\n\n\n\n    # join it all up\n    outputContents = tlHeader + '\\n' + newLUTStringBlock + '\\n' + tlFooter\n\n\n\n\n\n    # check directory for outputCubPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ouputCubPath)):\n        os.makedirs(os.path.dirname(ouputCubPath))\n\n\n\n\n\n    # write the file\n    with open(ouputCubPath, 'w') as f:\n        f.write(outputContents)\n\n\n\n\n\n\n\n\n\ndef bakeCandidateLUTfromNode(node,inverse=False):\n    candidate = node.knob('candidate').value()\n    revision = node.knob('revision').value()\n    target = node.knob('target').value()\n\n\n\n\n\n\n\n\n\n    nukeScriptDir = nuke.script_directory()\n    print(nukeScriptDir)\n    dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())\n    if inverse:\n        dctltemplatePath = dctltemplatePath.replace('.dctl','_inverse.dctl')\n\n\n\n\n\n    fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())\n    # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')\n    # print(flSpacePath)\n\n\n\n\n\n\n\n\n\n    cubePath = os.path.join(nukeScriptDir,node.knob('cubePath').evaluate())\n    cubePathClean = cubePath.replace('(','').replace(')','')\n    ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())\n    cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())\n    dctlColorspaceBufferTag = node.knob('dctlColorspaceBufferTag').getValue()\n\n\n\n\n\n    if inverse:\n        cubePath = cubePath.replace('.cube','_inverse.cube')\n        cubePathClean = cubePathClean.replace('.cube','_inverse.cube')\n        ocioCubePath = ocioCubePath.replace('.cube','_inverse.cube')\n        cubPath = cubPath.replace('.cub','_inverse.cub')\n\n\n\n\n\n    # replace LUT writer path with evaluated path\n    node.knob('file').setValue(cubePath)\n\n\n\n\n\n\n\n\n\n    # check cubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(cubePath)):\n        os.makedirs(os.path.dirname(cubePath))\n\n\n\n\n\n\n\n\n    # check ocioCubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ocioCubePath)):\n        os.makedirs(os.path.dirname(ocioCubePath))\n\n\n\n\n\n    dctlPath = cubePath.replace('.cube','.dctl')\n    if inverse:\n        dctlPath = dctlPath.replace('/ODT/','/IDT/')\n\n\n\n\n\n    # check dctlPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(dctlPath)):\n        os.makedirs(os.path.dirname(dctlPath))\n\n\n\n\n\n    cubeName = cubePath.split('/').pop(-1)\n    cubeNameClean = cubeName.replace('(','').replace(')','')\n\n\n\n\n\n\n\n\n\n\n    if bakeLuts == True:\n        node.knob('generate').execute()\n        # if cubeName does not match cubeNameClean copy cubeName to cubeNameClean\n        if cubePath != cubePathClean:\n            shutil.copy(cubePath,cubePathClean)\n\n\n\n\n\n\n    # read contents of cube file\n    with open(cubePathClean) as f:\n        cubelines = f.readlines()\n\n\n\n\n\n\n\n    ## write the dctl file\n    with open(dctltemplatePath) as f:\n        lines = f.readlines()\n    newLines = \[x.replace('replace.cube',cubeNameClean) for x in lines]\n    newLines = \[x.replace('DCTL_ACES_COLORSPACE_BUFFER_TAG_PLACEHOLDER',dctlColorspaceBufferTag) for x in lines]\n    # replace the string REPLACE_WITH_CUBE_DATA with the contents of cubelines\n    newLines = \[x.replace('REPLACE_WITH_CUBE_DATA',''.join(cubelines)) for x in newLines]\n\n\n\n\n\n    with open(dctlPath, 'w') as f:\n        f.write(''.join(newLines))\n\n\n\n\n\n\n\n\n\n    # Baselight\n    # convert cube to cub\n    cubeToCub(cubePath,cubPath)\n\n\n\n\n\n    # copy cubePath to ocioCubePath\n    shutil.copy(cubePath,ocioCubePath)\n\n\n\n\n\n    # # remove original cube if it isnt the same as the clean version\n    # if cubePathClean != cubePath:\n    #     # delete cubeName\n        # os.remove(cubePath)\n    if os.path.exists(cubePath):\n        os.remove(cubePath)\n    if os.path.exists(cubePathClean):\n        os.remove(cubePathClean)\n\n\n\n\n\n\n\n\n\n    ## write the fltransform\n    if target == 'Rec709':\n        if  inverse == False:\n            fltransformPath = cubPath.replace('.cub','.fltransform')\n            cubeToken = os.path.basename(cubPath.replace('_Rec709','').replace('.cub',''))\n            newFltransformName = fltransformPath.replace('_Rec709','')\n            with open(fltransformTemplatePath) as f:\n                lines = f.readlines()\n            newLines = \[x.replace('replaceTransformName','ACES 2.0 Candidate'+ candidate + ' rev'+revision) for x in lines]\n            newLines = \[x.replace('replaceForward',cubeToken) for x in newLines]\n            # newLines = \[x.replace('replaceForward_Rec2100',os.path.basename(cubPath).replace('Rec709','Rec2100').replace('.cub','')) for x in newLines]\n            with open(newFltransformName, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\n\n\n\n\n    # check ACEScct_AP0.flspace exists, if not, copy it\n    for flspace in \['/ACEScct_AP0.flspace','/ACEScct_APS4.flspace']:\n        flSpaceSourcePath = os.path.join(nukeScriptDir,'resources' + flspace)\n        flSpaceDestPath = os.path.dirname(cubPath) + flspace\n        if not os.path.exists(flSpaceDestPath):\n            shutil.copy(flSpaceSourcePath,flSpaceDestPath)\n\n\n\n\n\n\n\n\n\ndef createOCIOconfigs(revision):\n    nukeScriptDir = nuke.script_directory()\n    revision = nuke.thisNode().knob('revision').value()\n    ocioTemplateDir = os.path.join(nukeScriptDir,'resources/')\n    newOcioTemplateDir = os.path.join(nukeScriptDir,'OCIO/')\n    ocioConfigTemplates = \[x for x in os.listdir(ocioTemplateDir) if x.endswith('.ocio')]\n    ocioConfigTemplatePaths = \[os.path.join(ocioTemplateDir,x) for x in ocioConfigTemplates]\n\n\n    acesVersion = revision\n\n\n\n\n    activeViewDicts = \[]\n\n\n    activeViewList = \[\n        'ACES ACESVERSION - Rec.709',\n        'ACES ACESVERSION - P3D65',\n        'ACES ACESVERSION - P3D65 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 1000nit Limited)',\n        'ACES ACESVERSION - DisplayP3 (Rec.709 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        ]\n    activeViewList = \[x.replace('ACESVERSION',acesVersion) for x in activeViewList]\n    activeViewDicts.append(\{'name':'All','values':activeViewList\})\n\n\n\n\n    activeViewList = \[\n        'ACES ACESVERSION - DisplayP3 (Rec.709 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        ]\n    activeViewList = \[x.replace('ACESVERSION',acesVersion) for x in activeViewList]\n    activeViewDicts.append(\{'name':'DisplayP3','values':activeViewList\})\n\n\n\n\n    activeViewList = \[\n        'ACES ACESVERSION - Rec.709',\n        'ACES ACESVERSION - P3D65',\n        'ACES ACESVERSION - P3D65 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 1000nit Limited)',\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        ]\n    activeViewList = \[x.replace('ACESVERSION',acesVersion) for x in activeViewList]\n    activeViewDicts.append(\{'name':'Limited','values':activeViewList\})\n\n\n\n\n\n\n    for config in ocioConfigTemplatePaths:\n        for activeViewDict in activeViewDicts:\n\n\n\n\n\n            configName = config.split('/').pop(-1)\n            newConfigName = configName.replace('XXX','v'+revision).replace('TEMPLATE',activeViewDict\['name'])\n            newConfigPath = os.path.join(newOcioTemplateDir,newConfigName)\n            with open(config) as f:\n                lines = f.readlines()\n            activeViewsStrings = \[ x.replace('revXXX','rev'+revision) for x in  activeViewDict\['values']]\n            activeViews = ','.join(activeViewsStrings)\n            newLines = \[x.replace('XXX',revision).replace('ACTIVEVIEWSPLACEHOLDER',activeViews) for x in lines]\n            with open(newConfigPath, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\n\n\n\nODTWrites = \[]\nfor node in nuke.allNodes():\n    if 'Write_ResolveACES_ODT_LUT' in node.name():\n        ODTWrites.append(node)\n\n\n\n\n\n\n\n\nfor ODTWriteNode in ODTWrites:\n    masterNode.knob('inverseMode').setValue(False)\n    bakeCandidateLUTfromNode(ODTWriteNode)\n    masterNode.knob('inverseMode').setValue(True)\n    bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)\n\n\n\n\n\n## flip flag back to nukescript makes more sense when opened afterwards\nmasterNode.knob('inverseMode').setValue(False)\n\n\n\n\n\n# createOCIOconfigs(revision)\ncreateOCIOconfigs(nuke.thisNode().knob('revision').getValue())" +STARTLINE}
+ addUserKnob {22 bakeAllODTs T "### This code is embedded in the nukescript, not accessed from here\n\n\n\n\n\n\n\n\n\nimport os\nimport shutil\n\n\n\n\n\n\nmasterNode = nuke.thisNode()\n\n\n\n\n\n\nbakeLuts = nuke.thisNode().knob('bakeLUTs').value()\n\n\n\n\n\n\ndef cubeToCub(cubePath,cubPath):\n    inputCubePath = cubePath\n    ouputCubPath = cubPath\n\n\n\n\n\n    # read the cube\n    with open(inputCubePath) as f:\n        lines = f.readlines()\n\n\n\n\n\n    cubeSize = lines\[1].split(' ')\[1].replace('\\n','')\n\n\n\n\n\n    # header\n    tlHeader = '''# Truelight Cube v2.1\n    # iDims     3\n    # oDims     3\n    # width     CUBESIZE CUBESIZE CUBESIZE\\n\n    # Cube'''\n\n\n\n\n\n    tlHeader = tlHeader.replace('CUBESIZE',cubeSize)\n\n\n\n\n\n    # footer\n    tlFooter = '''\\n# end\\n'''\n\n\n\n\n\n    LUTlines = lines\[2:]\n    LUTlines = \[x.replace('\\n','').split(' ') for x in LUTlines]\n    LUTlines = \[\[float(i) for i in x] for x in LUTlines]\n    LUTlines = \[\[str(i) for i in x] for x in LUTlines]\n\n\n\n\n\n    ## remove decimal from 0.0 and 1.0\n    for i, x in enumerate(LUTlines):\n        for j, a in enumerate(x):\n            if '0.0' == a:\n                LUTlines\[i]\[j] = '0'\n            if '1.0' == a:\n                LUTlines\[i]\[j] = '1'\n\n\n\n\n\n    # reconstruct the cube string\n    stringLUTlines = \[]\n    for line in LUTlines:\n        stringLUTlines.append(' '.join(line))\n    newLUTStringBlock = '\\n'.join(stringLUTlines)\n\n\n\n\n\n    # join it all up\n    outputContents = tlHeader + '\\n' + newLUTStringBlock + '\\n' + tlFooter\n\n\n\n\n\n    # check directory for outputCubPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ouputCubPath)):\n        os.makedirs(os.path.dirname(ouputCubPath))\n\n\n\n\n\n    # write the file\n    with open(ouputCubPath, 'w') as f:\n        f.write(outputContents)\n\n\n\n\n\n\n\n\n\ndef bakeCandidateLUTfromNode(node,inverse=False):\n    candidate = node.knob('candidate').value()\n    revision = node.knob('revision').value()\n    target = node.knob('target').value()\n\n\n\n\n\n\n\n\n\n    nukeScriptDir = nuke.script_directory()\n    print(nukeScriptDir)\n    dctltemplatePath = os.path.join(nukeScriptDir,node.knob('dctlTemplate').evaluate())\n    if inverse:\n        dctltemplatePath = dctltemplatePath.replace('.dctl','_inverse.dctl')\n\n\n\n\n\n    fltransformTemplatePath = os.path.join(nukeScriptDir,node.knob('fltransformTemplate').evaluate())\n    # flSpacePath = os.path.join(nukeScriptDir,'resources/ACEScct_AP0.flspace')\n    # print(flSpacePath)\n\n\n\n\n\n\n\n\n\n    cubePath = os.path.join(nukeScriptDir,node.knob('cubePath').evaluate())\n    cubePathClean = cubePath.replace('(','').replace(')','')\n    ocioCubePath = os.path.join(nukeScriptDir,node.knob('ocioCubePath').evaluate())\n    cubPath = os.path.join(nukeScriptDir,node.knob('cubPath').evaluate())\n    dctlColorspaceBufferTag = node.knob('dctlColorspaceBufferTag').getValue()\n\n\n\n\n\n    if inverse:\n        cubePath = cubePath.replace('.cube','_inverse.cube')\n        cubePathClean = cubePathClean.replace('.cube','_inverse.cube')\n        ocioCubePath = ocioCubePath.replace('.cube','_inverse.cube')\n        cubPath = cubPath.replace('.cub','_inverse.cub')\n\n\n\n\n\n    # replace LUT writer path with evaluated path\n    node.knob('file').setValue(cubePath)\n\n\n\n\n\n\n\n\n\n    # check cubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(cubePath)):\n        os.makedirs(os.path.dirname(cubePath))\n\n\n\n\n\n\n\n\n    # check ocioCubePath exists, if not, create it\n    if not os.path.exists(os.path.dirname(ocioCubePath)):\n        os.makedirs(os.path.dirname(ocioCubePath))\n\n\n\n\n\n    dctlPath = cubePath.replace('.cube','.dctl')\n    if inverse:\n        dctlPath = dctlPath.replace('/ODT/','/IDT/')\n\n\n\n\n\n    # check dctlPath exists, if not, create it\n    if not os.path.exists(os.path.dirname(dctlPath)):\n        os.makedirs(os.path.dirname(dctlPath))\n\n\n\n\n\n    cubeName = cubePath.split('/').pop(-1)\n    cubeNameClean = cubeName.replace('(','').replace(')','')\n\n\n\n\n\n\n\n\n\n\n    if bakeLuts == True:\n        node.knob('generate').execute()\n        # if cubeName does not match cubeNameClean copy cubeName to cubeNameClean\n        if cubePath != cubePathClean:\n            shutil.copy(cubePath,cubePathClean)\n\n\n\n\n\n\n    # read contents of cube file\n    with open(cubePathClean) as f:\n        cubelines = f.readlines()\n\n\n\n\n\n\n\n    ## write the dctl file\n    with open(dctltemplatePath) as f:\n        lines = f.readlines()\n    newLines = \[x.replace('replace.cube',cubeNameClean) for x in lines]\n    newLines = \[x.replace('DCTL_ACES_COLORSPACE_BUFFER_TAG_PLACEHOLDER',dctlColorspaceBufferTag) for x in lines]\n    # replace the string REPLACE_WITH_CUBE_DATA with the contents of cubelines\n    newLines = \[x.replace('REPLACE_WITH_CUBE_DATA',''.join(cubelines)) for x in newLines]\n\n\n\n\n\n    with open(dctlPath, 'w') as f:\n        f.write(''.join(newLines))\n\n\n\n\n\n\n\n\n\n    # Baselight\n    # convert cube to cub\n    cubeToCub(cubePath,cubPath)\n\n\n\n\n\n    # copy cubePath to ocioCubePath\n    shutil.copy(cubePath,ocioCubePath)\n\n\n\n\n\n    # # remove original cube if it isnt the same as the clean version\n    # if cubePathClean != cubePath:\n    #     # delete cubeName\n        # os.remove(cubePath)\n    if os.path.exists(cubePath):\n        os.remove(cubePath)\n    if os.path.exists(cubePathClean):\n        os.remove(cubePathClean)\n\n\n\n\n\n\n\n\n\n    ## write the fltransform\n    if target == 'Rec709':\n        if  inverse == False:\n            fltransformPath = cubPath.replace('.cub','.fltransform')\n            cubeToken = os.path.basename(cubPath.replace('_Rec709','').replace('.cub',''))\n            newFltransformName = fltransformPath.replace('_Rec709','')\n            with open(fltransformTemplatePath) as f:\n                lines = f.readlines()\n            newLines = \[x.replace('replaceTransformName','ACES v'+revision) for x in lines]\n            newLines = \[x.replace('replaceForward',cubeToken) for x in newLines]\n            # newLines = \[x.replace('replaceForward_Rec2100',os.path.basename(cubPath).replace('Rec709','Rec2100').replace('.cub','')) for x in newLines]\n            with open(newFltransformName, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\n\n\n\n\n    # check ACEScct_AP0.flspace exists, if not, copy it\n    for flspace in \['/ACEScct_AP0.flspace','/ACEScct_APS4.flspace']:\n        flSpaceSourcePath = os.path.join(nukeScriptDir,'resources' + flspace)\n        flSpaceDestPath = os.path.dirname(cubPath) + flspace\n        if not os.path.exists(flSpaceDestPath):\n            shutil.copy(flSpaceSourcePath,flSpaceDestPath)\n\n\n\n\n\n\n\n\n\ndef createOCIOconfigs(revision):\n    nukeScriptDir = nuke.script_directory()\n    revision = nuke.thisNode().knob('revision').value()\n    ocioTemplateDir = os.path.join(nukeScriptDir,'resources/')\n    newOcioTemplateDir = os.path.join(nukeScriptDir,'OCIO/')\n    ocioConfigTemplates = \[x for x in os.listdir(ocioTemplateDir) if x.endswith('.ocio')]\n    ocioConfigTemplatePaths = \[os.path.join(ocioTemplateDir,x) for x in ocioConfigTemplates]\n\n\n    acesVersion = revision\n\n\n\n\n    activeViewDicts = \[]\n\n\n    activeViewList = \[\n        'ACES ACESVERSION - Rec.709',\n        'ACES ACESVERSION - P3D65',\n        'ACES ACESVERSION - P3D65 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 1000nit Limited)',\n        'ACES ACESVERSION - DisplayP3 (Rec.709 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        ]\n    activeViewList = \[x.replace('ACESVERSION',acesVersion) for x in activeViewList]\n    activeViewDicts.append(\{'name':'All','values':activeViewList\})\n\n\n\n\n    activeViewList = \[\n        'ACES ACESVERSION - DisplayP3 (Rec.709 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - DisplayP3 (P3D65 1000nit Limited)',\n        'ACES 1.2 - DisplayP3 (Rec.709 Limited)',\n        'ACES 1.2 - DisplayP3 (P3D65 1000nit Limited)',\n        ]\n    activeViewList = \[x.replace('ACESVERSION',acesVersion) for x in activeViewList]\n    activeViewDicts.append(\{'name':'DisplayP3','values':activeViewList\})\n\n\n\n\n    activeViewList = \[\n        'ACES ACESVERSION - Rec.709',\n        'ACES ACESVERSION - P3D65',\n        'ACES ACESVERSION - P3D65 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (Rec709 sim)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 540nit Limited)',\n        'ACES ACESVERSION - Rec.2100 (P3D65 1000nit Limited)',\n        'ACES 1.2 - Rec.709',\n        'ACES 1.2 - Rec2100',\n        'ACES 1.2 - Rec2100 (Rec709 sim)',\n        ]\n    activeViewList = \[x.replace('ACESVERSION',acesVersion) for x in activeViewList]\n    activeViewDicts.append(\{'name':'Limited','values':activeViewList\})\n\n\n\n\n\n\n    for config in ocioConfigTemplatePaths:\n        for activeViewDict in activeViewDicts:\n\n\n\n\n\n            configName = config.split('/').pop(-1)\n            newConfigName = configName.replace('XXX','v'+revision).replace('TEMPLATE',activeViewDict\['name'])\n            newConfigPath = os.path.join(newOcioTemplateDir,newConfigName)\n            with open(config) as f:\n                lines = f.readlines()\n            activeViewsStrings = \[ x.replace('revXXX','rev'+revision) for x in  activeViewDict\['values']]\n            activeViews = ','.join(activeViewsStrings)\n            newLines = \[x.replace('XXX',revision).replace('ACTIVEVIEWSPLACEHOLDER',activeViews) for x in lines]\n            with open(newConfigPath, 'w') as f:\n                f.write(''.join(newLines))\n\n\n\n\n\n\n\n\nODTWrites = \[]\nfor node in nuke.allNodes():\n    if 'Write_ResolveACES_ODT_LUT' in node.name():\n        ODTWrites.append(node)\n\n\n\n\n\n\n\n\nfor ODTWriteNode in ODTWrites:\n    masterNode.knob('inverseMode').setValue(False)\n    bakeCandidateLUTfromNode(ODTWriteNode)\n    masterNode.knob('inverseMode').setValue(True)\n    bakeCandidateLUTfromNode(ODTWriteNode, inverse=True)\n\n\n\n\n\n## flip flag back to nukescript makes more sense when opened afterwards\nmasterNode.knob('inverseMode').setValue(False)\n\n\n\n\n\n# createOCIOconfigs(revision)\ncreateOCIOconfigs(nuke.thisNode().knob('revision').getValue())" +STARTLINE}
  addUserKnob {6 bakeLUTs +STARTLINE}
  bakeLUTs true
  addUserKnob {26 ""}
